@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5DEF7E6D86CE1016EC333832 /* Pods_Personal_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */; };
+		8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B051ECA2D9700566531 /* Muli-Black.ttf */; };
+		8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */; };
+		8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B071ECA2D9700566531 /* Muli-Bold.ttf */; };
+		8C463B161ECA2D9700566531 /* Muli-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B081ECA2D9700566531 /* Muli-BoldItalic.ttf */; };
+		8C463B171ECA2D9700566531 /* Muli-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B091ECA2D9700566531 /* Muli-ExtraBold.ttf */; };
+		8C463B181ECA2D9700566531 /* Muli-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B0A1ECA2D9700566531 /* Muli-ExtraBoldItalic.ttf */; };
+		8C463B191ECA2D9700566531 /* Muli-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B0B1ECA2D9700566531 /* Muli-ExtraLight.ttf */; };
+		8C463B1A1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B0C1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf */; };
+		8C463B1B1ECA2D9700566531 /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B0D1ECA2D9700566531 /* Muli-Italic.ttf */; };
+		8C463B1C1ECA2D9700566531 /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B0E1ECA2D9700566531 /* Muli-Light.ttf */; };
+		8C463B1D1ECA2D9700566531 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B0F1ECA2D9700566531 /* Muli-LightItalic.ttf */; };
+		8C463B1E1ECA2D9700566531 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B101ECA2D9700566531 /* Muli-Regular.ttf */; };
+		8C463B1F1ECA2D9700566531 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B111ECA2D9700566531 /* Muli-SemiBold.ttf */; };
+		8C463B201ECA2D9700566531 /* Muli-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B121ECA2D9700566531 /* Muli-SemiBoldItalic.ttf */; };
+		8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */; };
+		8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */; };
 		8CF78EC94537B4F6424BE525 /* Pods_Personal_CompassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */; };
 		CBF5C2B987593B1534F06EDA /* Pods_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
@@ -39,6 +55,22 @@
 /* Begin PBXFileReference section */
 		46EC5D6D9BEABB60B929A107 /* Pods-Personal-Compass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.release.xcconfig"; sourceTree = "<group>"; };
 		485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C463B051ECA2D9700566531 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Black.ttf"; path = "Fonts/Muli-Black.ttf"; sourceTree = "<group>"; };
+		8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-BlackItalic.ttf"; path = "Fonts/Muli-BlackItalic.ttf"; sourceTree = "<group>"; };
+		8C463B071ECA2D9700566531 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Bold.ttf"; path = "Fonts/Muli-Bold.ttf"; sourceTree = "<group>"; };
+		8C463B081ECA2D9700566531 /* Muli-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-BoldItalic.ttf"; path = "Fonts/Muli-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8C463B091ECA2D9700566531 /* Muli-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-ExtraBold.ttf"; path = "Fonts/Muli-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8C463B0A1ECA2D9700566531 /* Muli-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-ExtraBoldItalic.ttf"; path = "Fonts/Muli-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		8C463B0B1ECA2D9700566531 /* Muli-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-ExtraLight.ttf"; path = "Fonts/Muli-ExtraLight.ttf"; sourceTree = "<group>"; };
+		8C463B0C1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-ExtraLightItalic.ttf"; path = "Fonts/Muli-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		8C463B0D1ECA2D9700566531 /* Muli-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Italic.ttf"; path = "Fonts/Muli-Italic.ttf"; sourceTree = "<group>"; };
+		8C463B0E1ECA2D9700566531 /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Light.ttf"; path = "Fonts/Muli-Light.ttf"; sourceTree = "<group>"; };
+		8C463B0F1ECA2D9700566531 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-LightItalic.ttf"; path = "Fonts/Muli-LightItalic.ttf"; sourceTree = "<group>"; };
+		8C463B101ECA2D9700566531 /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Regular.ttf"; path = "Fonts/Muli-Regular.ttf"; sourceTree = "<group>"; };
+		8C463B111ECA2D9700566531 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-SemiBold.ttf"; path = "Fonts/Muli-SemiBold.ttf"; sourceTree = "<group>"; };
+		8C463B121ECA2D9700566531 /* Muli-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-SemiBoldItalic.ttf"; path = "Fonts/Muli-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+CustomColors.swift"; path = "Extensions/UIColor+CustomColors.swift"; sourceTree = "<group>"; };
+		8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+CustomFonts.swift"; path = "Extensions/UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
 		93B37BC394469BAF74853DD5 /* Pods-Personal-CompassUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests.release.xcconfig"; sourceTree = "<group>"; };
 		978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2CF0E80AFBAC596BA0EBC /* Pods-Personal-Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +131,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8C463B041ECA2D8600566531 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8C463B051ECA2D9700566531 /* Muli-Black.ttf */,
+				8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */,
+				8C463B071ECA2D9700566531 /* Muli-Bold.ttf */,
+				8C463B081ECA2D9700566531 /* Muli-BoldItalic.ttf */,
+				8C463B091ECA2D9700566531 /* Muli-ExtraBold.ttf */,
+				8C463B0A1ECA2D9700566531 /* Muli-ExtraBoldItalic.ttf */,
+				8C463B0B1ECA2D9700566531 /* Muli-ExtraLight.ttf */,
+				8C463B0C1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf */,
+				8C463B0D1ECA2D9700566531 /* Muli-Italic.ttf */,
+				8C463B0E1ECA2D9700566531 /* Muli-Light.ttf */,
+				8C463B0F1ECA2D9700566531 /* Muli-LightItalic.ttf */,
+				8C463B101ECA2D9700566531 /* Muli-Regular.ttf */,
+				8C463B111ECA2D9700566531 /* Muli-SemiBold.ttf */,
+				8C463B121ECA2D9700566531 /* Muli-SemiBoldItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		8C463B211ECA2EC500566531 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */,
+				8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		E37C7A6E1EC9FBA300076737 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,
+				8C463B211ECA2EC500566531 /* Extensions */,
+				8C463B041ECA2D8600566531 /* Fonts */,
 				E37C7A7C1EC9FBA300076737 /* ViewController.swift */,
 				E37C7A7E1EC9FBA300076737 /* Main.storyboard */,
 				E37C7A811EC9FBA300076737 /* Assets.xcassets */,
@@ -284,9 +348,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C463B1F1ECA2D9700566531 /* Muli-SemiBold.ttf in Resources */,
+				8C463B181ECA2D9700566531 /* Muli-ExtraBoldItalic.ttf in Resources */,
+				8C463B1B1ECA2D9700566531 /* Muli-Italic.ttf in Resources */,
+				8C463B1D1ECA2D9700566531 /* Muli-LightItalic.ttf in Resources */,
+				8C463B1E1ECA2D9700566531 /* Muli-Regular.ttf in Resources */,
+				8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */,
 				E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */,
+				8C463B191ECA2D9700566531 /* Muli-ExtraLight.ttf in Resources */,
+				8C463B201ECA2D9700566531 /* Muli-SemiBoldItalic.ttf in Resources */,
+				8C463B1A1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf in Resources */,
 				E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */,
+				8C463B1C1ECA2D9700566531 /* Muli-Light.ttf in Resources */,
+				8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */,
+				8C463B161ECA2D9700566531 /* Muli-BoldItalic.ttf in Resources */,
 				E37C7A801EC9FBA300076737 /* Main.storyboard in Resources */,
+				8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */,
+				8C463B171ECA2D9700566531 /* Muli-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +527,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */,
 				E37C7A7D1EC9FBA300076737 /* ViewController.swift in Sources */,
+				8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
