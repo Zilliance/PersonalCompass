@@ -713,6 +713,7 @@
 				E37C7AA11EC9FBA300076737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E37C7AA21EC9FBA300076737 /* Build configuration list for PBXNativeTarget "Personal-CompassTests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +722,7 @@
 				E37C7AA41EC9FBA300076737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E37C7AA51EC9FBA300076737 /* Build configuration list for PBXNativeTarget "Personal-CompassUITests" */ = {
 			isa = XCConfigurationList;
@@ -729,6 +731,7 @@
 				E37C7AA71EC9FBA300076737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
