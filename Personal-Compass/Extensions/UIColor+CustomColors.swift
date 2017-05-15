@@ -1,6 +1,6 @@
 //
 //  UIColor+CustomColors.swift
-//  Balance Pie
+//  Personal Compass
 //
 //  Created by ricardo hernandez  on 1/23/17.
 //  Copyright © 2017 Phil Dow. All rights reserved.
