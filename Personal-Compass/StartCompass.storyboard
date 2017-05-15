@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zHu-2M-R1x">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bcG-bS-yTf">
+            <objects>
+                <navigationController id="zHu-2M-R1x" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9jK-0q-TRI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="D2h-TF-JmU" kind="relationship" relationship="rootViewController" id="xEI-kd-IAR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSC-qU-IxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1073" y="-258"/>
+        </scene>
+        <!--Start Compass View Controller-->
+        <scene sceneID="MS6-I3-OHI">
+            <objects>
+                <viewController id="D2h-TF-JmU" customClass="StartCompassViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ORX-96-Elx"/>
+                        <viewControllerLayoutGuide type="bottom" id="z0H-kt-gXv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ih-dt-2gG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wMD-FY-9kz">
+                        <barButtonItem key="leftBarButtonItem" image="menu-icon" id="n1Z-dY-3fE">
+                            <connections>
+                                <action selector="menuAction:" destination="D2h-TF-JmU" id="5Bn-EA-tw4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fZ-dG-goc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="-259"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu-icon" width="20" height="17"/>
+    </resources>
+</document>

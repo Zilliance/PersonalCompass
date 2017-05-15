@@ -24,11 +24,19 @@
 		8C463B201ECA2D9700566531 /* Muli-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B121ECA2D9700566531 /* Muli-SemiBoldItalic.ttf */; };
 		8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */; };
 		8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */; };
+		8C463B281ECA358F00566531 /* StartCompass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B271ECA358F00566531 /* StartCompass.storyboard */; };
+		8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B291ECA36BD00566531 /* StartCompassViewController.swift */; };
+		8C463B2E1ECA441100566531 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B2D1ECA441100566531 /* SideMenu.storyboard */; };
+		8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B2F1ECA61E500566531 /* LeftMenuViewController.swift */; };
+		8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B301ECA61E500566531 /* CustomSideViewController.swift */; };
+		8C463B341ECA63CB00566531 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B331ECA63CB00566531 /* WebView.storyboard */; };
+		8C463B361ECA63D700566531 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B351ECA63D700566531 /* WebViewController.swift */; };
+		8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B371ECA642600566531 /* UITableViewCell+Extensions.swift */; };
+		8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B381ECA642600566531 /* UIDevice+Extensions.swift */; };
+		8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B3B1ECA682F00566531 /* AboutCompanyViewController.swift */; };
 		8CF78EC94537B4F6424BE525 /* Pods_Personal_CompassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */; };
 		CBF5C2B987593B1534F06EDA /* Pods_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
-		E37C7A7D1EC9FBA300076737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7C1EC9FBA300076737 /* ViewController.swift */; };
-		E37C7A801EC9FBA300076737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A7E1EC9FBA300076737 /* Main.storyboard */; };
 		E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A811EC9FBA300076737 /* Assets.xcassets */; };
 		E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A831EC9FBA300076737 /* LaunchScreen.storyboard */; };
 		E37C7A901EC9FBA300076737 /* Personal_CompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A8F1EC9FBA300076737 /* Personal_CompassTests.swift */; };
@@ -71,14 +79,22 @@
 		8C463B121ECA2D9700566531 /* Muli-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-SemiBoldItalic.ttf"; path = "Fonts/Muli-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+CustomColors.swift"; path = "Extensions/UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+CustomFonts.swift"; path = "Extensions/UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
+		8C463B271ECA358F00566531 /* StartCompass.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartCompass.storyboard; sourceTree = "<group>"; };
+		8C463B291ECA36BD00566531 /* StartCompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartCompassViewController.swift; path = ViewControllers/StartCompassViewController.swift; sourceTree = "<group>"; };
+		8C463B2D1ECA441100566531 /* SideMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		8C463B2F1ECA61E500566531 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftMenuViewController.swift; path = ViewControllers/LeftMenuViewController.swift; sourceTree = "<group>"; };
+		8C463B301ECA61E500566531 /* CustomSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSideViewController.swift; path = ViewControllers/CustomSideViewController.swift; sourceTree = "<group>"; };
+		8C463B331ECA63CB00566531 /* WebView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		8C463B351ECA63D700566531 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ViewControllers/WebViewController.swift; sourceTree = "<group>"; };
+		8C463B371ECA642600566531 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extensions.swift"; path = "Extensions/UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		8C463B381ECA642600566531 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "Extensions/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		8C463B3B1ECA682F00566531 /* AboutCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutCompanyViewController.swift; path = ViewControllers/AboutCompanyViewController.swift; sourceTree = "<group>"; };
 		93B37BC394469BAF74853DD5 /* Pods-Personal-CompassUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests.release.xcconfig"; sourceTree = "<group>"; };
 		978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2CF0E80AFBAC596BA0EBC /* Pods-Personal-Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F1D4F40C4085A19441E40F /* Pods-Personal-CompassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassTests/Pods-Personal-CompassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E37C7A771EC9FBA300076737 /* Personal-Compass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal-Compass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E37C7A7C1EC9FBA300076737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E37C7A7F1EC9FBA300076737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E37C7A811EC9FBA300076737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37C7A841EC9FBA300076737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E37C7A861EC9FBA300076737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,10 +171,43 @@
 		8C463B211ECA2EC500566531 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8C463B371ECA642600566531 /* UITableViewCell+Extensions.swift */,
+				8C463B381ECA642600566531 /* UIDevice+Extensions.swift */,
 				8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */,
 				8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8C463B261ECA356F00566531 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8C463B2C1ECA3BA600566531 /* SideMenu */,
+				8C463B2B1ECA3B6000566531 /* StartCompass */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		8C463B2B1ECA3B6000566531 /* StartCompass */ = {
+			isa = PBXGroup;
+			children = (
+				8C463B271ECA358F00566531 /* StartCompass.storyboard */,
+				8C463B291ECA36BD00566531 /* StartCompassViewController.swift */,
+			);
+			name = StartCompass;
+			sourceTree = "<group>";
+		};
+		8C463B2C1ECA3BA600566531 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8C463B2D1ECA441100566531 /* SideMenu.storyboard */,
+				8C463B2F1ECA61E500566531 /* LeftMenuViewController.swift */,
+				8C463B301ECA61E500566531 /* CustomSideViewController.swift */,
+				8C463B3B1ECA682F00566531 /* AboutCompanyViewController.swift */,
+				8C463B331ECA63CB00566531 /* WebView.storyboard */,
+				8C463B351ECA63D700566531 /* WebViewController.swift */,
+			);
+			name = SideMenu;
 			sourceTree = "<group>";
 		};
 		E37C7A6E1EC9FBA300076737 = {
@@ -187,10 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,
+				8C463B261ECA356F00566531 /* Scenes */,
 				8C463B211ECA2EC500566531 /* Extensions */,
 				8C463B041ECA2D8600566531 /* Fonts */,
-				E37C7A7C1EC9FBA300076737 /* ViewController.swift */,
-				E37C7A7E1EC9FBA300076737 /* Main.storyboard */,
 				E37C7A811EC9FBA300076737 /* Assets.xcassets */,
 				E37C7A831EC9FBA300076737 /* LaunchScreen.storyboard */,
 				E37C7A861EC9FBA300076737 /* Info.plist */,
@@ -353,6 +401,7 @@
 				8C463B1B1ECA2D9700566531 /* Muli-Italic.ttf in Resources */,
 				8C463B1D1ECA2D9700566531 /* Muli-LightItalic.ttf in Resources */,
 				8C463B1E1ECA2D9700566531 /* Muli-Regular.ttf in Resources */,
+				8C463B341ECA63CB00566531 /* WebView.storyboard in Resources */,
 				8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */,
 				E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */,
 				8C463B191ECA2D9700566531 /* Muli-ExtraLight.ttf in Resources */,
@@ -360,9 +409,10 @@
 				8C463B1A1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf in Resources */,
 				E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */,
 				8C463B1C1ECA2D9700566531 /* Muli-Light.ttf in Resources */,
+				8C463B281ECA358F00566531 /* StartCompass.storyboard in Resources */,
 				8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */,
+				8C463B2E1ECA441100566531 /* SideMenu.storyboard in Resources */,
 				8C463B161ECA2D9700566531 /* Muli-BoldItalic.ttf in Resources */,
-				E37C7A801EC9FBA300076737 /* Main.storyboard in Resources */,
 				8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */,
 				8C463B171ECA2D9700566531 /* Muli-ExtraBold.ttf in Resources */,
 			);
@@ -527,10 +577,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
 				8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */,
-				E37C7A7D1EC9FBA300076737 /* ViewController.swift in Sources */,
+				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,
+				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
 				8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */,
+				8C463B361ECA63D700566531 /* WebViewController.swift in Sources */,
+				8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
+				8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */,
+				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,14 +622,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E37C7A7E1EC9FBA300076737 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E37C7A7F1EC9FBA300076737 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E37C7A831EC9FBA300076737 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
