@@ -11,12 +11,16 @@ import RealmSwift
 
 final class Compass: Object {
     
-    @objc enum Characteristic: Int32 {
-        case notStarted
-        case phase1
+    @objc enum Facet: Int32 {
+        case unknown
+        case emotion
+        case thought
+        case body
+        case behaviour
+        case innerWisdom
     }
     
-    dynamic var lastEditedCharacteristic: Characteristic = .notStarted
+    dynamic var lastEditedFacet: Facet = .unknown
     
     let bodyStressElements = List<BodyStress>()
 
