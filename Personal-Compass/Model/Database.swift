@@ -25,9 +25,7 @@ class Database {
     
     init() {
         do {
-            
-            // Inside your application(application:didFinishLaunchingWithOptions:)
-            
+                        
             let config = Realm.Configuration(
                 schemaVersion: 0,
                 
@@ -63,11 +61,6 @@ class Database {
             print("realm initialization failed, aborting")
         }
     }
-    
-    
-    private func bootstrap() {
-        //we'll preload the body stress and physical stress elements here
-    }
 
 }
 
@@ -75,7 +68,12 @@ class Database {
 //all bootstrap methods
 extension Database {
     
-    private func bootstrapUser() {
+    fileprivate func bootstrap() {
+        //we'll preload the body stress and physical stress elements here
+        self.bootstrapUser()
+    }
+    
+    fileprivate func bootstrapUser() {
         guard self.realm.objects(User.self).count == 0 else {
             return
         }
