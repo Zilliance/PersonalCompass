@@ -8,6 +8,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="bcG-bS-yTf">
@@ -36,7 +44,110 @@
                     <view key="view" contentMode="scaleToFill" id="9ih-dt-2gG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJm-xD-0QE" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="236" width="375" height="431"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7bn-1n-4ff">
+                                        <rect key="frame" x="20" y="53" width="335" height="378"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Drw-jK-1vw">
+                                            <size key="itemSize" width="97" height="95"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="compassCell" id="1rD-pt-ued" customClass="CompassCollectionViewCell" customModule="Personal_Compass" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="95"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pc" translatesAutoresizingMaskIntoConstraints="NO" id="lGd-Gd-Jhc">
+                                                            <rect key="frame" x="28" y="10" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="Ra4-Jq-lcJ"/>
+                                                                <constraint firstAttribute="width" constant="40" id="zBP-TS-hOS"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO3-nZ-y38">
+                                                            <rect key="frame" x="10" y="60" width="77" height="25"/>
+                                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="13"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="lGd-Gd-Jhc" firstAttribute="centerX" secondItem="1rD-pt-ued" secondAttribute="centerX" id="5dm-EN-HjK"/>
+                                                    <constraint firstItem="lGd-Gd-Jhc" firstAttribute="top" secondItem="1rD-pt-ued" secondAttribute="top" constant="10" id="5ez-Z9-Wyr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BO3-nZ-y38" secondAttribute="trailing" constant="10" id="K3i-jN-i3r"/>
+                                                    <constraint firstItem="BO3-nZ-y38" firstAttribute="top" secondItem="lGd-Gd-Jhc" secondAttribute="bottom" constant="10" id="fEw-TS-41A"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BO3-nZ-y38" secondAttribute="bottom" constant="10" id="kWc-uF-WyV"/>
+                                                    <constraint firstItem="BO3-nZ-y38" firstAttribute="leading" secondItem="1rD-pt-ued" secondAttribute="leading" constant="10" id="s21-UY-IO3"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="BO3-nZ-y38" id="Ify-l6-GL2"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="D2h-TF-JmU" id="PgX-zx-Gyd"/>
+                                        </connections>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Saved Compasses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-FS-IrB">
+                                        <rect key="frame" x="20" y="16" width="335" height="21"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="5LE-FS-IrB" firstAttribute="leading" secondItem="XJm-xD-0QE" secondAttribute="leading" constant="20" id="1Pt-NQ-eJB"/>
+                                    <constraint firstAttribute="trailing" secondItem="5LE-FS-IrB" secondAttribute="trailing" constant="20" id="4gE-3h-idl"/>
+                                    <constraint firstItem="7bn-1n-4ff" firstAttribute="top" secondItem="5LE-FS-IrB" secondAttribute="bottom" constant="16" id="6W9-L9-njp"/>
+                                    <constraint firstAttribute="trailing" secondItem="7bn-1n-4ff" secondAttribute="trailing" constant="20" id="HOT-le-WeV"/>
+                                    <constraint firstItem="7bn-1n-4ff" firstAttribute="leading" secondItem="XJm-xD-0QE" secondAttribute="leading" constant="20" id="Ljm-rv-RnT"/>
+                                    <constraint firstItem="5LE-FS-IrB" firstAttribute="top" secondItem="XJm-xD-0QE" secondAttribute="top" constant="16" id="d0z-RY-9uP"/>
+                                    <constraint firstAttribute="bottom" secondItem="7bn-1n-4ff" secondAttribute="bottom" id="dfd-G9-2pb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q5-p4-7Jt" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="172"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7C-Xt-k2k">
+                                        <rect key="frame" x="16" y="61" width="339" height="50"/>
+                                        <color key="backgroundColor" red="0.4549019608" green="0.79607843140000001" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Yvk-JJ-RX3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
+                                        <state key="normal" title="  START A NEW COMPASS" image="pc"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="i7C-Xt-k2k" secondAttribute="trailing" constant="20" id="6p7-UQ-o0k"/>
+                                    <constraint firstItem="i7C-Xt-k2k" firstAttribute="leading" secondItem="5q5-p4-7Jt" secondAttribute="leading" constant="16" id="Ixh-hd-Ij7"/>
+                                    <constraint firstItem="i7C-Xt-k2k" firstAttribute="centerY" secondItem="5q5-p4-7Jt" secondAttribute="centerY" id="pxe-YI-Mij"/>
+                                    <constraint firstAttribute="height" constant="172" id="yIp-Jg-o0T"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XJm-xD-0QE" firstAttribute="top" secondItem="5q5-p4-7Jt" secondAttribute="bottom" id="Ekv-gr-6GJ"/>
+                            <constraint firstItem="5q5-p4-7Jt" firstAttribute="top" secondItem="ORX-96-Elx" secondAttribute="bottom" id="LdX-vr-X9E"/>
+                            <constraint firstAttribute="bottom" secondItem="XJm-xD-0QE" secondAttribute="bottom" id="X9z-wi-fgS"/>
+                            <constraint firstItem="XJm-xD-0QE" firstAttribute="leading" secondItem="9ih-dt-2gG" secondAttribute="leading" id="dgZ-CP-sWz"/>
+                            <constraint firstItem="5q5-p4-7Jt" firstAttribute="leading" secondItem="9ih-dt-2gG" secondAttribute="leading" id="sdj-S8-i6q"/>
+                            <constraint firstAttribute="trailing" secondItem="5q5-p4-7Jt" secondAttribute="trailing" id="teW-pB-DZ6"/>
+                            <constraint firstAttribute="trailing" secondItem="XJm-xD-0QE" secondAttribute="trailing" id="y86-Rd-Zhf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wMD-FY-9kz">
                         <barButtonItem key="leftBarButtonItem" image="menu-icon" id="n1Z-dY-3fE">
@@ -45,13 +156,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="7bn-1n-4ff" id="7Ih-Yc-6Py"/>
+                        <outlet property="startCompassButton" destination="i7C-Xt-k2k" id="uev-Cn-yvj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fZ-dG-goc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278" y="-259"/>
+            <point key="canvasLocation" x="-279.19999999999999" y="-259.52023988005999"/>
         </scene>
     </scenes>
     <resources>
         <image name="menu-icon" width="20" height="17"/>
+        <image name="pc" width="48" height="48"/>
     </resources>
 </document>
