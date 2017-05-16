@@ -34,6 +34,7 @@
 		8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B371ECA642600566531 /* UITableViewCell+Extensions.swift */; };
 		8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B381ECA642600566531 /* UIDevice+Extensions.swift */; };
 		8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B3B1ECA682F00566531 /* AboutCompanyViewController.swift */; };
+		8C463B3E1ECB6E2300566531 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B3D1ECB6E2300566531 /* App.swift */; };
 		8CF78EC94537B4F6424BE525 /* Pods_Personal_CompassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */; };
 		CBF5C2B987593B1534F06EDA /* Pods_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
@@ -89,6 +90,7 @@
 		8C463B371ECA642600566531 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extensions.swift"; path = "Extensions/UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		8C463B381ECA642600566531 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "Extensions/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		8C463B3B1ECA682F00566531 /* AboutCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutCompanyViewController.swift; path = ViewControllers/AboutCompanyViewController.swift; sourceTree = "<group>"; };
+		8C463B3D1ECB6E2300566531 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		93B37BC394469BAF74853DD5 /* Pods-Personal-CompassUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests.release.xcconfig"; sourceTree = "<group>"; };
 		978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2CF0E80AFBAC596BA0EBC /* Pods-Personal-Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		E37C7A791EC9FBA300076737 /* Personal-Compass */ = {
 			isa = PBXGroup;
 			children = (
+				8C463B3D1ECB6E2300566531 /* App.swift */,
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,
 				8C463B261ECA356F00566531 /* Scenes */,
 				8C463B211ECA2EC500566531 /* Extensions */,
@@ -579,6 +582,7 @@
 			files = (
 				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
 				8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */,
+				8C463B3E1ECB6E2300566531 /* App.swift in Sources */,
 				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,
 				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
 				8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */,
