@@ -33,6 +33,12 @@ class StartCompassViewController: UIViewController {
     
     // MARK: -- User Actions
     
+    @IBAction func startAction(_ sender: UIButton) {
+        
+        guard let createCompassViewController = UIStoryboard(name: "CreateCompass", bundle: nil).instantiateInitialViewController() as? CreateCompassViewController else { return }
+        self.navigationController?.pushViewController(createCompassViewController, animated: true)
+    }
+    
     @IBAction func menuAction(_ sender: Any) {
         self.sideMenuController?.toggle()
     }
