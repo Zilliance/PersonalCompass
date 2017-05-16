@@ -17,7 +17,7 @@ class Database {
     
     private(set) var realm: Realm!
     
-    private(set) var user: User!
+    fileprivate(set) var user: User!
     
     private(set) var bodyStressStored: Results<BodyStress>!
 
@@ -69,6 +69,25 @@ class Database {
         //we'll preload the body stress and physical stress elements here
     }
 
+}
+
+
+//all bootstrap methods
+extension Database {
+    
+    private func bootstrapUser() {
+        guard self.realm.objects(User.self).count == 0 else {
+            return
+        }
+        
+        let user = User()
+
+        add(realmObject: user)
+        
+        self.user = user
+    }
+    
+    
 }
 
 //realm storage methods
