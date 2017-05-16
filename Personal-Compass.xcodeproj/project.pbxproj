@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047A58011ECB2B5200BC7650 /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58001ECB2B5200BC7650 /* Compass.swift */; };
+		047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58021ECB2D6300BC7650 /* BodyStress.swift */; };
+		047A58051ECB2DBC00BC7650 /* PhysicalStress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58041ECB2DBC00BC7650 /* PhysicalStress.swift */; };
+		047A58071ECB30A400BC7650 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58061ECB30A400BC7650 /* Emotion.swift */; };
 		5DEF7E6D86CE1016EC333832 /* Pods_Personal_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */; };
 		8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B051ECA2D9700566531 /* Muli-Black.ttf */; };
 		8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */; };
@@ -53,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047A58001ECB2B5200BC7650 /* Compass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Compass.swift; path = Model/Compass.swift; sourceTree = "<group>"; };
+		047A58021ECB2D6300BC7650 /* BodyStress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BodyStress.swift; path = Model/BodyStress.swift; sourceTree = "<group>"; };
+		047A58041ECB2DBC00BC7650 /* PhysicalStress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhysicalStress.swift; path = Model/PhysicalStress.swift; sourceTree = "<group>"; };
+		047A58061ECB30A400BC7650 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emotion.swift; path = Model/Emotion.swift; sourceTree = "<group>"; };
 		46EC5D6D9BEABB60B929A107 /* Pods-Personal-Compass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.release.xcconfig"; sourceTree = "<group>"; };
 		485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C463B051ECA2D9700566531 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Black.ttf"; path = "Fonts/Muli-Black.ttf"; sourceTree = "<group>"; };
@@ -121,6 +129,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047A57FF1ECB2B3700BC7650 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				047A58001ECB2B5200BC7650 /* Compass.swift */,
+				047A58021ECB2D6300BC7650 /* BodyStress.swift */,
+				047A58041ECB2DBC00BC7650 /* PhysicalStress.swift */,
+				047A58061ECB30A400BC7650 /* Emotion.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		109AAC9BE2861A85E3AA9588 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +205,7 @@
 		E37C7A791EC9FBA300076737 /* Personal-Compass */ = {
 			isa = PBXGroup;
 			children = (
+				047A57FF1ECB2B3700BC7650 /* Model */,
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,
 				8C463B211ECA2EC500566531 /* Extensions */,
 				8C463B041ECA2D8600566531 /* Fonts */,
@@ -527,9 +547,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047A58011ECB2B5200BC7650 /* Compass.swift in Sources */,
 				8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */,
 				E37C7A7D1EC9FBA300076737 /* ViewController.swift in Sources */,
+				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
+				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
 				8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */,
+				047A58051ECB2DBC00BC7650 /* PhysicalStress.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
