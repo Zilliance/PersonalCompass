@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import FXPageControl
 
 class CreateCompassViewController: UIViewController {
 
     @IBOutlet weak var topLabel: UILabel!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var pageControl: FXPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     
-    let sections = ["Emotion", "Thought", "Body", "Behavior", "Inner Wisdom"]
+    fileprivate let sections = ["Emotion", "Thought", "Body", "Behavior", "Inner Wisdom"]
     
     fileprivate lazy var pageControlViewController: UIPageViewController = {
         let controller = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -36,6 +37,15 @@ class CreateCompassViewController: UIViewController {
     }
     
     private func setupView() {
+        
+        self.pageControl.dotSize = 12
+        self.pageControl.numberOfPages = sections.count
+        self.pageControl.dotColor = .darkGray
+        self.pageControl.dotSpacing = 20
+        self.pageControl.selectedDotColor = .white
+        self.pageControl.dotBorderColor = .darkGray
+        self.pageControl.backgroundColor = .clear
+        
         self.topLabel.clipsToBounds = true
         self.topLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.addChildViewController(self.pageControlViewController)
@@ -45,6 +55,7 @@ class CreateCompassViewController: UIViewController {
     // MARK: - User Actions
 
     @IBAction func nextAction(_ sender: UIButton) {
+        self.pageControl.currentPage += 1
     }
 }
 

@@ -57,22 +57,23 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OjJ-Vl-f4x">
-                                        <rect key="frame" x="0.0" y="84" width="375" height="37"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bsn-fd-0nv" customClass="FXPageControl">
+                                        <rect key="frame" x="0.0" y="84" width="375" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="5rU-pB-zHG"/>
+                                            <constraint firstAttribute="height" constant="36" id="IZa-KY-P7M"/>
                                         </constraints>
-                                    </pageControl>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0085661538128493347" green="0.20100701917046276" blue="0.48014491580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Col-Lk-2OQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bsn-fd-0nv" secondAttribute="bottom" constant="8" id="Gmj-Cm-k1U"/>
                                     <constraint firstAttribute="trailing" secondItem="7gC-GR-w4D" secondAttribute="trailing" id="HYW-oc-e0p"/>
+                                    <constraint firstItem="Bsn-fd-0nv" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" id="LMA-DI-awV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bsn-fd-0nv" secondAttribute="trailing" id="UT1-3D-AZc"/>
                                     <constraint firstItem="7gC-GR-w4D" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" id="Yqb-qr-Blf"/>
                                     <constraint firstAttribute="bottom" secondItem="7gC-GR-w4D" secondAttribute="bottom" constant="25" id="f31-hu-dmO"/>
-                                    <constraint firstAttribute="trailing" secondItem="OjJ-Vl-f4x" secondAttribute="trailing" id="iHT-a4-r95"/>
-                                    <constraint firstItem="OjJ-Vl-f4x" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" id="ktc-SV-hdE"/>
-                                    <constraint firstAttribute="bottom" secondItem="OjJ-Vl-f4x" secondAttribute="bottom" constant="7" id="lFU-8S-yXR"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGI-Ub-dY5">
@@ -95,7 +96,7 @@
                     </view>
                     <connections>
                         <outlet property="pageContainerView" destination="iGI-Ub-dY5" id="Nde-Bv-l6b"/>
-                        <outlet property="pageControl" destination="OjJ-Vl-f4x" id="67Y-Dx-KDH"/>
+                        <outlet property="pageControl" destination="Bsn-fd-0nv" id="IJG-2S-tPY"/>
                         <outlet property="topLabel" destination="HWv-ax-Pbb" id="Nu2-kg-fIg"/>
                     </connections>
                 </viewController>
