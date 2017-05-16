@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		047A58011ECB2B5200BC7650 /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58001ECB2B5200BC7650 /* Compass.swift */; };
 		047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58021ECB2D6300BC7650 /* BodyStress.swift */; };
-		047A58051ECB2DBC00BC7650 /* PhysicalStress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58041ECB2DBC00BC7650 /* PhysicalStress.swift */; };
+		047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58041ECB2DBC00BC7650 /* BehaviorStress.swift */; };
 		047A58071ECB30A400BC7650 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58061ECB30A400BC7650 /* Emotion.swift */; };
 		047A58091ECB36F100BC7650 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58081ECB36F100BC7650 /* Database.swift */; };
 		047A580B1ECB379700BC7650 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A580A1ECB379700BC7650 /* User.swift */; };
@@ -61,7 +61,7 @@
 /* Begin PBXFileReference section */
 		047A58001ECB2B5200BC7650 /* Compass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Compass.swift; path = Model/Compass.swift; sourceTree = "<group>"; };
 		047A58021ECB2D6300BC7650 /* BodyStress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BodyStress.swift; path = Model/BodyStress.swift; sourceTree = "<group>"; };
-		047A58041ECB2DBC00BC7650 /* PhysicalStress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhysicalStress.swift; path = Model/PhysicalStress.swift; sourceTree = "<group>"; };
+		047A58041ECB2DBC00BC7650 /* BehaviorStress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BehaviorStress.swift; path = Model/BehaviorStress.swift; sourceTree = "<group>"; };
 		047A58061ECB30A400BC7650 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Emotion.swift; path = Model/Emotion.swift; sourceTree = "<group>"; };
 		047A58081ECB36F100BC7650 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Database.swift; path = Model/Database.swift; sourceTree = "<group>"; };
 		047A580A1ECB379700BC7650 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 			children = (
 				047A58001ECB2B5200BC7650 /* Compass.swift */,
 				047A58021ECB2D6300BC7650 /* BodyStress.swift */,
-				047A58041ECB2DBC00BC7650 /* PhysicalStress.swift */,
+				047A58041ECB2DBC00BC7650 /* BehaviorStress.swift */,
 				047A58061ECB30A400BC7650 /* Emotion.swift */,
 				047A58081ECB36F100BC7650 /* Database.swift */,
 				047A580A1ECB379700BC7650 /* User.swift */,
@@ -560,7 +560,7 @@
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
 				8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
-				047A58051ECB2DBC00BC7650 /* PhysicalStress.swift in Sources */,
+				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 			);

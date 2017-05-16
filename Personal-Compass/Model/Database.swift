@@ -18,7 +18,7 @@ class Database {
     
     private(set) var bodyStressStored: Results<BodyStress>!
 
-    private(set) var physicalStressStored: Results<PhysicalStress>!
+    private(set) var behaviorStressStored: Results<BehaviorStress>!
     
     init() {
         do {
@@ -41,7 +41,7 @@ class Database {
             
             bodyStressStored = self.realm.objects(BodyStress.self).sorted(byKeyPath: "title")
             
-            physicalStressStored = self.realm.objects(PhysicalStress.self).sorted(byKeyPath: "title")
+            behaviorStressStored = self.realm.objects(BehaviorStress.self).sorted(byKeyPath: "title")
 
             if let user = self.realm.objects(User.self).first
             {

@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-final class PhysicalStress: Object {
+final class BehaviorStress: Object {
     
     dynamic var title: String?
     

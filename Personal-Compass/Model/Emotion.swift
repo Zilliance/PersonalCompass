@@ -31,6 +31,8 @@ final class Emotion: Object {
     
     dynamic var level: Level = .one
     
-    dynamic var text: String = ""
-    
+    dynamic var shortTitle: String = ""
+
+    dynamic var longTitle: String = ""
+
 }

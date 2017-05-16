@@ -24,7 +24,7 @@ final class Compass: Object {
     
     let bodyStressElements = List<BodyStress>()
 
-    let physicalStressElements = List<PhysicalStress>()
+    let physicalStressElements = List<BehaviorStress>()
     
     dynamic var emotion: Emotion?
     
