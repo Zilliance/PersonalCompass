@@ -12,9 +12,6 @@ import RealmSwift
 class Database {
     static let shared = Database()
     
-    /// You may access the realm object directly to query for objects or use the
-    /// convenience methods provided below
-    
     private(set) var realm: Realm!
     
     fileprivate(set) var user: User!
