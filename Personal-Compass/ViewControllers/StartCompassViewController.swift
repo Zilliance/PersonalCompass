@@ -54,3 +54,9 @@ extension StartCompassViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
+extension StartCompassViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+    }
+}
