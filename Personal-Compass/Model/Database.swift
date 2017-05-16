@@ -61,6 +61,10 @@ class Database {
             print("realm initialization failed, aborting")
         }
     }
+    
+    func appStarted() {
+        //nothing to do here, all initialization is being done on the init.
+    }
 
 }
 
