@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Stress Selection View Controller-->
+        <scene sceneID="GFE-lB-vwW">
+            <objects>
+                <tableViewController id="aiV-aJ-KyN" customClass="StressSelectionViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qdU-Vc-IWr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="6J2-dA-8D5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the stress of this situation affecting me phisically" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unk-Qi-Tc6">
+                                    <rect key="frame" x="40" y="5" width="295" height="87"/>
+                                    <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="unk-Qi-Tc6" firstAttribute="leading" secondItem="6J2-dA-8D5" secondAttribute="leading" constant="40" id="DWM-4O-viX"/>
+                                <constraint firstAttribute="trailing" secondItem="unk-Qi-Tc6" secondAttribute="trailing" constant="40" id="Kv3-oc-QCc"/>
+                                <constraint firstAttribute="bottom" secondItem="unk-Qi-Tc6" secondAttribute="bottom" constant="5" id="cto-U9-mlL"/>
+                                <constraint firstItem="unk-Qi-Tc6" firstAttribute="top" secondItem="6J2-dA-8D5" secondAttribute="top" constant="5" id="rsi-sZ-usQ"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createItemCell" id="6aB-dw-Jgd" customClass="AddItemCell" customModule="Personal_Compass" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="125" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6aB-dw-Jgd" id="ROT-hv-05I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGT-rU-J3J">
+                                            <rect key="frame" x="40" y="6" width="295" height="30"/>
+                                            <state key="normal" title="Tap to create a new item"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="GGT-rU-J3J" secondAttribute="trailing" constant="40" id="awS-Gy-y4n"/>
+                                        <constraint firstItem="GGT-rU-J3J" firstAttribute="leading" secondItem="ROT-hv-05I" secondAttribute="leading" constant="40" id="pdJ-BW-vyw"/>
+                                        <constraint firstItem="GGT-rU-J3J" firstAttribute="centerY" secondItem="ROT-hv-05I" secondAttribute="centerY" id="rkH-r6-xxr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addButton" destination="GGT-rU-J3J" id="BtQ-q0-OvA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aiV-aJ-KyN" id="zNV-cL-4bm"/>
+                            <outlet property="delegate" destination="aiV-aJ-KyN" id="V8y-W8-h5y"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="titleLable" destination="unk-Qi-Tc6" id="HmF-gQ-hgW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlD-gQ-G8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="172.26386806596702"/>
+        </scene>
+    </scenes>
+</document>

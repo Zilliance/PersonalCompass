@@ -18,6 +18,11 @@
 		4FD5B64E1ECC3C2A0017DC06 /* PreloadedBodyStress.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */; };
 		4FD5B6501ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B64F1ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist */; };
 		4FD5B6521ECC3DEC0017DC06 /* PreloadedEmotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B6511ECC3DEC0017DC06 /* PreloadedEmotions.plist */; };
+		4FD5B6541ECCD8110017DC06 /* StressItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B6531ECCD8110017DC06 /* StressItems.storyboard */; };
+		4FD5B65A1ECCD9680017DC06 /* StressItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */; };
+		4FD5B65B1ECCD9680017DC06 /* StressItemSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B6591ECCD9680017DC06 /* StressItemSelectionCell.xib */; };
+		4FD5B65D1ECCDB200017DC06 /* StressSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */; };
+		4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */; };
 		5DEF7E6D86CE1016EC333832 /* Pods_Personal_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */; };
 		8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B051ECA2D9700566531 /* Muli-Black.ttf */; };
 		8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */; };
@@ -82,6 +87,11 @@
 		4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBodyStress.plist; path = Model/PreloadedBodyStress.plist; sourceTree = "<group>"; };
 		4FD5B64F1ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBehaviourStress.plist; path = Model/PreloadedBehaviourStress.plist; sourceTree = "<group>"; };
 		4FD5B6511ECC3DEC0017DC06 /* PreloadedEmotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedEmotions.plist; path = Model/PreloadedEmotions.plist; sourceTree = "<group>"; };
+		4FD5B6531ECCD8110017DC06 /* StressItems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StressItems.storyboard; sourceTree = "<group>"; };
+		4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressItemSelectionCell.swift; path = Cells/StressItemSelectionCell.swift; sourceTree = "<group>"; };
+		4FD5B6591ECCD9680017DC06 /* StressItemSelectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StressItemSelectionCell.xib; path = Cells/StressItemSelectionCell.xib; sourceTree = "<group>"; };
+		4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressSelectionViewController.swift; path = ViewControllers/StressSelectionViewController.swift; sourceTree = "<group>"; };
+		4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemCell.swift; path = Cells/AddItemCell.swift; sourceTree = "<group>"; };
 		8C463B051ECA2D9700566531 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Black.ttf"; path = "Fonts/Muli-Black.ttf"; sourceTree = "<group>"; };
 		8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-BlackItalic.ttf"; path = "Fonts/Muli-BlackItalic.ttf"; sourceTree = "<group>"; };
 		8C463B071ECA2D9700566531 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Bold.ttf"; path = "Fonts/Muli-Bold.ttf"; sourceTree = "<group>"; };
@@ -183,6 +193,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4FD5B6571ECCD93B0017DC06 /* StressSelectionItems */ = {
+			isa = PBXGroup;
+			children = (
+				4FD5B6531ECCD8110017DC06 /* StressItems.storyboard */,
+				4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */,
+				4FD5B6591ECCD9680017DC06 /* StressItemSelectionCell.xib */,
+				4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */,
+				4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */,
+			);
+			name = StressSelectionItems;
+			sourceTree = "<group>";
+		};
 		8C463B041ECA2D8600566531 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +293,7 @@
 		E37C7A791EC9FBA300076737 /* Personal-Compass */ = {
 			isa = PBXGroup;
 			children = (
+				4FD5B6571ECCD93B0017DC06 /* StressSelectionItems */,
 				047A57FF1ECB2B3700BC7650 /* Model */,
 				8C463B3D1ECB6E2300566531 /* App.swift */,
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,
@@ -439,6 +462,7 @@
 				8C463B1B1ECA2D9700566531 /* Muli-Italic.ttf in Resources */,
 				8C463B1D1ECA2D9700566531 /* Muli-LightItalic.ttf in Resources */,
 				8C463B1E1ECA2D9700566531 /* Muli-Regular.ttf in Resources */,
+				4FD5B65B1ECCD9680017DC06 /* StressItemSelectionCell.xib in Resources */,
 				4FD5B64E1ECC3C2A0017DC06 /* PreloadedBodyStress.plist in Resources */,
 				4FD5B6501ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist in Resources */,
 				8C463B341ECA63CB00566531 /* WebView.storyboard in Resources */,
@@ -450,6 +474,7 @@
 				8C463B1A1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf in Resources */,
 				E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */,
 				8C463B1C1ECA2D9700566531 /* Muli-Light.ttf in Resources */,
+				4FD5B6541ECCD8110017DC06 /* StressItems.storyboard in Resources */,
 				8C463B281ECA358F00566531 /* StartCompass.storyboard in Resources */,
 				8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */,
 				8C463B2E1ECA441100566531 /* SideMenu.storyboard in Resources */,
@@ -626,12 +651,15 @@
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
 				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
+				4FD5B65D1ECCDB200017DC06 /* StressSelectionViewController.swift in Sources */,
 				8C463B3E1ECB6E2300566531 /* App.swift in Sources */,
+				4FD5B65A1ECCD9680017DC06 /* StressItemSelectionCell.swift in Sources */,
 				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,
 				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
 				4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */,
 				8C463B361ECA63D700566531 /* WebViewController.swift in Sources */,
 				8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */,
+				4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 				8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */,
 				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
