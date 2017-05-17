@@ -49,6 +49,7 @@ class CreateCompassViewController: UIViewController {
         self.topLabel.clipsToBounds = true
         self.topLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.addChildViewController(self.pageControlViewController)
+        self.pageControlViewController.didMove(toParentViewController: self)
         self.pageContainerView.addSubview(self.pageControlViewController.view)
     }
     
