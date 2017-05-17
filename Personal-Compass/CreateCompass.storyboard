@@ -12,9 +12,6 @@
         <array key="Muli-Bold.ttf">
             <string>Muli-Bold</string>
         </array>
-        <array key="Muli-Regular.ttf">
-            <string>Muli-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Create Compass View Controller-->
@@ -29,10 +26,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGI-7Y-I1n">
+                                <rect key="frame" x="20" y="597" width="48" height="50"/>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.4549019608" green="0.79607843140000001" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backAction:" destination="OKr-4S-7Vd" eventType="touchUpInside" id="6hV-ok-zff"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVq-fT-VQY">
-                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <rect key="frame" x="310" y="597" width="45" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="KRM-rG-vXz"/>
+                                    <constraint firstAttribute="height" constant="50" id="SD1-tD-3cn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
                                 <state key="normal" title="NEXT">
@@ -67,20 +74,6 @@
                                             <constraint firstAttribute="height" constant="36" id="IZa-KY-P7M"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGI-7Y-I1n">
-                                        <rect key="frame" x="20" y="30" width="46" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="Y5w-f6-yTJ"/>
-                                            <constraint firstAttribute="height" constant="30" id="z5d-km-QFW"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
-                                        <state key="normal" title="Back">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="backAction:" destination="OKr-4S-7Vd" eventType="touchUpInside" id="6hV-ok-zff"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0085661538128493347" green="0.20100701917046276" blue="0.48014491580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -91,26 +84,26 @@
                                     <constraint firstAttribute="trailing" secondItem="Bsn-fd-0nv" secondAttribute="trailing" id="UT1-3D-AZc"/>
                                     <constraint firstItem="7gC-GR-w4D" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" id="Yqb-qr-Blf"/>
                                     <constraint firstAttribute="bottom" secondItem="7gC-GR-w4D" secondAttribute="bottom" constant="25" id="f31-hu-dmO"/>
-                                    <constraint firstItem="uGI-7Y-I1n" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" constant="20" id="iVa-2z-VgU"/>
-                                    <constraint firstItem="uGI-7Y-I1n" firstAttribute="top" secondItem="iTh-8Q-mvF" secondAttribute="top" constant="30" id="qNZ-fr-sIm"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGI-Ub-dY5">
                                 <rect key="frame" x="0.0" y="128" width="375" height="449"/>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3ar-5q-Iaj" firstAttribute="top" secondItem="lVq-fT-VQY" secondAttribute="bottom" constant="20" id="2Yl-3E-OQd"/>
                             <constraint firstAttribute="trailing" secondItem="iTh-8Q-mvF" secondAttribute="trailing" id="5ot-LM-jjb"/>
                             <constraint firstItem="iGI-Ub-dY5" firstAttribute="leading" secondItem="m4W-LG-OIi" secondAttribute="leading" id="6Yt-E4-lH9"/>
                             <constraint firstItem="iTh-8Q-mvF" firstAttribute="top" secondItem="m4W-LG-OIi" secondAttribute="top" id="6qe-VW-UvP"/>
-                            <constraint firstItem="lVq-fT-VQY" firstAttribute="top" secondItem="iGI-Ub-dY5" secondAttribute="bottom" constant="20" id="O23-E5-bcA"/>
-                            <constraint firstItem="lVq-fT-VQY" firstAttribute="leading" secondItem="m4W-LG-OIi" secondAttribute="leading" constant="20" id="cRb-4W-QHn"/>
+                            <constraint firstItem="3ar-5q-Iaj" firstAttribute="top" secondItem="uGI-7Y-I1n" secondAttribute="bottom" constant="20" id="PNM-es-PU4"/>
+                            <constraint firstAttribute="trailing" secondItem="lVq-fT-VQY" secondAttribute="trailing" constant="20" id="TVv-7a-42s"/>
                             <constraint firstItem="iTh-8Q-mvF" firstAttribute="leading" secondItem="m4W-LG-OIi" secondAttribute="leading" id="jF1-du-MgN"/>
+                            <constraint firstItem="lVq-fT-VQY" firstAttribute="top" secondItem="iGI-Ub-dY5" secondAttribute="bottom" constant="20" id="liH-zk-Jed"/>
+                            <constraint firstItem="uGI-7Y-I1n" firstAttribute="leading" secondItem="m4W-LG-OIi" secondAttribute="leading" constant="20" id="mu7-xm-kaI"/>
                             <constraint firstAttribute="trailing" secondItem="iGI-Ub-dY5" secondAttribute="trailing" id="pjG-I4-fQS"/>
                             <constraint firstItem="iGI-Ub-dY5" firstAttribute="top" secondItem="iTh-8Q-mvF" secondAttribute="bottom" id="rF3-g6-U7M"/>
-                            <constraint firstAttribute="trailing" secondItem="lVq-fT-VQY" secondAttribute="trailing" constant="20" id="vac-JW-iho"/>
-                            <constraint firstItem="3ar-5q-Iaj" firstAttribute="top" secondItem="lVq-fT-VQY" secondAttribute="bottom" constant="20" id="wad-bG-4yK"/>
+                            <constraint firstItem="uGI-7Y-I1n" firstAttribute="top" secondItem="iGI-Ub-dY5" secondAttribute="bottom" constant="20" id="voW-s3-kVq"/>
                         </constraints>
                     </view>
                     <connections>

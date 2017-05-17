@@ -15,13 +15,24 @@ class CreateCompassViewController: UIViewController {
     @IBOutlet weak var pageControl: FXPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     
-    fileprivate let sections = ["Emotion", "Thought", "Body", "Behavior", "Inner Wisdom"]
+    private enum CompassScene: String {
+        case stressor
+    }
+    
+    fileprivate(set) lazy var viewControllers: [UIViewController]  = {
+        
+        var viewControllers: [UIViewController] = [
+            self.viewController(for: .stressor),
+            ]
+        
+        return viewControllers
+        
+    }()
     
     fileprivate lazy var pageControlViewController: UIPageViewController = {
         let controller = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         controller.delegate = self
-        controller.dataSource = self
-        controller.setViewControllers([UIViewController()], direction: .forward, animated: true, completion: nil)
+        controller.setViewControllers([self.viewControllers.first!], direction: .forward, animated: true, completion: nil)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         return controller
     }()
@@ -40,7 +51,7 @@ class CreateCompassViewController: UIViewController {
         
         self.topLabel.backgroundColor = .clear
         self.pageControl.dotSize = 12
-        self.pageControl.numberOfPages = sections.count
+        self.pageControl.numberOfPages = self.viewControllers.count
         self.pageControl.dotColor = .darkGray
         self.pageControl.dotSpacing = 20
         self.pageControl.selectedDotColor = .white
@@ -48,10 +59,25 @@ class CreateCompassViewController: UIViewController {
         self.pageControl.backgroundColor = .clear
         
         self.topLabel.clipsToBounds = true
+        self.topLabel.text = CompassScene.stressor.rawValue.capitalized
+        self.topLabel.layer.backgroundColor = UIColor.red.cgColor
         self.topLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.addChildViewController(self.pageControlViewController)
         self.pageControlViewController.didMove(toParentViewController: self)
         self.pageContainerView.addSubview(self.pageControlViewController.view)
+        
+        self.pageControlViewController.view.topAnchor.constraint(equalTo: self.pageContainerView.topAnchor).isActive = true
+        self.pageControlViewController.view.leadingAnchor.constraint(equalTo: self.pageContainerView.leadingAnchor).isActive = true
+        self.pageControlViewController.view.trailingAnchor.constraint(equalTo: self.pageContainerView.trailingAnchor).isActive = true
+        self.pageControlViewController.view.bottomAnchor.constraint(equalTo: self.pageContainerView.bottomAnchor).isActive = true
+        
+        
+    }
+    
+    private func viewController(for scene: CompassScene) -> UIViewController {
+    
+        return UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController()!
+        
     }
     
     // MARK: - User Actions
@@ -68,17 +94,7 @@ class CreateCompassViewController: UIViewController {
     }
 }
 
-extension CreateCompassViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+extension CreateCompassViewController: UIPageViewControllerDelegate {
     
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        
-        return nil
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-
-        return nil
-    }
     
 }
