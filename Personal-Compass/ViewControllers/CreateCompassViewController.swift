@@ -38,6 +38,7 @@ class CreateCompassViewController: UIViewController {
     
     private func setupView() {
         
+        self.topLabel.backgroundColor = .clear
         self.pageControl.dotSize = 12
         self.pageControl.numberOfPages = sections.count
         self.pageControl.dotColor = .darkGray
@@ -61,6 +62,9 @@ class CreateCompassViewController: UIViewController {
     
     @IBAction func nextAction(_ sender: UIButton) {
         self.pageControl.currentPage += 1
+        UIView.animate(withDuration: 0.3) { 
+            self.topLabel.layer.backgroundColor = UIColor.green.cgColor
+        }
     }
 }
 
