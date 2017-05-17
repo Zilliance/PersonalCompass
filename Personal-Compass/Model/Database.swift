@@ -153,7 +153,7 @@ extension Database {
     
     fileprivate func bootstrapBodyStress() {
         
-        parseStressData(fileName: "PreloadedBodyStress", type: BodyStress.self)
+        parseStressData(fileName: "PreloadedBodyStress", itemType: BodyStress.self)
         
         print(bodyStressStored)
 
@@ -161,7 +161,7 @@ extension Database {
     
     fileprivate func bootstrapBehaviourStress() {
 
-        parseStressData(fileName: "PreloadedBehaviourStress", type: BehaviourStress.self)
+        parseStressData(fileName: "PreloadedBehaviourStress", itemType: BehaviourStress.self)
         
         print(behaviourStressStored)
     }
