@@ -15,24 +15,42 @@ class CreateCompassViewController: UIViewController {
     @IBOutlet weak var pageControl: FXPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     
-    private enum CompassScene: String {
-        case stressor
+    private struct CompassItem {
+        let viewController: UIViewController
+        let scene: CompassScene
     }
     
-    fileprivate(set) lazy var viewControllers: [UIViewController]  = {
+    private enum CompassScene: String {
+        case stressor
+        case emotion
         
-        var viewControllers: [UIViewController] = [
-            self.viewController(for: .stressor),
-            ]
+        var color: UIColor {
+            switch self {
+            case .stressor:
+                return .darkGray
+            case .emotion:
+                return .red
+            }
+        }
+    }
+    
+    private var pageCount = 0
+    
+    private lazy var compassItems: [CompassItem]  = {
         
-        return viewControllers
+        var items: [CompassItem] = [
+            CompassItem(viewController: self.viewController(for: .stressor), scene: .stressor),
+            CompassItem(viewController: self.viewController(for: .emotion), scene: .emotion),
+            
+        ]
+        
+        return items
         
     }()
     
-    fileprivate lazy var pageControlViewController: UIPageViewController = {
+    private lazy var pageControlViewController: UIPageViewController = {
         let controller = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        controller.delegate = self
-        controller.setViewControllers([self.viewControllers.first!], direction: .forward, animated: true, completion: nil)
+        controller.setViewControllers([self.compassItems.first!.viewController], direction: .forward, animated: true, completion: nil)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         return controller
     }()
@@ -51,7 +69,7 @@ class CreateCompassViewController: UIViewController {
         
         self.topLabel.backgroundColor = .clear
         self.pageControl.dotSize = 12
-        self.pageControl.numberOfPages = self.viewControllers.count
+        self.pageControl.numberOfPages = self.compassItems.count
         self.pageControl.dotColor = .darkGray
         self.pageControl.dotSpacing = 20
         self.pageControl.selectedDotColor = .white
@@ -60,7 +78,7 @@ class CreateCompassViewController: UIViewController {
         
         self.topLabel.clipsToBounds = true
         self.topLabel.text = CompassScene.stressor.rawValue.capitalized
-        self.topLabel.layer.backgroundColor = UIColor.red.cgColor
+        self.topLabel.layer.backgroundColor = CompassScene.stressor.color.cgColor
         self.topLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.addChildViewController(self.pageControlViewController)
         self.pageControlViewController.didMove(toParentViewController: self)
@@ -80,21 +98,47 @@ class CreateCompassViewController: UIViewController {
         
     }
     
+    private func setupLabel(for scene: CompassScene) {
+        
+        UIView.animate(withDuration: 0.3, animations: { 
+            self.topLabel.layer.backgroundColor = scene.color.cgColor
+        }) { _ in
+            self.topLabel.text = scene.rawValue.capitalized
+        }
+        
+    }
+    
     // MARK: - User Actions
 
     @IBAction func backAction(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        guard self.pageCount > 0 else {
+            return
+        }
+        
+        self.pageCount -= 1
+        
+        self.pageControl.currentPage = self.pageCount
+        
+        let item = self.compassItems[self.pageCount]
+        
+        self.pageControlViewController.setViewControllers([item.viewController], direction: .reverse, animated: true, completion: nil)
+        self.setupLabel(for: item.scene)
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
-        self.pageControl.currentPage += 1
-        UIView.animate(withDuration: 0.3) { 
-            self.topLabel.layer.backgroundColor = UIColor.green.cgColor
+        
+        guard self.pageCount < self.compassItems.count - 1 else {
+            return
         }
+        
+        self.pageCount += 1
+        
+        self.pageControl.currentPage = self.pageCount
+        
+        let item = self.compassItems[self.pageCount]
+        
+        self.pageControlViewController.setViewControllers([item.viewController], direction: .forward, animated: true, completion: nil)
+        self.setupLabel(for: item.scene)
     }
 }
 
-extension CreateCompassViewController: UIPageViewControllerDelegate {
-    
-    
-}
