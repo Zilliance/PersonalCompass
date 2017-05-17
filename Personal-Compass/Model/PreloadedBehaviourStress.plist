@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <string>Social withdrawal/isolation</string>
+    <string>Short-tempered</string>
+    <string>Over-reacting</string>
+    <string>Decreased productivity</string>
+    <string>Difficulty concentrating</string>
+    <string>Crying spells/weepiness</string>
+    <string>Difficulty communicating</string>
+    <string>Nervous habits, fidgeting</string>
+    <string>Panic attacks</string>
+    <string>Nail biting</string>
+    <string>Weight gain/weight loss</string>
+    <string>Overeating/not eating</string>
+    <string>Lack of interest in appearance</string>
+    <string>Lack of interest in punctuality</string>
+    <string>Overworking</string>
+    <string>Loss of sense of humor</string>
+    <string>Alcohol/substance abuse</string>
+    <string>Obsessive/compulsive behavior</string>
+</array>
+</plist>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>longTitle</key>
+		<string>Despairing, Ashamed, Fearful, Hopeless, Helpless</string>
+		<key>shortTitle</key>
+		<string>Despairing, Ashamed, ...</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Despairing, Ashamed, Fearful, Hopeless, Helpless</string>
+		<key>shortTitle</key>
+		<string>Despairing, Ashamed, ...</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Angry, Resentful, Disgusted, Hateful, Jealous, Depressed</string>
+		<key>shortTitle</key>
+		<string>Angry, Resentful, Disgusted</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Dejected, Hurt, Discouraged, Deflated</string>
+		<key>shortTitle</key>
+		<string>Dejected, Hurt</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Doubtful, Disappointed, Disillusioned, Worried, Anxious</string>
+		<key>shortTitle</key>
+		<string>Doubtful, Disappointed</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Frustrated, Impatient, Overwhelmed, Confused, Embarrassed</string>
+		<key>shortTitle</key>
+		<string>Frustrated, Impatient</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Neutral, Apathetic, Pessimistic, Distrustful</string>
+		<key>shortTitle</key>
+		<string>Neutral, Apathetic</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Content, Peaceful, Calm</string>
+		<key>shortTitle</key>
+		<string>Content</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Optimistic, Happy, Hopeful, Willing, Open</string>
+		<key>shortTitle</key>
+		<string>Optimistic, Happy</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Inspired, Confident, Trusting</string>
+		<key>shortTitle</key>
+		<string>Inspired, Confident</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Passionate, Blissful, Delighted, Enthusiastic</string>
+		<key>shortTitle</key>
+		<string>Passionate, Blissful</string>
+	</dict>
+	<dict>
+		<key>longTitle</key>
+		<string>Joyful, Appreciative, Loving, Empowered, Free</string>
+		<key>shortTitle</key>
+		<string>Joyful, Appreciative</string>
+	</dict>
+</array>
+</plist>

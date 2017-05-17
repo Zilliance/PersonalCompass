@@ -71,6 +71,7 @@ extension Database {
     
     fileprivate func bootstrap() {
         //we'll preload the body stress and physical stress elements here
+        self.bootstrapEmotions()
         self.bootstrapUser()
     }
     
@@ -84,6 +85,33 @@ extension Database {
         add(realmObject: user)
         
         self.user = user
+    }
+    
+    typealias PreloadedEmotionData = [[String: String]]
+    fileprivate func bootstrapEmotions() {
+        
+        let emotionsPreloaded = realm.objects(Emotion.self)
+        print(emotionsPreloaded)
+        
+        if let path = Bundle.main.path(forResource: "PreloadedEmotions", ofType: "plist"), let emotions = NSArray(contentsOfFile: path) as? PreloadedEmotionData {
+        
+            try! realm.write({
+                emotions.enumerated().forEach({ offset, emotion in
+                    guard let longTitle = emotion["longTitle"], let shortTitle = emotion["shortTitle"] else {
+                        return assertionFailure()
+                    }
+                    
+                    let newEmotion = Emotion()
+                    newEmotion.level = offset
+                    newEmotion.longTitle = longTitle
+                    newEmotion.shortTitle = shortTitle
+                    
+                    realm.add(newEmotion)
+                    
+                })
+            })
+
+        }
     }
     
     

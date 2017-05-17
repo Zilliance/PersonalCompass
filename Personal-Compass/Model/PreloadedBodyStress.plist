@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <string>Stiff or sore muscles</string>
+    <string>Neck pain</string>
+    <string>Back pain</string>
+    <string>Headache</string>
+    <string>Stomach ache</string>
+    <string>Nausea</string>
+    <string>Tightness of chest</string>
+    <string>Difficulty breathing/sighing</string>
+    <string>Chest pain/palpitations</string>
+    <string>Jaw clenching</string>
+    <string>Teeth grinding</string>
+    <string>Dry mouth</string>
+    <string>Dizziness/lightheadedness</string>
+    <string>Tiredness/fatigue</string>
+    <string>Sleeplessness</string>
+    <string>Appetite increase/decrease</string>
+</array>
+</plist>
