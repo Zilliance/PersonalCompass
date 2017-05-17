@@ -28,7 +28,6 @@
 		8C463B1E1ECA2D9700566531 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B101ECA2D9700566531 /* Muli-Regular.ttf */; };
 		8C463B1F1ECA2D9700566531 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B111ECA2D9700566531 /* Muli-SemiBold.ttf */; };
 		8C463B201ECA2D9700566531 /* Muli-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B121ECA2D9700566531 /* Muli-SemiBoldItalic.ttf */; };
-		8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */; };
 		8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */; };
 		8C463B281ECA358F00566531 /* StartCompass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B271ECA358F00566531 /* StartCompass.storyboard */; };
 		8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B291ECA36BD00566531 /* StartCompassViewController.swift */; };
@@ -605,10 +604,8 @@
 			files = (
 				047A58011ECB2B5200BC7650 /* Compass.swift in Sources */,
 				8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */,
-				E37C7A7D1EC9FBA300076737 /* ViewController.swift in Sources */,
 				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
-				8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
@@ -616,7 +613,6 @@
 				8C463B251ECA2ED600566531 /* UIFont+CustomFonts.swift in Sources */,
 				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,
 				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
-				8C463B241ECA2ED600566531 /* UIColor+CustomColors.swift in Sources */,
 				8C463B361ECA63D700566531 /* WebViewController.swift in Sources */,
 				8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
