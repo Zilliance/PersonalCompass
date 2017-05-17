@@ -55,6 +55,10 @@ class CreateCompassViewController: UIViewController {
     
     // MARK: - User Actions
 
+    @IBAction func backAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func nextAction(_ sender: UIButton) {
         self.pageControl.currentPage += 1
     }

@@ -26,6 +26,11 @@ class StartCompassViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     private func setupView() {
         self.title = "Personal Compass"
         self.startCompassButton.layer.cornerRadius = App.Appearance.buttonCornerRadius
