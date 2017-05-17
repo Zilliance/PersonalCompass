@@ -34,5 +34,10 @@ final class Emotion: Object {
     dynamic var shortTitle: String = ""
 
     dynamic var longTitle: String = ""
+    
+    var icon: UIImage? {
+        let iconName = "emotion-icon-\(self.level)"
+        return UIImage(named: iconName)
+    }
 
 }
