@@ -13,6 +13,17 @@ class StressItem: Object {
 
     dynamic var title: String?
     dynamic var order: Int = 0
+    
+    class func createNew(title: String) -> Self {
+        
+        let newItem = self.init()
+        newItem.order = -1
+        newItem.title = title
+        
+        Database.shared.add(realmObject: newItem)
+        
+        return newItem
+    }
 
 }
 
@@ -129,11 +140,11 @@ extension Database {
                 data.enumerated().forEach({ offset, stressItem  in
                     //newItemLoaded(offset, stressItem)
                     
-                    let newBodyStress = T()
-                    newBodyStress.title = stressItem
-                    newBodyStress.order = offset
+                    let newStressItem = T()
+                    newStressItem.title = stressItem
+                    newStressItem.order = offset
                     
-                    realm.add(newBodyStress)
+                    realm.add(newStressItem)
                     
                 })
             })

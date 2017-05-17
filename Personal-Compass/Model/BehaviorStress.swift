@@ -10,5 +10,5 @@ import Foundation
 import RealmSwift
 
 final class BehaviourStress: StressItem {
-
+    
 }
