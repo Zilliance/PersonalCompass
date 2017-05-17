@@ -132,7 +132,7 @@ extension Database {
     
     typealias StressData = [String]
     
-    fileprivate func parseStressData<T: StressItem>(fileName: String, type: T.Type) {
+    fileprivate func parseStressData(fileName: String, itemType: StressItem.Type) {
         if let path = Bundle.main.path(forResource: fileName, ofType: "plist"), let data = NSArray(contentsOfFile: path) as? StressData {
             
             try! realm.write({
@@ -140,7 +140,7 @@ extension Database {
                 data.enumerated().forEach({ offset, stressItem  in
                     //newItemLoaded(offset, stressItem)
                     
-                    let newStressItem = T()
+                    let newStressItem = itemType.init()
                     newStressItem.title = stressItem
                     newStressItem.order = offset
                     
@@ -154,6 +154,8 @@ extension Database {
     fileprivate func bootstrapBodyStress() {
         
         parseStressData(fileName: "PreloadedBodyStress", type: BodyStress.self)
+        
+        print(bodyStressStored)
 
     }
     
@@ -161,6 +163,7 @@ extension Database {
 
         parseStressData(fileName: "PreloadedBehaviourStress", type: BehaviourStress.self)
         
+        print(behaviourStressStored)
     }
     
     
