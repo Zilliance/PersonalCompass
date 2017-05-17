@@ -9,6 +9,13 @@
 import Foundation
 import RealmSwift
 
+class StressItem: Object {
+
+    dynamic var title: String?
+    dynamic var order: Int = 0
+
+}
+
 class Database {
     static let shared = Database()
     
@@ -18,7 +25,7 @@ class Database {
     
     private(set) var bodyStressStored: Results<BodyStress>!
 
-    private(set) var behaviorStressStored: Results<BehaviorStress>!
+    private(set) var behaviourStressStored: Results<BehaviourStress>!
     
     init() {
         do {
@@ -41,7 +48,7 @@ class Database {
             
             bodyStressStored = self.realm.objects(BodyStress.self).sorted(byKeyPath: "title")
             
-            behaviorStressStored = self.realm.objects(BehaviorStress.self).sorted(byKeyPath: "title")
+            behaviourStressStored = self.realm.objects(BehaviourStress.self).sorted(byKeyPath: "title")
 
             if let user = self.realm.objects(User.self).first
             {
@@ -72,6 +79,8 @@ extension Database {
     fileprivate func bootstrap() {
         //we'll preload the body stress and physical stress elements here
         self.bootstrapEmotions()
+        self.bootstrapBodyStress()
+        self.bootstrapBehaviourStress()
         self.bootstrapUser()
     }
     
@@ -88,11 +97,8 @@ extension Database {
     }
     
     typealias PreloadedEmotionData = [[String: String]]
+    
     fileprivate func bootstrapEmotions() {
-        
-        let emotionsPreloaded = realm.objects(Emotion.self)
-        print(emotionsPreloaded)
-        
         if let path = Bundle.main.path(forResource: "PreloadedEmotions", ofType: "plist"), let emotions = NSArray(contentsOfFile: path) as? PreloadedEmotionData {
         
             try! realm.write({
@@ -110,8 +116,40 @@ extension Database {
                     
                 })
             })
-
         }
+    }
+    
+    typealias StressData = [String]
+    
+    fileprivate func parseStressData<T: StressItem>(fileName: String, type: T.Type) {
+        if let path = Bundle.main.path(forResource: fileName, ofType: "plist"), let data = NSArray(contentsOfFile: path) as? StressData {
+            
+            try! realm.write({
+                
+                data.enumerated().forEach({ offset, stressItem  in
+                    //newItemLoaded(offset, stressItem)
+                    
+                    let newBodyStress = T()
+                    newBodyStress.title = stressItem
+                    newBodyStress.order = offset
+                    
+                    realm.add(newBodyStress)
+                    
+                })
+            })
+        }
+    }
+    
+    fileprivate func bootstrapBodyStress() {
+        
+        parseStressData(fileName: "PreloadedBodyStress", type: BodyStress.self)
+
+    }
+    
+    fileprivate func bootstrapBehaviourStress() {
+
+        parseStressData(fileName: "PreloadedBehaviourStress", type: BehaviourStress.self)
+        
     }
     
     

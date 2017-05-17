@@ -9,8 +9,6 @@
 import Foundation
 import RealmSwift
 
-final class BodyStress: Object {
-    
-    dynamic var title: String?
+final class BodyStress: StressItem {
     
 }
