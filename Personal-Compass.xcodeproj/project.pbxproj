@@ -44,6 +44,12 @@
 		8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B381ECA642600566531 /* UIDevice+Extensions.swift */; };
 		8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B3B1ECA682F00566531 /* AboutCompanyViewController.swift */; };
 		8C463B3E1ECB6E2300566531 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B3D1ECB6E2300566531 /* App.swift */; };
+		8C463B411ECB843400566531 /* CreateCompass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B401ECB843400566531 /* CreateCompass.storyboard */; };
+		8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B421ECBA02600566531 /* CreateCompassViewController.swift */; };
+		8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166801ECCD0DD0072C19F /* Stressor.storyboard */; };
+		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
+		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
+		8C9166881ECCF2030072C19F /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166871ECCF2030072C19F /* EmotionViewController.swift */; };
 		8CF78EC94537B4F6424BE525 /* Pods_Personal_CompassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */; };
 		CBF5C2B987593B1534F06EDA /* Pods_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
@@ -109,6 +115,12 @@
 		8C463B381ECA642600566531 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "Extensions/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		8C463B3B1ECA682F00566531 /* AboutCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutCompanyViewController.swift; path = ViewControllers/AboutCompanyViewController.swift; sourceTree = "<group>"; };
 		8C463B3D1ECB6E2300566531 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		8C463B401ECB843400566531 /* CreateCompass.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateCompass.storyboard; sourceTree = "<group>"; };
+		8C463B421ECBA02600566531 /* CreateCompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateCompassViewController.swift; path = ViewControllers/CreateCompassViewController.swift; sourceTree = "<group>"; };
+		8C9166801ECCD0DD0072C19F /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
+		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
+		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
+		8C9166871ECCF2030072C19F /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionViewController.swift; path = ViewControllers/EmotionViewController.swift; sourceTree = "<group>"; };
 		93B37BC394469BAF74853DD5 /* Pods-Personal-CompassUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests.release.xcconfig"; sourceTree = "<group>"; };
 		978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2CF0E80AFBAC596BA0EBC /* Pods-Personal-Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +231,9 @@
 			isa = PBXGroup;
 			children = (
 				8C463B2C1ECA3BA600566531 /* SideMenu */,
+				8C91667F1ECCB8900072C19F /* Stressor */,
+				8C9166841ECCF18F0072C19F /* Emotion */,
+				8C463B3F1ECB81A400566531 /* CreateCompass */,
 				8C463B2B1ECA3B6000566531 /* StartCompass */,
 			);
 			name = Scenes;
@@ -244,6 +259,33 @@
 				8C463B351ECA63D700566531 /* WebViewController.swift */,
 			);
 			name = SideMenu;
+			sourceTree = "<group>";
+		};
+		8C463B3F1ECB81A400566531 /* CreateCompass */ = {
+			isa = PBXGroup;
+			children = (
+				8C463B401ECB843400566531 /* CreateCompass.storyboard */,
+				8C463B421ECBA02600566531 /* CreateCompassViewController.swift */,
+			);
+			name = CreateCompass;
+			sourceTree = "<group>";
+		};
+		8C91667F1ECCB8900072C19F /* Stressor */ = {
+			isa = PBXGroup;
+			children = (
+				8C9166801ECCD0DD0072C19F /* Stressor.storyboard */,
+				8C9166821ECCDA090072C19F /* StressorViewController.swift */,
+			);
+			name = Stressor;
+			sourceTree = "<group>";
+		};
+		8C9166841ECCF18F0072C19F /* Emotion */ = {
+			isa = PBXGroup;
+			children = (
+				8C9166851ECCF1F20072C19F /* Emotion.storyboard */,
+				8C9166871ECCF2030072C19F /* EmotionViewController.swift */,
+			);
+			name = Emotion;
 			sourceTree = "<group>";
 		};
 		E37C7A6E1EC9FBA300076737 = {
@@ -441,12 +483,15 @@
 				8C463B1E1ECA2D9700566531 /* Muli-Regular.ttf in Resources */,
 				4FD5B64E1ECC3C2A0017DC06 /* PreloadedBodyStress.plist in Resources */,
 				4FD5B6501ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist in Resources */,
+				8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */,
+				8C463B411ECB843400566531 /* CreateCompass.storyboard in Resources */,
 				8C463B341ECA63CB00566531 /* WebView.storyboard in Resources */,
 				8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */,
 				E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */,
 				8C463B191ECA2D9700566531 /* Muli-ExtraLight.ttf in Resources */,
 				4FD5B6521ECC3DEC0017DC06 /* PreloadedEmotions.plist in Resources */,
 				8C463B201ECA2D9700566531 /* Muli-SemiBoldItalic.ttf in Resources */,
+				8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */,
 				8C463B1A1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf in Resources */,
 				E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */,
 				8C463B1C1ECA2D9700566531 /* Muli-Light.ttf in Resources */,
@@ -618,6 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9166881ECCF2030072C19F /* EmotionViewController.swift in Sources */,
 				4FD5B64C1ECBD9550017DC06 /* UIFont+CustomFonts.swift in Sources */,
 				047A58011ECB2B5200BC7650 /* Compass.swift in Sources */,
 				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
@@ -627,6 +673,7 @@
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
 				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
 				8C463B3E1ECB6E2300566531 /* App.swift in Sources */,
+				8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */,
 				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,
 				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
 				4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */,
@@ -635,6 +682,7 @@
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 				8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */,
 				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
+				8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
