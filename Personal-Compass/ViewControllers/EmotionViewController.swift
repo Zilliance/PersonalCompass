@@ -18,7 +18,7 @@ class EmotionCell: UITableViewCell {
     
     func setup(for emotion: Emotion) {
         self.titleLabel.text = emotion.shortTitle
-        self.numberLabel.text = "\(emotion.level)"
+        self.numberLabel.text = "\(emotion.level + 1)"
         self.iconImageView.image = emotion.icon
     }
     
