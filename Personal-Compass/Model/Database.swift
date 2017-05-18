@@ -160,7 +160,7 @@ extension Database {
     fileprivate func bootstrapBehaviourStress() {
 
         parseStressData(fileName: "PreloadedBehaviourStress", itemType: BehaviourStress.self)
-    
+
     }
     
     
