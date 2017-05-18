@@ -10,12 +10,6 @@
 	</dict>
 	<dict>
 		<key>longTitle</key>
-		<string>Despairing, Ashamed, Fearful, Hopeless, Helpless</string>
-		<key>shortTitle</key>
-		<string>Despairing, Ashamed, ...</string>
-	</dict>
-	<dict>
-		<key>longTitle</key>
 		<string>Angry, Resentful, Disgusted, Hateful, Jealous, Depressed</string>
 		<key>shortTitle</key>
 		<string>Angry, Resentful, Disgusted</string>
