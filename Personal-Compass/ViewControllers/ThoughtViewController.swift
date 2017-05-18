@@ -9,27 +9,29 @@
 import UIKit
 
 class ThoughtViewController: UIViewController {
+    
+    // dummy data
+    var emotion: Emotion? = Database.shared.allEmotions().first
 
+    @IBOutlet weak var emotionIconImageView: UIImageView!
+    @IBOutlet weak var emotionLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func setupView() {
+        self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
+        self.textView.layer.borderWidth = App.Appearance.borderWidth
+        self.textView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        if let emotion = self.emotion {
+            self.emotionIconImageView.image = emotion.icon
+            self.emotionLabel.text = emotion.shortTitle
+            self.emotionLabel.textColor = .red
+        }
     }
-    */
 
 }
