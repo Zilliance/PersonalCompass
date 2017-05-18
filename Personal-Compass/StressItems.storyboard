@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,17 +18,17 @@
         <!--Stress Selection View Controller-->
         <scene sceneID="GFE-lB-vwW">
             <objects>
-                <tableViewController id="aiV-aJ-KyN" customClass="StressSelectionViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qdU-Vc-IWr">
+                <tableViewController storyboardIdentifier="StressSelectionViewController" id="aiV-aJ-KyN" customClass="StressSelectionViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qdU-Vc-IWr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="6J2-dA-8D5">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the stress of this situation affecting me phisically" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unk-Qi-Tc6">
-                                    <rect key="frame" x="40" y="5" width="295" height="87"/>
+                                    <rect key="frame" x="40" y="13.5" width="295" height="43"/>
                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -35,33 +36,85 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="unk-Qi-Tc6" firstAttribute="centerY" secondItem="6J2-dA-8D5" secondAttribute="centerY" id="8ut-6j-9fa"/>
                                 <constraint firstItem="unk-Qi-Tc6" firstAttribute="leading" secondItem="6J2-dA-8D5" secondAttribute="leading" constant="40" id="DWM-4O-viX"/>
                                 <constraint firstAttribute="trailing" secondItem="unk-Qi-Tc6" secondAttribute="trailing" constant="40" id="Kv3-oc-QCc"/>
-                                <constraint firstAttribute="bottom" secondItem="unk-Qi-Tc6" secondAttribute="bottom" constant="5" id="cto-U9-mlL"/>
-                                <constraint firstItem="unk-Qi-Tc6" firstAttribute="top" secondItem="6J2-dA-8D5" secondAttribute="top" constant="5" id="rsi-sZ-usQ"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="createItemCell" id="6aB-dw-Jgd" customClass="AddItemCell" customModule="Personal_Compass" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="125" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddItemCell" id="6aB-dw-Jgd" customClass="AddItemCell" customModule="Personal_Compass" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="98" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6aB-dw-Jgd" id="ROT-hv-05I">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3V-Cd-gsm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="nFU-PX-mzV"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86f-fx-f5R">
+                                            <rect key="frame" x="0.0" y="41.5" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="bIc-Nf-smD"/>
+                                            </constraints>
+                                        </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGT-rU-J3J">
-                                            <rect key="frame" x="40" y="6" width="295" height="30"/>
+                                            <rect key="frame" x="40" y="7" width="295" height="30"/>
                                             <state key="normal" title="Tap to create a new item"/>
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="R3V-Cd-gsm" firstAttribute="top" secondItem="ROT-hv-05I" secondAttribute="top" id="6Fz-Ko-IkU"/>
+                                        <constraint firstAttribute="trailing" secondItem="R3V-Cd-gsm" secondAttribute="trailing" id="7q5-YA-1kd"/>
+                                        <constraint firstItem="R3V-Cd-gsm" firstAttribute="leading" secondItem="ROT-hv-05I" secondAttribute="leading" id="ADO-Tw-S5a"/>
+                                        <constraint firstItem="86f-fx-f5R" firstAttribute="leading" secondItem="ROT-hv-05I" secondAttribute="leading" id="GBt-F7-V9F"/>
+                                        <constraint firstAttribute="bottom" secondItem="86f-fx-f5R" secondAttribute="bottom" constant="1" id="Wo6-3Y-hza"/>
                                         <constraint firstAttribute="trailing" secondItem="GGT-rU-J3J" secondAttribute="trailing" constant="40" id="awS-Gy-y4n"/>
+                                        <constraint firstAttribute="trailing" secondItem="86f-fx-f5R" secondAttribute="trailing" id="bLd-wE-8Ic"/>
                                         <constraint firstItem="GGT-rU-J3J" firstAttribute="leading" secondItem="ROT-hv-05I" secondAttribute="leading" constant="40" id="pdJ-BW-vyw"/>
                                         <constraint firstItem="GGT-rU-J3J" firstAttribute="centerY" secondItem="ROT-hv-05I" secondAttribute="centerY" id="rkH-r6-xxr"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addButton" destination="GGT-rU-J3J" id="BtQ-q0-OvA"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StressItemSelectionCell" id="wWu-dR-8II" customClass="StressItemSelectionCell" customModule="Personal_Compass" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="142" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWu-dR-8II" id="9HF-FZ-8hN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-uH-Xi2">
+                                            <rect key="frame" x="28" y="13.5" width="179" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEq-VK-Kyu">
+                                            <rect key="frame" x="0.0" y="42" width="375" height="1"/>
+                                            <color key="backgroundColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="tLS-8E-85O"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oEq-VK-Kyu" firstAttribute="leading" secondItem="9HF-FZ-8hN" secondAttribute="leading" id="E6E-3A-bg4"/>
+                                        <constraint firstAttribute="bottom" secondItem="oEq-VK-Kyu" secondAttribute="bottom" constant="1" id="KqF-dN-eXx"/>
+                                        <constraint firstAttribute="trailing" secondItem="oEq-VK-Kyu" secondAttribute="trailing" id="T8z-az-bEq"/>
+                                        <constraint firstItem="fhZ-uH-Xi2" firstAttribute="centerY" secondItem="9HF-FZ-8hN" secondAttribute="centerY" id="aRQ-75-qzN"/>
+                                        <constraint firstItem="fhZ-uH-Xi2" firstAttribute="leading" secondItem="9HF-FZ-8hN" secondAttribute="leadingMargin" constant="20" id="dIH-hz-X9B"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="fhZ-uH-Xi2" id="g9t-RI-DTw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,6 +130,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlD-gQ-G8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84" y="172.26386806596702"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RLB-PU-rI3">
+            <objects>
+                <viewController id="Cp1-Wv-TqT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Osa-Hg-Eod"/>
+                        <viewControllerLayoutGuide type="bottom" id="cGf-ai-fPG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KoZ-tU-nXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7h-b0-DZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

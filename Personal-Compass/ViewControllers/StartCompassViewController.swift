@@ -58,5 +58,13 @@ extension StartCompassViewController: UICollectionViewDataSource {
 extension StartCompassViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+        let stressSelectionVC = UIStoryboard(name: "StressItems", bundle: nil).instantiateViewController(withIdentifier: "StressSelectionViewController") as! StressSelectionViewController
+        
+        stressSelectionVC.title = "This is a test to see how the title looks"
+        
+        stressSelectionVC.items = Array(Database.shared.bodyStressStored)
+        
+        self.navigationController?.pushViewController(stressSelectionVC, animated: true)
+        
     }
 }
