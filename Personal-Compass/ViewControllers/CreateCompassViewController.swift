@@ -18,11 +18,17 @@ class CreateCompassViewController: UIViewController {
     private struct CompassItem {
         let viewController: UIViewController
         let scene: CompassScene
+        
+        init(for scene: CompassScene) {
+            self.viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController()!
+            self.scene = scene
+        }
     }
     
     private enum CompassScene: String {
         case stressor
         case emotion
+        case thought
         
         var color: UIColor {
             switch self {
@@ -30,6 +36,8 @@ class CreateCompassViewController: UIViewController {
                 return .darkGray
             case .emotion:
                 return .red
+            case .thought:
+                return .blue
             }
         }
     }
@@ -39,9 +47,9 @@ class CreateCompassViewController: UIViewController {
     private lazy var compassItems: [CompassItem]  = {
         
         var items: [CompassItem] = [
-            CompassItem(viewController: self.viewController(for: .stressor), scene: .stressor),
-            CompassItem(viewController: self.viewController(for: .emotion), scene: .emotion),
-            
+            CompassItem(for: .stressor),
+            CompassItem(for: .emotion),
+            CompassItem(for: .thought),
         ]
         
         return items
@@ -89,12 +97,6 @@ class CreateCompassViewController: UIViewController {
         self.pageControlViewController.view.trailingAnchor.constraint(equalTo: self.pageContainerView.trailingAnchor).isActive = true
         self.pageControlViewController.view.bottomAnchor.constraint(equalTo: self.pageContainerView.bottomAnchor).isActive = true
         
-        
-    }
-    
-    private func viewController(for scene: CompassScene) -> UIViewController {
-    
-        return UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController()!
         
     }
     
