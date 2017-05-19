@@ -13,6 +13,7 @@ final class Compass: Object {
     
     @objc enum Facet: Int32 {
         case unknown
+        case stressor
         case emotion
         case thought
         case body
@@ -27,6 +28,8 @@ final class Compass: Object {
     let behaviourStressElements = List<BehaviourStress>()
     
     dynamic var emotion: Emotion?
+    
+    dynamic var stressor: String?
     
     dynamic var thoughtAboutEmotion: String?
     

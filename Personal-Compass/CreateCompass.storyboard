@@ -12,6 +12,9 @@
         <array key="Muli-Bold.ttf">
             <string>Muli-Bold</string>
         </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Create Compass View Controller-->
@@ -77,9 +80,38 @@
                                             <constraint firstAttribute="height" constant="36" id="IZa-KY-P7M"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkU-5G-HW6">
+                                        <rect key="frame" x="16" y="31" width="58" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="h8T-Rj-liG"/>
+                                            <constraint firstAttribute="height" constant="30" id="oKD-xA-ysO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="OKr-4S-7Vd" eventType="touchUpInside" id="Bd6-Ay-6wz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY2-dZ-S5u">
+                                        <rect key="frame" x="313" y="31" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="NY9-kU-aWI"/>
+                                            <constraint firstAttribute="height" constant="30" id="fJG-HZ-4ec"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveAction:" destination="OKr-4S-7Vd" eventType="touchUpInside" id="6DG-tP-uvR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0085661538128493347" green="0.20100701917046276" blue="0.48014491580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="kkU-5G-HW6" firstAttribute="top" secondItem="iTh-8Q-mvF" secondAttribute="top" constant="31" id="24G-Fk-Pqu"/>
                                     <constraint firstAttribute="height" constant="128" id="Col-Lk-2OQ"/>
                                     <constraint firstAttribute="bottom" secondItem="Bsn-fd-0nv" secondAttribute="bottom" constant="8" id="Gmj-Cm-k1U"/>
                                     <constraint firstAttribute="trailing" secondItem="7gC-GR-w4D" secondAttribute="trailing" id="HYW-oc-e0p"/>
@@ -88,7 +120,10 @@
                                     <constraint firstItem="7gC-GR-w4D" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" id="Yqb-qr-Blf"/>
                                     <constraint firstItem="HWv-ax-Pbb" firstAttribute="centerX" secondItem="iTh-8Q-mvF" secondAttribute="centerX" id="ZiS-ib-mjW"/>
                                     <constraint firstAttribute="bottom" secondItem="7gC-GR-w4D" secondAttribute="bottom" constant="25" id="f31-hu-dmO"/>
+                                    <constraint firstAttribute="trailing" secondItem="BY2-dZ-S5u" secondAttribute="trailing" constant="16" id="iTj-Xw-yj7"/>
+                                    <constraint firstItem="kkU-5G-HW6" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" constant="16" id="icm-AK-q4d"/>
                                     <constraint firstItem="HWv-ax-Pbb" firstAttribute="top" secondItem="iTh-8Q-mvF" secondAttribute="top" constant="30" id="mJh-YC-VgN"/>
+                                    <constraint firstItem="BY2-dZ-S5u" firstAttribute="top" secondItem="iTh-8Q-mvF" secondAttribute="top" constant="31" id="qzM-GH-K9U"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGI-Ub-dY5">

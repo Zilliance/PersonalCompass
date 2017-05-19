@@ -19,7 +19,9 @@ class StartCompassViewController: UIViewController {
     @IBOutlet weak var startCompassButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    fileprivate let compasses = ["Compass 1", "Compass 2", "Compass 3", "Compass 4", "Compass 5"]
+    fileprivate var compasses: [Compass] {
+        return Array(Database.shared.user.compasses)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class StartCompassViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.collectionView.reloadData()
     }
     
     private func setupView() {
@@ -39,8 +42,13 @@ class StartCompassViewController: UIViewController {
     // MARK: -- User Actions
     
     @IBAction func startAction(_ sender: UIButton) {
-        
+        let compass = Compass()
+        let user = Database.shared.user
+        Database.shared.save {
+            user?.compasses.append(compass)
+        }
         guard let createCompassViewController = UIStoryboard(name: "CreateCompass", bundle: nil).instantiateInitialViewController() as? CreateCompassViewController else { return }
+        createCompassViewController.compass = compass
         self.navigationController?.pushViewController(createCompassViewController, animated: true)
     }
     
@@ -58,9 +66,9 @@ extension StartCompassViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "compassCell", for: indexPath) as! CompassCollectionViewCell
-        let title = self.compasses[indexPath.row]
+        let compass = self.compasses[indexPath.row]
         
-        cell.titleLabel.text = title
+        cell.titleLabel.text = compass.completed ? "completed" : "incomplete"
         
         return cell
     }
@@ -68,6 +76,18 @@ extension StartCompassViewController: UICollectionViewDataSource {
 
 extension StartCompassViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let compass = self.compasses[indexPath.row]
+        
+        if !compass.completed {
+            guard let createCompassViewController = UIStoryboard(name: "CreateCompass", bundle: nil).instantiateInitialViewController() as? CreateCompassViewController else { return }
+            createCompassViewController.compass = compass
+            self.navigationController?.pushViewController(createCompassViewController, animated: true)
+        }
+        
+        else {
+            //go to summary
+        }
 
         let stressConfigurationVC = UIStoryboard(name: "StressItems", bundle: nil).instantiateViewController(withIdentifier: "CompassStressViewController") as! CompassStressViewController
         

@@ -15,6 +15,8 @@ class CreateCompassViewController: UIViewController {
     @IBOutlet weak var pageControl: FXPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     
+    var compass: Compass = Compass()
+    
     private struct CompassItem {
         let viewController: UIViewController
         let scene: CompassScene
@@ -58,7 +60,8 @@ class CreateCompassViewController: UIViewController {
     
     private lazy var pageControlViewController: UIPageViewController = {
         let controller = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        controller.setViewControllers([self.compassItems.first!.viewController], direction: .forward, animated: true, completion: nil)
+        self.pageCount = self.index(for: self.compass.lastEditedFacet) + 1
+        controller.setViewControllers([self.compassItems[self.pageCount].viewController], direction: .forward, animated: true, completion: nil)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         return controller
     }()
@@ -68,9 +71,20 @@ class CreateCompassViewController: UIViewController {
         self.setupView()
     }
     
+    private func index(for lastState: Compass.Facet) -> Int {
+        switch lastState {
+        case .stressor:
+            return 0
+        case .emotion:
+            return 1
+        default:
+            return 0
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.loadCompassData()
     }
     
     private func setupView() {
@@ -110,6 +124,34 @@ class CreateCompassViewController: UIViewController {
         
     }
     
+    private func saveCompass() {
+        let compassItem = self.compassItems[self.pageCount]
+        switch compassItem.scene {
+        case .stressor:
+            if let viewController = compassItem.viewController as? StressorViewController {
+                Database.shared.save {
+                    self.compass.stressor = viewController.textView.text
+                    self.compass.lastEditedFacet = .stressor
+                }
+            }
+        default:
+            break
+        }
+    }
+    
+    private func loadCompassData() {
+        let compassItem = self.compassItems[self.pageCount]
+        switch compassItem.scene {
+        case .stressor:
+            if let viewController = compassItem.viewController as? StressorViewController {
+                viewController.textView.text = self.compass.stressor
+            }
+        default:
+            break
+        }
+
+    }
+    
     // MARK: - User Actions
 
     @IBAction func backAction(_ sender: UIButton) {
@@ -118,7 +160,6 @@ class CreateCompassViewController: UIViewController {
         }
         
         self.pageCount -= 1
-        
         self.pageControl.currentPage = self.pageCount
         
         let item = self.compassItems[self.pageCount]
@@ -133,6 +174,8 @@ class CreateCompassViewController: UIViewController {
             return
         }
         
+        self.saveCompass()
+
         self.pageCount += 1
         
         self.pageControl.currentPage = self.pageCount
@@ -142,5 +185,15 @@ class CreateCompassViewController: UIViewController {
         self.pageControlViewController.setViewControllers([item.viewController], direction: .forward, animated: true, completion: nil)
         self.setupLabel(for: item.scene)
     }
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func saveAction(_ sender: Any) {
+        self.saveCompass()
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
