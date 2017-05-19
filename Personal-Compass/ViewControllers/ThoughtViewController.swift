@@ -10,8 +10,7 @@ import UIKit
 
 class ThoughtViewController: UIViewController {
     
-    // dummy data
-    var emotion: Emotion? = Database.shared.allEmotions().first
+    var currentCompass: Compass!
 
     @IBOutlet weak var emotionIconImageView: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!
@@ -22,12 +21,25 @@ class ThoughtViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        Database.shared.save {
+            self.currentCompass.thoughtAboutEmotion = self.textView.text
+            self.currentCompass.lastEditedFacet = .thought
+        }
+    }
+    
     private func setupView() {
+        
+        if let thought = self.currentCompass.thoughtAboutEmotion {
+            self.textView.text = thought
+        }
+        
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
         
-        if let emotion = self.emotion {
+        if let emotion = self.currentCompass.emotion {
             self.emotionIconImageView.image = emotion.icon
             self.emotionLabel.text = emotion.shortTitle
             self.emotionLabel.textColor = .red

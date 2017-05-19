@@ -12,12 +12,27 @@ class StressorViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     
+    var currentCompass: Compass!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        Database.shared.save {
+            self.currentCompass.stressor = self.textView.text
+            self.currentCompass.lastEditedFacet = .stressor
+        }
+    }
+    
     private func setupView() {
+        
+        if let stressor = self.currentCompass.stressor {
+            self.textView.text = stressor
+        }
+        
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor

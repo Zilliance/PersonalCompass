@@ -10,6 +10,8 @@ import UIKit
 
 class EmotionCell: UITableViewCell {
     
+    var currentCompass: Compass!
+    
     static let cellHeight: CGFloat = 56.0
     
     @IBOutlet weak var numberLabel: UILabel!
@@ -27,6 +29,8 @@ class EmotionCell: UITableViewCell {
 class EmotionViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var currentCompass: Compass!
     
     let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
