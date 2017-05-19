@@ -93,7 +93,6 @@ class Database {
 extension Database {
     
     fileprivate func bootstrap() {
-        //we'll preload the body stress and physical stress elements here
         self.bootstrapEmotions()
         self.bootstrapBodyStress()
         self.bootstrapBehaviourStress()
@@ -165,7 +164,7 @@ extension Database {
     fileprivate func bootstrapBehaviourStress() {
 
         parseStressData(fileName: "PreloadedBehaviourStress", itemType: BehaviourStress.self)
-        
+
     }
     
     
