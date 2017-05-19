@@ -256,6 +256,7 @@
 		8C463B261ECA356F00566531 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4FD5B6571ECCD93B0017DC06 /* StressSelectionItems */,
 				8CFC6D471ECE4C4D00F44B95 /* Thought */,
 				8C463B2C1ECA3BA600566531 /* SideMenu */,
 				8C91667F1ECCB8900072C19F /* Stressor */,
@@ -349,7 +350,6 @@
 		E37C7A791EC9FBA300076737 /* Personal-Compass */ = {
 			isa = PBXGroup;
 			children = (
-				4FD5B6571ECCD93B0017DC06 /* StressSelectionItems */,
 				047A57FF1ECB2B3700BC7650 /* Model */,
 				8C463B3D1ECB6E2300566531 /* App.swift */,
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,

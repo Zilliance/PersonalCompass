@@ -43,6 +43,7 @@ class StartCompassViewController: UIViewController {
     
     @IBAction func startAction(_ sender: UIButton) {
         let compass = Compass()
+        compass.lastEditedFacet = .unknown
         let user = Database.shared.user
         Database.shared.save {
             user?.compasses.append(compass)
@@ -89,15 +90,6 @@ extension StartCompassViewController: UICollectionViewDelegate {
             //go to summary
         }
 
-        let stressConfigurationVC = UIStoryboard(name: "StressItems", bundle: nil).instantiateViewController(withIdentifier: "CompassStressViewController") as! CompassStressViewController
-        
-        stressConfigurationVC.title = "This is a test to see how the title looks"
-        
-        stressConfigurationVC.stressItemType = .behaviour
-        
-        stressConfigurationVC.currentCompass = Compass()
-        
-        self.navigationController?.pushViewController(stressConfigurationVC, animated: true)
         
     }
 }
