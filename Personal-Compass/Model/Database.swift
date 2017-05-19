@@ -80,6 +80,11 @@ class Database {
     func appStarted() {
         //nothing to do here, all initialization is being done on the init.
     }
+    
+    func allEmotions() -> Results<Emotion>
+    {
+        return self.realm.objects(Emotion.self)
+    }
 
 }
 

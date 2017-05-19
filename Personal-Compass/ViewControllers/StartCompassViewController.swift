@@ -26,12 +26,23 @@ class StartCompassViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     private func setupView() {
         self.title = "Personal Compass"
         self.startCompassButton.layer.cornerRadius = App.Appearance.buttonCornerRadius
     }
     
     // MARK: -- User Actions
+    
+    @IBAction func startAction(_ sender: UIButton) {
+        
+        guard let createCompassViewController = UIStoryboard(name: "CreateCompass", bundle: nil).instantiateInitialViewController() as? CreateCompassViewController else { return }
+        self.navigationController?.pushViewController(createCompassViewController, animated: true)
+    }
     
     @IBAction func menuAction(_ sender: Any) {
         self.sideMenuController?.toggle()
