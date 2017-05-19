@@ -13,11 +13,17 @@ final class StressSelectionViewController: UITableViewController {
     
     var items: [StressItem] = []
     var selectedItems: [StressItem] = []
-    @IBOutlet fileprivate var titleLable: UILabel!
+    var saveAction: (([StressItem]) -> ())!
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
+            
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        saveAction(selectedItems)
         
     }
     
@@ -44,7 +50,7 @@ final class StressSelectionViewController: UITableViewController {
         
         cell.titleLabel?.text = item.title
         
-        //cell.accessoryView = selectedItems.contains(item) ? UIImageView(image: UIImage(named: "menu-icon")) : nil
+        cell.selectionImage.image = selectedItems.contains(item) ? UIImage(named: "checkbox-checked"): UIImage(named: "checkbox-unchecked")
         
         return cell
 
@@ -63,6 +69,8 @@ final class StressSelectionViewController: UITableViewController {
         
         tableView.reloadRows(at: [indexPath], with: .none)
     }
+    
+    
 }
 
 

@@ -11,6 +11,7 @@ import UIKit
 @IBDesignable class StressItemSelectionCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var selectionImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

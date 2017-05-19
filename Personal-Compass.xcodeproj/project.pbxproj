@@ -22,6 +22,7 @@
 		4FD5B65A1ECCD9680017DC06 /* StressItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */; };
 		4FD5B65D1ECCDB200017DC06 /* StressSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */; };
 		4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */; };
+		4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */; };
 		5DEF7E6D86CE1016EC333832 /* Pods_Personal_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */; };
 		8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B051ECA2D9700566531 /* Muli-Black.ttf */; };
 		8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */; };
@@ -96,6 +97,7 @@
 		4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressItemSelectionCell.swift; path = Cells/StressItemSelectionCell.swift; sourceTree = "<group>"; };
 		4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressSelectionViewController.swift; path = ViewControllers/StressSelectionViewController.swift; sourceTree = "<group>"; };
 		4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemCell.swift; path = Cells/AddItemCell.swift; sourceTree = "<group>"; };
+		4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompassStressViewController.swift; path = ViewControllers/CompassStressViewController.swift; sourceTree = "<group>"; };
 		8C463B051ECA2D9700566531 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Black.ttf"; path = "Fonts/Muli-Black.ttf"; sourceTree = "<group>"; };
 		8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-BlackItalic.ttf"; path = "Fonts/Muli-BlackItalic.ttf"; sourceTree = "<group>"; };
 		8C463B071ECA2D9700566531 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Bold.ttf"; path = "Fonts/Muli-Bold.ttf"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */,
 				4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */,
 				4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */,
+				4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */,
 			);
 			name = StressSelectionItems;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
+				4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
 				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
 				4FD5B65D1ECCDB200017DC06 /* StressSelectionViewController.swift in Sources */,
