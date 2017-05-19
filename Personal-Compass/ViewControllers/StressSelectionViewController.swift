@@ -18,11 +18,7 @@ final class StressSelectionViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-                
-        titleLable.text = self.title
         
-        titleLable.textColor = UIColor.darkBlue
-
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

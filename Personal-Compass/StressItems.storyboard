@@ -23,27 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="6J2-dA-8D5">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the stress of this situation affecting me phisically" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unk-Qi-Tc6">
-                                    <rect key="frame" x="40" y="13.5" width="295" height="43"/>
-                                    <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="unk-Qi-Tc6" firstAttribute="centerY" secondItem="6J2-dA-8D5" secondAttribute="centerY" id="8ut-6j-9fa"/>
-                                <constraint firstItem="unk-Qi-Tc6" firstAttribute="leading" secondItem="6J2-dA-8D5" secondAttribute="leading" constant="40" id="DWM-4O-viX"/>
-                                <constraint firstAttribute="trailing" secondItem="unk-Qi-Tc6" secondAttribute="trailing" constant="40" id="Kv3-oc-QCc"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddItemCell" id="6aB-dw-Jgd" customClass="AddItemCell" customModule="Personal_Compass" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="98" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6aB-dw-Jgd" id="ROT-hv-05I">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -85,14 +67,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StressItemSelectionCell" id="wWu-dR-8II" customClass="StressItemSelectionCell" customModule="Personal_Compass" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="142" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWu-dR-8II" id="9HF-FZ-8hN">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-uH-Xi2">
-                                            <rect key="frame" x="28" y="13.5" width="179" height="17.5"/>
+                                            <rect key="frame" x="28" y="14" width="179" height="17.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -123,9 +105,6 @@
                             <outlet property="delegate" destination="aiV-aJ-KyN" id="V8y-W8-h5y"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="titleLable" destination="unk-Qi-Tc6" id="HmF-gQ-hgW"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlD-gQ-G8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
