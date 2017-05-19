@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g9l-os-V6r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Italic.ttf">
+            <string>Muli-Italic</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Thought View Controller-->
+        <scene sceneID="DRh-Mv-VAn">
+            <objects>
+                <viewController id="g9l-os-V6r" customClass="ThoughtViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jvH-Hc-0OV"/>
+                        <viewControllerLayoutGuide type="bottom" id="MLh-5j-cKm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nlG-po-c2V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am feeling:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ1-8y-9Os">
+                                <rect key="frame" x="0.0" y="60" width="375" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Because:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0c-IZ-fsP">
+                                <rect key="frame" x="0.0" y="171.5" width="375" height="21"/>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IHa-ko-eTm">
+                                <rect key="frame" x="20" y="212.5" width="335" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="I4c-v7-2Pv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-uD-pDv">
+                                <rect key="frame" x="132.5" y="116" width="43" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCh-BD-kcc">
+                                <rect key="frame" x="20" y="360.5" width="335" height="85.5"/>
+                                <string key="text">Ex: “I am feeling fearful because I need to find a new job. Money is tight and time is running out. I have sent out a ton of resumes. I don’t know what else to do.”</string>
+                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPt-St-839">
+                                <rect key="frame" x="62.5" y="101.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bHz-q5-hmp"/>
+                                    <constraint firstAttribute="height" constant="50" id="pB9-ew-ymL"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fZ1-8y-9Os" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" id="7gg-Xy-s3p"/>
+                            <constraint firstItem="n0c-IZ-fsP" firstAttribute="top" secondItem="YPt-St-839" secondAttribute="bottom" constant="20" id="Bgv-PW-fYt"/>
+                            <constraint firstItem="YCh-BD-kcc" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" constant="20" id="KOK-De-ZkQ"/>
+                            <constraint firstItem="YCh-BD-kcc" firstAttribute="top" secondItem="IHa-ko-eTm" secondAttribute="bottom" constant="20" id="MEJ-Hb-vTz"/>
+                            <constraint firstItem="1vt-uD-pDv" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="34.5" id="Mbe-pQ-J1v"/>
+                            <constraint firstItem="YPt-St-839" firstAttribute="centerX" secondItem="nlG-po-c2V" secondAttribute="centerX" constant="-100" id="Rbr-5w-Ozj"/>
+                            <constraint firstItem="IHa-ko-eTm" firstAttribute="top" secondItem="n0c-IZ-fsP" secondAttribute="bottom" constant="20" id="RhH-RW-eCo"/>
+                            <constraint firstAttribute="trailing" secondItem="YCh-BD-kcc" secondAttribute="trailing" constant="20" id="TVR-t8-k8h"/>
+                            <constraint firstItem="1vt-uD-pDv" firstAttribute="leading" secondItem="YPt-St-839" secondAttribute="trailing" constant="20" id="Tyk-o1-Us2"/>
+                            <constraint firstAttribute="trailing" secondItem="IHa-ko-eTm" secondAttribute="trailing" constant="20" id="XWF-FD-oG1"/>
+                            <constraint firstItem="YPt-St-839" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="20" id="XeZ-c2-Xc9"/>
+                            <constraint firstItem="IHa-ko-eTm" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" constant="20" id="nsv-jZ-NVY"/>
+                            <constraint firstAttribute="trailing" secondItem="fZ1-8y-9Os" secondAttribute="trailing" id="rzb-AP-fje"/>
+                            <constraint firstAttribute="trailing" secondItem="n0c-IZ-fsP" secondAttribute="trailing" id="skU-KW-jnk"/>
+                            <constraint firstItem="fZ1-8y-9Os" firstAttribute="top" secondItem="jvH-Hc-0OV" secondAttribute="bottom" constant="40" id="z9b-zI-hc2"/>
+                            <constraint firstItem="n0c-IZ-fsP" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" id="zUZ-hc-5ir"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emotionIconImageView" destination="YPt-St-839" id="mhr-PL-PCw"/>
+                        <outlet property="emotionLabel" destination="1vt-uD-pDv" id="Mh8-Ir-7hm"/>
+                        <outlet property="textView" destination="IHa-ko-eTm" id="xNU-QP-rOw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bel-aD-GWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77.599999999999994" y="45.42728635682159"/>
+        </scene>
+    </scenes>
+</document>

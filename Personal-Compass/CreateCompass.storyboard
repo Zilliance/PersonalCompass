@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OKr-4S-7Vd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OKr-4S-7Vd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -59,10 +59,13 @@
                                             <constraint firstAttribute="height" constant="1" id="UsE-aA-b9Y"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emotion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWv-ax-Pbb">
-                                        <rect key="frame" x="102" y="30" width="168" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emotion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWv-ax-Pbb">
+                                        <rect key="frame" x="103.5" y="30" width="168" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.10685428512454309" blue="0.14833018241874207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="168" id="ZdD-7M-vVq"/>
+                                            <constraint firstAttribute="height" constant="45" id="oS9-Iq-mLm"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -83,7 +86,9 @@
                                     <constraint firstItem="Bsn-fd-0nv" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" id="LMA-DI-awV"/>
                                     <constraint firstAttribute="trailing" secondItem="Bsn-fd-0nv" secondAttribute="trailing" id="UT1-3D-AZc"/>
                                     <constraint firstItem="7gC-GR-w4D" firstAttribute="leading" secondItem="iTh-8Q-mvF" secondAttribute="leading" id="Yqb-qr-Blf"/>
+                                    <constraint firstItem="HWv-ax-Pbb" firstAttribute="centerX" secondItem="iTh-8Q-mvF" secondAttribute="centerX" id="ZiS-ib-mjW"/>
                                     <constraint firstAttribute="bottom" secondItem="7gC-GR-w4D" secondAttribute="bottom" constant="25" id="f31-hu-dmO"/>
+                                    <constraint firstItem="HWv-ax-Pbb" firstAttribute="top" secondItem="iTh-8Q-mvF" secondAttribute="top" constant="30" id="mJh-YC-VgN"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGI-Ub-dY5">
