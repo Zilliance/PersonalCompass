@@ -26,7 +26,7 @@ class EmotionCell: UITableViewCell {
     
 }
 
-class EmotionViewController: UIViewController, CompassItem {
+class EmotionViewController: UIViewController, CompassValidation {
     
     @IBOutlet weak var tableView: UITableView!
     

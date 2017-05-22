@@ -9,7 +9,7 @@
 import UIKit
 import FXPageControl
 
-protocol CompassItem {
+protocol CompassValidation {
     var error: CompassError? { get }
     var currentCompass: Compass! { get set }
 }
@@ -176,6 +176,11 @@ class CreateCompassViewController: UIViewController {
         
     }
     
+    private func checkError() -> CompassError? {
+        let vc = self.compassItems[self.pageCount].viewController as! CompassValidation
+        return vc.error
+    }
+    
     
     // MARK: - User Actions
 
@@ -196,6 +201,17 @@ class CreateCompassViewController: UIViewController {
     @IBAction func nextAction(_ sender: UIButton) {
         
         guard self.pageCount < self.compassItems.count - 1 else {
+            return
+        }
+        
+        if let error = self.checkError() {
+            
+            switch error {
+            case .selection:
+                self.showAlert(title: "", message: "Please select an item")
+            case .text:
+                self.showAlert(title: "", message: "Please enter a text")
+            }
             return
         }
 

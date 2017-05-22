@@ -58,6 +58,7 @@
 		8CF78EC94537B4F6424BE525 /* Pods_Personal_CompassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */; };
 		8CFC6D491ECE4E6000F44B95 /* Thought.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC6D481ECE4E6000F44B95 /* Thought.storyboard */; };
 		8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */; };
+		8CFC6D4D1ED3A0D600F44B95 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */; };
 		CBF5C2B987593B1534F06EDA /* Pods_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
 		E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A811EC9FBA300076737 /* Assets.xcassets */; };
@@ -135,6 +136,7 @@
 		8C9166871ECCF2030072C19F /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionViewController.swift; path = ViewControllers/EmotionViewController.swift; sourceTree = "<group>"; };
 		8CFC6D481ECE4E6000F44B95 /* Thought.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Thought.storyboard; sourceTree = "<group>"; };
 		8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThoughtViewController.swift; path = ViewControllers/ThoughtViewController.swift; sourceTree = "<group>"; };
+		8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		93B37BC394469BAF74853DD5 /* Pods-Personal-CompassUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests.release.xcconfig"; sourceTree = "<group>"; };
 		978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2CF0E80AFBAC596BA0EBC /* Pods-Personal-Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.debug.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				8C463B381ECA642600566531 /* UIDevice+Extensions.swift */,
 				8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */,
 				8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */,
+				8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -704,6 +707,7 @@
 			files = (
 				8C9166881ECCF2030072C19F /* EmotionViewController.swift in Sources */,
 				4FD5B64C1ECBD9550017DC06 /* UIFont+CustomFonts.swift in Sources */,
+				8CFC6D4D1ED3A0D600F44B95 /* UIViewController+Extensions.swift in Sources */,
 				047A58011ECB2B5200BC7650 /* Compass.swift in Sources */,
 				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThoughtViewController: UIViewController, CompassItem {
+class ThoughtViewController: UIViewController, CompassValidation {
     
     var currentCompass: Compass!
     
