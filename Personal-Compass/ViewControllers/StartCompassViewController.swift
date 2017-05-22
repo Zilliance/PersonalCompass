@@ -69,7 +69,7 @@ extension StartCompassViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "compassCell", for: indexPath) as! CompassCollectionViewCell
         let compass = self.compasses[indexPath.row]
         
-        cell.titleLabel.text = compass.completed ? "completed" : "incomplete"
+        cell.titleLabel.text = compass.stressor
         
         return cell
     }
