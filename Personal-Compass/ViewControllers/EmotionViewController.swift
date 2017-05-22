@@ -26,11 +26,20 @@ class EmotionCell: UITableViewCell {
     
 }
 
-class EmotionViewController: UIViewController {
+class EmotionViewController: UIViewController, CompassItem {
     
     @IBOutlet weak var tableView: UITableView!
     
     var currentCompass: Compass!
+    
+    var error: CompassError? {
+        if let _ = self.tableView.indexPathsForSelectedRows {
+            return nil
+        }
+        else {
+            return .selection
+        }
+    }
     
     let emotions: [Emotion] = Array(Database.shared.allEmotions())
 

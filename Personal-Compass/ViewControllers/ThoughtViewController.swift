@@ -8,9 +8,18 @@
 
 import UIKit
 
-class ThoughtViewController: UIViewController {
+class ThoughtViewController: UIViewController, CompassItem {
     
     var currentCompass: Compass!
+    
+    var error: CompassError? {
+        if textView.text.characters.count == 0 {
+            return .text
+        }
+        else {
+            return nil
+        }
+    }
 
     @IBOutlet weak var emotionIconImageView: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!

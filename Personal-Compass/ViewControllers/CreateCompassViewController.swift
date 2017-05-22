@@ -9,13 +9,17 @@
 import UIKit
 import FXPageControl
 
-class CreateCompassViewController: UIViewController {
+protocol CompassItem {
+    var error: CompassError? { get }
+    var currentCompass: Compass! { get set }
+}
 
-    @IBOutlet weak var topLabel: UILabel!
-    @IBOutlet weak var pageControl: FXPageControl!
-    @IBOutlet weak var pageContainerView: UIView!
-    
-    var compass: Compass = Compass()
+enum CompassError {
+    case text
+    case selection
+}
+
+class CreateCompassViewController: UIViewController {
     
     private struct CompassItem {
         let viewController: UIViewController
@@ -48,7 +52,7 @@ class CreateCompassViewController: UIViewController {
                 let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! EmotionViewController
                 viewController.currentCompass = compass
                 self.viewController = viewController
-            
+                
             case .thought:
                 let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! ThoughtViewController
                 viewController.currentCompass = compass
@@ -82,6 +86,13 @@ class CreateCompassViewController: UIViewController {
         }
     }
     
+
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var pageControl: FXPageControl!
+    @IBOutlet weak var pageContainerView: UIView!
+    
+    var compass: Compass = Compass()
+
     private var pageCount = 0
     
     private lazy var compassItems: [CompassItem]  = {

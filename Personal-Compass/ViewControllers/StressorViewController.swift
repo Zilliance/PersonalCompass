@@ -8,11 +8,20 @@
 
 import UIKit
 
-class StressorViewController: UIViewController {
+class StressorViewController: UIViewController, CompassItem {
 
     @IBOutlet weak var textView: UITextView!
     
     var currentCompass: Compass!
+    
+    var error: CompassError? {
+        if self.textView.text.characters.count == 0 {
+            return .text
+        }
+        else {
+            return nil
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
