@@ -48,6 +48,18 @@ class EmotionViewController: UIViewController, CompassValidation {
         self.setupTableView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let index = self.tableView.indexPathForSelectedRow?.first {
+            let emotion = self.emotions[index]
+            Database.shared.save {
+                self.currentCompass.emotion = emotion
+                self.currentCompass.lastEditedFacet = .emotion
+            }
+        }
+    }
+    
     private func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self

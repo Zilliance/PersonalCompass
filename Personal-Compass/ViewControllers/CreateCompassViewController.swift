@@ -111,7 +111,7 @@ class CreateCompassViewController: UIViewController {
     
     private lazy var pageControlViewController: UIPageViewController = {
         let controller = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-             self.pageCount = self.index(for: self.compass.lastEditedFacet)
+             self.pageCount = self.compass.lastEditedFacet.pageIndex
         controller.setViewControllers([self.compassItems[self.pageCount].viewController], direction: .forward, animated: true, completion: nil)
         self.pageControl.currentPage = self.pageCount
         controller.view.translatesAutoresizingMaskIntoConstraints = false
@@ -123,18 +123,6 @@ class CreateCompassViewController: UIViewController {
         self.setupView()
     }
     
-    private func index(for lastState: Compass.Facet) -> Int {
-        switch lastState {
-        case .unknown:
-            return 0
-        case .stressor:
-            return 1
-        case .emotion:
-            return 2
-        default:
-            return 0
-        }
-    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)

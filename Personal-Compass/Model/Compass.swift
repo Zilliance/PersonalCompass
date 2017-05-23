@@ -19,6 +19,27 @@ final class Compass: Object {
         case body
         case behaviour
         case innerWisdom
+        
+        var pageIndex: Int {
+            switch self {
+            case .unknown:
+                return 0
+            case .stressor:
+                return 1
+            case .emotion:
+                return 2
+            case .thought:
+                return 3
+            case .body:
+                return 4
+            case .behaviour:
+                return 5
+            default:
+                return 0
+
+            }
+        }
+        
     }
     
     dynamic var lastEditedFacet: Facet = .unknown

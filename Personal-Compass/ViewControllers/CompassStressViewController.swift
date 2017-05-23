@@ -15,13 +15,15 @@ enum StressType {
     case behaviour
 }
 
-final class CompassStressViewController: UIViewController {
+final class CompassStressViewController: UIViewController, CompassValidation {
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
     var currentCompass: Compass!
     
     var stressItemType: StressType = .body
+    
+    var error: CompassError? = nil
 
     override func viewDidLoad() {
         
