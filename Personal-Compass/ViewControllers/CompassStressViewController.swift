@@ -19,11 +19,21 @@ final class CompassStressViewController: UIViewController, CompassValidation {
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
+    private var tableViewController: StressSelectionViewController?
+    
     var currentCompass: Compass!
     
     var stressItemType: StressType = .body
     
-    var error: CompassError? = nil
+    var error: CompassError? {
+        if let items = self.tableViewController?.selectedItems, items.count > 0 {
+            return nil
+        }
+        else {
+            return .selection
+        }
+
+    }
 
     override func viewDidLoad() {
         
@@ -33,6 +43,17 @@ final class CompassStressViewController: UIViewController, CompassValidation {
         
         self.titleLable.textColor = UIColor.darkBlue
         
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        Database.shared.save {
+            if self.stressItemType == .body {
+                self.currentCompass.lastEditedFacet = .body
+            }
+            else {
+                self.currentCompass.lastEditedFacet = .behaviour
+            }
+        }
     }
     
     private func setupItemsSelection<T: StressItem>(vc: StressSelectionViewController, preloadedItems: [T], destination: List<T>) {
@@ -58,6 +79,8 @@ final class CompassStressViewController: UIViewController, CompassValidation {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let itemsSelectionsController = segue.destination as? StressSelectionViewController {
+            
+            self.tableViewController = itemsSelectionsController
             
             if (self.stressItemType == .body) {
                 
