@@ -353,9 +353,9 @@
 		E37C7A791EC9FBA300076737 /* Personal-Compass */ = {
 			isa = PBXGroup;
 			children = (
-				047A57FF1ECB2B3700BC7650 /* Model */,
 				8C463B3D1ECB6E2300566531 /* App.swift */,
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,
+				047A57FF1ECB2B3700BC7650 /* Model */,
 				8C463B261ECA356F00566531 /* Scenes */,
 				8C463B211ECA2EC500566531 /* Extensions */,
 				8C463B041ECA2D8600566531 /* Fonts */,

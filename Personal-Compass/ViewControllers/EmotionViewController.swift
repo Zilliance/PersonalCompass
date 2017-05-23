@@ -51,8 +51,8 @@ class EmotionViewController: UIViewController, CompassValidation {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if let index = self.tableView.indexPathForSelectedRow?.first {
-            let emotion = self.emotions[index]
+        if let index = self.tableView.indexPathsForSelectedRows?.first {
+            let emotion = self.emotions[index.row]
             Database.shared.save {
                 self.currentCompass.emotion = emotion
                 self.currentCompass.lastEditedFacet = .emotion
@@ -64,6 +64,14 @@ class EmotionViewController: UIViewController, CompassValidation {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
+        
+        guard let emotion = self.currentCompass.emotion else { return }
+        if let row = self.emotions.index(of: emotion) {
+            self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .middle)
+        }
+
+        
+        
     }
 }
 
