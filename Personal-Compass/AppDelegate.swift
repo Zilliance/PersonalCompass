@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // App wide appearance
         
         UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().barTintColor = .darkBlue
+        UINavigationBar.appearance().barTintColor = .navBar
         UINavigationBar.appearance().barStyle = .black
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [
