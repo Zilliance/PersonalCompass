@@ -38,7 +38,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Leaving some space for a copy" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jrv-Wv-PUM">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Leaving some space for more text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jrv-Wv-PUM">
                                         <rect key="frame" x="0.0" y="45" width="320" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -64,8 +64,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X1-82-uoX">
                                                             <rect key="frame" x="15" y="8" width="290" height="27.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-gb-XeS">
-                                                                    <rect key="frame" x="8" y="0.0" width="282" height="27.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-gb-XeS">
+                                                                    <rect key="frame" x="8" y="8" width="282" height="11.5"/>
                                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -75,8 +75,8 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="aKc-gb-XeS" secondAttribute="trailing" id="TtT-ze-Gj7"/>
                                                                 <constraint firstItem="aKc-gb-XeS" firstAttribute="leading" secondItem="8X1-82-uoX" secondAttribute="leading" constant="8" id="Vhl-41-Fm7"/>
-                                                                <constraint firstItem="aKc-gb-XeS" firstAttribute="top" secondItem="8X1-82-uoX" secondAttribute="top" id="Vyy-VB-JTI"/>
-                                                                <constraint firstAttribute="bottom" secondItem="aKc-gb-XeS" secondAttribute="bottom" id="slG-V3-eXI"/>
+                                                                <constraint firstItem="aKc-gb-XeS" firstAttribute="top" secondItem="8X1-82-uoX" secondAttribute="top" constant="8" id="Vyy-VB-JTI"/>
+                                                                <constraint firstAttribute="bottom" secondItem="aKc-gb-XeS" secondAttribute="bottom" constant="8" id="slG-V3-eXI"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -98,7 +98,7 @@
                                             <outlet property="delegate" destination="p66-MD-3vQ" id="Ocd-dF-JZd"/>
                                         </connections>
                                     </tableView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Leaving some space for a copy" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-KK-Ef0">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Leaving some space for more text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-KK-Ef0">
                                         <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -121,6 +121,9 @@
                             <constraint firstItem="Y6Y-QL-zxF" firstAttribute="top" secondItem="aPI-kJ-IZd" secondAttribute="top" id="hXK-a0-S3i"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="cr0-5n-2PU" id="s6h-e6-JV7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXb-hK-dmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

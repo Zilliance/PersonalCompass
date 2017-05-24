@@ -46,6 +46,9 @@ class AssessmentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 70
 
     }
 
@@ -85,13 +88,17 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch row {
         case .feeling:
-            cell.label.text = "Emotions"
+            cell.label.text = "I am feeling " + (currentCompass.emotion?.longTitle ?? "")
         case .thought:
-            cell.label.text = currentCompass.thoughtAboutEmotion
+            cell.label.text = "Because " + (currentCompass.thoughtAboutEmotion ?? "")
         case .bodyStress:
-            cell.label.text = "body stress"
+            
+            let stressElements = (currentCompass.bodyStressElements.flatMap { $0.title }).joined(separator: ", ")
+            cell.label.text = stressElements
+        
         case .behaviourStress:
-            cell.label.text = "behaviour stress"
+            let stressElements = (currentCompass.behaviourStressElements.flatMap { $0.title }).joined(separator: ", ")
+            cell.label.text = stressElements
         }
         
         cell.labelContainer.backgroundColor = row.sceneAssociated.color
