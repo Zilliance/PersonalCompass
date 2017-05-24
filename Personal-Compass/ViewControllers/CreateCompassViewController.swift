@@ -26,6 +26,7 @@ enum CompassScene: String {
     case body
     case behavior
     case assessment
+    case need
     
     var color: UIColor {
         switch self {
@@ -41,6 +42,8 @@ enum CompassScene: String {
             return .green
         case .assessment:
             return .green
+        case .need:
+            return .purple
         }
     }
     
@@ -51,7 +54,6 @@ class CreateCompassViewController: UIViewController {
     fileprivate struct CompassItem {
         let viewController: UIViewController
         let scene: CompassScene
-        var compass: Compass = Compass()
         
         init(for scene: CompassScene, container: CreateCompassViewController) {
             
@@ -90,11 +92,10 @@ class CreateCompassViewController: UIViewController {
                 viewController.currentCompass = container.compass
                 viewController.delegate = container
                 self.viewController = viewController
-
                 
             case .need:
                 let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! NeedViewController
-                viewController.currentCompass = compass
+                viewController.currentCompass = container.compass
                 self.viewController = viewController
             }
             
@@ -102,33 +103,6 @@ class CreateCompassViewController: UIViewController {
         }
     }
     
-    private enum CompassScene: String {
-        case stressor
-        case emotion
-        case thought
-        case body
-        case behavior
-        case need
-        
-        var color: UIColor {
-            switch self {
-            case .stressor:
-                return .darkGray
-            case .emotion:
-                return .red
-            case .thought:
-                return .blue
-            case .body:
-                return .orange
-            case .behavior:
-                return .green
-            case .need:
-                return .purple
-            }
-        }
-    }
-    
-
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var pageControl: FXPageControl!
     @IBOutlet weak var pageContainerView: UIView!
@@ -146,7 +120,7 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .body, container: self),
             CompassItem(for: .behavior, container: self),
             CompassItem(for: .assessment, container: self),
-            CompassItem(for: .need, compass: self.compass),
+            CompassItem(for: .need, container: self),
         ]
         
         return items

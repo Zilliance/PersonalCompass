@@ -80,7 +80,7 @@
                                                         </label>
                                                     </subviews>
                                                 </view>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="lGd-Gd-Jhc" firstAttribute="centerX" secondItem="1rD-pt-ued" secondAttribute="centerX" id="5dm-EN-HjK"/>
                                                     <constraint firstItem="lGd-Gd-Jhc" firstAttribute="top" secondItem="1rD-pt-ued" secondAttribute="top" constant="10" id="5ez-Z9-Wyr"/>
