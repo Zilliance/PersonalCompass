@@ -14,7 +14,7 @@ protocol AssessmentViewControllerDelegate {
     
 }
 
-class AssessmentViewController: UIViewController {
+class AssessmentViewController: UIViewController, CompassValidation {
     
     enum RowType: Int {
         case feeling
@@ -39,6 +39,8 @@ class AssessmentViewController: UIViewController {
             }
         }
     }
+    
+    var error: CompassError? = .none
     
     var currentCompass: Compass!
     var delegate: AssessmentViewControllerDelegate!

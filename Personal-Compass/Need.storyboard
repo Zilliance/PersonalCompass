@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g5q-sN-oXo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Italic.ttf">
+            <string>Muli-Italic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Need View Controller-->
+        <scene sceneID="NEN-8j-r2E">
+            <objects>
+                <viewController id="g5q-sN-oXo" customClass="NeedViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Pr-ZN-C0i"/>
+                        <viewControllerLayoutGuide type="bottom" id="I7k-N0-HFK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nX8-Ba-cXY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do I need to feel better?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLS-yy-axy">
+                                <rect key="frame" x="20" y="60" width="335" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1RR-MN-alT">
+                                <rect key="frame" x="20" y="121.5" width="335" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Apn-bx-oen"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="g5q-sN-oXo" id="tXf-Df-b5G"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pib-WR-Kg3">
+                                <rect key="frame" x="20" y="289.5" width="335" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2U-dk-bIB">
+                                <rect key="frame" x="20" y="331" width="335" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pib-WR-Kg3" secondAttribute="trailing" constant="20" id="01L-41-Nrb"/>
+                            <constraint firstItem="W2U-dk-bIB" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="43I-Rk-kpT"/>
+                            <constraint firstItem="1RR-MN-alT" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="97n-sK-kNg"/>
+                            <constraint firstItem="fLS-yy-axy" firstAttribute="top" secondItem="1Pr-ZN-C0i" secondAttribute="bottom" constant="40" id="Adw-A7-xuf"/>
+                            <constraint firstAttribute="trailing" secondItem="fLS-yy-axy" secondAttribute="trailing" constant="20" id="Nz8-dr-CRH"/>
+                            <constraint firstAttribute="trailing" secondItem="W2U-dk-bIB" secondAttribute="trailing" constant="20" id="XxL-JT-Zat"/>
+                            <constraint firstAttribute="trailing" secondItem="1RR-MN-alT" secondAttribute="trailing" constant="20" id="Y8U-nP-XEz"/>
+                            <constraint firstItem="pib-WR-Kg3" firstAttribute="top" secondItem="1RR-MN-alT" secondAttribute="bottom" constant="40" id="ci1-1n-iUV"/>
+                            <constraint firstItem="W2U-dk-bIB" firstAttribute="top" secondItem="pib-WR-Kg3" secondAttribute="bottom" constant="20" id="dKl-Y9-IVf"/>
+                            <constraint firstItem="fLS-yy-axy" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="efv-0Q-wXY"/>
+                            <constraint firstItem="pib-WR-Kg3" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="f8i-Lc-73V"/>
+                            <constraint firstItem="1RR-MN-alT" firstAttribute="top" secondItem="fLS-yy-axy" secondAttribute="bottom" constant="40" id="vmq-qG-Cor"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="1RR-MN-alT" id="7a0-es-PYA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mO-16-Cee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="23"/>
+        </scene>
+    </scenes>
+</document>
