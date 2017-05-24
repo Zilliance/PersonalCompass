@@ -19,6 +19,7 @@ final class Compass: Object {
         case body
         case behaviour
         case innerWisdom
+        case need
         
         var pageIndex: Int {
             switch self {
@@ -51,6 +52,8 @@ final class Compass: Object {
     dynamic var emotion: Emotion?
     
     dynamic var stressor: String?
+    
+    dynamic var need: String?
     
     dynamic var thoughtAboutEmotion: String?
     

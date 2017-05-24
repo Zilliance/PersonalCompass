@@ -54,6 +54,8 @@
 		8C463B3E1ECB6E2300566531 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B3D1ECB6E2300566531 /* App.swift */; };
 		8C463B411ECB843400566531 /* CreateCompass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B401ECB843400566531 /* CreateCompass.storyboard */; };
 		8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B421ECBA02600566531 /* CreateCompassViewController.swift */; };
+		8C54AD101ED5E262001EC903 /* Need.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C54AD0F1ED5E262001EC903 /* Need.storyboard */; };
+		8C54AD121ED5E4C6001EC903 /* NeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD111ED5E4C6001EC903 /* NeedViewController.swift */; };
 		8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166801ECCD0DD0072C19F /* Stressor.storyboard */; };
 		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
@@ -136,6 +138,8 @@
 		8C463B3D1ECB6E2300566531 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		8C463B401ECB843400566531 /* CreateCompass.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateCompass.storyboard; sourceTree = "<group>"; };
 		8C463B421ECBA02600566531 /* CreateCompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateCompassViewController.swift; path = ViewControllers/CreateCompassViewController.swift; sourceTree = "<group>"; };
+		8C54AD0F1ED5E262001EC903 /* Need.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Need.storyboard; sourceTree = "<group>"; };
+		8C54AD111ED5E4C6001EC903 /* NeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedViewController.swift; path = ViewControllers/NeedViewController.swift; sourceTree = "<group>"; };
 		8C9166801ECCD0DD0072C19F /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
@@ -276,9 +280,10 @@
 			isa = PBXGroup;
 			children = (
 				4F8C2E281ED5BA0900A24A40 /* Assessment */,
+				8C54AD0E1ED5E255001EC903 /* Need */,
+				8C463B2C1ECA3BA600566531 /* SideMenu */,
 				4FD5B6571ECCD93B0017DC06 /* StressSelectionItems */,
 				8CFC6D471ECE4C4D00F44B95 /* Thought */,
-				8C463B2C1ECA3BA600566531 /* SideMenu */,
 				8C91667F1ECCB8900072C19F /* Stressor */,
 				8C9166841ECCF18F0072C19F /* Emotion */,
 				8C463B3F1ECB81A400566531 /* CreateCompass */,
@@ -316,6 +321,15 @@
 				8C463B421ECBA02600566531 /* CreateCompassViewController.swift */,
 			);
 			name = CreateCompass;
+			sourceTree = "<group>";
+		};
+		8C54AD0E1ED5E255001EC903 /* Need */ = {
+			isa = PBXGroup;
+			children = (
+				8C54AD0F1ED5E262001EC903 /* Need.storyboard */,
+				8C54AD111ED5E4C6001EC903 /* NeedViewController.swift */,
+			);
+			name = Need;
 			sourceTree = "<group>";
 		};
 		8C91667F1ECCB8900072C19F /* Stressor */ = {
@@ -543,6 +557,7 @@
 				4FD5B6501ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist in Resources */,
 				8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */,
 				8C463B411ECB843400566531 /* CreateCompass.storyboard in Resources */,
+				8C54AD101ED5E262001EC903 /* Need.storyboard in Resources */,
 				8C463B341ECA63CB00566531 /* WebView.storyboard in Resources */,
 				8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */,
 				E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */,
@@ -748,6 +763,7 @@
 				4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 				8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */,
+				8C54AD121ED5E4C6001EC903 /* NeedViewController.swift in Sources */,
 				8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */,
 				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
 				8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */,
