@@ -58,6 +58,8 @@ final class Compass: Object {
     
     dynamic var completed: Bool = false
     
+    dynamic var dateCreated: Date = Date()
+    
 }
 
 extension Compass {
