@@ -34,7 +34,9 @@ final class Compass: Object {
             case .body:
                 return 4
             case .behaviour:
-                return 4
+                return 5
+            case .need:
+                return 5
             default:
                 return 0
 
