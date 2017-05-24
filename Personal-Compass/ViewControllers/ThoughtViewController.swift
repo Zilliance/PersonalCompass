@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ThoughtViewController: UIViewController, CompassValidation {
     
@@ -25,8 +26,15 @@ class ThoughtViewController: UIViewController, CompassValidation {
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
+    private var notificationToken: NotificationToken? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.notificationToken = self.currentCompass.addNotificationBlock { [unowned self] _ in
+            self.setupView()
+        }
+        
         self.setupView()
     }
     
