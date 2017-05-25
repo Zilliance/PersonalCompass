@@ -100,7 +100,7 @@
                                             <constraint firstAttribute="width" constant="46" id="NY9-kU-aWI"/>
                                             <constraint firstAttribute="height" constant="30" id="fJG-HZ-4ec"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
