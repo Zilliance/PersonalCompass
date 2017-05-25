@@ -152,11 +152,12 @@ class CreateCompassViewController: UIViewController {
         self.topLabel.backgroundColor = .clear
         self.pageControl.dotSize = 12
         self.pageControl.numberOfPages = self.compassItems.count
-        self.pageControl.dotColor = .darkGray
         self.pageControl.dotSpacing = 20
-        self.pageControl.selectedDotColor = .white
-        self.pageControl.dotBorderColor = .darkGray
         self.pageControl.backgroundColor = .clear
+        self.pageControl.selectedDotImage = #imageLiteral(resourceName: "pageview-dot-on")
+        self.pageControl.dotImage = #imageLiteral(resourceName: "pageview-dot-off")
+        
+        
         
         self.topLabel.clipsToBounds = true
         self.topLabel.layer.backgroundColor = CompassScene.stressor.color.cgColor
