@@ -80,6 +80,7 @@ final class CompassStressViewController: UIViewController, CompassValidation {
         
         if let itemsSelectionsController = segue.destination as? StressSelectionViewController {
             
+            itemsSelectionsController.type = self.stressItemType
             self.tableViewController = itemsSelectionsController
             
             if (self.stressItemType == .body) {

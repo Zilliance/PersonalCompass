@@ -14,6 +14,8 @@ final class StressSelectionViewController: UITableViewController {
     var items: [StressItem] = []
     var selectedItems: [StressItem] = []
     var saveAction: (([StressItem]) -> ())!
+    
+    var type : StressType?
 
     override func viewDidLoad() {
         
@@ -79,8 +81,19 @@ extension StressSelectionViewController {
     //add a new item logic
     @objc fileprivate func addItemTapped() {
         
-        print("todo...")
+        guard let customStressViewController = UIStoryboard(name: "StressItems", bundle: nil).instantiateViewController(withIdentifier: "CustomStress") as? CustomStressViewController
+            else {
+                assertionFailure()
+                return
+        }
         
+        if let type = self.type {
+            customStressViewController.type = type
+        }
+        
+        let navController = UINavigationController(rootViewController: customStressViewController)
+        
+        self.present(navController, animated: true, completion: nil)
     }
     
 }
