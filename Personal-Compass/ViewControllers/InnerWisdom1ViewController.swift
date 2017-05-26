@@ -22,6 +22,7 @@ class InnerWisdom1ViewController: UIViewController, CompassValidation {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.listenLabel.clipsToBounds = true
         self.listenLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.setupView()
@@ -30,6 +31,14 @@ class InnerWisdom1ViewController: UIViewController, CompassValidation {
             self.setupView()
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        Database.shared.save {
+            self.currentCompass.lastEditedFacet = .innerWisdom1
+        }
+    }
+
     
     private func setupView() {
         
