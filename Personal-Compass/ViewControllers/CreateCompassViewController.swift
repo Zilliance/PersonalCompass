@@ -107,6 +107,8 @@ class CreateCompassViewController: UIViewController {
     @IBOutlet weak var pageControl: FXPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     @IBOutlet weak var returnToSummaryButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     var compass: Compass = Compass()
 
@@ -185,6 +187,19 @@ class CreateCompassViewController: UIViewController {
         
     }
     
+    fileprivate func toggleSummaryButton() {
+        
+        let isShowing = self.returnToSummaryButton.alpha == 1 ? true : false
+        
+        UIView.animate(withDuration: 0.3) { 
+            self.returnToSummaryButton.alpha = isShowing ?  0 : 1
+            self.nextButton.alpha = isShowing ? 1 : 0
+            self.backButton.alpha = isShowing ? 1 : 0
+            
+        }
+    
+    }
+    
     private func checkError() -> CompassError? {
         let vc = self.compassItems[self.pageCount].viewController as! CompassValidation
         return vc.error
@@ -229,7 +244,7 @@ class CreateCompassViewController: UIViewController {
             return
         }
 
-        moveToPage(page: self.pageCount + 1, direction: .forward)
+        self.moveToPage(page: self.pageCount + 1, direction: .forward)
 
     }
     
@@ -251,6 +266,8 @@ class CreateCompassViewController: UIViewController {
     }
     
     @IBAction func returnToSummaryAction(_ sender: Any) {
+        self.toggleSummaryButton()
+        self.moveToPage(page: Compass.Facet.assessment.pageIndex - 1, direction: .forward)
     }
 }
 
@@ -261,7 +278,7 @@ extension CreateCompassViewController: AssessmentViewControllerDelegate {
         guard let scenePage = (compassItems.index { $0.scene == scene }) else {
             return assertionFailure()
         }
-        
+        self.toggleSummaryButton()
         self.moveToPage(page: scenePage, direction: .reverse)
     }
 

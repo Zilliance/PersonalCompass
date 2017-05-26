@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGI-7Y-I1n">
-                                <rect key="frame" x="20" y="597" width="48" height="50"/>
+                                <rect key="frame" x="20" y="597" width="47" height="50"/>
                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
                                 <state key="normal" title="BACK">
                                     <color key="titleColor" red="0.4549019608" green="0.79607843140000001" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVq-fT-VQY">
-                                <rect key="frame" x="310" y="597" width="45" height="50"/>
+                                <rect key="frame" x="312" y="597" width="43" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SD1-tD-3cn"/>
                                 </constraints>
@@ -129,7 +129,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGI-Ub-dY5">
                                 <rect key="frame" x="0.0" y="128" width="375" height="449"/>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix6-pQ-A7d">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix6-pQ-A7d">
                                 <rect key="frame" x="74" y="607" width="226" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="c8O-l7-X5c"/>
@@ -163,6 +163,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="uGI-7Y-I1n" id="pLu-n9-yWE"/>
+                        <outlet property="nextButton" destination="lVq-fT-VQY" id="x6G-l8-xKm"/>
                         <outlet property="pageContainerView" destination="iGI-Ub-dY5" id="Nde-Bv-l6b"/>
                         <outlet property="pageControl" destination="Bsn-fd-0nv" id="IJG-2S-tPY"/>
                         <outlet property="returnToSummaryButton" destination="Ix6-pQ-A7d" id="dNg-GL-LkT"/>
