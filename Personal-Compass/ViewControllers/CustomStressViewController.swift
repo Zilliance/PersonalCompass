@@ -11,10 +11,14 @@ import UIKit
 class CustomStressViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var topLabel: UILabel!
     
     var type: StressType = .body
     
-    fileprivate let placeholderText = "In one or two words, describe how the situation is makes you feel physically"
+    fileprivate var placeholderText: String {
+        return self.type == .body ? "In one or two words, describe how the situation is makes you feel physically" : "In one or two words, describe how the situation is affecting my behavior"
+    }
+    
     fileprivate let placeholderTextColor = UIColor.lightGray
     fileprivate let normalTextColor = UIColor.darkGray
 
@@ -30,6 +34,7 @@ class CustomStressViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save))
         
         self.title = self.type == .body ? "Custom Body Stress" : "Custom Behavior Stress"
+        self.topLabel.text = self.type == .body ? "How is the stress of this situation affecting me physically?" : "How is the stress of this situation affecting my behavior?"
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
