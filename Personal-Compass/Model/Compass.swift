@@ -63,6 +63,8 @@ final class Compass: Object {
     
     dynamic var need: String?
     
+    dynamic var editedNeed: String?
+    
     dynamic var thoughtAboutEmotion: String?
     
     dynamic var innerWisdom: String?
