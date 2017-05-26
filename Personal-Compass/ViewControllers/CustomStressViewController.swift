@@ -8,15 +8,21 @@
 
 import UIKit
 
-class CustomStressViewController: UIViewController {
+protocol CustomStressViewControllerDelegate: class {
+    func newItemSaved(newItem: StressItem)
+}
+
+final class CustomStressViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var topLabel: UILabel!
     
-    var type: StressType = .body
+    var type: StressItem.Type!
+    weak var delegate: CustomStressViewControllerDelegate!
     
     fileprivate var placeholderText: String {
-        return self.type == .body ? "In one or two words, describe how the situation is makes you feel physically" : "In one or two words, describe how the situation is affecting my behavior"
+        
+        return self.type == BodyStress.self ? "In one or two words, describe how the situation is makes you feel physically" : "In one or two words, describe how the situation is affecting my behavior"
     }
     
     fileprivate let placeholderTextColor = UIColor.lightGray
@@ -33,8 +39,8 @@ class CustomStressViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.closeView))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save))
         
-        self.title = self.type == .body ? "Custom Body Stress" : "Custom Behavior Stress"
-        self.topLabel.text = self.type == .body ? "How is the stress of this situation affecting me physically?" : "How is the stress of this situation affecting my behavior?"
+        self.title = self.type == BodyStress.self ? "Custom Body Stress" : "Custom Behavior Stress"
+        self.topLabel.text = self.type == BodyStress.self ? "How is the stress of this situation affecting me physically?" : "How is the stress of this situation affecting my behavior?"
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
@@ -78,6 +84,10 @@ extension CustomStressViewController {
             self.showAlert(title: "", message: "Please enter text")
             return
         }
+        
+        let newItem = self.type.createNew(title: textView.text)
+        self.delegate.newItemSaved(newItem: newItem)
+        
         self.dismiss(animated: true, completion: nil)
     }
 

@@ -23,7 +23,9 @@ final class CompassStressViewController: UIViewController, CompassValidation {
     
     var currentCompass: Compass!
     
-    var stressItemType: StressType = .body
+    var stressItemType: StressItem.Type!
+    
+    var notificationToken: NotificationToken? = nil
     
     var error: CompassError? {
         if let items = self.tableViewController?.selectedItems, items.count > 0 {
@@ -47,7 +49,7 @@ final class CompassStressViewController: UIViewController, CompassValidation {
     
     override func viewDidDisappear(_ animated: Bool) {
         Database.shared.save {
-            if self.stressItemType == .body {
+            if self.stressItemType == BodyStress.self {
                 self.currentCompass.lastEditedFacet = .body
             }
             else {
@@ -83,14 +85,26 @@ final class CompassStressViewController: UIViewController, CompassValidation {
             itemsSelectionsController.type = self.stressItemType
             self.tableViewController = itemsSelectionsController
             
-            if (self.stressItemType == .body) {
+            if (self.stressItemType == BodyStress.self) {
                 
                 self.setupItemsSelection(vc: itemsSelectionsController, preloadedItems: Array(Database.shared.bodyStressStored), destination: self.currentCompass.bodyStressElements)
 
+                notificationToken = Database.shared.bodyStressStored.addNotificationBlock({ _ in
+                    
+                    itemsSelectionsController.updateItems(newItems: Array(Database.shared.bodyStressStored))
+                    
+                })
+                
             }
             else {
                 
                 self.setupItemsSelection(vc: itemsSelectionsController, preloadedItems: Array(Database.shared.behaviourStressStored), destination: self.currentCompass.behaviourStressElements)
+                
+                notificationToken = Database.shared.behaviourStressStored.addNotificationBlock({ _ in
+                    
+                    itemsSelectionsController.updateItems(newItems: Array(Database.shared.behaviourStressStored))
+                    
+                })
                 
             }
             
