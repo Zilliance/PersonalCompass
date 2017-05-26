@@ -19,8 +19,9 @@ final class Compass: Object {
         case body
         case behaviour
         case assessment
-        case innerWisdom
         case need
+        case innerWisdom1
+        case innerWisdom2
         
         var pageIndex: Int {
             switch self {
@@ -39,9 +40,11 @@ final class Compass: Object {
             case .assessment:
                 return 5
             case .need:
-                return 5
-            default:
-                return 0
+                return 6
+            case .innerWisdom1:
+                return 7
+            case .innerWisdom2:
+                return 8
 
             }
         }

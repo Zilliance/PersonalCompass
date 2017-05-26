@@ -58,6 +58,9 @@
 		8C54AD101ED5E262001EC903 /* Need.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C54AD0F1ED5E262001EC903 /* Need.storyboard */; };
 		8C54AD121ED5E4C6001EC903 /* NeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD111ED5E4C6001EC903 /* NeedViewController.swift */; };
 		8C54AD141ED72B33001EC903 /* CustomStressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD131ED72B33001EC903 /* CustomStressViewController.swift */; };
+		8C54AD171ED89991001EC903 /* InnerWisdom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C54AD161ED89991001EC903 /* InnerWisdom.storyboard */; };
+		8C54AD191ED8DF0E001EC903 /* InnerWisdom1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD181ED8DF0E001EC903 /* InnerWisdom1ViewController.swift */; };
+		8C54AD1B1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD1A1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift */; };
 		8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166801ECCD0DD0072C19F /* Stressor.storyboard */; };
 		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
@@ -144,6 +147,9 @@
 		8C54AD0F1ED5E262001EC903 /* Need.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Need.storyboard; sourceTree = "<group>"; };
 		8C54AD111ED5E4C6001EC903 /* NeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedViewController.swift; path = ViewControllers/NeedViewController.swift; sourceTree = "<group>"; };
 		8C54AD131ED72B33001EC903 /* CustomStressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomStressViewController.swift; path = ViewControllers/CustomStressViewController.swift; sourceTree = "<group>"; };
+		8C54AD161ED89991001EC903 /* InnerWisdom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InnerWisdom.storyboard; sourceTree = "<group>"; };
+		8C54AD181ED8DF0E001EC903 /* InnerWisdom1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom1ViewController.swift; path = ViewControllers/InnerWisdom1ViewController.swift; sourceTree = "<group>"; };
+		8C54AD1A1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom2ViewController.swift; path = ViewControllers/InnerWisdom2ViewController.swift; sourceTree = "<group>"; };
 		8C9166801ECCD0DD0072C19F /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
@@ -292,6 +298,7 @@
 		8C463B261ECA356F00566531 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8C54AD151ED89197001EC903 /* InnerWisdom */,
 				4F8C2E281ED5BA0900A24A40 /* Assessment */,
 				8C54AD0E1ED5E255001EC903 /* Need */,
 				8C463B2C1ECA3BA600566531 /* SideMenu */,
@@ -343,6 +350,16 @@
 				8C54AD111ED5E4C6001EC903 /* NeedViewController.swift */,
 			);
 			name = Need;
+			sourceTree = "<group>";
+		};
+		8C54AD151ED89197001EC903 /* InnerWisdom */ = {
+			isa = PBXGroup;
+			children = (
+				8C54AD161ED89991001EC903 /* InnerWisdom.storyboard */,
+				8C54AD181ED8DF0E001EC903 /* InnerWisdom1ViewController.swift */,
+				8C54AD1A1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift */,
+			);
+			name = InnerWisdom;
 			sourceTree = "<group>";
 		};
 		8C91667F1ECCB8900072C19F /* Stressor */ = {
@@ -571,6 +588,7 @@
 				4FD5B6501ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist in Resources */,
 				8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */,
 				8C463B411ECB843400566531 /* CreateCompass.storyboard in Resources */,
+				8C54AD171ED89991001EC903 /* InnerWisdom.storyboard in Resources */,
 				8C54AD101ED5E262001EC903 /* Need.storyboard in Resources */,
 				8C463B341ECA63CB00566531 /* WebView.storyboard in Resources */,
 				8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */,
@@ -765,10 +783,12 @@
 				4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
 				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
+				8C54AD1B1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift in Sources */,
 				4F8C2E2C1ED5BD1E00A24A40 /* DynamicTextCell.swift in Sources */,
 				4FD5B65D1ECCDB200017DC06 /* StressSelectionViewController.swift in Sources */,
 				8C463B3E1ECB6E2300566531 /* App.swift in Sources */,
 				4FD5B65A1ECCD9680017DC06 /* StressItemSelectionCell.swift in Sources */,
+				8C54AD191ED8DF0E001EC903 /* InnerWisdom1ViewController.swift in Sources */,
 				8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */,
 				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,
 				4FCBA1B11EDD954900B68A85 /* UINavigationController+Completion.swift in Sources */,

@@ -31,6 +31,8 @@ enum CompassScene: String {
     case behavior
     case assessment
     case need
+    case innerWisdom1
+    case innerWisdom2
     
     var color: UIColor {
         switch self {
@@ -48,6 +50,10 @@ enum CompassScene: String {
             return .green
         case .need:
             return .purple
+        case .innerWisdom1:
+            return .innerWisdom
+        case .innerWisdom2:
+            return .innerWisdom
         }
     }
     
@@ -101,6 +107,16 @@ class CreateCompassViewController: UIViewController {
                 let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! NeedViewController
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
+                
+            case .innerWisdom1:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "1") as! InnerWisdom1ViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
+                
+            case .innerWisdom2:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "2") as! InnerWisdom2ViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
             }
             
             self.scene = scene
@@ -128,6 +144,8 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .behavior, container: self),
             CompassItem(for: .assessment, container: self),
             CompassItem(for: .need, container: self),
+            CompassItem(for: .innerWisdom1, container: self),
+            CompassItem(for: .innerWisdom2, container: self),
         ]
         
         return items
@@ -186,7 +204,14 @@ class CreateCompassViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: { 
             self.topLabel.layer.backgroundColor = scene.color.cgColor
         }) { _ in
-            self.topLabel.text = scene.rawValue.capitalized
+        
+            switch scene {
+            case .innerWisdom1, .innerWisdom2:
+                self.topLabel.text = "Inner Wisdom"
+            default:
+                self.topLabel.text = scene.rawValue.capitalized
+            }
+            
         }
         
     }
