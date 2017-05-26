@@ -101,7 +101,7 @@
                                             <constraint firstAttribute="height" constant="30" id="fJG-HZ-4ec"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
-                                        <state key="normal" title="Save">
+                                        <state key="normal" title="Done">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
