@@ -57,9 +57,11 @@ class Database {
             
             self.realm = try Realm()
             
-            bodyStressStored = self.realm.objects(BodyStress.self).sorted(byKeyPath: "order")
+            let sortProperties = [SortDescriptor(keyPath: "order", ascending: true), SortDescriptor(keyPath: "title", ascending: true)]
             
-            behaviourStressStored = self.realm.objects(BehaviourStress.self).sorted(byKeyPath: "order")
+            bodyStressStored = self.realm.objects(BodyStress.self).sorted(by: sortProperties)
+            
+            behaviourStressStored = self.realm.objects(BehaviourStress.self).sorted(by: sortProperties)
 
             if let user = self.realm.objects(User.self).first
             {
