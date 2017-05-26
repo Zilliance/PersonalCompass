@@ -106,6 +106,7 @@ class CreateCompassViewController: UIViewController {
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var pageControl: FXPageControl!
     @IBOutlet weak var pageContainerView: UIView!
+    @IBOutlet weak var returnToSummaryButton: UIButton!
     
     var compass: Compass = Compass()
 
@@ -249,6 +250,8 @@ class CreateCompassViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func returnToSummaryAction(_ sender: Any) {
+    }
 }
 
 extension CreateCompassViewController: AssessmentViewControllerDelegate {
