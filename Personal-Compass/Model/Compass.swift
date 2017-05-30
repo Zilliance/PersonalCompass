@@ -23,6 +23,7 @@ final class Compass: Object {
         case innerWisdom1
         case innerWisdom2
         case innerWisdom3
+        case innerWisdom4
         
         var pageIndex: Int {
             switch self {
@@ -48,6 +49,8 @@ final class Compass: Object {
                 return 8
             case .innerWisdom3:
                 return 9
+            case .innerWisdom4:
+                return 10
 
             }
         }
@@ -61,6 +64,8 @@ final class Compass: Object {
     let behaviourStressElements = List<BehaviourStress>()
     
     dynamic var emotion: Emotion?
+    
+    dynamic var needMetEmotion: Emotion?
     
     dynamic var stressor: String?
     
