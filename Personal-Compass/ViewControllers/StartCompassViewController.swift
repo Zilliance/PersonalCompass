@@ -44,10 +44,9 @@ class StartCompassViewController: UIViewController {
     @IBAction func startAction(_ sender: UIButton) {
         let compass = Compass()
         compass.lastEditedFacet = .unknown
-        let user = Database.shared.user
-        Database.shared.save {
-            user?.compasses.append(compass)
-        }
+//        let user = Database.shared.user
+//        user?.compasses.append(compass)
+        
         guard let createCompassViewController = UIStoryboard(name: "CreateCompass", bundle: nil).instantiateInitialViewController() as? CreateCompassViewController else { return }
         createCompassViewController.compass = compass
         self.navigationController?.pushViewController(createCompassViewController, animated: true)
@@ -82,7 +81,7 @@ extension StartCompassViewController: UICollectionViewDelegate {
         
         if !compass.completed {
             guard let createCompassViewController = UIStoryboard(name: "CreateCompass", bundle: nil).instantiateInitialViewController() as? CreateCompassViewController else { return }
-            createCompassViewController.compass = compass
+            createCompassViewController.compass = Compass(value: compass)
             self.navigationController?.pushViewController(createCompassViewController, animated: true)
         }
         

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ThoughtViewController: UIViewController, CompassValidation {
+class ThoughtViewController: CompassFacetEditorController, CompassValidation {
     
     var currentCompass: Compass!
     
@@ -26,24 +26,15 @@ class ThoughtViewController: UIViewController, CompassValidation {
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
-    private var notificationToken: NotificationToken? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.notificationToken = self.currentCompass.addNotificationBlock { [unowned self] _ in
-            self.setupView()
-        }
         
         self.setupView()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        Database.shared.save {
-            self.currentCompass.thoughtAboutEmotion = self.textView.text
-            self.currentCompass.lastEditedFacet = .thought
-        }
+    override func save() {
+        self.currentCompass.thoughtAboutEmotion = self.textView.text
+        self.currentCompass.lastEditedFacet = .thought
     }
     
     private func setupView() {

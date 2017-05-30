@@ -23,12 +23,6 @@ final class StressSelectionViewController: UITableViewController {
             
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        saveAction(selectedItems)
-        
-    }
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }

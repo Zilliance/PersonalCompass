@@ -22,7 +22,7 @@ final class CustomStressViewController: UIViewController {
     
     fileprivate var placeholderText: String {
         
-        return self.type == BodyStress.self ? "In one or two words, describe how the situation is makes you feel physically" : "In one or two words, describe how the situation is affecting my behavior"
+        return self.type == BodyStress.self ? "In one or two words, describe how the situation makes you feel physically" : "In one or two words, describe how the situation is affecting my behavior"
     }
     
     fileprivate let placeholderTextColor = UIColor.lightGray
