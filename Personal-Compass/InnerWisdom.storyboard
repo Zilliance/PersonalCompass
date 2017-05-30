@@ -53,38 +53,30 @@
                                     <constraint firstAttribute="width" constant="122" id="yTO-op-k2g"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lud-GJ-gma">
-                                <rect key="frame" x="126" y="243" width="122" height="2"/>
-                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="xxD-2N-D87"/>
-                                    <constraint firstAttribute="width" constant="122" id="ysc-rp-ETc"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNh-ro-hH3">
                                 <rect key="frame" x="20" y="192" width="335" height="33"/>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE INVITE YOU TO TRY THIS TWO MINUTE TOOL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-lp-yc3">
-                                <rect key="frame" x="22" y="259" width="331.5" height="18"/>
-                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.011764705882352941" green="0.77647058823529413" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We invite you to try this two minute tool." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-lp-yc3">
+                                <rect key="frame" x="60" y="242" width="256.5" height="18"/>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3G-hd-Nz5">
-                                <rect key="frame" x="135.5" y="297" width="104" height="100"/>
+                                <rect key="frame" x="135.5" y="280" width="104" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconHeadphones" translatesAutoresizingMaskIntoConstraints="NO" id="JrN-2R-qnf">
-                                        <rect key="frame" x="27" y="0.0" width="50" height="50"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconHeadphonesEncircled" translatesAutoresizingMaskIntoConstraints="NO" id="JrN-2R-qnf">
+                                        <rect key="frame" x="11" y="0.0" width="82" height="82"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="GDr-ZA-VJ2"/>
-                                            <constraint firstAttribute="height" constant="50" id="mwz-rY-FN6"/>
+                                            <constraint firstAttribute="width" constant="82" id="GDr-ZA-VJ2"/>
+                                            <constraint firstAttribute="height" constant="82" id="mwz-rY-FN6"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bre-2q-owR">
-                                        <rect key="frame" x="0.0" y="66" width="104" height="28"/>
+                                        <rect key="frame" x="0.0" y="98" width="104" height="28"/>
                                         <color key="backgroundColor" red="0.38431372549019605" green="0.42745098039215684" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="BIn-73-kus"/>
@@ -94,7 +86,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9k-aS-hGn">
-                                        <rect key="frame" x="0.0" y="0.0" width="104" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="130"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="listenAction:" destination="Eq7-Qq-x6S" eventType="touchUpInside" id="wts-vC-9JA"/>
@@ -109,7 +101,7 @@
                                     <constraint firstItem="N9k-aS-hGn" firstAttribute="top" secondItem="g3G-hd-Nz5" secondAttribute="top" id="6dh-XB-Wv4"/>
                                     <constraint firstAttribute="bottom" secondItem="N9k-aS-hGn" secondAttribute="bottom" id="GVs-g7-Hhl"/>
                                     <constraint firstItem="bre-2q-owR" firstAttribute="leading" secondItem="g3G-hd-Nz5" secondAttribute="leading" id="OUf-9b-FTG"/>
-                                    <constraint firstAttribute="height" constant="100" id="OW4-Px-nIZ"/>
+                                    <constraint firstAttribute="height" constant="130" id="OW4-Px-nIZ"/>
                                     <constraint firstAttribute="width" constant="104" id="TFE-l5-O1s"/>
                                     <constraint firstItem="JrN-2R-qnf" firstAttribute="top" secondItem="g3G-hd-Nz5" secondAttribute="top" id="p3M-V4-12E"/>
                                     <constraint firstItem="bre-2q-owR" firstAttribute="top" secondItem="JrN-2R-qnf" secondAttribute="bottom" constant="16" id="rPZ-Iz-FnO"/>
@@ -117,7 +109,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or skip to next." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbr-z3-OHF">
-                                <rect key="frame" x="141" y="409" width="92.5" height="18"/>
+                                <rect key="frame" x="141" y="422" width="92.5" height="18"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,14 +119,12 @@
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="EO1-G0-WM5" firstAttribute="top" secondItem="Snc-z6-P4A" secondAttribute="bottom" constant="40" id="50Q-kQ-HH2"/>
-                            <constraint firstItem="A7R-lp-yc3" firstAttribute="top" secondItem="Lud-GJ-gma" secondAttribute="bottom" constant="14" id="7jV-8e-s0D"/>
                             <constraint firstItem="A7R-lp-yc3" firstAttribute="centerX" secondItem="zhQ-W8-oRl" secondAttribute="centerX" id="Ciu-hl-eN8"/>
                             <constraint firstItem="Zbr-z3-OHF" firstAttribute="top" secondItem="g3G-hd-Nz5" secondAttribute="bottom" constant="12" id="DdP-G4-SpA"/>
                             <constraint firstAttribute="trailing" secondItem="CNh-ro-hH3" secondAttribute="trailing" constant="20" id="GaE-NJ-IFU"/>
-                            <constraint firstItem="Lud-GJ-gma" firstAttribute="top" secondItem="CNh-ro-hH3" secondAttribute="bottom" constant="18" id="HPs-h9-174"/>
                             <constraint firstItem="SLh-dr-JrE" firstAttribute="centerX" secondItem="zhQ-W8-oRl" secondAttribute="centerX" id="M0M-iD-ciQ"/>
+                            <constraint firstItem="A7R-lp-yc3" firstAttribute="top" secondItem="CNh-ro-hH3" secondAttribute="bottom" constant="17" id="UWI-g2-VJ7"/>
                             <constraint firstItem="Zbr-z3-OHF" firstAttribute="centerX" secondItem="zhQ-W8-oRl" secondAttribute="centerX" id="aWy-XK-3oG"/>
-                            <constraint firstItem="Lud-GJ-gma" firstAttribute="centerX" secondItem="zhQ-W8-oRl" secondAttribute="centerX" id="acH-mZ-uTB"/>
                             <constraint firstAttribute="trailing" secondItem="EO1-G0-WM5" secondAttribute="trailing" constant="20" id="e5M-fX-4vP"/>
                             <constraint firstItem="g3G-hd-Nz5" firstAttribute="top" secondItem="A7R-lp-yc3" secondAttribute="bottom" constant="20" id="iCl-VL-VbN"/>
                             <constraint firstItem="EO1-G0-WM5" firstAttribute="leading" secondItem="zhQ-W8-oRl" secondAttribute="leading" constant="20" id="ifa-O8-Rdq"/>
@@ -181,7 +171,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="166" id="hTk-68-TpQ"/>
                                 </constraints>
-                                <color key="textColor" red="0.38431372549019605" green="0.42745098039215684" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
@@ -227,6 +217,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iconHeadphones" width="50" height="50"/>
+        <image name="iconHeadphonesEncircled" width="84" height="84"/>
     </resources>
 </document>
