@@ -56,6 +56,7 @@
 		8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B421ECBA02600566531 /* CreateCompassViewController.swift */; };
 		8C54AD101ED5E262001EC903 /* Need.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C54AD0F1ED5E262001EC903 /* Need.storyboard */; };
 		8C54AD121ED5E4C6001EC903 /* NeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD111ED5E4C6001EC903 /* NeedViewController.swift */; };
+		8C54AD141ED72B33001EC903 /* CustomStressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD131ED72B33001EC903 /* CustomStressViewController.swift */; };
 		8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166801ECCD0DD0072C19F /* Stressor.storyboard */; };
 		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
@@ -140,6 +141,7 @@
 		8C463B421ECBA02600566531 /* CreateCompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateCompassViewController.swift; path = ViewControllers/CreateCompassViewController.swift; sourceTree = "<group>"; };
 		8C54AD0F1ED5E262001EC903 /* Need.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Need.storyboard; sourceTree = "<group>"; };
 		8C54AD111ED5E4C6001EC903 /* NeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NeedViewController.swift; path = ViewControllers/NeedViewController.swift; sourceTree = "<group>"; };
+		8C54AD131ED72B33001EC903 /* CustomStressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomStressViewController.swift; path = ViewControllers/CustomStressViewController.swift; sourceTree = "<group>"; };
 		8C9166801ECCD0DD0072C19F /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */,
 				4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */,
 				4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */,
+				8C54AD131ED72B33001EC903 /* CustomStressViewController.swift */,
 			);
 			name = StressSelectionItems;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 				8CFC6D4D1ED3A0D600F44B95 /* UIViewController+Extensions.swift in Sources */,
 				047A58011ECB2B5200BC7650 /* Compass.swift in Sources */,
 				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
+				8C54AD141ED72B33001EC903 /* CustomStressViewController.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,

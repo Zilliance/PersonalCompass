@@ -14,6 +14,8 @@ final class StressSelectionViewController: UITableViewController {
     var items: [StressItem] = []
     var selectedItems: [StressItem] = []
     var saveAction: (([StressItem]) -> ())!
+    
+    var type : StressItem.Type!
 
     override func viewDidLoad() {
         
@@ -70,16 +72,37 @@ final class StressSelectionViewController: UITableViewController {
         tableView.reloadRows(at: [indexPath], with: .none)
     }
     
+    func updateItems(newItems: [StressItem]) {
+        self.items = newItems
+        self.tableView.reloadData()
+    }
     
 }
 
 
-extension StressSelectionViewController {
+extension StressSelectionViewController: CustomStressViewControllerDelegate {
     
     //add a new item logic
     @objc fileprivate func addItemTapped() {
         
-        print("todo...")
+        guard let customStressViewController = UIStoryboard(name: "StressItems", bundle: nil).instantiateViewController(withIdentifier: "CustomStress") as? CustomStressViewController
+            else {
+                assertionFailure()
+                return
+        }
+        
+        customStressViewController.type = self.type
+        
+        customStressViewController.delegate = self
+        
+        let navController = UINavigationController(rootViewController: customStressViewController)
+        
+        self.present(navController, animated: true, completion: nil)
+    }
+    
+    func newItemSaved(newItem: StressItem) {
+        
+        self.selectedItems.append(newItem)
         
     }
     

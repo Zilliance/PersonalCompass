@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
@@ -178,6 +181,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlM-Oa-09s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="238.83058470764618"/>
+        </scene>
+        <!--Custom Stress View Controller-->
+        <scene sceneID="9v9-iJ-IFM">
+            <objects>
+                <viewController storyboardIdentifier="CustomStress" id="p86-3Q-HEy" customClass="CustomStressViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cnG-7G-X4P"/>
+                        <viewControllerLayoutGuide type="bottom" id="c53-Jj-oDy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7JY-Xl-6P3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UuJ-t9-57O">
+                                <rect key="frame" x="20" y="142" width="335" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Wsa-0n-TbU"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="p86-3Q-HEy" id="NSl-AR-kqN"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the stress of this situation affecting me physically?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csk-Fr-vSj">
+                                <rect key="frame" x="20" y="60" width="335" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="VjE-Po-XdR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Csk-Fr-vSj" firstAttribute="top" secondItem="cnG-7G-X4P" secondAttribute="bottom" constant="40" id="00B-6H-dDs"/>
+                            <constraint firstItem="UuJ-t9-57O" firstAttribute="leading" secondItem="7JY-Xl-6P3" secondAttribute="leading" constant="20" id="5e4-CV-Won"/>
+                            <constraint firstItem="UuJ-t9-57O" firstAttribute="top" secondItem="Csk-Fr-vSj" secondAttribute="bottom" constant="20" id="5ha-A2-ehz"/>
+                            <constraint firstItem="Csk-Fr-vSj" firstAttribute="leading" secondItem="7JY-Xl-6P3" secondAttribute="leading" constant="20" id="Gce-ho-nFg"/>
+                            <constraint firstAttribute="trailing" secondItem="UuJ-t9-57O" secondAttribute="trailing" constant="20" id="Hy7-Os-3Gc"/>
+                            <constraint firstAttribute="trailing" secondItem="Csk-Fr-vSj" secondAttribute="trailing" constant="20" id="PNl-jf-ZJB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mKP-bx-AmN"/>
+                    <connections>
+                        <outlet property="textView" destination="UuJ-t9-57O" id="Z9w-X7-btE"/>
+                        <outlet property="topLabel" destination="Csk-Fr-vSj" id="Ze4-1g-B0C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQB-Db-0eJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="239"/>
         </scene>
     </scenes>
     <resources>
