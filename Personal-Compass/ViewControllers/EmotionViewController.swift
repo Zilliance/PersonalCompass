@@ -26,7 +26,7 @@ class EmotionCell: UITableViewCell {
     
 }
 
-class EmotionViewController: CompassFacetEditorController, CompassValidation {
+class EmotionViewController: UIViewController, CompassFacetEditor, CompassValidation {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -48,7 +48,7 @@ class EmotionViewController: CompassFacetEditorController, CompassValidation {
         self.setupTableView()
     }
     
-    override func save() {
+    func save() {
         
         if let index = self.tableView.indexPathsForSelectedRows?.first {
             let emotion = self.emotions[index.row]

@@ -15,7 +15,7 @@ enum StressType {
     case behaviour
 }
 
-final class CompassStressViewController: CompassFacetEditorController, CompassValidation {
+final class CompassStressViewController: UIViewController, CompassFacetEditor, CompassValidation {
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
@@ -47,7 +47,7 @@ final class CompassStressViewController: CompassFacetEditorController, CompassVa
         
     }
     
-    override func save() {
+    func save() {
         
         self.tableViewController.saveAction(self.tableViewController.selectedItems)
         

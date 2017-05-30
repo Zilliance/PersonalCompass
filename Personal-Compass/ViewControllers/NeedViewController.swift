@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NeedViewController: CompassFacetEditorController, CompassValidation {
+class NeedViewController: UIViewController, CompassFacetEditor, CompassValidation {
 
     var currentCompass: Compass!
     var error: CompassError? {
@@ -32,7 +32,7 @@ class NeedViewController: CompassFacetEditorController, CompassValidation {
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
-    override func save() {
+    func save() {
         self.currentCompass.need = self.textView.text
         self.currentCompass.lastEditedFacet = .need
     }

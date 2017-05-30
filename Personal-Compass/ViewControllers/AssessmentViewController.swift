@@ -14,7 +14,7 @@ protocol AssessmentViewControllerDelegate {
     
 }
 
-class AssessmentViewController: CompassFacetEditorController, CompassValidation {
+class AssessmentViewController: UIViewController, CompassValidation {
     
     enum RowType: Int {
         case feeling
@@ -59,10 +59,6 @@ class AssessmentViewController: CompassFacetEditorController, CompassValidation 
         // Dispose of any resources that can be recreated.
     }
     
-    override func save() {
-        //
-    }
-
     /*
     // MARK: - Navigation
 

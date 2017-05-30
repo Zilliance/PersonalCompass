@@ -14,12 +14,8 @@ protocol CompassValidation {
     var currentCompass: Compass! { get set }
 }
 
-class CompassFacetEditorController: UIViewController {
-    
-    func save() {
-        assertionFailure("function needs to be implemented")
-    }
-    
+protocol CompassFacetEditor {
+    func save()
 }
 
 enum CompassError {
@@ -60,7 +56,7 @@ enum CompassScene: String {
 class CreateCompassViewController: UIViewController {
     
     fileprivate struct CompassItem {
-        let viewController: CompassFacetEditorController
+        let viewController: UIViewController
         let scene: CompassScene
         
         init(for scene: CompassScene, container: CreateCompassViewController) {
@@ -220,8 +216,9 @@ class CreateCompassViewController: UIViewController {
     
     fileprivate func moveToPage(page: Int, direction: UIPageViewControllerNavigationDirection) {
         
-        let currentItem = self.compassItems[self.currentPageIndex]
-        currentItem.viewController.save()
+        if let currentItem = self.compassItems[self.currentPageIndex].viewController as? CompassFacetEditor {
+            currentItem.save()
+        }
         
         self.currentPageIndex = page
         self.pageControl.currentPage = self.currentPageIndex
@@ -258,7 +255,7 @@ class CreateCompassViewController: UIViewController {
             return
         }
 
-        self.moveToPage(page: self.pageCount + 1, direction: .forward)
+        self.moveToPage(page: self.currentPageIndex + 1, direction: .forward)
 
     }
     
@@ -270,9 +267,9 @@ class CreateCompassViewController: UIViewController {
     
     @IBAction func saveAction(_ sender: Any) {
         
-        let currentItem = self.compassItems[self.currentPageIndex]
-        
-        currentItem.viewController.save()
+        if let currentItem = self.compassItems[self.currentPageIndex].viewController as? CompassFacetEditor {
+            currentItem.save()
+        }
 
         let update = Database.shared.user.compasses.filter { $0.id == self.compass.id }.count > 0
         

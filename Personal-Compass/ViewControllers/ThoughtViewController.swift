@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ThoughtViewController: CompassFacetEditorController, CompassValidation {
+class ThoughtViewController: UIViewController, CompassFacetEditor, CompassValidation {
     
     var currentCompass: Compass!
     
@@ -32,7 +32,7 @@ class ThoughtViewController: CompassFacetEditorController, CompassValidation {
         self.setupView()
     }
     
-    override func save() {
+    func save() {
         self.currentCompass.thoughtAboutEmotion = self.textView.text
         self.currentCompass.lastEditedFacet = .thought
     }
