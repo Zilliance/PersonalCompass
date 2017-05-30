@@ -48,7 +48,7 @@ class AssessmentViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 70
+        self.tableView.estimatedRowHeight = 84
 
     }
 
@@ -78,7 +78,7 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DynamicTextCell", for: indexPath) as! DynamicTextCell
+        var cell: CompassFacetSummaryCell!
         
         guard let row = RowType(rawValue: indexPath.row) else {
             assertionFailure()
@@ -87,20 +87,32 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch row {
         case .feeling:
-            cell.label.text = "I am feeling " + (currentCompass.emotion?.longTitle ?? "")
-        case .thought:
-            cell.label.text = "Because " + (currentCompass.thoughtAboutEmotion ?? "")
-        case .bodyStress:
+            let emotionCell = tableView.dequeueReusableCell(withIdentifier: "EmotionSummaryCell", for: indexPath) as! EmotionSummaryCell
+            emotionCell.label.text = (currentCompass.emotion?.longTitle ?? "")
+            emotionCell.iconView.image = currentCompass.emotion?.icon
+            emotionCell.label.textColor = row.sceneAssociated.color
             
-            let stressElements = (currentCompass.bodyStressElements.flatMap { $0.title }).joined(separator: ", ")
+            cell = emotionCell
+        case .thought:
+            cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
+            cell.label.text = "Because of " + (currentCompass.thoughtAboutEmotion ?? "")
+        case .bodyStress:
+            cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
+            let stressElements = (currentCompass.bodyStressElements.flatMap { $0.title }).joined(separator: "\n")
             cell.label.text = stressElements
+            cell.label.textColor = row.sceneAssociated.color
         
         case .behaviourStress:
-            let stressElements = (currentCompass.behaviourStressElements.flatMap { $0.title }).joined(separator: ", ")
+            cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
+            
+            let stressElements = (currentCompass.behaviourStressElements.flatMap { $0.title }).joined(separator: "\n")
             cell.label.text = stressElements
+            cell.label.textColor = row.sceneAssociated.color
+
         }
         
-        cell.labelContainer.backgroundColor = row.sceneAssociated.color
+        cell.titleContainer.backgroundColor = row.sceneAssociated.color
+        cell.title.text = row.sceneAssociated.title
         
         return cell
         

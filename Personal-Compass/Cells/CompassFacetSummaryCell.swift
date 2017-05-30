@@ -8,16 +8,16 @@
 
 import UIKit
 
-class DynamicTextCell: UITableViewCell {
+class CompassFacetSummaryCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var labelContainer: UIView!
+    @IBOutlet weak var titleContainer: UIView!
+    @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.labelContainer.layer.cornerRadius = App.Appearance.buttonCornerRadius
-        self.label.textColor = UIColor.white
+        self.titleContainer.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.selectionStyle = .none
     }
 

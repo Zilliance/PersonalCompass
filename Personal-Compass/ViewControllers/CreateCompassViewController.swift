@@ -51,6 +51,10 @@ enum CompassScene: String {
         }
     }
     
+    var title: String {
+        return self.rawValue.capitalized
+    }
+    
 }
 
 class CreateCompassViewController: UIViewController {
