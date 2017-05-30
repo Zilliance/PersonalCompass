@@ -261,7 +261,40 @@ class CreateCompassViewController: UIViewController {
     
     @IBAction func cancelAction(_ sender: Any) {
         
-        self.navigationController?.popViewController(animated: true)
+        let update = Database.shared.user.compasses.filter { $0.id == self.compass.id }.count > 0
+        
+        var alertController: UIAlertController
+        
+        if (update) {
+            
+            alertController = UIAlertController(title: nil, message: "Cancelling will discard changes to your compass. Are you sure you want to cancel?", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Don't Cancel", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "Discard Changes", style: .destructive) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            })
+
+        }
+        else {
+            alertController = UIAlertController(title: nil, message: "Cancelling will discard your new compass. Are you sure you want to cancel?", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Don't Cancel", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "Discard New Compass", style: .destructive) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            })
+            
+        }
+        
+        
+        self.present(alertController, animated: true, completion: nil)
         
     }
     
