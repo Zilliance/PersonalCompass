@@ -42,7 +42,7 @@ class Database {
         do {
                         
             let config = Realm.Configuration(
-                schemaVersion: 2,
+                schemaVersion: 3,
                 
                 migrationBlock: { migration, oldSchemaVersion in
                     if (oldSchemaVersion < 1) {
@@ -184,10 +184,10 @@ extension Database {
         }
     }
     
-    func add(realmObject: Object) {
+    func add(realmObject: Object, update: Bool = false) {
         do {
             try realm.write({
-                realm.add(realmObject)
+                realm.add(realmObject, update: update)
             })
         }
         catch let error {

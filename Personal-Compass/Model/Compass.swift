@@ -68,14 +68,13 @@ final class Compass: Object {
     
     dynamic var dateCreated: Date = Date()
     
-}
-
-extension Compass {
+    dynamic var id: String = UUID().uuidString
     
-    static func createNewCompass() -> Compass {
-        let newCompass = Compass()
-        Database.shared.add(realmObject: newCompass)
-        return newCompass
+    override class func primaryKey() -> String? {
+        return "id"
     }
     
 }
+
+
+

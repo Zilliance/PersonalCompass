@@ -15,11 +15,11 @@ enum StressType {
     case behaviour
 }
 
-final class CompassStressViewController: UIViewController, CompassValidation {
+final class CompassStressViewController: UIViewController, CompassFacetEditor, CompassValidation {
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
-    private var tableViewController: StressSelectionViewController?
+    private var tableViewController: StressSelectionViewController!
     
     var currentCompass: Compass!
     
@@ -47,15 +47,17 @@ final class CompassStressViewController: UIViewController, CompassValidation {
         
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        Database.shared.save {
-            if self.stressItemType == BodyStress.self {
-                self.currentCompass.lastEditedFacet = .body
-            }
-            else {
-                self.currentCompass.lastEditedFacet = .behaviour
-            }
+    func save() {
+        
+        self.tableViewController.saveAction(self.tableViewController.selectedItems)
+        
+        if self.stressItemType == BodyStress.self {
+            self.currentCompass.lastEditedFacet = .body
         }
+        else {
+            self.currentCompass.lastEditedFacet = .behaviour
+        }
+
     }
     
     private func setupItemsSelection<T: StressItem>(vc: StressSelectionViewController, preloadedItems: [T], destination: List<T>) {

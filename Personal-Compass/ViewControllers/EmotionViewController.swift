@@ -26,7 +26,7 @@ class EmotionCell: UITableViewCell {
     
 }
 
-class EmotionViewController: UIViewController, CompassValidation {
+class EmotionViewController: UIViewController, CompassFacetEditor, CompassValidation {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -48,15 +48,12 @@ class EmotionViewController: UIViewController, CompassValidation {
         self.setupTableView()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    func save() {
         
         if let index = self.tableView.indexPathsForSelectedRows?.first {
             let emotion = self.emotions[index.row]
-            Database.shared.save {
-                self.currentCompass.emotion = emotion
-                self.currentCompass.lastEditedFacet = .emotion
-            }
+            self.currentCompass.emotion = emotion
+            self.currentCompass.lastEditedFacet = .emotion
         }
     }
     

@@ -14,6 +14,10 @@ protocol CompassValidation {
     var currentCompass: Compass! { get set }
 }
 
+protocol CompassFacetEditor {
+    func save()
+}
+
 enum CompassError {
     case text
     case selection
@@ -112,7 +116,7 @@ class CreateCompassViewController: UIViewController {
     
     var compass: Compass = Compass()
 
-    private var pageCount = 0
+    private var currentPageIndex = 0
     
     fileprivate lazy var compassItems: [CompassItem]  = {
         
@@ -132,10 +136,10 @@ class CreateCompassViewController: UIViewController {
     
     private lazy var pageControlViewController: UIPageViewController = {
         let controller = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-             self.pageCount = self.compass.lastEditedFacet.pageIndex
-        controller.setViewControllers([self.compassItems[self.pageCount].viewController], direction: .forward, animated: true, completion: nil)
-        self.pageControl.currentPage = self.pageCount
-        self.setupLabel(for: self.compassItems[self.pageCount].scene)
+             self.currentPageIndex = self.compass.lastEditedFacet.pageIndex
+        controller.setViewControllers([self.compassItems[self.currentPageIndex].viewController], direction: .forward, animated: true, completion: nil)
+        self.pageControl.currentPage = self.currentPageIndex
+        self.setupLabel(for: self.compassItems[self.currentPageIndex].scene)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         return controller
     }()
@@ -201,7 +205,9 @@ class CreateCompassViewController: UIViewController {
     }
     
     private func checkError() -> CompassError? {
-        let vc = self.compassItems[self.pageCount].viewController as! CompassValidation
+        guard let vc = self.compassItems[self.currentPageIndex].viewController as? CompassValidation else {
+            return nil
+        }
         return vc.error
     }
     
@@ -209,10 +215,15 @@ class CreateCompassViewController: UIViewController {
     // MARK: - User Actions
     
     fileprivate func moveToPage(page: Int, direction: UIPageViewControllerNavigationDirection) {
-        self.pageCount = page
-        self.pageControl.currentPage = self.pageCount
         
-        let item = self.compassItems[self.pageCount]
+        if let currentItem = self.compassItems[self.currentPageIndex].viewController as? CompassFacetEditor {
+            currentItem.save()
+        }
+        
+        self.currentPageIndex = page
+        self.pageControl.currentPage = self.currentPageIndex
+        
+        let item = self.compassItems[self.currentPageIndex]
         
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         self.setupLabel(for: item.scene)
@@ -220,16 +231,16 @@ class CreateCompassViewController: UIViewController {
     }
 
     @IBAction func backAction(_ sender: UIButton) {
-        guard self.pageCount > 0 else {
+        guard self.currentPageIndex > 0 else {
             return
         }
         
-        moveToPage(page: self.pageCount - 1, direction: .reverse)
+        moveToPage(page: self.currentPageIndex - 1, direction: .reverse)
     }
     
     @IBAction func nextAction(_ sender: UIButton) {
         
-        guard self.pageCount < self.compassItems.count - 1 else {
+        guard self.currentPageIndex < self.compassItems.count - 1 else {
             return
         }
         
@@ -244,25 +255,68 @@ class CreateCompassViewController: UIViewController {
             return
         }
 
-        self.moveToPage(page: self.pageCount + 1, direction: .forward)
+        self.moveToPage(page: self.currentPageIndex + 1, direction: .forward)
 
     }
     
     @IBAction func cancelAction(_ sender: Any) {
         
-        if !self.compass.completed {
-            let user = Database.shared.user
-            if let index = user?.compasses.index(of: self.compass) {
-                Database.shared.save {
-                    user?.compasses.remove(objectAtIndex: index)
-                }
-            }
-            self.navigationController?.popViewController(animated: true)
+        let update = Database.shared.user.compasses.filter { $0.id == self.compass.id }.count > 0
+        
+        var alertController: UIAlertController
+        
+        if (update) {
+            
+            alertController = UIAlertController(title: nil, message: "Cancelling will discard changes to your compass. Are you sure you want to cancel?", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Don't Cancel", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "Discard Changes", style: .destructive) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            })
+
         }
+        else {
+            alertController = UIAlertController(title: nil, message: "Cancelling will discard your new compass. Are you sure you want to cancel?", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Don't Cancel", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "Discard New Compass", style: .destructive) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            })
+            
+        }
+        
+        
+        self.present(alertController, animated: true, completion: nil)
+        
     }
     
     @IBAction func saveAction(_ sender: Any) {
+        
+        if let currentItem = self.compassItems[self.currentPageIndex].viewController as? CompassFacetEditor {
+            currentItem.save()
+        }
+
+        let update = Database.shared.user.compasses.filter { $0.id == self.compass.id }.count > 0
+        
+        if (update) {
+            Database.shared.add(realmObject: self.compass, update: true)
+        }
+        else {
+            Database.shared.save {
+                Database.shared.user.compasses.append(self.compass)
+            }
+        }
+        
         self.navigationController?.popViewController(animated: true)
+
     }
     
     @IBAction func returnToSummaryAction(_ sender: Any) {

@@ -16,6 +16,7 @@
 		4F8C2E2A1ED5BA2D00A24A40 /* Assessment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */; };
 		4F8C2E2C1ED5BD1E00A24A40 /* DynamicTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2B1ED5BD1E00A24A40 /* DynamicTextCell.swift */; };
 		4F8C2E2E1ED5BD8600A24A40 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */; };
+		4FCBA1B11EDD954900B68A85 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */; };
 		4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */; };
 		4FD5B64C1ECBD9550017DC06 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */; };
 		4FD5B64E1ECC3C2A0017DC06 /* PreloadedBodyStress.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */; };
@@ -102,6 +103,7 @@
 		4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assessment.storyboard; sourceTree = "<group>"; };
 		4F8C2E2B1ED5BD1E00A24A40 /* DynamicTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicTextCell.swift; path = Cells/DynamicTextCell.swift; sourceTree = "<group>"; };
 		4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssessmentViewController.swift; path = ViewControllers/AssessmentViewController.swift; sourceTree = "<group>"; };
+		4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Completion.swift"; path = "Utils/UINavigationController+Completion.swift"; sourceTree = "<group>"; };
 		4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBodyStress.plist; path = Model/PreloadedBodyStress.plist; sourceTree = "<group>"; };
 		4FD5B64F1ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBehaviourStress.plist; path = Model/PreloadedBehaviourStress.plist; sourceTree = "<group>"; };
 		4FD5B6511ECC3DEC0017DC06 /* PreloadedEmotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedEmotions.plist; path = Model/PreloadedEmotions.plist; sourceTree = "<group>"; };
@@ -231,6 +233,14 @@
 				4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */,
 			);
 			name = Assessment;
+			sourceTree = "<group>";
+		};
+		4FCBA1AF1EDD951400B68A85 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		4FD5B6571ECCD93B0017DC06 /* StressSelectionItems */ = {
@@ -387,6 +397,7 @@
 		E37C7A791EC9FBA300076737 /* Personal-Compass */ = {
 			isa = PBXGroup;
 			children = (
+				4FCBA1AF1EDD951400B68A85 /* Utils */,
 				8C463B3D1ECB6E2300566531 /* App.swift */,
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,
 				047A57FF1ECB2B3700BC7650 /* Model */,
@@ -760,6 +771,7 @@
 				4FD5B65A1ECCD9680017DC06 /* StressItemSelectionCell.swift in Sources */,
 				8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */,
 				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,
+				4FCBA1B11EDD954900B68A85 /* UINavigationController+Completion.swift in Sources */,
 				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
 				4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */,
 				8C463B361ECA63D700566531 /* WebViewController.swift in Sources */,

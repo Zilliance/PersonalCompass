@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StressorViewController: UIViewController, CompassValidation {
+class StressorViewController: UIViewController, CompassFacetEditor, CompassValidation {
 
     @IBOutlet weak var textView: UITextView!
     
@@ -27,13 +27,10 @@ class StressorViewController: UIViewController, CompassValidation {
         super.viewDidLoad()
         self.setupView()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        Database.shared.save {
-            self.currentCompass.stressor = self.textView.text
-            self.currentCompass.lastEditedFacet = .stressor
-        }
+        
+    func save() {
+        self.currentCompass.stressor = self.textView.text
+        self.currentCompass.lastEditedFacet = .stressor
     }
     
     private func setupView() {

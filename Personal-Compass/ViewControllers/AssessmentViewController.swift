@@ -14,7 +14,7 @@ protocol AssessmentViewControllerDelegate {
     
 }
 
-class AssessmentViewController: UIViewController, CompassValidation {
+class AssessmentViewController: UIViewController {
     
     enum RowType: Int {
         case feeling
@@ -40,8 +40,6 @@ class AssessmentViewController: UIViewController, CompassValidation {
         }
     }
     
-    var error: CompassError? = .none
-    
     var currentCompass: Compass!
     var delegate: AssessmentViewControllerDelegate!
     @IBOutlet var tableView: UITableView!
@@ -59,7 +57,6 @@ class AssessmentViewController: UIViewController, CompassValidation {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

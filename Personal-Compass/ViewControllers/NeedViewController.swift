@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NeedViewController: UIViewController, CompassValidation {
+class NeedViewController: UIViewController, CompassFacetEditor, CompassValidation {
 
     var currentCompass: Compass!
     var error: CompassError? {
@@ -21,15 +21,7 @@ class NeedViewController: UIViewController, CompassValidation {
         super.viewDidLoad()
         self.setupView()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        Database.shared.save {
-            self.currentCompass.need = self.textView.text
-            self.currentCompass.lastEditedFacet = .need
-        }
-    }
-    
+
     private func setupView() {
         
         if let need = self.currentCompass.need {
@@ -38,6 +30,11 @@ class NeedViewController: UIViewController, CompassValidation {
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    func save() {
+        self.currentCompass.need = self.textView.text
+        self.currentCompass.lastEditedFacet = .need
     }
 
 }
