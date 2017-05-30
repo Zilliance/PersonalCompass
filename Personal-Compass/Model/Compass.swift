@@ -27,19 +27,19 @@ final class Compass: Object {
             case .unknown:
                 return 0
             case .stressor:
-                return 1
+                return 0
             case .emotion:
-                return 2
+                return 1
             case .thought:
-                return 3
+                return 2
             case .body:
-                return 4
+                return 3
             case .behaviour:
-                return 5
+                return 4
             case .assessment:
-                return 6
+                return 5
             case .need:
-                return 6
+                return 5
             default:
                 return 0
 
