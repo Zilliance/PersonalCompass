@@ -22,6 +22,7 @@ final class Compass: Object {
         case need
         case innerWisdom1
         case innerWisdom2
+        case innerWisdom3
         
         var pageIndex: Int {
             switch self {
@@ -45,6 +46,8 @@ final class Compass: Object {
                 return 7
             case .innerWisdom2:
                 return 8
+            case .innerWisdom3:
+                return 9
 
             }
         }
@@ -64,6 +67,8 @@ final class Compass: Object {
     dynamic var need: String?
     
     dynamic var editedNeed: String?
+    
+    dynamic var concreteStep: String?
     
     dynamic var thoughtAboutEmotion: String?
     

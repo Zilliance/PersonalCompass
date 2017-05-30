@@ -215,6 +215,101 @@
             </objects>
             <point key="canvasLocation" x="660" y="152.47376311844079"/>
         </scene>
+        <!--Inner Wisdom3 View Controller-->
+        <scene sceneID="SsL-q7-kYQ">
+            <objects>
+                <viewController storyboardIdentifier="3" id="zj9-2b-aXb" customClass="InnerWisdom3ViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FRE-Rr-O4A"/>
+                        <viewControllerLayoutGuide type="bottom" id="PFU-2X-ecl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xi2-Z8-oH5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQl-I8-12b">
+                                <rect key="frame" x="20" y="60" width="335" height="92"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="l7O-UR-sBu"/>
+                                </constraints>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gda-KX-9vn">
+                                <rect key="frame" x="126.5" y="171" width="122" height="2"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="QAK-5b-4sz"/>
+                                    <constraint firstAttribute="height" constant="2" id="XRL-Kv-ryr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is one concrete step that I can take to get this need met?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8md-by-F3n">
+                                <rect key="frame" x="20" y="199" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Muy-cC-aGL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MC3-wX-h0D">
+                                <rect key="frame" x="20" y="269" width="335" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="UjN-k9-Jmz"/>
+                                </constraints>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zj9-2b-aXb" id="7U8-MA-vqf"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO4-fW-DHZ">
+                                <rect key="frame" x="20" y="386" width="335" height="18"/>
+                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V42-8K-bD6">
+                                <rect key="frame" x="20" y="409" width="335" height="18"/>
+                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MC3-wX-h0D" secondAttribute="trailing" constant="20" id="1kB-at-3nn"/>
+                            <constraint firstAttribute="trailing" secondItem="EQl-I8-12b" secondAttribute="trailing" constant="20" id="5C5-xv-CoQ"/>
+                            <constraint firstItem="MC3-wX-h0D" firstAttribute="top" secondItem="8md-by-F3n" secondAttribute="bottom" constant="20" id="5vt-mw-ecB"/>
+                            <constraint firstItem="8md-by-F3n" firstAttribute="top" secondItem="gda-KX-9vn" secondAttribute="bottom" constant="26" id="7Dj-Fm-D2o"/>
+                            <constraint firstAttribute="trailing" secondItem="8md-by-F3n" secondAttribute="trailing" constant="20" id="AKH-CN-Rca"/>
+                            <constraint firstItem="EQl-I8-12b" firstAttribute="top" secondItem="FRE-Rr-O4A" secondAttribute="bottom" constant="40" id="EyL-La-ZuK"/>
+                            <constraint firstAttribute="trailing" secondItem="V42-8K-bD6" secondAttribute="trailing" constant="20" id="Pj6-yQ-WGG"/>
+                            <constraint firstItem="8md-by-F3n" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="QNw-iv-cSv"/>
+                            <constraint firstItem="MC3-wX-h0D" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="SQx-ct-Dok"/>
+                            <constraint firstItem="NO4-fW-DHZ" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="U5i-UQ-dsE"/>
+                            <constraint firstItem="gda-KX-9vn" firstAttribute="top" secondItem="EQl-I8-12b" secondAttribute="bottom" constant="19" id="Wyk-HS-9lB"/>
+                            <constraint firstItem="V42-8K-bD6" firstAttribute="top" secondItem="NO4-fW-DHZ" secondAttribute="bottom" constant="5" id="b3a-yA-rSd"/>
+                            <constraint firstItem="EQl-I8-12b" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="cJW-Mn-jc8"/>
+                            <constraint firstItem="NO4-fW-DHZ" firstAttribute="top" secondItem="MC3-wX-h0D" secondAttribute="bottom" constant="5" id="cSa-tG-gDh"/>
+                            <constraint firstAttribute="trailing" secondItem="NO4-fW-DHZ" secondAttribute="trailing" constant="20" id="dce-PK-JHt"/>
+                            <constraint firstItem="gda-KX-9vn" firstAttribute="centerX" secondItem="Xi2-Z8-oH5" secondAttribute="centerX" id="jj1-Pq-JC7"/>
+                            <constraint firstItem="V42-8K-bD6" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="vW4-TY-wZc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="concreteTextView" destination="MC3-wX-h0D" id="G2K-mw-5x3"/>
+                        <outlet property="needTextView" destination="EQl-I8-12b" id="Y5r-3m-d4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0c-we-nJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360.8" y="151.57421289355324"/>
+        </scene>
     </scenes>
     <resources>
         <image name="iconHeadphonesEncircled" width="84" height="84"/>

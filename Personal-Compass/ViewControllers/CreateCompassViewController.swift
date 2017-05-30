@@ -33,6 +33,7 @@ enum CompassScene: String {
     case need
     case innerWisdom1
     case innerWisdom2
+    case innerWisdom3
     
     var color: UIColor {
         switch self {
@@ -53,6 +54,8 @@ enum CompassScene: String {
         case .innerWisdom1:
             return .innerWisdom
         case .innerWisdom2:
+            return .innerWisdom
+        case .innerWisdom3:
             return .innerWisdom
         }
     }
@@ -117,6 +120,11 @@ class CreateCompassViewController: UIViewController {
                 let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "2") as! InnerWisdom2ViewController
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
+                
+            case .innerWisdom3:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "3") as! InnerWisdom3ViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
             }
             
             self.scene = scene
@@ -146,6 +154,7 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .need, container: self),
             CompassItem(for: .innerWisdom1, container: self),
             CompassItem(for: .innerWisdom2, container: self),
+            CompassItem(for: .innerWisdom3, container: self)
         ]
         
         return items
