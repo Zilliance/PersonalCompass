@@ -23,7 +23,7 @@ class CompassCollectionViewCell: UICollectionViewCell {
     
     func setup(for compass: Compass) {
         
-        if !compass.completed {
+        if compass.completed {
             self.completedLabel.backgroundColor = .navBar
             self.completedLabel.textColor = .softWhite
             
