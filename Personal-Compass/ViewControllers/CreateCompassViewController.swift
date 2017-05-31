@@ -224,7 +224,7 @@ class CreateCompassViewController: UIViewController {
         }) { _ in
         
             switch scene {
-            case .innerWisdom1, .innerWisdom2:
+            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4:
                 self.topLabel.text = "Inner Wisdom"
             default:
                 self.topLabel.text = scene.rawValue.capitalized
