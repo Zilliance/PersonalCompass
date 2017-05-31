@@ -1,34 +1,14 @@
 //
-//  EmotionViewController.swift
+//  InnerWisdom4ViewController.swift
 //  Personal-Compass
 //
-//  Created by ricardo hernandez  on 5/17/17.
+//  Created by ricardo hernandez  on 5/30/17.
 //  Copyright © 2017 Zilliance. All rights reserved.
 //
 
 import UIKit
 
-class EmotionCell: UITableViewCell {
-    
-    var currentCompass: Compass!
-    
-    static let cellHeight: CGFloat = 56.0
-    
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    func setup(for emotion: Emotion) {
-        self.titleLabel.text = emotion.shortTitle
-        self.numberLabel.text = "\(emotion.level + 1)"
-        self.iconImageView.image = emotion.icon
-    }
-    
-}
-
-class EmotionViewController: UIViewController, CompassFacetEditor, CompassValidation {
-    
-    @IBOutlet weak var tableView: UITableView!
+class InnerWisdom4ViewController: UIViewController, CompassValidation, CompassFacetEditor {
     
     var currentCompass: Compass!
     
@@ -40,39 +20,44 @@ class EmotionViewController: UIViewController, CompassFacetEditor, CompassValida
             return .selection
         }
     }
-    
-    fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
+
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textView: UITextView!
+    
+    fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions()).reversed()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupTableView()
+        self.setupView()
+    
     }
     
     func save() {
-        
         if let index = self.tableView.indexPathsForSelectedRows?.first {
             let emotion = self.emotions[index.row]
-            self.currentCompass.emotion = emotion
-            self.currentCompass.lastEditedFacet = .emotion
+            self.currentCompass.needMetEmotion = emotion
+            self.currentCompass.lastEditedFacet = .innerWisdom4
         }
     }
     
-    private func setupTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+    private func setupView() {
+        if let need = self.currentCompass.editedNeed {
+            self.textView.text = need
+        }
+        
         self.tableView.tableFooterView = UIView()
         
-        guard let emotion = self.currentCompass.emotion else { return }
+        guard let emotion = self.currentCompass.needMetEmotion else { return }
         if let row = self.emotions.index(of: emotion) {
             self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .middle)
         }
-
-        
-        
     }
+
+
 }
 
-extension EmotionViewController: UITableViewDataSource, UITableViewDelegate {
+extension InnerWisdom4ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.emotions.count
@@ -86,5 +71,17 @@ extension EmotionViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return EmotionCell.cellHeight
+    }
+}
+
+extension InnerWisdom4ViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n")
+        {
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        return true
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InnerWisdom2ViewController: UIViewController, CompassValidation {
+class InnerWisdom2ViewController: UIViewController, CompassValidation, CompassFacetEditor {
     
     @IBOutlet weak var textView: UITextView!
     
@@ -29,12 +29,9 @@ class InnerWisdom2ViewController: UIViewController, CompassValidation {
 
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        Database.shared.save {
-            self.currentCompass.editedNeed = self.textView.text
-            self.currentCompass.lastEditedFacet = .innerWisdom2
-        }
+    func save() {
+        self.currentCompass.editedNeed = self.textView.text
+        self.currentCompass.lastEditedFacet = .innerWisdom2
     }
     
     private func setupView() {
