@@ -228,10 +228,12 @@ class CreateCompassViewController: UIViewController {
             case .stressor:
                 self.stressorLabel.alpha = 0
                 self.topLabel.text = scene.rawValue.capitalized
+                self.backButton.alpha = 0
             case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4:
                 self.topLabel.text = "Inner Wisdom"
             default:
                 self.stressorLabel.alpha = 1
+                self.backButton.alpha = 1
                 self.topLabel.text = scene.rawValue.capitalized
                 self.stressorLabel.text = self.compass.stressor?.uppercased()
             }
