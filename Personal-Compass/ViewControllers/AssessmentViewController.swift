@@ -50,7 +50,6 @@ class AssessmentViewController: UIViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 84
         
-        
         let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 2))
         additionalSeparator.backgroundColor = UIColor.silverColor
 
@@ -101,17 +100,36 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
             cell = emotionCell
         case .thought:
             cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
-            cell.label.text = "Because of " + (currentCompass.thoughtAboutEmotion ?? "")
+            
+            let attributes = [
+                NSFontAttributeName: UIFont.muliSemiBold(size: 14),
+                NSForegroundColorAttributeName: row.sceneAssociated.color
+            ]
+            let attributedText = NSMutableAttributedString(string: "Because of " + (currentCompass.thoughtAboutEmotion ?? ""), attributes: attributes)
+            let becauseOfRange = (attributedText.string as NSString).range(of: "Because of")
+            
+//            for fontFamilyName in UIFont.familyNames{
+//                for fontName in UIFont.fontNames(forFamilyName: fontFamilyName){
+//                    print("Family: \(fontFamilyName)     Font: \(fontName)")
+//                }
+//            }
+            
+            attributedText.addAttribute(NSFontAttributeName, value: UIFont.muliItalic(size: 14), range: becauseOfRange)
+            attributedText.addAttribute(NSForegroundColorAttributeName, value: UIColor.battleshipGrey, range: becauseOfRange)
+            
+            cell.label.attributedText = attributedText
+            
+            
         case .bodyStress:
             cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
-            let stressElements = (currentCompass.bodyStressElements.flatMap { $0.title }).joined(separator: "\n")
+            let stressElements = (currentCompass.bodyStressElements.flatMap { $0.title }).joined(separator: ",\n")
             cell.label.text = stressElements
             cell.label.textColor = row.sceneAssociated.color
         
         case .behaviourStress:
             cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
             
-            let stressElements = (currentCompass.behaviourStressElements.flatMap { $0.title }).joined(separator: "\n")
+            let stressElements = (currentCompass.behaviourStressElements.flatMap { $0.title }).joined(separator: ",\n")
             cell.label.text = stressElements
             cell.label.textColor = row.sceneAssociated.color
 
