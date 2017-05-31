@@ -222,18 +222,22 @@ class CreateCompassViewController: UIViewController {
         
         UIView.animate(withDuration: 0.3, animations: { 
             self.topLabel.layer.backgroundColor = scene.color.cgColor
-        }) { _ in
-        
             switch scene {
             case .stressor:
-                self.stressorLabel.alpha = 0
                 self.topLabel.text = scene.rawValue.capitalized
+                self.stressorLabel.alpha = 0
                 self.backButton.alpha = 0
-            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4:
-                self.topLabel.text = "Inner Wisdom"
             default:
                 self.stressorLabel.alpha = 1
                 self.backButton.alpha = 1
+            }
+
+        }) { _ in
+        
+            switch scene {
+            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4:
+                self.topLabel.text = "Inner Wisdom"
+            default:
                 self.topLabel.text = scene.rawValue.capitalized
                 self.stressorLabel.text = self.compass.stressor?.uppercased()
             }
