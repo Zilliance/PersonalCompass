@@ -49,6 +49,12 @@ class AssessmentViewController: UIViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 84
+        
+        
+        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 2))
+        additionalSeparator.backgroundColor = UIColor.silverColor
+
+        self.tableView.tableHeaderView = additionalSeparator
 
     }
 
@@ -88,7 +94,7 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
         switch row {
         case .feeling:
             let emotionCell = tableView.dequeueReusableCell(withIdentifier: "EmotionSummaryCell", for: indexPath) as! EmotionSummaryCell
-            emotionCell.label.text = (currentCompass.emotion?.longTitle ?? "")
+            emotionCell.label.text = (currentCompass.emotion?.longTitle.components(separatedBy: ",").first ?? "")
             emotionCell.iconView.image = currentCompass.emotion?.icon
             emotionCell.label.textColor = row.sceneAssociated.color
             

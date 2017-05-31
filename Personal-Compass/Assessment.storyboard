@@ -34,13 +34,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Y-QL-zxF">
-                                <rect key="frame" x="12" y="15" width="296" height="553"/>
+                                <rect key="frame" x="0.0" y="15" width="320" height="553"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="tit-Lm-HtY">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjH-Ko-AYY">
-                                                <rect key="frame" x="0.0" y="0.0" width="296" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="26"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="26" id="br5-pI-GGe"/>
                                                 </constraints>
@@ -49,25 +49,25 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Space for one line of text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhH-9Z-J22">
-                                                <rect key="frame" x="0.0" y="32" width="296" height="12"/>
+                                                <rect key="frame" x="0.0" y="32" width="320" height="16"/>
                                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cr0-5n-2PU">
-                                        <rect key="frame" x="0.0" y="49" width="296" height="455"/>
+                                        <rect key="frame" x="0.0" y="53" width="320" height="451"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Inj-qo-IuJ"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmotionSummaryCell" id="eBL-Sv-Tag" customClass="EmotionSummaryCell" customModule="Personal_Compass" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="296" height="83"/>
+                                                <rect key="frame" x="0.0" y="28" width="320" height="83"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eBL-Sv-Tag" id="UvJ-Rm-cHE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="296" height="83"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-70-Q92">
@@ -82,7 +82,7 @@
                                                             <rect key="frame" x="13" y="27.5" width="104" height="28"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1E-lA-6DU">
-                                                                    <rect key="frame" x="33" y="4.5" width="38.5" height="20.5"/>
+                                                                    <rect key="frame" x="33.5" y="4" width="38" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -130,10 +130,10 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CompassFacetSummaryCell" id="dUy-66-YNn" customClass="CompassFacetSummaryCell" customModule="Personal_Compass" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="111" width="296" height="83"/>
+                                                <rect key="frame" x="0.0" y="111" width="320" height="83"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dUy-66-YNn" id="cb5-Eg-ivs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="296" height="83"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdS-pH-SJl">
@@ -148,7 +148,7 @@
                                                             <rect key="frame" x="13" y="27.5" width="104" height="28"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNn-3d-QeA">
-                                                                    <rect key="frame" x="33" y="4" width="38.5" height="21"/>
+                                                                    <rect key="frame" x="33.5" y="4.5" width="38" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -163,7 +163,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Input goes here]" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apK-Il-Ogd">
-                                                            <rect key="frame" x="162" y="33" width="126" height="18"/>
+                                                            <rect key="frame" x="162" y="33" width="150" height="18"/>
                                                             <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -192,23 +192,30 @@
                                             <outlet property="delegate" destination="p66-MD-3vQ" id="Ocd-dF-JZd"/>
                                         </connections>
                                     </tableView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Leaving some space for more text" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-KK-Ef0">
-                                        <rect key="frame" x="0.0" y="509" width="296" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="xwz-9s-JMR"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-1B-8jm">
+                                        <rect key="frame" x="0.0" y="509" width="320" height="44"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Additional text can go here" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-KK-Ef0">
+                                                <rect key="frame" x="12" y="0.0" width="296" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="xwz-9s-JMR"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="12" bottom="0.0" right="12"/>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Y6Y-QL-zxF" secondAttribute="trailing" constant="12" id="P8X-2Z-hra"/>
+                            <constraint firstAttribute="trailing" secondItem="Y6Y-QL-zxF" secondAttribute="trailing" id="P8X-2Z-hra"/>
                             <constraint firstItem="o1b-ap-5JS" firstAttribute="top" secondItem="Y6Y-QL-zxF" secondAttribute="bottom" id="Ua1-l5-toJ"/>
-                            <constraint firstItem="Y6Y-QL-zxF" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" constant="12" id="fQd-mB-cNe"/>
+                            <constraint firstItem="Y6Y-QL-zxF" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" id="fQd-mB-cNe"/>
                             <constraint firstItem="Y6Y-QL-zxF" firstAttribute="top" secondItem="aPI-kJ-IZd" secondAttribute="top" constant="15" id="hXK-a0-S3i"/>
                         </constraints>
                     </view>
