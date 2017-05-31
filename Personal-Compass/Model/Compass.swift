@@ -19,8 +19,11 @@ final class Compass: Object {
         case body
         case behaviour
         case assessment
-        case innerWisdom
         case need
+        case innerWisdom1
+        case innerWisdom2
+        case innerWisdom3
+        case innerWisdom4
         
         var pageIndex: Int {
             switch self {
@@ -39,9 +42,15 @@ final class Compass: Object {
             case .assessment:
                 return 5
             case .need:
-                return 5
-            default:
-                return 0
+                return 6
+            case .innerWisdom1:
+                return 7
+            case .innerWisdom2:
+                return 8
+            case .innerWisdom3:
+                return 9
+            case .innerWisdom4:
+                return 10
 
             }
         }
@@ -56,9 +65,15 @@ final class Compass: Object {
     
     dynamic var emotion: Emotion?
     
+    dynamic var needMetEmotion: Emotion?
+    
     dynamic var stressor: String?
     
     dynamic var need: String?
+    
+    dynamic var editedNeed: String?
+    
+    dynamic var concreteStep: String?
     
     dynamic var thoughtAboutEmotion: String?
     

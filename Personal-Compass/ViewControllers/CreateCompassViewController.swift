@@ -31,6 +31,10 @@ enum CompassScene: String {
     case behavior
     case assessment
     case need
+    case innerWisdom1
+    case innerWisdom2
+    case innerWisdom3
+    case innerWisdom4
     
     var color: UIColor {
         switch self {
@@ -48,6 +52,14 @@ enum CompassScene: String {
             return .green
         case .need:
             return .purple
+        case .innerWisdom1:
+            return .innerWisdom
+        case .innerWisdom2:
+            return .innerWisdom
+        case .innerWisdom3:
+            return .innerWisdom
+        case .innerWisdom4:
+            return .innerWisdom
         }
     }
     
@@ -105,6 +117,26 @@ class CreateCompassViewController: UIViewController {
                 let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! NeedViewController
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
+                
+            case .innerWisdom1:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "1") as! InnerWisdom1ViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
+                
+            case .innerWisdom2:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "2") as! InnerWisdom2ViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
+                
+            case .innerWisdom3:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "3") as! InnerWisdom3ViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
+                
+            case .innerWisdom4:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "4") as! InnerWisdom4ViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
             }
             
             self.scene = scene
@@ -117,6 +149,7 @@ class CreateCompassViewController: UIViewController {
     @IBOutlet weak var returnToSummaryButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var stressorLabel: UILabel!
     
     var compass: Compass = Compass()
 
@@ -132,6 +165,10 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .behavior, container: self),
             CompassItem(for: .assessment, container: self),
             CompassItem(for: .need, container: self),
+            CompassItem(for: .innerWisdom1, container: self),
+            CompassItem(for: .innerWisdom2, container: self),
+            CompassItem(for: .innerWisdom3, container: self),
+            CompassItem(for: .innerWisdom4, container: self),
         ]
         
         return items
@@ -189,8 +226,25 @@ class CreateCompassViewController: UIViewController {
         
         UIView.animate(withDuration: 0.3, animations: { 
             self.topLabel.layer.backgroundColor = scene.color.cgColor
+            switch scene {
+            case .stressor:
+                self.topLabel.text = scene.rawValue.capitalized
+                self.backButton.alpha = 0
+            default:
+                self.stressorLabel.alpha = 1
+                self.backButton.alpha = 1
+            }
+
         }) { _ in
-            self.topLabel.text = scene.rawValue.capitalized
+        
+            switch scene {
+            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4:
+                self.topLabel.text = "Inner Wisdom"
+            default:
+                self.topLabel.text = scene.rawValue.capitalized
+                self.stressorLabel.text = self.compass.stressor?.uppercased()
+            }
+            
         }
         
     }
@@ -265,7 +319,40 @@ class CreateCompassViewController: UIViewController {
     
     @IBAction func cancelAction(_ sender: Any) {
         
-        self.navigationController?.popViewController(animated: true)
+        let update = Database.shared.user.compasses.filter { $0.id == self.compass.id }.count > 0
+        
+        var alertController: UIAlertController
+        
+        if (update) {
+            
+            alertController = UIAlertController(title: nil, message: "Cancelling will discard changes to your compass. Are you sure you want to cancel?", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Don't Cancel", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "Discard Changes", style: .destructive) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            })
+
+        }
+        else {
+            alertController = UIAlertController(title: nil, message: "Cancelling will discard your new compass. Are you sure you want to cancel?", preferredStyle: .alert)
+            
+            alertController.addAction(UIAlertAction(title: "Don't Cancel", style: .default) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(UIAlertAction(title: "Discard New Compass", style: .destructive) { _ in
+                alertController.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            })
+            
+        }
+        
+        
+        self.present(alertController, animated: true, completion: nil)
         
     }
     
