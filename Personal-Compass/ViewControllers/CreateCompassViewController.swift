@@ -225,7 +225,6 @@ class CreateCompassViewController: UIViewController {
             switch scene {
             case .stressor:
                 self.topLabel.text = scene.rawValue.capitalized
-                self.stressorLabel.alpha = 0
                 self.backButton.alpha = 0
             default:
                 self.stressorLabel.alpha = 1
