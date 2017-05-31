@@ -11,6 +11,34 @@ import UIKit
 class CompassCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var completedLabel: UILabel!
+    
+    static let size = CGSize(width: 105.0, height: 105.0)
+    private let dateFormatter = DateFormatter()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.dateFormatter.dateStyle = .short
+    }
+    
+    func setup(for compass: Compass) {
+        
+        if compass.completed {
+            self.completedLabel.backgroundColor = .navBar
+            self.completedLabel.textColor = .softWhite
+            
+            self.completedLabel.text = self.dateFormatter.string(from: compass.dateCreated)
+            
+        }
+        else {
+            
+            self.completedLabel.text = "In progress"
+            self.titleLabel.text = compass.stressor
+            
+            self.completedLabel.layer.borderColor = UIColor.paleGrey.cgColor
+            self.completedLabel.layer.borderWidth = 1.0
+        }
+    }
     
 }
 
@@ -36,6 +64,9 @@ class StartCompassViewController: UIViewController {
     
     private func setupView() {
         self.title = "Personal Compass"
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CompassCollectionViewCell.size
+        self.collectionView.collectionViewLayout = layout
         self.startCompassButton.layer.cornerRadius = App.Appearance.buttonCornerRadius
     }
     
@@ -44,8 +75,6 @@ class StartCompassViewController: UIViewController {
     @IBAction func startAction(_ sender: UIButton) {
         let compass = Compass()
         compass.lastEditedFacet = .unknown
-//        let user = Database.shared.user
-//        user?.compasses.append(compass)
         
         guard let createCompassViewController = UIStoryboard(name: "CreateCompass", bundle: nil).instantiateInitialViewController() as? CreateCompassViewController else { return }
         createCompassViewController.compass = compass
@@ -67,9 +96,8 @@ extension StartCompassViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "compassCell", for: indexPath) as! CompassCollectionViewCell
         let compass = self.compasses[indexPath.row]
-        
-        cell.titleLabel.text = compass.stressor
-        
+        cell.setup(for: compass)
+    
         return cell
     }
 }
