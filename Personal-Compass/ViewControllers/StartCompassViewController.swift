@@ -14,22 +14,23 @@ class CompassCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var completedLabel: UILabel!
     
     static let size = CGSize(width: 105.0, height: 105.0)
-    private let dateFormatter = DateFormatter()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.dateFormatter.dateStyle = .short
-    }
+    private static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter
+    }()
     
     func setup(for compass: Compass) {
         
-        if compass.completed {
+        if !compass.completed {
             self.completedLabel.backgroundColor = .navBar
             self.completedLabel.textColor = .softWhite
             
-            self.completedLabel.text = self.dateFormatter.string(from: compass.dateCreated)
+            self.completedLabel.text = CompassCollectionViewCell.dateFormatter.string(from: compass.dateCreated)
             
         }
+            
         else {
             
             self.completedLabel.text = "In progress"
