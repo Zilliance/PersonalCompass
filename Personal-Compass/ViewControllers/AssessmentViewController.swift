@@ -108,13 +108,7 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
             let attributedText = NSMutableAttributedString(string: "Because of " + (currentCompass.thoughtAboutEmotion ?? ""), attributes: attributes)
             let becauseOfRange = (attributedText.string as NSString).range(of: "Because of")
             
-//            for fontFamilyName in UIFont.familyNames{
-//                for fontName in UIFont.fontNames(forFamilyName: fontFamilyName){
-//                    print("Family: \(fontFamilyName)     Font: \(fontName)")
-//                }
-//            }
-            
-            attributedText.addAttribute(NSFontAttributeName, value: UIFont.muliItalic(size: 14), range: becauseOfRange)
+            attributedText.addAttribute(NSFontAttributeName, value: UIFont.muliLightItalic(size: 14), range: becauseOfRange)
             attributedText.addAttribute(NSForegroundColorAttributeName, value: UIColor.battleshipGrey, range: becauseOfRange)
             
             cell.label.attributedText = attributedText
