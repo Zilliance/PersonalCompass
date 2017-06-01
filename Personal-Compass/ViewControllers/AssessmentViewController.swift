@@ -48,7 +48,12 @@ class AssessmentViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 70
+        self.tableView.estimatedRowHeight = 84
+        
+        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 2))
+        additionalSeparator.backgroundColor = UIColor.silverColor
+
+        self.tableView.tableHeaderView = additionalSeparator
 
     }
 
@@ -78,7 +83,7 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DynamicTextCell", for: indexPath) as! DynamicTextCell
+        var cell: CompassFacetSummaryCell!
         
         guard let row = RowType(rawValue: indexPath.row) else {
             assertionFailure()
@@ -87,20 +92,45 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch row {
         case .feeling:
-            cell.label.text = "I am feeling " + (currentCompass.emotion?.longTitle ?? "")
-        case .thought:
-            cell.label.text = "Because " + (currentCompass.thoughtAboutEmotion ?? "")
-        case .bodyStress:
+            let emotionCell = tableView.dequeueReusableCell(withIdentifier: "EmotionSummaryCell", for: indexPath) as! EmotionSummaryCell
+            emotionCell.label.text = (currentCompass.emotion?.longTitle.components(separatedBy: ",").first ?? "")
+            emotionCell.iconView.image = currentCompass.emotion?.icon
+            emotionCell.label.textColor = row.sceneAssociated.color
             
-            let stressElements = (currentCompass.bodyStressElements.flatMap { $0.title }).joined(separator: ", ")
+            cell = emotionCell
+        case .thought:
+            cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
+            
+            let attributes = [
+                NSFontAttributeName: UIFont.muliSemiBold(size: 14),
+                NSForegroundColorAttributeName: row.sceneAssociated.color
+            ]
+            let attributedText = NSMutableAttributedString(string: "Because of " + (currentCompass.thoughtAboutEmotion ?? ""), attributes: attributes)
+            let becauseOfRange = (attributedText.string as NSString).range(of: "Because of")
+            
+            attributedText.addAttribute(NSFontAttributeName, value: UIFont.muliLightItalic(size: 14), range: becauseOfRange)
+            attributedText.addAttribute(NSForegroundColorAttributeName, value: UIColor.battleshipGrey, range: becauseOfRange)
+            
+            cell.label.attributedText = attributedText
+            
+            
+        case .bodyStress:
+            cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
+            let stressElements = (currentCompass.bodyStressElements.flatMap { $0.title }).joined(separator: ",\n")
             cell.label.text = stressElements
+            cell.label.textColor = row.sceneAssociated.color
         
         case .behaviourStress:
-            let stressElements = (currentCompass.behaviourStressElements.flatMap { $0.title }).joined(separator: ", ")
+            cell = tableView.dequeueReusableCell(withIdentifier: "CompassFacetSummaryCell", for: indexPath) as! CompassFacetSummaryCell
+            
+            let stressElements = (currentCompass.behaviourStressElements.flatMap { $0.title }).joined(separator: ",\n")
             cell.label.text = stressElements
+            cell.label.textColor = row.sceneAssociated.color
+
         }
         
-        cell.labelContainer.backgroundColor = row.sceneAssociated.color
+        cell.titleContainer.backgroundColor = row.sceneAssociated.color
+        cell.title.text = row.sceneAssociated.title
         
         return cell
         

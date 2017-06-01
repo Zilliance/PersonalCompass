@@ -13,6 +13,11 @@ extension UIColor {
     static let lightBlue = UIColor.color(forRed: 1, green: 188, blue: 213, alpha: 1)
     static let darkBlue = UIColor.color(forRed: 30.0, green: 43.0, blue: 62.0, alpha: 1)
     static let navBar = UIColor.color(forRed: 51.0, green: 74.0, blue: 95.0, alpha: 1)
+
+    static let silverColor = UIColor.color(forRed: 225, green: 225, blue: 228, alpha: 1)
+
+    static let battleshipGrey = UIColor.color(forRed: 117, green: 119, blue: 124, alpha: 1)
+
     static let innerWisdom = UIColor.color(forRed: 98.0, green: 109.0, blue: 218.0, alpha: 1)
     
     class func color(forRed red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {

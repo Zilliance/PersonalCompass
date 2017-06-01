@@ -13,10 +13,11 @@
 		047A58071ECB30A400BC7650 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58061ECB30A400BC7650 /* Emotion.swift */; };
 		047A58091ECB36F100BC7650 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58081ECB36F100BC7650 /* Database.swift */; };
 		047A580B1ECB379700BC7650 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A580A1ECB379700BC7650 /* User.swift */; };
+		4F7D86E91EDF5198002C63A4 /* CompassFacetSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */; };
 		4F8C2E2A1ED5BA2D00A24A40 /* Assessment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */; };
-		4F8C2E2C1ED5BD1E00A24A40 /* DynamicTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2B1ED5BD1E00A24A40 /* DynamicTextCell.swift */; };
 		4F8C2E2E1ED5BD8600A24A40 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */; };
 		4FCBA1B11EDD954900B68A85 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */; };
+		4FCBA1B31EDDBE7E00B68A85 /* EmotionSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBA1B21EDDBE7E00B68A85 /* EmotionSummaryCell.swift */; };
 		4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */; };
 		4FD5B64C1ECBD9550017DC06 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */; };
 		4FD5B64E1ECC3C2A0017DC06 /* PreloadedBodyStress.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */; };
@@ -106,9 +107,10 @@
 		46EC5D6D9BEABB60B929A107 /* Pods-Personal-Compass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.release.xcconfig"; sourceTree = "<group>"; };
 		485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assessment.storyboard; sourceTree = "<group>"; };
-		4F8C2E2B1ED5BD1E00A24A40 /* DynamicTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicTextCell.swift; path = Cells/DynamicTextCell.swift; sourceTree = "<group>"; };
+		4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompassFacetSummaryCell.swift; path = Cells/CompassFacetSummaryCell.swift; sourceTree = "<group>"; };
 		4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssessmentViewController.swift; path = ViewControllers/AssessmentViewController.swift; sourceTree = "<group>"; };
 		4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Completion.swift"; path = "Utils/UINavigationController+Completion.swift"; sourceTree = "<group>"; };
+		4FCBA1B21EDDBE7E00B68A85 /* EmotionSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionSummaryCell.swift; path = Cells/EmotionSummaryCell.swift; sourceTree = "<group>"; };
 		4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBodyStress.plist; path = Model/PreloadedBodyStress.plist; sourceTree = "<group>"; };
 		4FD5B64F1ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBehaviourStress.plist; path = Model/PreloadedBehaviourStress.plist; sourceTree = "<group>"; };
 		4FD5B6511ECC3DEC0017DC06 /* PreloadedEmotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedEmotions.plist; path = Model/PreloadedEmotions.plist; sourceTree = "<group>"; };
@@ -239,8 +241,9 @@
 			isa = PBXGroup;
 			children = (
 				4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */,
-				4F8C2E2B1ED5BD1E00A24A40 /* DynamicTextCell.swift */,
+				4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */,
 				4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */,
+				4FCBA1B21EDDBE7E00B68A85 /* EmotionSummaryCell.swift */,
 			);
 			name = Assessment;
 			sourceTree = "<group>";
@@ -790,8 +793,8 @@
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
 				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
 				8C54AD1B1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift in Sources */,
-				4F8C2E2C1ED5BD1E00A24A40 /* DynamicTextCell.swift in Sources */,
 				4FD5B65D1ECCDB200017DC06 /* StressSelectionViewController.swift in Sources */,
+				4F7D86E91EDF5198002C63A4 /* CompassFacetSummaryCell.swift in Sources */,
 				8C463B3E1ECB6E2300566531 /* App.swift in Sources */,
 				4FD5B65A1ECCD9680017DC06 /* StressItemSelectionCell.swift in Sources */,
 				8C54AD191ED8DF0E001EC903 /* InnerWisdom1ViewController.swift in Sources */,
@@ -807,6 +810,7 @@
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 				8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */,
 				8C54AD121ED5E4C6001EC903 /* NeedViewController.swift in Sources */,
+				4FCBA1B31EDDBE7E00B68A85 /* EmotionSummaryCell.swift in Sources */,
 				8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */,
 				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
 				8C54AD1D1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift in Sources */,

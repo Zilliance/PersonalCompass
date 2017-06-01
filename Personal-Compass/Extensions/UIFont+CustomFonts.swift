@@ -18,6 +18,10 @@ extension UIFont {
         return UIFont(name: "Muli-Italic", size: size)!
     }
     
+    class func muliLightItalic(size: (CGFloat)) -> UIFont {
+        return UIFont(name: "Muli-LightItalic", size: size)!
+    }
+    
     class func muliBlack(size: (CGFloat)) -> UIFont {
         return UIFont(name: "Muli-Black", size: size)!
     }
