@@ -32,5 +32,14 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
     }
 
     @IBAction func scheduleAction(_ sender: UIButton) {
+        
+        guard let viewController = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController
+            else {
+                assertionFailure()
+                return
+        }
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.present(navigationController, animated: true, completion: nil)
     }
 }

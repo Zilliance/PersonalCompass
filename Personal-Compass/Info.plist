@@ -28,6 +28,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Personal Compass would like to add a reminder to your calendar</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-Black.ttf</string>

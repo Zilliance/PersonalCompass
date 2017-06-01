@@ -11,6 +11,7 @@ target 'Personal-Compass' do
   pod 'RealmSwift'
   pod 'SideMenuController'
   pod 'FXPageControl'
+  pod 'SVProgressHUD'
 
   target 'Personal-CompassTests' do
     inherit! :search_paths

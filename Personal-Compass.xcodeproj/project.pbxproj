@@ -71,6 +71,9 @@
 		8C54AD1D1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD1C1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift */; };
 		8C54AD1F1EDE1A34001EC903 /* InnerWisdom4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD1E1EDE1A34001EC903 /* InnerWisdom4ViewController.swift */; };
 		8C54AD211EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD201EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift */; };
+		8C54AD241EE0B7F5001EC903 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C54AD231EE0B7F5001EC903 /* Schedule.storyboard */; };
+		8C54AD261EE0B88D001EC903 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD251EE0B88D001EC903 /* ScheduleViewController.swift */; };
+		8C54AD281EE0D27D001EC903 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD271EE0D27D001EC903 /* CalendarHelper.swift */; };
 		8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166801ECCD0DD0072C19F /* Stressor.storyboard */; };
 		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
@@ -170,6 +173,9 @@
 		8C54AD1C1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom3ViewController.swift; path = ViewControllers/InnerWisdom3ViewController.swift; sourceTree = "<group>"; };
 		8C54AD1E1EDE1A34001EC903 /* InnerWisdom4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom4ViewController.swift; path = ViewControllers/InnerWisdom4ViewController.swift; sourceTree = "<group>"; };
 		8C54AD201EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdomScheduleViewController.swift; path = ViewControllers/InnerWisdomScheduleViewController.swift; sourceTree = "<group>"; };
+		8C54AD231EE0B7F5001EC903 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
+		8C54AD251EE0B88D001EC903 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = ViewControllers/ScheduleViewController.swift; sourceTree = "<group>"; };
+		8C54AD271EE0D27D001EC903 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarHelper.swift; path = Utils/CalendarHelper.swift; sourceTree = "<group>"; };
 		8C9166801ECCD0DD0072C19F /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
@@ -276,6 +282,7 @@
 		4FCBA1AF1EDD951400B68A85 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8C54AD271EE0D27D001EC903 /* CalendarHelper.swift */,
 				4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */,
 			);
 			name = Utils;
@@ -331,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				4FA825761EE1AC6A009AB272 /* Cells */,
+				8C54AD221EE0B7E1001EC903 /* Schedule */,
 				8C54AD151ED89197001EC903 /* InnerWisdom */,
 				4F8C2E281ED5BA0900A24A40 /* Assessment */,
 				8C54AD0E1ED5E255001EC903 /* Need */,
@@ -398,6 +406,15 @@
 				8C54AD201EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift */,
 			);
 			name = InnerWisdom;
+			sourceTree = "<group>";
+		};
+		8C54AD221EE0B7E1001EC903 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				8C54AD231EE0B7F5001EC903 /* Schedule.storyboard */,
+				8C54AD251EE0B88D001EC903 /* ScheduleViewController.swift */,
+			);
+			name = Schedule;
 			sourceTree = "<group>";
 		};
 		8C91667F1ECCB8900072C19F /* Stressor */ = {
@@ -617,6 +634,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CFC6D491ECE4E6000F44B95 /* Thought.storyboard in Resources */,
+				8C54AD241EE0B7F5001EC903 /* Schedule.storyboard in Resources */,
 				8C463B1F1ECA2D9700566531 /* Muli-SemiBold.ttf in Resources */,
 				8C463B181ECA2D9700566531 /* Muli-ExtraBoldItalic.ttf in Resources */,
 				8C463B1B1ECA2D9700566531 /* Muli-Italic.ttf in Resources */,
@@ -820,11 +838,13 @@
 				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
 				4F7D86EB1EE04243002C63A4 /* PositiveActivity.swift in Sources */,
 				8C54AD141ED72B33001EC903 /* CustomStressViewController.swift in Sources */,
+				8C54AD281EE0D27D001EC903 /* CalendarHelper.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
 				4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */,
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
 				4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */,
+				8C54AD261EE0B88D001EC903 /* ScheduleViewController.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
 				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
 				8C54AD1B1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift in Sources */,

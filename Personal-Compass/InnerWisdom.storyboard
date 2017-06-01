@@ -193,7 +193,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHn-hj-FqW">
-                                        <rect key="frame" x="37" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="130"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="listenAction:" destination="Eq7-Qq-x6S" eventType="touchUpInside" id="FzS-E4-4wO"/>
@@ -205,11 +205,13 @@
                                 <constraints>
                                     <constraint firstItem="py9-0E-2Bj" firstAttribute="top" secondItem="4wf-m6-dbP" secondAttribute="top" id="4mm-mk-pV4"/>
                                     <constraint firstItem="TQ0-yj-o2Y" firstAttribute="top" secondItem="py9-0E-2Bj" secondAttribute="bottom" constant="16" id="BsN-wu-UJg"/>
+                                    <constraint firstItem="DHn-hj-FqW" firstAttribute="leading" secondItem="4wf-m6-dbP" secondAttribute="leading" id="FYr-1X-JYt"/>
                                     <constraint firstAttribute="width" constant="104" id="UMC-an-Jj3"/>
-                                    <constraint firstItem="py9-0E-2Bj" firstAttribute="top" secondItem="DHn-hj-FqW" secondAttribute="top" id="rFk-rd-wzk"/>
+                                    <constraint firstAttribute="bottom" secondItem="DHn-hj-FqW" secondAttribute="bottom" id="aPS-To-em0"/>
+                                    <constraint firstItem="DHn-hj-FqW" firstAttribute="top" secondItem="4wf-m6-dbP" secondAttribute="top" id="eZa-hV-Qfc"/>
+                                    <constraint firstAttribute="trailing" secondItem="DHn-hj-FqW" secondAttribute="trailing" id="fsG-lA-h9I"/>
                                     <constraint firstItem="TQ0-yj-o2Y" firstAttribute="leading" secondItem="4wf-m6-dbP" secondAttribute="leading" id="rr9-rW-fT6"/>
                                     <constraint firstAttribute="trailing" secondItem="TQ0-yj-o2Y" secondAttribute="trailing" id="tu6-gM-QS9"/>
-                                    <constraint firstItem="py9-0E-2Bj" firstAttribute="centerX" secondItem="DHn-hj-FqW" secondAttribute="centerX" id="v8Q-t4-1CK"/>
                                     <constraint firstAttribute="height" constant="130" id="wSD-Mt-Mso"/>
                                     <constraint firstItem="py9-0E-2Bj" firstAttribute="centerX" secondItem="4wf-m6-dbP" secondAttribute="centerX" id="zuA-md-rdR"/>
                                 </constraints>
