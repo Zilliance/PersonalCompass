@@ -18,7 +18,6 @@ class ScheduleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.closeView))
         self.setupView()
     }
@@ -78,4 +77,16 @@ class ScheduleViewController: UIViewController {
     @IBAction func setReminderAction(_ sender: UIButton) {
     }
     
+}
+
+extension ScheduleViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n")
+        {
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        return true
+    }
 }

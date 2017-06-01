@@ -85,17 +85,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="176.5" id="wDH-rA-RiC"/>
                                         </constraints>
-                                        <string key="text">Action step.  Better feeling emotion action step.
-
-
-
-
-
-
-</string>
                                         <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="wEt-bd-DK6" id="Dhg-m0-OIW"/>
+                                        </connections>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pz9-qF-xLk">
                                         <rect key="frame" x="16" y="506" width="318" height="44"/>
