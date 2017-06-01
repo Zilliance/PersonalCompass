@@ -12,6 +12,7 @@ class CompassCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var completedLabel: UILabel!
+    @IBOutlet weak var greyLineView: UIView!
     
     static let size = CGSize(width: 105.0, height: 105.0)
     
@@ -25,8 +26,8 @@ class CompassCollectionViewCell: UICollectionViewCell {
         
         if compass.completed {
             self.completedLabel.backgroundColor = .navBar
-            self.completedLabel.textColor = .softWhite
-            
+            self.completedLabel.textColor = .silverColor
+            self.greyLineView.isHidden = true
             self.completedLabel.text = CompassCollectionViewCell.dateFormatter.string(from: compass.dateCreated)
             
         }
@@ -36,8 +37,6 @@ class CompassCollectionViewCell: UICollectionViewCell {
             self.completedLabel.text = "In progress"
             self.titleLabel.text = compass.stressor
             
-            self.completedLabel.layer.borderColor = UIColor.paleGrey.cgColor
-            self.completedLabel.layer.borderWidth = 1.0
         }
     }
     
