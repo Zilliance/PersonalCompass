@@ -43,7 +43,6 @@ class StartCompassViewController: UIViewController {
     
     @IBAction func startAction(_ sender: UIButton) {
         let compass = Compass()
-        compass.lastEditedFacet = .unknown
 //        let user = Database.shared.user
 //        user?.compasses.append(compass)
         

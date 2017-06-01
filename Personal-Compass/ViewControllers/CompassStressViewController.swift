@@ -19,7 +19,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
-    private var tableViewController: StressSelectionViewController!
+    private var tableViewController: ItemsSelectionViewController!
     
     var currentCompass: Compass!
     
@@ -60,7 +60,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
 
     }
     
-    private func setupItemsSelection<T: StringItem>(vc: StressSelectionViewController, preloadedItems: [T], destination: List<T>) {
+    private func setupItemsSelection<T: StringItem>(vc: ItemsSelectionViewController, preloadedItems: [T], destination: List<T>) {
         
         vc.items = preloadedItems
         vc.selectedItems = destination.count == 0 ? [] : Array(destination)
@@ -82,7 +82,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let itemsSelectionsController = segue.destination as? StressSelectionViewController {
+        if let itemsSelectionsController = segue.destination as? ItemsSelectionViewController {
             
             itemsSelectionsController.type = self.StringItemType
             self.tableViewController = itemsSelectionsController

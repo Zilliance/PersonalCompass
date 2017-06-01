@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Meditation/Deep Breathing</string>
+    <string>Take a walk/Exercise</string>
+    <string>Spend time with loved ones</string>
+    <string>Call a friend</string>
+    <string>Listen to music</string>
+    <string>Watch a funny video</string>
+    <string>Spend time in nature</string>
+    <string>Ask for a hug</string>
+</array>
+</plist>

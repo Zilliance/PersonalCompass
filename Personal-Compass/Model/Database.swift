@@ -38,11 +38,14 @@ class Database {
 
     private(set) var behaviourStressStored: Results<BehaviourStress>!
     
+    private(set) var positiveActivitiesStored: Results<PositiveActivity>!
+
+    
     init() {
         do {
                         
             let config = Realm.Configuration(
-                schemaVersion: 5,
+                schemaVersion: 6,
                 
                 migrationBlock: { migration, oldSchemaVersion in
                     if (oldSchemaVersion < 1) {
@@ -62,6 +65,8 @@ class Database {
             bodyStressStored = self.realm.objects(BodyStress.self).sorted(by: sortProperties)
             
             behaviourStressStored = self.realm.objects(BehaviourStress.self).sorted(by: sortProperties)
+            
+            positiveActivitiesStored = self.realm.objects(PositiveActivity.self).sorted(by: sortProperties)
 
             if let user = self.realm.objects(User.self).first
             {
@@ -98,6 +103,7 @@ extension Database {
         self.bootstrapEmotions()
         self.bootstrapBodyStress()
         self.bootstrapBehaviourStress()
+        self.bootstrapPositiveActivities()
         self.bootstrapUser()
     }
     
@@ -136,10 +142,10 @@ extension Database {
         }
     }
     
-    typealias StressData = [String]
+    typealias StringData = [String]
     
-    fileprivate func parseStressData(fileName: String, itemType: StringItem.Type) {
-        if let path = Bundle.main.path(forResource: fileName, ofType: "plist"), let data = NSArray(contentsOfFile: path) as? StressData {
+    fileprivate func parseStringData(fileName: String, itemType: StringItem.Type) {
+        if let path = Bundle.main.path(forResource: fileName, ofType: "plist"), let data = NSArray(contentsOfFile: path) as? StringData {
             
             try! realm.write({
                 
@@ -159,14 +165,20 @@ extension Database {
     
     fileprivate func bootstrapBodyStress() {
         
-        parseStressData(fileName: "PreloadedBodyStress", itemType: BodyStress.self)
+        parseStringData(fileName: "PreloadedBodyStress", itemType: BodyStress.self)
         
     }
     
     fileprivate func bootstrapBehaviourStress() {
 
-        parseStressData(fileName: "PreloadedBehaviourStress", itemType: BehaviourStress.self)
+        parseStringData(fileName: "PreloadedBehaviourStress", itemType: BehaviourStress.self)
 
+    }
+    
+    fileprivate func bootstrapPositiveActivities() {
+        
+        parseStringData(fileName: "PreloadedPositiveActivities", itemType: PositiveActivity.self)
+        
     }
     
     

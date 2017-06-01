@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Stress Selection View Controller-->
+        <!--Items Selection View Controller-->
         <scene sceneID="GFE-lB-vwW">
             <objects>
-                <tableViewController storyboardIdentifier="StressSelectionViewController" id="aiV-aJ-KyN" customClass="StressSelectionViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ItemsSelectionViewController" id="aiV-aJ-KyN" customClass="ItemsSelectionViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qdU-Vc-IWr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +180,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlM-Oa-09s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.59999999999999" y="238.83058470764618"/>
+            <point key="canvasLocation" x="113" y="-16"/>
+        </scene>
+        <!--Positive Activities View Controller-->
+        <scene sceneID="K23-CF-wRi">
+            <objects>
+                <viewController storyboardIdentifier="PositiveActivitiesViewController" id="lh6-Ra-ZEU" customClass="PositiveActivitiesViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pm1-FH-3uQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Ek-Hu-Xj1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="af0-JD-6kv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jS-7R-Bxe">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="aiV-aJ-KyN" kind="embed" id="4Ut-fh-kqa"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BM0-6q-0Jv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Positive Activities" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfb-NN-Pqp">
+                                        <rect key="frame" x="40" y="48.5" width="295" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Lfb-NN-Pqp" firstAttribute="leading" secondItem="BM0-6q-0Jv" secondAttribute="leading" constant="40" id="E5F-YA-IRH"/>
+                                    <constraint firstAttribute="height" constant="80" id="QWG-bY-qSZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lfb-NN-Pqp" secondAttribute="trailing" constant="40" id="fej-b6-1Sm"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lfb-NN-Pqp" secondAttribute="bottom" constant="10" id="qUc-L2-m39"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0jS-7R-Bxe" secondAttribute="trailing" id="7m9-nI-UwF"/>
+                            <constraint firstAttribute="trailing" secondItem="BM0-6q-0Jv" secondAttribute="trailing" id="UkX-J2-1Xu"/>
+                            <constraint firstItem="BM0-6q-0Jv" firstAttribute="leading" secondItem="af0-JD-6kv" secondAttribute="leading" id="WaP-WE-FND"/>
+                            <constraint firstItem="BM0-6q-0Jv" firstAttribute="top" secondItem="af0-JD-6kv" secondAttribute="top" id="YjD-lk-YBj"/>
+                            <constraint firstItem="0jS-7R-Bxe" firstAttribute="leading" secondItem="af0-JD-6kv" secondAttribute="leading" id="oi9-ON-J7k"/>
+                            <constraint firstItem="0jS-7R-Bxe" firstAttribute="top" secondItem="BM0-6q-0Jv" secondAttribute="bottom" id="qSP-mn-oE9"/>
+                            <constraint firstItem="1Ek-Hu-Xj1" firstAttribute="top" secondItem="0jS-7R-Bxe" secondAttribute="bottom" id="yRD-23-bP8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLable" destination="Lfb-NN-Pqp" id="Haj-XR-OVw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrf-eG-X5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="690"/>
         </scene>
         <!--Custom Stress View Controller-->
         <scene sceneID="9v9-iJ-IFM">
@@ -241,4 +298,7 @@
     <resources>
         <image name="checkbox-checked" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Ut-fh-kqa"/>
+    </inferredMetricsTieBreakers>
 </document>

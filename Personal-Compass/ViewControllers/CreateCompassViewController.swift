@@ -35,6 +35,7 @@ enum CompassScene: String {
     case innerWisdom2
     case innerWisdom3
     case innerWisdom4
+    case innerWisdom5
     
     var color: UIColor {
         switch self {
@@ -60,9 +61,11 @@ enum CompassScene: String {
             return .innerWisdom
         case .innerWisdom4:
             return .innerWisdom
+        case .innerWisdom5:
+            return .innerWisdom
         }
     }
-    
+
     var title: String {
         return self.rawValue.capitalized
     }
@@ -137,8 +140,14 @@ class CreateCompassViewController: UIViewController {
                 let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "4") as! InnerWisdom4ViewController
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
+
+            case .innerWisdom5:
+                let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "PositiveActivitiesViewController") as! PositiveActivitiesViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
             }
-            
+        
+
             self.scene = scene
         }
     }
@@ -169,6 +178,7 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .innerWisdom2, container: self),
             CompassItem(for: .innerWisdom3, container: self),
             CompassItem(for: .innerWisdom4, container: self),
+            CompassItem(for: .innerWisdom5, container: self),
         ]
         
         return items
@@ -177,7 +187,7 @@ class CreateCompassViewController: UIViewController {
     
     private lazy var pageControlViewController: UIPageViewController = {
         let controller = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-             self.currentPageIndex = self.compass.lastEditedFacet.pageIndex
+             self.currentPageIndex = Int(self.compass.lastEditedFacet.pageIndex)
         controller.setViewControllers([self.compassItems[self.currentPageIndex].viewController], direction: .forward, animated: true, completion: nil)
         self.pageControl.currentPage = self.currentPageIndex
         self.setupLabel(for: self.compassItems[self.currentPageIndex].scene)
@@ -238,7 +248,7 @@ class CreateCompassViewController: UIViewController {
         }) { _ in
         
             switch scene {
-            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4:
+            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5:
                 self.topLabel.text = "Inner Wisdom"
             default:
                 self.topLabel.text = scene.rawValue.capitalized

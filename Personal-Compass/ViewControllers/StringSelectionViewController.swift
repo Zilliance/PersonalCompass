@@ -1,5 +1,5 @@
 //
-//  StressSelectionViewController.swift
+//  ItemsSelectionViewController.swift
 //  Personal-Compass
 //
 //  Created by Ignacio Zunino on 17-05-17.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class StressSelectionViewController: UITableViewController {
+final class ItemsSelectionViewController: UITableViewController {
     
     var items: [StringItem] = []
     var selectedItems: [StringItem] = []
@@ -74,7 +74,7 @@ final class StressSelectionViewController: UITableViewController {
 }
 
 
-extension StressSelectionViewController: CustomStressViewControllerDelegate {
+extension ItemsSelectionViewController: CustomStressViewControllerDelegate {
     
     //add a new item logic
     @objc fileprivate func addItemTapped() {
