@@ -70,6 +70,7 @@
 		8C54AD1B1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD1A1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift */; };
 		8C54AD1D1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD1C1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift */; };
 		8C54AD1F1EDE1A34001EC903 /* InnerWisdom4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD1E1EDE1A34001EC903 /* InnerWisdom4ViewController.swift */; };
+		8C54AD211EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD201EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift */; };
 		8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166801ECCD0DD0072C19F /* Stressor.storyboard */; };
 		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
@@ -168,6 +169,7 @@
 		8C54AD1A1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom2ViewController.swift; path = ViewControllers/InnerWisdom2ViewController.swift; sourceTree = "<group>"; };
 		8C54AD1C1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom3ViewController.swift; path = ViewControllers/InnerWisdom3ViewController.swift; sourceTree = "<group>"; };
 		8C54AD1E1EDE1A34001EC903 /* InnerWisdom4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom4ViewController.swift; path = ViewControllers/InnerWisdom4ViewController.swift; sourceTree = "<group>"; };
+		8C54AD201EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdomScheduleViewController.swift; path = ViewControllers/InnerWisdomScheduleViewController.swift; sourceTree = "<group>"; };
 		8C9166801ECCD0DD0072C19F /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				8C54AD1E1EDE1A34001EC903 /* InnerWisdom4ViewController.swift */,
 				4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */,
 				4FA8257F1EE1AE08009AB272 /* InnerWisdomSummaryViewController.swift */,
+				8C54AD201EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift */,
 			);
 			name = InnerWisdom;
 			sourceTree = "<group>";
@@ -846,6 +849,7 @@
 				8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */,
 				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
 				8C54AD1D1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift in Sources */,
+				8C54AD211EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift in Sources */,
 				8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

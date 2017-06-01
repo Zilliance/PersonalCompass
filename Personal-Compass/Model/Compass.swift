@@ -24,9 +24,38 @@ final class Compass: Object {
         case innerWisdom3
         case innerWisdom4
         case innerWisdom5
-    
+        case innerWisdomSchedule
+        
         var pageIndex: Int {
-            return Int(self.rawValue)
+            switch self {
+            case .unknown:
+                return 0
+            case .stressor:
+                return 0
+            case .emotion:
+                return 1
+            case .thought:
+                return 2
+            case .body:
+                return 3
+            case .behaviour:
+                return 4
+            case .assessment:
+                return 5
+            case .need:
+                return 6
+            case .innerWisdom1:
+                return 7
+            case .innerWisdom2:
+                return 8
+            case .innerWisdom3:
+                return 9
+            case .innerWisdom4:
+                return 10
+            case .innerWisdomSchedule:
+                return 11
+
+            }
         }
         
     }

@@ -146,6 +146,115 @@
             </objects>
             <point key="canvasLocation" x="-60" y="154.27286356821591"/>
         </scene>
+        <!--Inner Wisdom Schedule View Controller-->
+        <scene sceneID="fo3-EN-pAc">
+            <objects>
+                <viewController storyboardIdentifier="schedule" id="WNw-Lp-eqm" customClass="InnerWisdomScheduleViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uvA-sz-PM1"/>
+                        <viewControllerLayoutGuide type="bottom" id="xeG-zK-9An"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KVW-MR-bEe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fO4-6E-Act">
+                                <rect key="frame" x="127" y="114" width="122" height="2"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="0VD-uw-zCz"/>
+                                    <constraint firstAttribute="height" constant="2" id="K1u-KZ-ocC"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1U-q0-yeI">
+                                <rect key="frame" x="20" y="71" width="335" height="23"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-m6-dbP">
+                                <rect key="frame" x="136" y="230" width="104" height="130"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-schedule-encircled" translatesAutoresizingMaskIntoConstraints="NO" id="py9-0E-2Bj">
+                                        <rect key="frame" x="11" y="0.0" width="82" height="82"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="82" id="KLE-UD-17o"/>
+                                            <constraint firstAttribute="width" constant="82" id="UfK-Sk-kYL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-yj-o2Y">
+                                        <rect key="frame" x="0.0" y="98" width="104" height="28"/>
+                                        <color key="backgroundColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="blT-or-HME"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHn-hj-FqW">
+                                        <rect key="frame" x="37" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="listenAction:" destination="Eq7-Qq-x6S" eventType="touchUpInside" id="FzS-E4-4wO"/>
+                                            <action selector="scheduleAction:" destination="WNw-Lp-eqm" eventType="touchUpInside" id="Keh-ZD-kRE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="py9-0E-2Bj" firstAttribute="top" secondItem="4wf-m6-dbP" secondAttribute="top" id="4mm-mk-pV4"/>
+                                    <constraint firstItem="TQ0-yj-o2Y" firstAttribute="top" secondItem="py9-0E-2Bj" secondAttribute="bottom" constant="16" id="BsN-wu-UJg"/>
+                                    <constraint firstAttribute="width" constant="104" id="UMC-an-Jj3"/>
+                                    <constraint firstItem="py9-0E-2Bj" firstAttribute="top" secondItem="DHn-hj-FqW" secondAttribute="top" id="rFk-rd-wzk"/>
+                                    <constraint firstItem="TQ0-yj-o2Y" firstAttribute="leading" secondItem="4wf-m6-dbP" secondAttribute="leading" id="rr9-rW-fT6"/>
+                                    <constraint firstAttribute="trailing" secondItem="TQ0-yj-o2Y" secondAttribute="trailing" id="tu6-gM-QS9"/>
+                                    <constraint firstItem="py9-0E-2Bj" firstAttribute="centerX" secondItem="DHn-hj-FqW" secondAttribute="centerX" id="v8Q-t4-1CK"/>
+                                    <constraint firstAttribute="height" constant="130" id="wSD-Mt-Mso"/>
+                                    <constraint firstItem="py9-0E-2Bj" firstAttribute="centerX" secondItem="4wf-m6-dbP" secondAttribute="centerX" id="zuA-md-rdR"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or skip to next." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fg-JG-jag">
+                                <rect key="frame" x="141" y="368" width="93" height="18"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“We invite you to set a reminder for your better emotion action step”.  (TEXT TBD)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yef-GA-h23">
+                                <rect key="frame" x="20" y="154" width="335" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="CqS-ro-cnk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Fg-JG-jag" firstAttribute="top" secondItem="4wf-m6-dbP" secondAttribute="bottom" constant="8" id="BHz-eR-mj2"/>
+                            <constraint firstItem="G1U-q0-yeI" firstAttribute="leading" secondItem="KVW-MR-bEe" secondAttribute="leading" constant="20" id="ISk-4N-Loh"/>
+                            <constraint firstItem="9Fg-JG-jag" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="ND2-kB-6Ko"/>
+                            <constraint firstItem="4wf-m6-dbP" firstAttribute="top" secondItem="yef-GA-h23" secondAttribute="bottom" constant="34" id="Pry-NZ-jcl"/>
+                            <constraint firstItem="4wf-m6-dbP" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="RID-LU-HY2"/>
+                            <constraint firstAttribute="trailing" secondItem="yef-GA-h23" secondAttribute="trailing" constant="20" id="Slp-NY-h6b"/>
+                            <constraint firstItem="G1U-q0-yeI" firstAttribute="top" secondItem="uvA-sz-PM1" secondAttribute="bottom" constant="51" id="Wd5-fK-R03"/>
+                            <constraint firstAttribute="trailing" secondItem="G1U-q0-yeI" secondAttribute="trailing" constant="20" id="be9-e3-gog"/>
+                            <constraint firstItem="yef-GA-h23" firstAttribute="leading" secondItem="KVW-MR-bEe" secondAttribute="leading" constant="20" id="hBA-AR-6xD"/>
+                            <constraint firstItem="fO4-6E-Act" firstAttribute="top" secondItem="G1U-q0-yeI" secondAttribute="bottom" constant="20" id="pJl-qJ-tVS"/>
+                            <constraint firstItem="yef-GA-h23" firstAttribute="top" secondItem="fO4-6E-Act" secondAttribute="bottom" constant="38" id="pRX-cW-nDM"/>
+                            <constraint firstItem="fO4-6E-Act" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="rph-mQ-PZa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scheduleLabel" destination="TQ0-yj-o2Y" id="FpU-7A-it8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrY-bE-gjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="841.52923538230891"/>
+        </scene>
         <!--Inner Wisdom2 View Controller-->
         <scene sceneID="8I3-ux-58p">
             <objects>
@@ -516,6 +625,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-schedule-encircled" width="84" height="84"/>
         <image name="iconHeadphonesEncircled" width="84" height="84"/>
     </resources>
 </document>
