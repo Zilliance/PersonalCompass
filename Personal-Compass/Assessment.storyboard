@@ -60,8 +60,8 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="378"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cr0-5n-2PU">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="316"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="332"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="342" id="RGC-lG-B8U"/>
                                         </constraints>
@@ -85,7 +85,7 @@
                                                             <rect key="frame" x="13" y="27.5" width="104" height="28"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1E-lA-6DU">
-                                                                    <rect key="frame" x="33.5" y="4.5" width="38" height="20.5"/>
+                                                                    <rect key="frame" x="33.5" y="4" width="38" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -161,7 +161,7 @@
                                                             <rect key="frame" x="13" y="27.5" width="104" height="28"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNn-3d-QeA">
-                                                                    <rect key="frame" x="33.5" y="4" width="38" height="20.5"/>
+                                                                    <rect key="frame" x="33.5" y="4.5" width="38" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -215,11 +215,11 @@
                                             <outlet property="delegate" destination="p66-MD-3vQ" id="Ocd-dF-JZd"/>
                                         </connections>
                                     </tableView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Additional text can go here" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-KK-Ef0">
-                                        <rect key="frame" x="0.0" y="328" width="320" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" bounces="NO" scrollEnabled="NO" text="Additional text can go here" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-KK-Ef0">
+                                        <rect key="frame" x="0.0" y="344" width="320" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" priority="750" constant="25" id="aBx-zb-Yvh"/>
+                                            <constraint firstAttribute="height" priority="750" constant="34" id="aBx-zb-Yvh"/>
                                         </constraints>
                                         <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
@@ -228,7 +228,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dhB-lm-6Sw" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" id="3BX-hU-Hsi"/>
                             <constraint firstItem="dhB-lm-6Sw" firstAttribute="top" secondItem="tit-Lm-HtY" secondAttribute="bottom" constant="19" id="MhQ-1f-1s9"/>
