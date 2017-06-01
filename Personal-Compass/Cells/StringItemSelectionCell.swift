@@ -1,5 +1,5 @@
 //
-//  StressItemSelectionCell.swift
+//  StringItemSelectionCell.swift
 //  Personal-Compass
 //
 //  Created by Ignacio Zunino on 17-05-17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class StressItemSelectionCell: UITableViewCell {
+@IBDesignable class StringItemSelectionCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var selectionImage: UIImageView!

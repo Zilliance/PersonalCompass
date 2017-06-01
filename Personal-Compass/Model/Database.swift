@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class StressItem: Object {
+class StringItem: Object {
 
     dynamic var title: String?
     dynamic var order: Int = 0
@@ -138,19 +138,19 @@ extension Database {
     
     typealias StressData = [String]
     
-    fileprivate func parseStressData(fileName: String, itemType: StressItem.Type) {
+    fileprivate func parseStressData(fileName: String, itemType: StringItem.Type) {
         if let path = Bundle.main.path(forResource: fileName, ofType: "plist"), let data = NSArray(contentsOfFile: path) as? StressData {
             
             try! realm.write({
                 
-                data.enumerated().forEach({ offset, stressItem  in
-                    //newItemLoaded(offset, stressItem)
+                data.enumerated().forEach({ offset, StringItem  in
+                    //newItemLoaded(offset, StringItem)
                     
-                    let newStressItem = itemType.init()
-                    newStressItem.title = stressItem
-                    newStressItem.order = offset
+                    let newStringItem = itemType.init()
+                    newStringItem.title = StringItem
+                    newStringItem.order = offset
                     
-                    realm.add(newStressItem)
+                    realm.add(newStringItem)
                     
                 })
             })

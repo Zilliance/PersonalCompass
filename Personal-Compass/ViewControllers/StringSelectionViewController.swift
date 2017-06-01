@@ -11,11 +11,11 @@ import UIKit
 
 final class StressSelectionViewController: UITableViewController {
     
-    var items: [StressItem] = []
-    var selectedItems: [StressItem] = []
-    var saveAction: (([StressItem]) -> ())!
+    var items: [StringItem] = []
+    var selectedItems: [StringItem] = []
+    var saveAction: (([StringItem]) -> ())!
     
-    var type : StressItem.Type!
+    var type : StringItem.Type!
 
     override func viewDidLoad() {
         
@@ -40,7 +40,7 @@ final class StressSelectionViewController: UITableViewController {
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StressItemSelectionCell", for: indexPath) as! StressItemSelectionCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StringItemSelectionCell", for: indexPath) as! StringItemSelectionCell
         
         let item = items[indexPath.row]
         
@@ -66,7 +66,7 @@ final class StressSelectionViewController: UITableViewController {
         tableView.reloadRows(at: [indexPath], with: .none)
     }
     
-    func updateItems(newItems: [StressItem]) {
+    func updateItems(newItems: [StringItem]) {
         self.items = newItems
         self.tableView.reloadData()
     }
@@ -79,7 +79,7 @@ extension StressSelectionViewController: CustomStressViewControllerDelegate {
     //add a new item logic
     @objc fileprivate func addItemTapped() {
         
-        guard let customStressViewController = UIStoryboard(name: "StressItems", bundle: nil).instantiateViewController(withIdentifier: "CustomStress") as? CustomStressViewController
+        guard let customStressViewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "CustomStress") as? CustomStressViewController
             else {
                 assertionFailure()
                 return
@@ -94,7 +94,7 @@ extension StressSelectionViewController: CustomStressViewControllerDelegate {
         self.present(navController, animated: true, completion: nil)
     }
     
-    func newItemSaved(newItem: StressItem) {
+    func newItemSaved(newItem: StringItem) {
         
         self.selectedItems.append(newItem)
         

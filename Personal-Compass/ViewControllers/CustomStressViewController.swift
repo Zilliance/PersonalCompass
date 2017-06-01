@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CustomStressViewControllerDelegate: class {
-    func newItemSaved(newItem: StressItem)
+    func newItemSaved(newItem: StringItem)
 }
 
 final class CustomStressViewController: UIViewController {
@@ -17,7 +17,7 @@ final class CustomStressViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var topLabel: UILabel!
     
-    var type: StressItem.Type!
+    var type: StringItem.Type!
     weak var delegate: CustomStressViewControllerDelegate!
     
     fileprivate var placeholderText: String {

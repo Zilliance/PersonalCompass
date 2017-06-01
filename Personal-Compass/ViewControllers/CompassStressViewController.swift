@@ -23,7 +23,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
     
     var currentCompass: Compass!
     
-    var stressItemType: StressItem.Type!
+    var StringItemType: StringItem.Type!
     
     var notificationToken: NotificationToken? = nil
     
@@ -51,7 +51,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         
         self.tableViewController.saveAction(self.tableViewController.selectedItems)
         
-        if self.stressItemType == BodyStress.self {
+        if self.StringItemType == BodyStress.self {
             self.currentCompass.lastEditedFacet = .body
         }
         else {
@@ -60,7 +60,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
 
     }
     
-    private func setupItemsSelection<T: StressItem>(vc: StressSelectionViewController, preloadedItems: [T], destination: List<T>) {
+    private func setupItemsSelection<T: StringItem>(vc: StressSelectionViewController, preloadedItems: [T], destination: List<T>) {
         
         vc.items = preloadedItems
         vc.selectedItems = destination.count == 0 ? [] : Array(destination)
@@ -84,10 +84,10 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         
         if let itemsSelectionsController = segue.destination as? StressSelectionViewController {
             
-            itemsSelectionsController.type = self.stressItemType
+            itemsSelectionsController.type = self.StringItemType
             self.tableViewController = itemsSelectionsController
             
-            if (self.stressItemType == BodyStress.self) {
+            if (self.StringItemType == BodyStress.self) {
                 
                 self.setupItemsSelection(vc: itemsSelectionsController, preloadedItems: Array(Database.shared.bodyStressStored), destination: self.currentCompass.bodyStressElements)
 

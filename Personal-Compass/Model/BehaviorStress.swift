@@ -9,6 +9,6 @@
 import Foundation
 import RealmSwift
 
-final class BehaviourStress: StressItem {
+final class BehaviourStress: StringItem {
     
 }

@@ -79,16 +79,16 @@ class CreateCompassViewController: UIViewController {
             
             switch scene {
             case .body:
-                let viewController = UIStoryboard(name: "StressItems", bundle: nil).instantiateViewController(withIdentifier: "CompassStressViewController") as! CompassStressViewController
-                viewController.stressItemType = BodyStress.self
+                let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "CompassStressViewController") as! CompassStressViewController
+                viewController.StringItemType = BodyStress.self
                 viewController.currentCompass = container.compass
                 viewController.title = "How is the stress of this situation affecting me physically?"
                 self.viewController = viewController
                 
             case .behavior:
-                let viewController = UIStoryboard(name: "StressItems", bundle: nil).instantiateViewController(withIdentifier: "CompassStressViewController") as! CompassStressViewController
+                let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "CompassStressViewController") as! CompassStressViewController
                 viewController.title = "How are my thoughts about this situation affecting my behavior?"
-                viewController.stressItemType = BehaviourStress.self
+                viewController.StringItemType = BehaviourStress.self
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
                 
