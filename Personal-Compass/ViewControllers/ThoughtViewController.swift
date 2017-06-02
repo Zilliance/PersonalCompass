@@ -26,11 +26,6 @@ class ThoughtViewController: UIViewController, CompassFacetEditor, CompassValida
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.setupView()
-    }
     
     func save() {
         self.currentCompass.thoughtAboutEmotion = self.textView.text
@@ -52,6 +47,10 @@ class ThoughtViewController: UIViewController, CompassFacetEditor, CompassValida
             self.emotionLabel.text = emotion.shortTitle
             self.emotionLabel.textColor = .red
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.setupView()
     }
 
 }

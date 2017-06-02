@@ -19,7 +19,6 @@ class NeedViewController: UIViewController, CompassFacetEditor, CompassValidatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupView()
     }
 
     private func setupView() {
@@ -35,6 +34,10 @@ class NeedViewController: UIViewController, CompassFacetEditor, CompassValidatio
     func save() {
         self.currentCompass.need = self.textView.text
         self.currentCompass.lastEditedFacet = .need
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupView()
     }
 
 }

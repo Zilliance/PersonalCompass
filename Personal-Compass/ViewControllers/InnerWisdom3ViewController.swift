@@ -26,8 +26,6 @@ class InnerWisdom3ViewController: UIViewController, CompassValidation, CompassFa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupView()
-
     }
     
     func save() {
@@ -49,6 +47,10 @@ class InnerWisdom3ViewController: UIViewController, CompassValidation, CompassFa
             self.needTextView.text = need
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupView()
     }
 
 

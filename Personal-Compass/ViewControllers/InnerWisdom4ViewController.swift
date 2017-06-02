@@ -29,8 +29,6 @@ class InnerWisdom4ViewController: UIViewController, CompassValidation, CompassFa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupView()
-    
     }
     
     func save() {
@@ -52,6 +50,10 @@ class InnerWisdom4ViewController: UIViewController, CompassValidation, CompassFa
         if let row = self.emotions.index(of: emotion) {
             self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .middle)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupView()
     }
 
 

@@ -43,6 +43,7 @@ class StressorViewController: UIViewController, CompassFacetEditor, CompassValid
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
     }
+    
 
 }
 
