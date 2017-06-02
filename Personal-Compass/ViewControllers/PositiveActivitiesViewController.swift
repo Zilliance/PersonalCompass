@@ -1,5 +1,5 @@
 //
-//  PositiveActivitiesViewController.swift
+//  InnerWisdom5ViewController.swift
 //  Personal-Compass
 //
 //  Created by Ignacio Zunino on 01-06-17.
@@ -12,7 +12,7 @@ import UIKit
 import RealmSwift
 
 
-final class PositiveActivitiesViewController: UIViewController, CompassFacetEditor, CompassValidation {
+final class InnerWisdom5ViewController: UIViewController, CompassFacetEditor, CompassValidation {
     
     @IBOutlet fileprivate var titleLable: UILabel!
     

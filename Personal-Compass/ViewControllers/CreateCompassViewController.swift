@@ -142,7 +142,7 @@ class CreateCompassViewController: UIViewController {
                 self.viewController = viewController
 
             case .innerWisdom5:
-                let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "PositiveActivitiesViewController") as! PositiveActivitiesViewController
+                let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdom5ViewController") as! InnerWisdom5ViewController
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
             }

@@ -188,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="113" y="-16"/>
         </scene>
-        <!--Positive Activities View Controller-->
+        <!--Inner Wisdom5 View Controller-->
         <scene sceneID="K23-CF-wRi">
             <objects>
-                <viewController storyboardIdentifier="PositiveActivitiesViewController" automaticallyAdjustsScrollViewInsets="NO" id="lh6-Ra-ZEU" customClass="PositiveActivitiesViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InnerWisdom5ViewController" automaticallyAdjustsScrollViewInsets="NO" id="lh6-Ra-ZEU" customClass="InnerWisdom5ViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pm1-FH-3uQ"/>
                         <viewControllerLayoutGuide type="bottom" id="1Ek-Hu-Xj1"/>
@@ -213,7 +213,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would feel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-0P-MfT">
-                                        <rect key="frame" x="80" y="73" width="73" height="18"/>
+                                        <rect key="frame" x="80" y="73.5" width="73" height="18"/>
                                         <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
