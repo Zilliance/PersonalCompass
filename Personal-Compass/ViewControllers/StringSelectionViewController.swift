@@ -90,7 +90,7 @@ extension ItemsSelectionViewController: CustomStressViewControllerDelegate {
         customStressViewController.delegate = self
         
         if (type == BehaviourStress.self) {
-            customStressViewController.placeholder = "In one or two words, describe how the situation is affecting my behavior."
+            customStressViewController.placeholder = "In one or two words, describe how the situation is affecting your behavior."
             customStressViewController.headerText = "How is the stress of this situation affecting my behavior?"
             customStressViewController.title = "Custom Body Stress"
 
@@ -104,7 +104,7 @@ extension ItemsSelectionViewController: CustomStressViewControllerDelegate {
         
         if (type == PositiveActivity.self) {
             customStressViewController.placeholder = "In one or two words, describe how else you could feel this emotion."
-            customStressViewController.headerText = "How else can I feel this emotion"
+            customStressViewController.headerText = "How else can I feel this emotion?"
             customStressViewController.title = "Custom Alternative"
         }
         
