@@ -21,5 +21,9 @@ final class Emotion: Object {
         let iconName = "emotion-icon-\(self.level)"
         return UIImage(named: iconName)
     }
+    
+    var color: UIColor {
+        return UIColor.green // TODO
+    }
 
 }

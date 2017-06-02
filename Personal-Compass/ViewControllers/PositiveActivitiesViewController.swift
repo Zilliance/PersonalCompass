@@ -22,6 +22,11 @@ final class PositiveActivitiesViewController: UIViewController, CompassFacetEdit
     
     var notificationToken: NotificationToken? = nil
     
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var emotionIcon: UIImageView!
+    @IBOutlet weak var emotionLabel: UILabel!
+    
+    
     var error: CompassError? {
         if let items = self.tableViewController?.selectedItems, items.count > 0 {
             return nil
@@ -36,9 +41,9 @@ final class PositiveActivitiesViewController: UIViewController, CompassFacetEdit
         
         super.viewDidLoad()
         
-        self.titleLable.text = self.title
-        
-        self.titleLable.textColor = UIColor.darkBlue
+        emotionIcon.image = currentCompass.needMetEmotion?.icon
+        emotionLabel.text = currentCompass.needMetEmotion?.longTitle
+        emotionLabel.textColor = currentCompass.needMetEmotion?.color
         
     }
     
@@ -59,7 +64,7 @@ final class PositiveActivitiesViewController: UIViewController, CompassFacetEdit
             
             itemsSelectionsController.items = Array(Database.shared.positiveActivitiesStored)
             itemsSelectionsController.selectedItems = Array(self.currentCompass.positiveActivities)
-            
+                        
             itemsSelectionsController.saveAction = { selectedItems in
                 
                 let items = selectedItems.flatMap {

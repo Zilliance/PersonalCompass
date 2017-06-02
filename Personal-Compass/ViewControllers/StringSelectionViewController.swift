@@ -16,13 +16,14 @@ final class ItemsSelectionViewController: UITableViewController {
     var saveAction: (([StringItem]) -> ())!
     
     var type : StringItem.Type!
+    
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-            
+        
     }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
