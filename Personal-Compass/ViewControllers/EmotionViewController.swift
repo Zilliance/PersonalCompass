@@ -46,6 +46,7 @@ class EmotionViewController: UIViewController, CompassFacetEditor, CompassValida
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        self.setupView()
     }
     
     func save() {
@@ -61,14 +62,13 @@ class EmotionViewController: UIViewController, CompassFacetEditor, CompassValida
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
-        
+    }
+    
+    private func setupView() {
         guard let emotion = self.currentCompass.emotion else { return }
         if let row = self.emotions.index(of: emotion) {
             self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .middle)
         }
-
-        
-        
     }
 }
 

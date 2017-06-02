@@ -17,13 +17,11 @@ class InnerWisdom1ViewController: UIViewController, CompassValidation, CompassFa
     
     var currentCompass: Compass! 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.listenLabel.clipsToBounds = true
         self.listenLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
-        self.setupView()
         
     }
     
@@ -36,6 +34,10 @@ class InnerWisdom1ViewController: UIViewController, CompassValidation, CompassFa
         if let need = self.currentCompass.need {
             self.textView.text = need
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupView()
     }
     
     @IBAction func listenAction(_ sender: UIButton) {

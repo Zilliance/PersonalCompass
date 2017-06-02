@@ -25,8 +25,6 @@ class InnerWisdom2ViewController: UIViewController, CompassValidation, CompassFa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupView()
-
     }
     
     func save() {
@@ -42,6 +40,10 @@ class InnerWisdom2ViewController: UIViewController, CompassValidation, CompassFa
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupView()
     }
 }
 

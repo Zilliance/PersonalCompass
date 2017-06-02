@@ -41,10 +41,16 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         
         super.viewDidLoad()
         
-        self.titleLable.text = self.title
-        
         self.titleLable.textColor = UIColor.darkBlue
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupView()
+    }
+    
+    private func setupView() {
+        self.titleLable.text = self.title
     }
     
     func save() {

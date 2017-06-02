@@ -37,14 +37,14 @@ final class InnerWisdom5ViewController: UIViewController, CompassFacetEditor, Co
         
     }
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        
+    override func viewWillAppear(_ animated: Bool) {
+        setupView()
+    }
+    
+    private func setupView() {
         emotionIcon.image = currentCompass.needMetEmotion?.icon
         emotionLabel.text = currentCompass.needMetEmotion?.longTitle
         emotionLabel.textColor = currentCompass.needMetEmotion?.color
-        
     }
     
     func save() {
