@@ -16,7 +16,7 @@
 		4F7D86E91EDF5198002C63A4 /* CompassFacetSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */; };
 		4F7D86EB1EE04243002C63A4 /* PositiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D86EA1EE04243002C63A4 /* PositiveActivity.swift */; };
 		4F7D86EF1EE0441D002C63A4 /* PreloadedPositiveActivities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F7D86EE1EE0441D002C63A4 /* PreloadedPositiveActivities.plist */; };
-		4F7D86F11EE04F99002C63A4 /* PositiveActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D86F01EE04F99002C63A4 /* PositiveActivitiesViewController.swift */; };
+		4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */; };
 		4F8C2E2A1ED5BA2D00A24A40 /* Assessment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */; };
 		4F8C2E2E1ED5BD8600A24A40 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */; };
 		4FCBA1B11EDD954900B68A85 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */; };
@@ -111,7 +111,7 @@
 		485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7D86EA1EE04243002C63A4 /* PositiveActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PositiveActivity.swift; path = Model/PositiveActivity.swift; sourceTree = "<group>"; };
 		4F7D86EE1EE0441D002C63A4 /* PreloadedPositiveActivities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedPositiveActivities.plist; path = Model/PreloadedPositiveActivities.plist; sourceTree = "<group>"; };
-		4F7D86F01EE04F99002C63A4 /* PositiveActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PositiveActivitiesViewController.swift; path = ViewControllers/PositiveActivitiesViewController.swift; sourceTree = "<group>"; };
+		4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom5ViewController.swift; path = ViewControllers/InnerWisdom5ViewController.swift; sourceTree = "<group>"; };
 		4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assessment.storyboard; sourceTree = "<group>"; };
 		4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompassFacetSummaryCell.swift; path = Cells/CompassFacetSummaryCell.swift; sourceTree = "<group>"; };
 		4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssessmentViewController.swift; path = ViewControllers/AssessmentViewController.swift; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 				4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */,
 				4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */,
 				8C54AD131ED72B33001EC903 /* CustomStressViewController.swift */,
-				4F7D86F01EE04F99002C63A4 /* PositiveActivitiesViewController.swift */,
+				4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */,
 			);
 			name = StringSelectionItems;
 			sourceTree = "<group>";
@@ -799,7 +799,7 @@
 				8C54AD141ED72B33001EC903 /* CustomStressViewController.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
-				4F7D86F11EE04F99002C63A4 /* PositiveActivitiesViewController.swift in Sources */,
+				4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */,
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
 				4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
