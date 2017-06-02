@@ -19,11 +19,22 @@ extension UIColor {
     static let battleshipGrey = UIColor.color(forRed: 117, green: 119, blue: 124, alpha: 1)
 
     static let paleGrey = UIColor.color(forRed: 237.0, green: 237.0, blue: 239.0, alpha: 1)
-    static let innerWisdom = UIColor.color(forRed: 98.0, green: 109.0, blue: 218.0, alpha: 1)
     
     class func color(forRed red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
     }
+}
+
+// MARK: - Scene Colors
+
+extension UIColor {
+    static let stressor = UIColor.color(forRed: 243, green: 135, blue: 32, alpha: 1)
+    static let emotion = UIColor.color(forRed: 234, green: 91, blue: 67, alpha: 1)
+    static let thought = UIColor.color(forRed: 0, green: 184, blue: 231, alpha: 1)
+    static let body = UIColor.color(forRed: 255, green: 184, blue: 55, alpha: 1)
+    static let behavior = UIColor.color(forRed: 101, green: 175, blue: 71, alpha: 1)
+    static let assessment = UIColor.color(forRed: 234, green: 91, blue: 67, alpha: 1)
+    static let innerWisdom = UIColor.color(forRed: 98.0, green: 109.0, blue: 218.0, alpha: 1)
 }
 
 extension UIColor {
