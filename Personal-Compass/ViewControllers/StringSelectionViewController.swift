@@ -17,7 +17,6 @@ final class ItemsSelectionViewController: UITableViewController {
     
     var type : StringItem.Type!
     
-
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -89,6 +88,25 @@ extension ItemsSelectionViewController: CustomStressViewControllerDelegate {
         customStressViewController.type = self.type
         
         customStressViewController.delegate = self
+        
+        if (type == BehaviourStress.self) {
+            customStressViewController.placeholder = "In one or two words, describe how the situation is affecting my behavior."
+            customStressViewController.headerText = "How is the stress of this situation affecting my behavior?"
+            customStressViewController.title = "Custom Body Stress"
+
+        }
+        
+        if (type == BodyStress.self) {
+            customStressViewController.placeholder = "In one or two words, describe how the situation makes you feel physically."
+            customStressViewController.headerText = "How is the stress of this situation affecting me physically?"
+            customStressViewController.title = "Custom Behavior Stress"
+        }
+        
+        if (type == PositiveActivity.self) {
+            customStressViewController.placeholder = "In one or two words, describe how else you could feel this emotion."
+            customStressViewController.headerText = "How else can I feel this emotion"
+            customStressViewController.title = "Custom Alternative"
+        }
         
         let navController = UINavigationController(rootViewController: customStressViewController)
         

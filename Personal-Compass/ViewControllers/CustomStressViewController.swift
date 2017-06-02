@@ -20,10 +20,8 @@ final class CustomStressViewController: UIViewController {
     var type: StringItem.Type!
     weak var delegate: CustomStressViewControllerDelegate!
     
-    fileprivate var placeholderText: String {
-        
-        return self.type == BodyStress.self ? "In one or two words, describe how the situation makes you feel physically" : "In one or two words, describe how the situation is affecting my behavior"
-    }
+    var headerText: String!
+    var placeholder: String!
     
     fileprivate let placeholderTextColor = UIColor.lightGray
     fileprivate let normalTextColor = UIColor.darkGray
@@ -39,8 +37,7 @@ final class CustomStressViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.closeView))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save))
         
-        self.title = self.type == BodyStress.self ? "Custom Body Stress" : "Custom Behavior Stress"
-        self.topLabel.text = self.type == BodyStress.self ? "How is the stress of this situation affecting me physically?" : "How is the stress of this situation affecting my behavior?"
+        self.topLabel.text = self.headerText
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
@@ -54,13 +51,13 @@ final class CustomStressViewController: UIViewController {
         ]
         
         self.textView.typingAttributes = attrs
-        self.textView.attributedText = NSAttributedString(string: placeholderText, attributes: attrs)
+        self.textView.attributedText = NSAttributedString(string: placeholder, attributes: attrs)
         
     }
     
     fileprivate func showPlaceholder() {
         self.textView.textColor = placeholderTextColor
-        self.textView.text = placeholderText
+        self.textView.text = placeholder
     }
     
     fileprivate func hidePlaceholder() {
@@ -104,7 +101,7 @@ extension CustomStressViewController: UITextViewDelegate {
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == placeholderText {
+        if textView.text == placeholder {
             self.hidePlaceholder()
         }
     }
