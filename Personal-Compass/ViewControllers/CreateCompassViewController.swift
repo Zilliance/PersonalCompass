@@ -36,6 +36,7 @@ enum CompassScene: String {
     case innerWisdom3
     case innerWisdom4
     case innerWisdom5
+    case innerWisdomSummary
     
     var color: UIColor {
         switch self {
@@ -62,6 +63,8 @@ enum CompassScene: String {
         case .innerWisdom4:
             return .innerWisdom
         case .innerWisdom5:
+            return .innerWisdom
+        case .innerWisdomSummary:
             return .innerWisdom
         }
     }
@@ -113,7 +116,10 @@ class CreateCompassViewController: UIViewController {
             case .assessment:
                 let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! AssessmentViewController
                 viewController.currentCompass = container.compass
-                viewController.delegate = container
+                viewController.sceneSelectionAction = {[unowned container] selectedScene in
+                    container.previousScene = scene
+                    container.didSelectScene(scene: selectedScene)
+                }
                 self.viewController = viewController
                 
             case .need:
@@ -145,8 +151,17 @@ class CreateCompassViewController: UIViewController {
                 let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdom5ViewController") as! InnerWisdom5ViewController
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
+                
+            case .innerWisdomSummary:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdomSummaryViewController") as! InnerWisdomSummaryViewController
+                viewController.currentCompass = container.compass
+                viewController.sceneSelectionAction = {[unowned container] selectedScene in
+                    container.previousScene = scene
+                    container.didSelectScene(scene: selectedScene)
+                }
+
+                self.viewController = viewController
             }
-        
 
             self.scene = scene
         }
@@ -161,6 +176,8 @@ class CreateCompassViewController: UIViewController {
     @IBOutlet weak var stressorLabel: UILabel!
     
     var compass: Compass = Compass()
+    
+    var previousScene: CompassScene?
 
     private var currentPageIndex = 0
     
@@ -179,6 +196,7 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .innerWisdom3, container: self),
             CompassItem(for: .innerWisdom4, container: self),
             CompassItem(for: .innerWisdom5, container: self),
+            CompassItem(for: .innerWisdomSummary, container: self),
         ]
         
         return items
@@ -398,20 +416,30 @@ class CreateCompassViewController: UIViewController {
     }
     
     @IBAction func returnToSummaryAction(_ sender: Any) {
-        self.toggleSummaryButton()
-        self.moveToPage(page: Compass.Facet.assessment.pageIndex, direction: .forward)
+        if let previousScene = previousScene {
+         
+            moveToScene(scene: previousScene)
+            
+        }
     }
-}
-
-extension CreateCompassViewController: AssessmentViewControllerDelegate {
-
-    func didSelectScene(scene: CompassScene) {
-        
+    
+    func moveToScene(scene: CompassScene) {
         guard let scenePage = (compassItems.index { $0.scene == scene }) else {
             return assertionFailure()
         }
+        
         self.toggleSummaryButton()
-        self.moveToPage(page: scenePage, direction: .reverse)
+        self.moveToPage(page: scenePage, direction: scenePage > currentPageIndex ? .forward : .reverse)
+
+    }
+
+}
+
+extension CreateCompassViewController {
+    
+
+    func didSelectScene(scene: CompassScene) {
+        self.moveToScene(scene: scene)
     }
 
 }
