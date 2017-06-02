@@ -39,19 +39,19 @@ enum CompassScene: String {
     var color: UIColor {
         switch self {
         case .stressor:
-            return .darkGray
+            return .stressor
         case .emotion:
-            return .red
+            return .emotion
         case .thought:
-            return .blue
+            return .thought
         case .body:
-            return .orange
+            return .body
         case .behavior:
-            return .green
+            return .behavior
         case .assessment:
-            return .green
+            return .assessment
         case .need:
-            return .purple
+            return .innerWisdom
         case .innerWisdom1:
             return .innerWisdom
         case .innerWisdom2:
