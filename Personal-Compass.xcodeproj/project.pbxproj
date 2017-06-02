@@ -14,6 +14,9 @@
 		047A58091ECB36F100BC7650 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A58081ECB36F100BC7650 /* Database.swift */; };
 		047A580B1ECB379700BC7650 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A580A1ECB379700BC7650 /* User.swift */; };
 		4F7D86E91EDF5198002C63A4 /* CompassFacetSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */; };
+		4F7D86EB1EE04243002C63A4 /* PositiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D86EA1EE04243002C63A4 /* PositiveActivity.swift */; };
+		4F7D86EF1EE0441D002C63A4 /* PreloadedPositiveActivities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F7D86EE1EE0441D002C63A4 /* PreloadedPositiveActivities.plist */; };
+		4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */; };
 		4F8C2E2A1ED5BA2D00A24A40 /* Assessment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */; };
 		4F8C2E2E1ED5BD8600A24A40 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */; };
 		4FCBA1B11EDD954900B68A85 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */; };
@@ -23,9 +26,9 @@
 		4FD5B64E1ECC3C2A0017DC06 /* PreloadedBodyStress.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */; };
 		4FD5B6501ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B64F1ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist */; };
 		4FD5B6521ECC3DEC0017DC06 /* PreloadedEmotions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B6511ECC3DEC0017DC06 /* PreloadedEmotions.plist */; };
-		4FD5B6541ECCD8110017DC06 /* StressItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B6531ECCD8110017DC06 /* StressItems.storyboard */; };
-		4FD5B65A1ECCD9680017DC06 /* StressItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */; };
-		4FD5B65D1ECCDB200017DC06 /* StressSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */; };
+		4FD5B6541ECCD8110017DC06 /* StringItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD5B6531ECCD8110017DC06 /* StringItems.storyboard */; };
+		4FD5B65A1ECCD9680017DC06 /* StringItemSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B6581ECCD9680017DC06 /* StringItemSelectionCell.swift */; };
+		4FD5B65D1ECCDB200017DC06 /* StringSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B65C1ECCDB200017DC06 /* StringSelectionViewController.swift */; };
 		4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */; };
 		4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */; };
 		5DEF7E6D86CE1016EC333832 /* Pods_Personal_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */; };
@@ -106,6 +109,9 @@
 		047A580A1ECB379700BC7650 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		46EC5D6D9BEABB60B929A107 /* Pods-Personal-Compass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.release.xcconfig"; sourceTree = "<group>"; };
 		485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_Compass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7D86EA1EE04243002C63A4 /* PositiveActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PositiveActivity.swift; path = Model/PositiveActivity.swift; sourceTree = "<group>"; };
+		4F7D86EE1EE0441D002C63A4 /* PreloadedPositiveActivities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedPositiveActivities.plist; path = Model/PreloadedPositiveActivities.plist; sourceTree = "<group>"; };
+		4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom5ViewController.swift; path = ViewControllers/InnerWisdom5ViewController.swift; sourceTree = "<group>"; };
 		4F8C2E291ED5BA2D00A24A40 /* Assessment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assessment.storyboard; sourceTree = "<group>"; };
 		4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompassFacetSummaryCell.swift; path = Cells/CompassFacetSummaryCell.swift; sourceTree = "<group>"; };
 		4F8C2E2D1ED5BD8600A24A40 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssessmentViewController.swift; path = ViewControllers/AssessmentViewController.swift; sourceTree = "<group>"; };
@@ -114,9 +120,9 @@
 		4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBodyStress.plist; path = Model/PreloadedBodyStress.plist; sourceTree = "<group>"; };
 		4FD5B64F1ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBehaviourStress.plist; path = Model/PreloadedBehaviourStress.plist; sourceTree = "<group>"; };
 		4FD5B6511ECC3DEC0017DC06 /* PreloadedEmotions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedEmotions.plist; path = Model/PreloadedEmotions.plist; sourceTree = "<group>"; };
-		4FD5B6531ECCD8110017DC06 /* StressItems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StressItems.storyboard; sourceTree = "<group>"; };
-		4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressItemSelectionCell.swift; path = Cells/StressItemSelectionCell.swift; sourceTree = "<group>"; };
-		4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressSelectionViewController.swift; path = ViewControllers/StressSelectionViewController.swift; sourceTree = "<group>"; };
+		4FD5B6531ECCD8110017DC06 /* StringItems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StringItems.storyboard; sourceTree = "<group>"; };
+		4FD5B6581ECCD9680017DC06 /* StringItemSelectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringItemSelectionCell.swift; path = Cells/StringItemSelectionCell.swift; sourceTree = "<group>"; };
+		4FD5B65C1ECCDB200017DC06 /* StringSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringSelectionViewController.swift; path = ViewControllers/StringSelectionViewController.swift; sourceTree = "<group>"; };
 		4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemCell.swift; path = Cells/AddItemCell.swift; sourceTree = "<group>"; };
 		4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompassStressViewController.swift; path = ViewControllers/CompassStressViewController.swift; sourceTree = "<group>"; };
 		8C463B051ECA2D9700566531 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Black.ttf"; path = "Fonts/Muli-Black.ttf"; sourceTree = "<group>"; };
@@ -220,9 +226,11 @@
 				047A58061ECB30A400BC7650 /* Emotion.swift */,
 				047A58081ECB36F100BC7650 /* Database.swift */,
 				047A580A1ECB379700BC7650 /* User.swift */,
+				4F7D86EA1EE04243002C63A4 /* PositiveActivity.swift */,
 				4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */,
 				4FD5B64F1ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist */,
 				4FD5B6511ECC3DEC0017DC06 /* PreloadedEmotions.plist */,
+				4F7D86EE1EE0441D002C63A4 /* PreloadedPositiveActivities.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -256,17 +264,18 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		4FD5B6571ECCD93B0017DC06 /* StressSelectionItems */ = {
+		4FD5B6571ECCD93B0017DC06 /* StringSelectionItems */ = {
 			isa = PBXGroup;
 			children = (
-				4FD5B6531ECCD8110017DC06 /* StressItems.storyboard */,
-				4FD5B6581ECCD9680017DC06 /* StressItemSelectionCell.swift */,
-				4FD5B65C1ECCDB200017DC06 /* StressSelectionViewController.swift */,
+				4FD5B6531ECCD8110017DC06 /* StringItems.storyboard */,
+				4FD5B6581ECCD9680017DC06 /* StringItemSelectionCell.swift */,
+				4FD5B65C1ECCDB200017DC06 /* StringSelectionViewController.swift */,
 				4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */,
 				4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */,
 				8C54AD131ED72B33001EC903 /* CustomStressViewController.swift */,
+				4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */,
 			);
-			name = StressSelectionItems;
+			name = StringSelectionItems;
 			sourceTree = "<group>";
 		};
 		8C463B041ECA2D8600566531 /* Fonts */ = {
@@ -309,7 +318,7 @@
 				4F8C2E281ED5BA0900A24A40 /* Assessment */,
 				8C54AD0E1ED5E255001EC903 /* Need */,
 				8C463B2C1ECA3BA600566531 /* SideMenu */,
-				4FD5B6571ECCD93B0017DC06 /* StressSelectionItems */,
+				4FD5B6571ECCD93B0017DC06 /* StringSelectionItems */,
 				8CFC6D471ECE4C4D00F44B95 /* Thought */,
 				8C91667F1ECCB8900072C19F /* Stressor */,
 				8C9166841ECCF18F0072C19F /* Emotion */,
@@ -605,12 +614,13 @@
 				8C463B191ECA2D9700566531 /* Muli-ExtraLight.ttf in Resources */,
 				4F8C2E2A1ED5BA2D00A24A40 /* Assessment.storyboard in Resources */,
 				4FD5B6521ECC3DEC0017DC06 /* PreloadedEmotions.plist in Resources */,
+				4F7D86EF1EE0441D002C63A4 /* PreloadedPositiveActivities.plist in Resources */,
 				8C463B201ECA2D9700566531 /* Muli-SemiBoldItalic.ttf in Resources */,
 				8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */,
 				8C463B1A1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf in Resources */,
 				E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */,
 				8C463B1C1ECA2D9700566531 /* Muli-Light.ttf in Resources */,
-				4FD5B6541ECCD8110017DC06 /* StressItems.storyboard in Resources */,
+				4FD5B6541ECCD8110017DC06 /* StringItems.storyboard in Resources */,
 				8C463B281ECA358F00566531 /* StartCompass.storyboard in Resources */,
 				8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */,
 				8C463B2E1ECA441100566531 /* SideMenu.storyboard in Resources */,
@@ -785,18 +795,20 @@
 				8CFC6D4D1ED3A0D600F44B95 /* UIViewController+Extensions.swift in Sources */,
 				047A58011ECB2B5200BC7650 /* Compass.swift in Sources */,
 				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
+				4F7D86EB1EE04243002C63A4 /* PositiveActivity.swift in Sources */,
 				8C54AD141ED72B33001EC903 /* CustomStressViewController.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
+				4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */,
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
 				4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,
 				8C463B2A1ECA36BD00566531 /* StartCompassViewController.swift in Sources */,
 				8C54AD1B1ED8DF3D001EC903 /* InnerWisdom2ViewController.swift in Sources */,
-				4FD5B65D1ECCDB200017DC06 /* StressSelectionViewController.swift in Sources */,
+				4FD5B65D1ECCDB200017DC06 /* StringSelectionViewController.swift in Sources */,
 				4F7D86E91EDF5198002C63A4 /* CompassFacetSummaryCell.swift in Sources */,
 				8C463B3E1ECB6E2300566531 /* App.swift in Sources */,
-				4FD5B65A1ECCD9680017DC06 /* StressItemSelectionCell.swift in Sources */,
+				4FD5B65A1ECCD9680017DC06 /* StringItemSelectionCell.swift in Sources */,
 				8C54AD191ED8DF0E001EC903 /* InnerWisdom1ViewController.swift in Sources */,
 				8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */,
 				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,

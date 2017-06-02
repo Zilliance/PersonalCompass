@@ -74,7 +74,6 @@ class StartCompassViewController: UIViewController {
     
     @IBAction func startAction(_ sender: UIButton) {
         let compass = Compass()
-        compass.lastEditedFacet = .unknown
         
         guard let createCompassViewController = UIStoryboard(name: "CreateCompass", bundle: nil).instantiateInitialViewController() as? CreateCompassViewController else { return }
         createCompassViewController.compass = compass

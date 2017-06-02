@@ -1,14 +1,14 @@
 //
-//  BehaviourStress.swift
+//  PositiveActivity.swift
 //  Personal-Compass
 //
-//  Created by Ignacio Zunino on 16-05-17.
+//  Created by Ignacio Zunino on 01-06-17.
 //  Copyright © 2017 Zilliance. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-final class BehaviourStress: StringItem {
+final class PositiveActivity: StringItem {
     
 }

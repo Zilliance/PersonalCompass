@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,17 +13,23 @@
         <array key="Muli-Bold.ttf">
             <string>Muli-Bold</string>
         </array>
+        <array key="Muli-LightItalic.ttf">
+            <string>Muli-LightItalic</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--Stress Selection View Controller-->
+        <!--Items Selection View Controller-->
         <scene sceneID="GFE-lB-vwW">
             <objects>
-                <tableViewController storyboardIdentifier="StressSelectionViewController" id="aiV-aJ-KyN" customClass="StressSelectionViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ItemsSelectionViewController" id="aiV-aJ-KyN" customClass="ItemsSelectionViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qdU-Vc-IWr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="426"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -70,7 +76,7 @@
                                     <outlet property="addButton" destination="GGT-rU-J3J" id="BtQ-q0-OvA"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StressItemSelectionCell" id="wWu-dR-8II" customClass="StressItemSelectionCell" customModule="Personal_Compass" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StringItemSelectionCell" id="wWu-dR-8II" customClass="StringItemSelectionCell" customModule="Personal_Compass" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wWu-dR-8II" id="9HF-FZ-8hN">
@@ -78,7 +84,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-uH-Xi2">
-                                            <rect key="frame" x="28" y="13.5" width="187.5" height="19"/>
+                                            <rect key="frame" x="28" y="12.5" width="187.5" height="19"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -180,7 +186,103 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlM-Oa-09s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.59999999999999" y="238.83058470764618"/>
+            <point key="canvasLocation" x="113" y="-16"/>
+        </scene>
+        <!--Inner Wisdom5 View Controller-->
+        <scene sceneID="K23-CF-wRi">
+            <objects>
+                <viewController storyboardIdentifier="InnerWisdom5ViewController" automaticallyAdjustsScrollViewInsets="NO" id="lh6-Ra-ZEU" customClass="InnerWisdom5ViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pm1-FH-3uQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Ek-Hu-Xj1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="af0-JD-6kv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zid-CP-aUF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="221"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How else can I feel that emotion?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPq-P1-Jrk">
+                                        <rect key="frame" x="51" y="151.5" width="273" height="45.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="273" id="z3v-YU-TFb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would feel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-0P-MfT">
+                                        <rect key="frame" x="80" y="73.5" width="73" height="18"/>
+                                        <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joyful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DId-a1-ysX">
+                                        <rect key="frame" x="218.5" y="70.5" width="48" height="23"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emotion-icon-8" translatesAutoresizingMaskIntoConstraints="NO" id="2Q9-4X-nlx">
+                                        <rect key="frame" x="165.5" y="60" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="Bf8-84-pj3"/>
+                                            <constraint firstAttribute="height" constant="44" id="ZQr-Tr-Rb9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg5-33-iCS">
+                                        <rect key="frame" x="126.5" y="133.5" width="122" height="2"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="122" id="ny6-cO-yL9"/>
+                                            <constraint firstAttribute="height" constant="2" id="qud-gs-gMo"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2Q9-4X-nlx" firstAttribute="top" secondItem="zid-CP-aUF" secondAttribute="top" constant="60" id="7AB-oK-sM0"/>
+                                    <constraint firstAttribute="height" constant="221" id="849-KF-hbw"/>
+                                    <constraint firstItem="eg5-33-iCS" firstAttribute="top" secondItem="2Q9-4X-nlx" secondAttribute="bottom" constant="29.5" id="BX8-pR-NG0"/>
+                                    <constraint firstItem="DId-a1-ysX" firstAttribute="centerY" secondItem="2Q9-4X-nlx" secondAttribute="centerY" id="KuD-Uj-7Cb"/>
+                                    <constraint firstItem="UPq-P1-Jrk" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="Lfo-1m-uzl"/>
+                                    <constraint firstItem="DId-a1-ysX" firstAttribute="leading" secondItem="2Q9-4X-nlx" secondAttribute="trailing" constant="9" id="RhD-dt-nsb"/>
+                                    <constraint firstItem="2Q9-4X-nlx" firstAttribute="leading" secondItem="qKg-0P-MfT" secondAttribute="trailing" constant="12.5" id="ShI-gA-WZM"/>
+                                    <constraint firstItem="UPq-P1-Jrk" firstAttribute="top" secondItem="eg5-33-iCS" secondAttribute="bottom" constant="16" id="TZ4-AT-v5g"/>
+                                    <constraint firstItem="2Q9-4X-nlx" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="dgE-OK-rTP"/>
+                                    <constraint firstItem="qKg-0P-MfT" firstAttribute="centerY" secondItem="2Q9-4X-nlx" secondAttribute="centerY" id="epR-tp-Vdr"/>
+                                    <constraint firstItem="eg5-33-iCS" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="lLV-oH-ddY"/>
+                                    <constraint firstAttribute="bottom" secondItem="UPq-P1-Jrk" secondAttribute="bottom" constant="24" id="wh5-m0-7ek"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jS-7R-Bxe">
+                                <rect key="frame" x="0.0" y="241" width="375" height="426"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="aiV-aJ-KyN" kind="embed" id="4Ut-fh-kqa"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0jS-7R-Bxe" secondAttribute="trailing" id="7m9-nI-UwF"/>
+                            <constraint firstAttribute="trailing" secondItem="zid-CP-aUF" secondAttribute="trailing" id="AQH-pa-nzg"/>
+                            <constraint firstItem="zid-CP-aUF" firstAttribute="top" secondItem="pm1-FH-3uQ" secondAttribute="bottom" id="Lbs-8c-4ti"/>
+                            <constraint firstItem="0jS-7R-Bxe" firstAttribute="top" secondItem="zid-CP-aUF" secondAttribute="bottom" id="Mix-2H-Heb"/>
+                            <constraint firstItem="zid-CP-aUF" firstAttribute="leading" secondItem="af0-JD-6kv" secondAttribute="leading" id="Wqu-dO-lAH"/>
+                            <constraint firstItem="0jS-7R-Bxe" firstAttribute="leading" secondItem="af0-JD-6kv" secondAttribute="leading" id="oi9-ON-J7k"/>
+                            <constraint firstItem="1Ek-Hu-Xj1" firstAttribute="top" secondItem="0jS-7R-Bxe" secondAttribute="bottom" id="yRD-23-bP8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emotionIcon" destination="2Q9-4X-nlx" id="PsZ-Lg-RuU"/>
+                        <outlet property="emotionLabel" destination="DId-a1-ysX" id="YVp-nP-bpd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrf-eG-X5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="689.5052473763119"/>
         </scene>
         <!--Custom Stress View Controller-->
         <scene sceneID="9v9-iJ-IFM">
@@ -240,5 +342,9 @@
     </scenes>
     <resources>
         <image name="checkbox-checked" width="24" height="24"/>
+        <image name="emotion-icon-8" width="101" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Ut-fh-kqa"/>
+    </inferredMetricsTieBreakers>
 </document>
