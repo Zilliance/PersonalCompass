@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
@@ -20,7 +23,6 @@
         <!--Schedule View Controller-->
         <scene sceneID="1CY-Xk-ZOl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u4J-Mb-MPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddToCalendarViewController" id="wEt-bd-DK6" customClass="ScheduleViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KHT-VO-s0n"/>
@@ -85,15 +87,15 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="176.5" id="wDH-rA-RiC"/>
                                         </constraints>
-                                        <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
+                                        <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <outlet property="delegate" destination="wEt-bd-DK6" id="Dhg-m0-OIW"/>
                                         </connections>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-Pf-OA5">
-                                        <rect key="frame" x="169" y="484" width="12.5" height="22"/>
+                                        <rect key="frame" x="169.5" y="484" width="12" height="22"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -162,6 +164,7 @@
                         <outlet property="textView" destination="ARk-Af-1Ns" id="MN6-hH-TMf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4J-Mb-MPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.599999999999994" y="214.99250374812596"/>
         </scene>

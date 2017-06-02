@@ -39,6 +39,8 @@ class StressorViewController: UIViewController, CompassFacetEditor, CompassValid
             self.textView.text = stressor
         }
         
+        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
