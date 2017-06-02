@@ -234,6 +234,10 @@ class CreateCompassViewController: UIViewController {
     
     private func setupLabel(for scene: CompassScene) {
         
+        if scene == .stressor {
+            self.backButton.alpha = 0
+        }
+        
         UIView.animate(withDuration: 0.3, animations: { 
             self.topLabel.layer.backgroundColor = scene.color.cgColor
             switch scene {
@@ -242,7 +246,6 @@ class CreateCompassViewController: UIViewController {
                 self.backButton.alpha = 0
             default:
                 self.stressorLabel.alpha = 1
-                self.backButton.alpha = 1
             }
 
         }) { _ in
@@ -311,6 +314,13 @@ class CreateCompassViewController: UIViewController {
         guard self.currentPageIndex < self.compassItems.count - 1 else {
             return
         }
+        
+        if self.currentPageIndex == 0 {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.backButton.alpha = 1
+            })
+        }
+        
         
         if let error = self.checkError() {
             
@@ -389,7 +399,7 @@ class CreateCompassViewController: UIViewController {
     
     @IBAction func returnToSummaryAction(_ sender: Any) {
         self.toggleSummaryButton()
-        self.moveToPage(page: Compass.Facet.assessment.pageIndex - 1, direction: .forward)
+        self.moveToPage(page: Compass.Facet.assessment.pageIndex, direction: .forward)
     }
 }
 
