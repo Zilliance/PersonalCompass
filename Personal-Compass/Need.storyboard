@@ -15,6 +15,9 @@
         <array key="Muli-Italic.ttf">
             <string>Muli-Italic</string>
         </array>
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Need View Controller-->
@@ -41,7 +44,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Apn-bx-oen"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="g5q-sN-oXo" id="tXf-Df-b5G"/>

@@ -34,6 +34,8 @@ class InnerWisdom2ViewController: UIViewController, CompassValidation, CompassFa
     
     private func setupView() {
         
+        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        
         self.textView.text = self.currentCompass.editedNeed != nil ? self.currentCompass.editedNeed : self.currentCompass.need
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius

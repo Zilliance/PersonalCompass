@@ -26,6 +26,9 @@ class NeedViewController: UIViewController, CompassFacetEditor, CompassValidatio
         if let need = self.currentCompass.need {
             self.textView.text = need
         }
+        
+        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor

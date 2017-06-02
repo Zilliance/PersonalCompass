@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wEt-bd-DK6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Schedule View Controller-->
+        <scene sceneID="1CY-Xk-ZOl">
+            <objects>
+                <viewController storyboardIdentifier="AddToCalendarViewController" id="wEt-bd-DK6" customClass="ScheduleViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KHT-VO-s0n"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kpn-ua-jgX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sXM-h3-szb">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="610"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-AN-9Ff">
+                                <rect key="frame" x="0.0" y="44" width="350" height="566"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVA-66-HcP">
+                                        <rect key="frame" x="16" y="8" width="61" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="61" id="KGM-nl-dI1"/>
+                                            <constraint firstAttribute="height" constant="15" id="m6E-lb-Wfl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-9h-ebO">
+                                        <rect key="frame" x="16" y="268" width="318" height="152"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="513112832.37409902">
+                                            <!--2017-04-05 19:20:32 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSn-Ab-T1L">
+                                        <rect key="frame" x="16" y="239" width="127" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Cep-de-Hur"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhY-Pv-YdG">
+                                        <rect key="frame" x="16" y="440" width="318" height="44"/>
+                                        <color key="backgroundColor" red="0.38431372549019605" green="0.42745098039215684" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="5rD-Q6-tcc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="20"/>
+                                        <state key="normal" title="Add to Calendar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addToCalendarAction:" destination="wEt-bd-DK6" eventType="touchUpInside" id="qUB-ZX-rgY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use what's here or write your own" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OM2-74-mew">
+                                        <rect key="frame" x="16" y="26" width="193.5" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="12"/>
+                                        <color key="textColor" white="0.3981933594" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ARk-Af-1Ns">
+                                        <rect key="frame" x="20" y="52.5" width="310" height="176.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="176.5" id="wDH-rA-RiC"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="wEt-bd-DK6" id="Dhg-m0-OIW"/>
+                                        </connections>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-Pf-OA5">
+                                        <rect key="frame" x="169.5" y="484" width="12" height="22"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pz9-qF-xLk">
+                                        <rect key="frame" x="16" y="506" width="318" height="44"/>
+                                        <color key="backgroundColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="UJP-SH-Gak"/>
+                                            <constraint firstAttribute="height" constant="44" id="udE-r4-HU0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="20"/>
+                                        <state key="normal" title="Set Reminder">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="setReminderAction:" destination="wEt-bd-DK6" eventType="touchUpInside" id="rVB-qq-lpg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ARk-Af-1Ns" secondAttribute="trailing" constant="20" id="15x-UB-tSd"/>
+                                    <constraint firstItem="GVA-66-HcP" firstAttribute="top" secondItem="HUt-AN-9Ff" secondAttribute="top" constant="8" id="8Hf-v7-FDC"/>
+                                    <constraint firstAttribute="trailing" secondItem="NSn-Ab-T1L" secondAttribute="trailing" constant="207" id="96B-6U-gpa"/>
+                                    <constraint firstItem="UpF-Pf-OA5" firstAttribute="top" secondItem="QhY-Pv-YdG" secondAttribute="bottom" id="BLt-Yb-8hD"/>
+                                    <constraint firstItem="QhY-Pv-YdG" firstAttribute="top" secondItem="hVv-9h-ebO" secondAttribute="bottom" constant="20" id="Bhf-Fg-caA"/>
+                                    <constraint firstAttribute="trailing" secondItem="QhY-Pv-YdG" secondAttribute="trailing" constant="16" id="FJ7-Nr-npd"/>
+                                    <constraint firstItem="NSn-Ab-T1L" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="Hjm-oV-Qiw"/>
+                                    <constraint firstItem="hVv-9h-ebO" firstAttribute="top" secondItem="NSn-Ab-T1L" secondAttribute="bottom" constant="8" id="M8l-LN-CTz"/>
+                                    <constraint firstAttribute="trailing" secondItem="pz9-qF-xLk" secondAttribute="trailing" constant="16" id="OuF-Cm-qJ2"/>
+                                    <constraint firstItem="ARk-Af-1Ns" firstAttribute="top" secondItem="OM2-74-mew" secondAttribute="bottom" constant="11" id="QRp-rI-mqz"/>
+                                    <constraint firstItem="ARk-Af-1Ns" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="20" id="SLi-xa-3LR"/>
+                                    <constraint firstItem="NSn-Ab-T1L" firstAttribute="top" secondItem="ARk-Af-1Ns" secondAttribute="bottom" constant="10" id="SUO-Y9-Vkw"/>
+                                    <constraint firstItem="pz9-qF-xLk" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="TYB-T7-Rdb"/>
+                                    <constraint firstAttribute="trailing" secondItem="hVv-9h-ebO" secondAttribute="trailing" constant="16" id="d2H-vv-gPC"/>
+                                    <constraint firstItem="UpF-Pf-OA5" firstAttribute="centerX" secondItem="HUt-AN-9Ff" secondAttribute="centerX" id="go0-zH-rBb"/>
+                                    <constraint firstItem="QhY-Pv-YdG" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="kYe-EQ-sh9"/>
+                                    <constraint firstItem="hVv-9h-ebO" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="oFe-d2-ZAI"/>
+                                    <constraint firstAttribute="bottom" secondItem="pz9-qF-xLk" secondAttribute="bottom" constant="16" id="p0G-gx-yEQ"/>
+                                    <constraint firstItem="pz9-qF-xLk" firstAttribute="top" secondItem="UpF-Pf-OA5" secondAttribute="bottom" id="qWg-or-TAU"/>
+                                    <constraint firstItem="GVA-66-HcP" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="qvs-wM-ljC"/>
+                                    <constraint firstItem="OM2-74-mew" firstAttribute="top" secondItem="GVA-66-HcP" secondAttribute="bottom" constant="3" id="rAF-f0-vR7"/>
+                                    <constraint firstItem="pz9-qF-xLk" firstAttribute="top" secondItem="QhY-Pv-YdG" secondAttribute="bottom" constant="22" id="wq2-wl-LcZ"/>
+                                    <constraint firstItem="OM2-74-mew" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="yn3-3E-Vn7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HUt-AN-9Ff" firstAttribute="leading" secondItem="sXM-h3-szb" secondAttribute="leading" id="4tw-z3-WF5"/>
+                            <constraint firstItem="HUt-AN-9Ff" firstAttribute="top" secondItem="KHT-VO-s0n" secondAttribute="bottom" id="G3b-DV-rMY"/>
+                            <constraint firstItem="Kpn-ua-jgX" firstAttribute="top" secondItem="HUt-AN-9Ff" secondAttribute="bottom" id="Nfn-DK-Pwj"/>
+                            <constraint firstAttribute="trailing" secondItem="HUt-AN-9Ff" secondAttribute="trailing" id="W7A-rr-6CX"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="350" height="610"/>
+                    <connections>
+                        <outlet property="addToCalendarButton" destination="QhY-Pv-YdG" id="88M-J1-b2h"/>
+                        <outlet property="datePicker" destination="hVv-9h-ebO" id="Mjx-dO-8bu"/>
+                        <outlet property="setReminderButton" destination="pz9-qF-xLk" id="8Ej-s7-xj6"/>
+                        <outlet property="textView" destination="ARk-Af-1Ns" id="MN6-hH-TMf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4J-Mb-MPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73.599999999999994" y="214.99250374812596"/>
+        </scene>
+    </scenes>
+</document>

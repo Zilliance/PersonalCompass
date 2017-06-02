@@ -35,6 +35,8 @@ class InnerWisdom3ViewController: UIViewController, CompassValidation, CompassFa
     
     private func setupView() {
         
+        self.concreteTextView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        
         self.concreteTextView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.concreteTextView.layer.borderWidth = App.Appearance.borderWidth
         self.concreteTextView.layer.borderColor = UIColor.lightGray.cgColor

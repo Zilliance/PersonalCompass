@@ -24,8 +24,10 @@ final class Compass: Object {
         case innerWisdom3
         case innerWisdom4
         case innerWisdom5
-    
+        case innerWisdomSchedule
+        
         var pageIndex: Int {
+
             return Int(self.rawValue)
         }
         

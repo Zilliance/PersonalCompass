@@ -37,6 +37,7 @@ enum CompassScene: String {
     case innerWisdom4
     case innerWisdom5
     case innerWisdomSummary
+    case innerWisdomSchedule
     
     var color: UIColor {
         switch self {
@@ -65,6 +66,8 @@ enum CompassScene: String {
         case .innerWisdom5:
             return .innerWisdom
         case .innerWisdomSummary:
+            return .innerWisdom
+        case .innerWisdomSchedule:
             return .innerWisdom
         }
     }
@@ -161,6 +164,12 @@ class CreateCompassViewController: UIViewController {
                 }
 
                 self.viewController = viewController
+                
+            case .innerWisdomSchedule:
+                let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "schedule") as! InnerWisdomScheduleViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
+    
             }
 
             self.scene = scene
@@ -197,6 +206,7 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .innerWisdom4, container: self),
             CompassItem(for: .innerWisdom5, container: self),
             CompassItem(for: .innerWisdomSummary, container: self),
+            CompassItem(for: .innerWisdomSchedule, container: self),
         ]
         
         return items
@@ -269,8 +279,9 @@ class CreateCompassViewController: UIViewController {
         }) { _ in
         
             switch scene {
-            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5:
+            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5, .innerWisdomSchedule:
                 self.topLabel.text = "Inner Wisdom"
+                self.stressorLabel.text = self.compass.stressor?.uppercased()
             default:
                 self.topLabel.text = scene.rawValue.capitalized
                 self.stressorLabel.text = self.compass.stressor?.uppercased()

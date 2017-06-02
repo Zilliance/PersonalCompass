@@ -6,19 +6,22 @@ PODS:
   - RealmSwift (2.7.0):
     - Realm (= 2.7.0)
   - SideMenuController (0.2.4)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - FXPageControl
   - Realm
   - RealmSwift
   - SideMenuController
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   FXPageControl: 97620412515365d10a3282ec0660f49f6401a8f0
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 5816d6fcfe63513aaf50f80298d5280a1fadccd5
+PODFILE CHECKSUM: a5e4ee7d0053c1389477218f7b3bb3907e756e17
 
 COCOAPODS: 1.2.1
