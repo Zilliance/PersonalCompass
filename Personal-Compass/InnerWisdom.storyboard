@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
         </array>
@@ -350,7 +353,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlj-SM-4ea">
-                                                    <rect key="frame" x="135" y="17.5" width="220" height="21.5"/>
+                                                    <rect key="frame" x="135" y="18" width="220" height="21.5"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -445,6 +448,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5d-P9-54X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2013.5999999999999" y="147.97601199400302"/>
+        </scene>
+        <!--Inner Wisdom Summary View Controller-->
+        <scene sceneID="h5C-rq-cCB">
+            <objects>
+                <viewController storyboardIdentifier="InnerWisdomSummaryViewController" id="6ri-BK-QnJ" customClass="InnerWisdomSummaryViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HIU-PZ-Pz0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZHw-JG-kpX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MYI-CC-O5X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="470"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-mR-oEy">
+                                <rect key="frame" x="0.0" y="15" width="320" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gic-K5-HsP">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="yxb-7T-mmJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="What I have learned about myself:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvN-HW-eWH">
+                                        <rect key="frame" x="0.0" y="32" width="320" height="26"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                        <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="OwT-PR-h18"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cda-D4-GRU">
+                                <rect key="frame" x="0.0" y="92" width="320" height="378"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6ri-BK-QnJ" id="l3f-kd-OgN"/>
+                                    <outlet property="delegate" destination="6ri-BK-QnJ" id="fE5-OD-Ptr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vZo-mR-oEy" firstAttribute="top" secondItem="MYI-CC-O5X" secondAttribute="top" constant="15" id="3Qe-Nt-PMZ"/>
+                            <constraint firstAttribute="trailing" secondItem="vZo-mR-oEy" secondAttribute="trailing" id="9PO-Re-HG9"/>
+                            <constraint firstItem="cda-D4-GRU" firstAttribute="leading" secondItem="MYI-CC-O5X" secondAttribute="leading" id="Qeo-0t-8OE"/>
+                            <constraint firstAttribute="trailing" secondItem="cda-D4-GRU" secondAttribute="trailing" id="WdL-11-Yym"/>
+                            <constraint firstItem="vZo-mR-oEy" firstAttribute="leading" secondItem="MYI-CC-O5X" secondAttribute="leading" id="i9a-Dp-adB"/>
+                            <constraint firstItem="cda-D4-GRU" firstAttribute="top" secondItem="vZo-mR-oEy" secondAttribute="bottom" constant="19" id="yGD-SD-NM6"/>
+                            <constraint firstItem="ZHw-JG-kpX" firstAttribute="top" secondItem="cda-D4-GRU" secondAttribute="bottom" id="zTm-36-tZY"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="470"/>
+                    <connections>
+                        <outlet property="tableView" destination="cda-D4-GRU" id="mZM-ai-ctc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKq-ky-DG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="737"/>
         </scene>
     </scenes>
     <resources>

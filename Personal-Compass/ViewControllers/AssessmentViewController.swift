@@ -54,7 +54,18 @@ class AssessmentViewController: UIViewController {
         additionalSeparator.backgroundColor = UIColor.silverColor
 
         self.tableView.tableHeaderView = additionalSeparator
+        
+        loadCells()
 
+    }
+    
+    private func loadCells() {
+        var nib = UINib(nibName: "EmotionSummaryCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "EmotionSummaryCell")
+        
+        nib = UINib(nibName: "CompassFacetSummaryCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CompassFacetSummaryCell")
+        
     }
 
     override func didReceiveMemoryWarning() {
