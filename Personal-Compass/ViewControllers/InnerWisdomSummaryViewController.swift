@@ -19,11 +19,26 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
         static var count = {
             return 4
         }
+        
+        var sceneAssociated: CompassScene {
+            switch self {
+            case .need:
+                return CompassScene.innerWisdom2
+            case .actionStep:
+                return CompassScene.innerWisdom3
+            case .emotion:
+                return CompassScene.innerWisdom4
+            case .secondActionStep:
+                return CompassScene.innerWisdom5
+            }
+        }
 
     }
 
     var currentCompass: Compass!
     @IBOutlet var tableView: UITableView!
+    
+    var sceneSelectionAction: ((CompassScene) -> ())?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +121,16 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
         cell.titleContainer.backgroundColor = UIColor.innerWisdom
         
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let row = RowType(rawValue: indexPath.row) else {
+            return assertionFailure()
+        }
+        
+        sceneSelectionAction?(row.sceneAssociated)
         
     }
     

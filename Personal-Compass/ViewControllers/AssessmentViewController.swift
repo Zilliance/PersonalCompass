@@ -8,12 +8,6 @@
 
 import UIKit
 
-protocol AssessmentViewControllerDelegate {
-    
-    func didSelectScene(scene: CompassScene)
-    
-}
-
 class AssessmentViewController: UIViewController {
     
     enum RowType: Int {
@@ -40,8 +34,9 @@ class AssessmentViewController: UIViewController {
         }
     }
     
+    var sceneSelectionAction: ((CompassScene) -> ())?
+    
     var currentCompass: Compass!
-    var delegate: AssessmentViewControllerDelegate!
     @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -152,9 +147,9 @@ extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
         guard let row = RowType(rawValue: indexPath.row) else {
             return assertionFailure()
         }
-
-        delegate.didSelectScene(scene: row.sceneAssociated)
         
+        sceneSelectionAction?(row.sceneAssociated)
     }
+
     
 }
