@@ -29,6 +29,8 @@ class ScheduleViewController: UIViewController {
     
     private func setupView() {
         
+        self.title = "Schedule actions"
+        
         // date picker
         
         for view in [self.datePicker, self.textView] as [UIView] {
