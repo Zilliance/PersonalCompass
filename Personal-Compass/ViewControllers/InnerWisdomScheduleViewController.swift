@@ -38,7 +38,7 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
                 assertionFailure()
                 return
         }
-        
+        viewController.compass = currentCompass
         let navigationController = UINavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true, completion: nil)
     }
