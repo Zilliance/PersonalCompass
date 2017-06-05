@@ -19,6 +19,7 @@ class CompassFacetSummaryCell: UITableViewCell {
         // Initialization code
         self.titleContainer.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.selectionStyle = .none
+        self.backgroundColor = UIColor.clear
     }
 
 }
