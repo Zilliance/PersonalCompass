@@ -350,15 +350,32 @@ class CreateCompassViewController: UIViewController {
             })
         }
         
-        
         if let error = self.checkError() {
+            
+            typealias scene = Compass.Facet
             
             switch error {
             case .selection:
                 self.showAlert(title: "", message: "Please select an item")
             case .text:
-                self.showAlert(title: "", message: "Please enter a text")
+                
+                switch self.currentPageIndex {
+                case scene.stressor.pageIndex:
+                    self.showAlert(title: "", message: "Please enter a stressor")
+                case scene.thought.pageIndex:
+                    self.showAlert(title: "", message: "Please enter how you're feeling")
+                case scene.need.pageIndex:
+                    self.showAlert(title: "", message: "Please enter what you need to feel better")
+                case scene.innerWisdom2.pageIndex:
+                    self.showAlert(title: "", message: "Please enter what you need to feel better")
+                case scene.innerWisdom3.pageIndex:
+                    self.showAlert(title: "", message: "Please enter a concrete step")
+                default:
+                    self.showAlert(title: "", message: "Please enter a text")
+                }
             }
+            
+    
             return
         }
 
