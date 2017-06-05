@@ -356,22 +356,31 @@ class CreateCompassViewController: UIViewController {
             
             switch error {
             case .selection:
-                self.showAlert(title: "", message: "Please select an item")
-            case .text:
+                switch self.currentPageIndex {
+                case scene.body.pageIndex:
+                    self.showAlert(title: "Please select one or more items", message: "")
+                case scene.behaviour.pageIndex:
+                    self.showAlert(title: "Please select one or more items", message: "")
+                case scene.innerWisdom5.pageIndex:
+                    self.showAlert(title: "Please select one or more items", message: "")
+                default:
+                    self.showAlert(title: "Please select an item", message: "")
+                }
                 
+            case .text:
                 switch self.currentPageIndex {
                 case scene.stressor.pageIndex:
-                    self.showAlert(title: "", message: "Please enter a stressor")
+                    self.showAlert(title: "Please enter a stressor", message: "")
                 case scene.thought.pageIndex:
-                    self.showAlert(title: "", message: "Please enter how you're feeling")
+                    self.showAlert(title: "Please enter how you're feeling", message: "")
                 case scene.need.pageIndex:
-                    self.showAlert(title: "", message: "Please enter what you need to feel better")
+                    self.showAlert(title: "Please enter what you need to feel better", message: "")
                 case scene.innerWisdom2.pageIndex:
-                    self.showAlert(title: "", message: "Please enter what you need to feel better")
+                    self.showAlert(title: "Please enter what you need to feel better", message: "")
                 case scene.innerWisdom3.pageIndex:
-                    self.showAlert(title: "", message: "Please enter a concrete step")
+                    self.showAlert(title: "Please enter a concrete step", message: "")
                 default:
-                    self.showAlert(title: "", message: "Please enter a text")
+                    self.showAlert(title: "Please enter text", message: "")
                 }
             }
             
