@@ -279,7 +279,7 @@ class CreateCompassViewController: UIViewController {
         }) { _ in
         
             switch scene {
-            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5, .innerWisdomSchedule:
+            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5, .innerWisdomSummary, .innerWisdomSchedule:
                 self.topLabel.text = "Inner Wisdom"
                 self.stressorLabel.text = self.compass.stressor?.uppercased()
             default:
