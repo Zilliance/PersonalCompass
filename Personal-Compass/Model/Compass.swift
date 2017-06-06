@@ -24,7 +24,7 @@ final class Compass: Object {
         case innerWisdom3
         case innerWisdom4
         case innerWisdom5 // how else
-        case innerWisdomSchedule
+        case takeAction
         
         var pageIndex: Int {
 

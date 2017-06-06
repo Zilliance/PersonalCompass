@@ -37,7 +37,7 @@ enum CompassScene: String {
     case innerWisdom4
     case innerWisdom5
     case innerWisdomSummary
-    case innerWisdomSchedule
+    case takeAction
     
     var color: UIColor {
         switch self {
@@ -67,7 +67,7 @@ enum CompassScene: String {
             return .innerWisdom
         case .innerWisdomSummary:
             return .innerWisdom
-        case .innerWisdomSchedule:
+        case .takeAction:
             return .innerWisdom
         }
     }
@@ -165,7 +165,7 @@ class CreateCompassViewController: UIViewController {
 
                 self.viewController = viewController
                 
-            case .innerWisdomSchedule:
+            case .takeAction:
                 let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "schedule") as! InnerWisdomScheduleViewController
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
@@ -206,7 +206,7 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .innerWisdom4, container: self),
             CompassItem(for: .innerWisdom5, container: self),
             CompassItem(for: .innerWisdomSummary, container: self),
-            CompassItem(for: .innerWisdomSchedule, container: self),
+            CompassItem(for: .takeAction, container: self),
         ]
         
         return items
@@ -279,8 +279,11 @@ class CreateCompassViewController: UIViewController {
         }) { _ in
         
             switch scene {
-            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5, .innerWisdomSummary, .innerWisdomSchedule:
+            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5, .innerWisdomSummary:
                 self.topLabel.text = "Inner Wisdom"
+                self.stressorLabel.text = self.compass.stressor?.uppercased()
+            case .takeAction:
+                self.topLabel.text = "Take Action"
                 self.stressorLabel.text = self.compass.stressor?.uppercased()
             default:
                 self.topLabel.text = scene.rawValue.capitalized
