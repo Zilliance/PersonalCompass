@@ -69,6 +69,8 @@ enum CompassScene: String {
             return .innerWisdom
         case .takeAction:
             return .innerWisdom
+        case .feelBetter:
+            return .feelBetter
         }
     }
 
@@ -167,6 +169,11 @@ class CreateCompassViewController: UIViewController {
                 
             case .takeAction:
                 let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "schedule") as! InnerWisdomScheduleViewController
+                viewController.currentCompass = container.compass
+                self.viewController = viewController
+                
+            case .feelBetter:
+                let viewController = UIStoryboard(name: "FeelBetter", bundle: nil).instantiateInitialViewController() as! FeelBetterViewController
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
     

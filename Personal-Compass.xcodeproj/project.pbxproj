@@ -75,6 +75,11 @@
 		8C54AD241EE0B7F5001EC903 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C54AD231EE0B7F5001EC903 /* Schedule.storyboard */; };
 		8C54AD261EE0B88D001EC903 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD251EE0B88D001EC903 /* ScheduleViewController.swift */; };
 		8C54AD281EE0D27D001EC903 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD271EE0D27D001EC903 /* CalendarHelper.swift */; };
+		8C54AD2B1EE610E4001EC903 /* FeelBetter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C54AD2A1EE610E4001EC903 /* FeelBetter.storyboard */; };
+		8C54AD2D1EE619DA001EC903 /* FeelBetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD2C1EE619DA001EC903 /* FeelBetterViewController.swift */; };
+		8C571D771EE7323900050B8D /* FeelBetterItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C571D761EE7323900050B8D /* FeelBetterItems.storyboard */; };
+		8C571D791EE732A800050B8D /* FeelBetterItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C571D781EE732A800050B8D /* FeelBetterItemViewController.swift */; };
+		8C571D7B1EE7394200050B8D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C571D7A1EE7394200050B8D /* UIImage+Extensions.swift */; };
 		8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166801ECCD0DD0072C19F /* Stressor.storyboard */; };
 		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
@@ -178,6 +183,11 @@
 		8C54AD231EE0B7F5001EC903 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		8C54AD251EE0B88D001EC903 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = ViewControllers/ScheduleViewController.swift; sourceTree = "<group>"; };
 		8C54AD271EE0D27D001EC903 /* CalendarHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarHelper.swift; path = Utils/CalendarHelper.swift; sourceTree = "<group>"; };
+		8C54AD2A1EE610E4001EC903 /* FeelBetter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeelBetter.storyboard; sourceTree = "<group>"; };
+		8C54AD2C1EE619DA001EC903 /* FeelBetterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeelBetterViewController.swift; path = ViewControllers/FeelBetterViewController.swift; sourceTree = "<group>"; };
+		8C571D761EE7323900050B8D /* FeelBetterItems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeelBetterItems.storyboard; sourceTree = "<group>"; };
+		8C571D781EE732A800050B8D /* FeelBetterItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeelBetterItemViewController.swift; path = ViewControllers/FeelBetterItemViewController.swift; sourceTree = "<group>"; };
+		8C571D7A1EE7394200050B8D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "Extensions/UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		8C9166801ECCD0DD0072C19F /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
@@ -333,6 +343,7 @@
 				8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */,
 				8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */,
 				8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */,
+				8C571D7A1EE7394200050B8D /* UIImage+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -340,6 +351,7 @@
 		8C463B261ECA356F00566531 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8C54AD291EE602BD001EC903 /* FeelBetter */,
 				4FA825761EE1AC6A009AB272 /* Cells */,
 				8C54AD221EE0B7E1001EC903 /* Schedule */,
 				8C54AD151ED89197001EC903 /* InnerWisdom */,
@@ -418,6 +430,17 @@
 				8C54AD251EE0B88D001EC903 /* ScheduleViewController.swift */,
 			);
 			name = Schedule;
+			sourceTree = "<group>";
+		};
+		8C54AD291EE602BD001EC903 /* FeelBetter */ = {
+			isa = PBXGroup;
+			children = (
+				8C54AD2A1EE610E4001EC903 /* FeelBetter.storyboard */,
+				8C571D761EE7323900050B8D /* FeelBetterItems.storyboard */,
+				8C54AD2C1EE619DA001EC903 /* FeelBetterViewController.swift */,
+				8C571D781EE732A800050B8D /* FeelBetterItemViewController.swift */,
+			);
+			name = FeelBetter;
 			sourceTree = "<group>";
 		};
 		8C91667F1ECCB8900072C19F /* Stressor */ = {
@@ -645,10 +668,12 @@
 				8C463B1D1ECA2D9700566531 /* Muli-LightItalic.ttf in Resources */,
 				8C463B1E1ECA2D9700566531 /* Muli-Regular.ttf in Resources */,
 				4FD5B64E1ECC3C2A0017DC06 /* PreloadedBodyStress.plist in Resources */,
+				8C571D771EE7323900050B8D /* FeelBetterItems.storyboard in Resources */,
 				4FD5B6501ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist in Resources */,
 				8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */,
 				8C463B411ECB843400566531 /* CreateCompass.storyboard in Resources */,
 				8C54AD171ED89991001EC903 /* InnerWisdom.storyboard in Resources */,
+				8C54AD2B1EE610E4001EC903 /* FeelBetter.storyboard in Resources */,
 				8C54AD101ED5E262001EC903 /* Need.storyboard in Resources */,
 				8C463B341ECA63CB00566531 /* WebView.storyboard in Resources */,
 				8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */,
@@ -862,9 +887,11 @@
 				4FCBA1B11EDD954900B68A85 /* UINavigationController+Completion.swift in Sources */,
 				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
 				4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */,
+				8C54AD2D1EE619DA001EC903 /* FeelBetterViewController.swift in Sources */,
 				8C463B361ECA63D700566531 /* WebViewController.swift in Sources */,
 				8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */,
 				4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */,
+				8C571D791EE732A800050B8D /* FeelBetterItemViewController.swift in Sources */,
 				8C54AD1F1EDE1A34001EC903 /* InnerWisdom4ViewController.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 				8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */,
@@ -873,6 +900,7 @@
 				8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */,
 				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
 				8C54AD1D1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift in Sources */,
+				8C571D7B1EE7394200050B8D /* UIImage+Extensions.swift in Sources */,
 				8C54AD211EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift in Sources */,
 				8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */,
 			);
