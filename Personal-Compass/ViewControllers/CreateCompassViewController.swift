@@ -29,7 +29,7 @@ enum CompassScene: String {
     case thought
     case body
     case behavior
-    case assessment
+    case summary
     case need
     case innerWisdom1
     case innerWisdom2
@@ -51,8 +51,8 @@ enum CompassScene: String {
             return .body
         case .behavior:
             return .behavior
-        case .assessment:
-            return .assessment
+        case .summary:
+            return .summary
         case .need:
             return .innerWisdom
         case .innerWisdom1:
@@ -116,8 +116,8 @@ class CreateCompassViewController: UIViewController {
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
 
-            case .assessment:
-                let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! AssessmentViewController
+            case .summary:
+                let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! SummaryViewController
                 viewController.currentCompass = container.compass
                 viewController.sceneSelectionAction = {[unowned container] selectedScene in
                     container.previousScene = scene
@@ -201,7 +201,7 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .thought, container: self),
             CompassItem(for: .body, container: self),
             CompassItem(for: .behavior, container: self),
-            CompassItem(for: .assessment, container: self),
+            CompassItem(for: .summary, container: self),
             CompassItem(for: .need, container: self),
             CompassItem(for: .innerWisdom1, container: self),
             CompassItem(for: .innerWisdom2, container: self),
@@ -239,13 +239,13 @@ class CreateCompassViewController: UIViewController {
     private func setupView() {
         
         self.topLabel.backgroundColor = .clear
-        self.pageControl.dotSize = 12
+        self.pageControl.dotSize = 8
         self.pageControl.numberOfPages = self.compassItems.count
-        self.pageControl.dotSpacing = 20
+        self.pageControl.dotSpacing = 12
         self.pageControl.backgroundColor = .clear
-        self.pageControl.selectedDotImage = #imageLiteral(resourceName: "pageview-dot-on")
-        self.pageControl.dotImage = #imageLiteral(resourceName: "pageview-dot-off")
-        
+        self.pageControl.selectedDotImage = #imageLiteral(resourceName: "pageview-dot-on").resizedImage(newSize: CGSize(width: 12, height: 12))
+        self.pageControl.dotImage = #imageLiteral(resourceName: "pageview-dot-off").resizedImage(newSize: CGSize(width: 8, height: 8))
+        self.pageControl.isUserInteractionEnabled = false
         
         
         self.topLabel.clipsToBounds = true
@@ -390,7 +390,7 @@ class CreateCompassViewController: UIViewController {
                 case scene.stressor.pageIndex:
                     self.showAlert(title: "Please enter a stressor", message: "")
                 case scene.thought.pageIndex:
-                    self.showAlert(title: "Please enter how you're feeling", message: "")
+                    self.showAlert(title: "Please enter why you're feeling this way", message: "")
                 case scene.need.pageIndex:
                     self.showAlert(title: "Please enter what you need to feel better", message: "")
                 case scene.innerWisdom2.pageIndex:
