@@ -390,7 +390,7 @@ class CreateCompassViewController: UIViewController {
                 case scene.stressor.pageIndex:
                     self.showAlert(title: "Please enter a stressor", message: "")
                 case scene.thought.pageIndex:
-                    self.showAlert(title: "Please enter how you're feeling", message: "")
+                    self.showAlert(title: "Please enter why you're feeling this way", message: "")
                 case scene.need.pageIndex:
                     self.showAlert(title: "Please enter what you need to feel better", message: "")
                 case scene.innerWisdom2.pageIndex:
