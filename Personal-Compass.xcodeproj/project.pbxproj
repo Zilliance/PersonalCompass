@@ -94,6 +94,7 @@
 		E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A831EC9FBA300076737 /* LaunchScreen.storyboard */; };
 		E37C7A901EC9FBA300076737 /* Personal_CompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A8F1EC9FBA300076737 /* Personal_CompassTests.swift */; };
 		E37C7A9B1EC9FBA300076737 /* Personal_CompassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A9A1EC9FBA300076737 /* Personal_CompassUITests.swift */; };
+		E3E937A61EE7256F001F9035 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E937A51EE7256F001F9035 /* UIImage+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		E37C7A961EC9FBA300076737 /* Personal-CompassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Personal-CompassUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C7A9A1EC9FBA300076737 /* Personal_CompassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal_CompassUITests.swift; sourceTree = "<group>"; };
 		E37C7A9C1EC9FBA300076737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3E937A51EE7256F001F9035 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		EC48FF912D8728C3ACC4D045 /* Pods-Personal-CompassUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F62DA2C8E59F11927015A9E2 /* Pods-Personal-CompassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassTests/Pods-Personal-CompassTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,6 +340,7 @@
 		8C463B211ECA2EC500566531 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E3E937A51EE7256F001F9035 /* UIImage+Extensions.swift */,
 				8C463B371ECA642600566531 /* UITableViewCell+Extensions.swift */,
 				8C463B381ECA642600566531 /* UIDevice+Extensions.swift */,
 				8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */,
@@ -872,6 +875,7 @@
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
 				4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */,
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
+				E3E937A61EE7256F001F9035 /* UIImage+Extensions.swift in Sources */,
 				4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */,
 				8C54AD261EE0B88D001EC903 /* ScheduleViewController.swift in Sources */,
 				047A580B1ECB379700BC7650 /* User.swift in Sources */,

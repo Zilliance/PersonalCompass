@@ -239,12 +239,12 @@ class CreateCompassViewController: UIViewController {
     private func setupView() {
         
         self.topLabel.backgroundColor = .clear
-        self.pageControl.dotSize = 12
+        self.pageControl.dotSize = 8
         self.pageControl.numberOfPages = self.compassItems.count
-        self.pageControl.dotSpacing = 20
+        self.pageControl.dotSpacing = 12
         self.pageControl.backgroundColor = .clear
-        self.pageControl.selectedDotImage = #imageLiteral(resourceName: "pageview-dot-on")
-        self.pageControl.dotImage = #imageLiteral(resourceName: "pageview-dot-off")
+        self.pageControl.selectedDotImage = #imageLiteral(resourceName: "pageview-dot-on").resizedImage(newSize: CGSize(width: 12, height: 12))
+        self.pageControl.dotImage = #imageLiteral(resourceName: "pageview-dot-off").resizedImage(newSize: CGSize(width: 8, height: 8))
         
         
         
