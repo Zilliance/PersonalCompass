@@ -22,6 +22,7 @@
 		4FA8257C1EE1ACAD009AB272 /* EmotionSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA8257A1EE1ACAD009AB272 /* EmotionSummaryCell.xib */; };
 		4FA8257E1EE1AD5F009AB272 /* CompassFacetSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA8257D1EE1AD5F009AB272 /* CompassFacetSummaryCell.xib */; };
 		4FA825801EE1AE08009AB272 /* InnerWisdomSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8257F1EE1AE08009AB272 /* InnerWisdomSummaryViewController.swift */; };
+		4FB5AF171EE5F7E600837FF0 /* LocalNotificationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AF161EE5F7E600837FF0 /* LocalNotificationsHelper.swift */; };
 		4FCBA1B11EDD954900B68A85 /* UINavigationController+Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */; };
 		4FCBA1B31EDDBE7E00B68A85 /* EmotionSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBA1B21EDDBE7E00B68A85 /* EmotionSummaryCell.swift */; };
 		4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */; };
@@ -125,6 +126,7 @@
 		4FA8257A1EE1ACAD009AB272 /* EmotionSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmotionSummaryCell.xib; path = ViewControllers/EmotionSummaryCell.xib; sourceTree = "<group>"; };
 		4FA8257D1EE1AD5F009AB272 /* CompassFacetSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CompassFacetSummaryCell.xib; path = ViewControllers/CompassFacetSummaryCell.xib; sourceTree = "<group>"; };
 		4FA8257F1EE1AE08009AB272 /* InnerWisdomSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdomSummaryViewController.swift; path = ViewControllers/InnerWisdomSummaryViewController.swift; sourceTree = "<group>"; };
+		4FB5AF161EE5F7E600837FF0 /* LocalNotificationsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalNotificationsHelper.swift; path = Utils/LocalNotificationsHelper.swift; sourceTree = "<group>"; };
 		4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Completion.swift"; path = "Utils/UINavigationController+Completion.swift"; sourceTree = "<group>"; };
 		4FCBA1B21EDDBE7E00B68A85 /* EmotionSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionSummaryCell.swift; path = Cells/EmotionSummaryCell.swift; sourceTree = "<group>"; };
 		4FD5B64D1ECC3C2A0017DC06 /* PreloadedBodyStress.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedBodyStress.plist; path = Model/PreloadedBodyStress.plist; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			children = (
 				8C54AD271EE0D27D001EC903 /* CalendarHelper.swift */,
 				4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */,
+				4FB5AF161EE5F7E600837FF0 /* LocalNotificationsHelper.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
 				4F7D86EB1EE04243002C63A4 /* PositiveActivity.swift in Sources */,
 				8C54AD141ED72B33001EC903 /* CustomStressViewController.swift in Sources */,
+				4FB5AF171EE5F7E600837FF0 /* LocalNotificationsHelper.swift in Sources */,
 				8C54AD281EE0D27D001EC903 /* CalendarHelper.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,

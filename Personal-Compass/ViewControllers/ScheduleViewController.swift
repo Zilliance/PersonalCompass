@@ -16,10 +16,25 @@ class ScheduleViewController: UIViewController {
     @IBOutlet weak var addToCalendarButton: UIButton!
     @IBOutlet weak var setReminderButton: UIButton!
     
+    var compass: Compass!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeView))
         self.setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //load data
+        
+        if let previousInformation = LocalNotificationsHelper.getInformationForStoredNotification(identifier: self.compass.id) {
+            
+            textView.text = previousInformation.0
+            datePicker.date = previousInformation.1
+            
+        }
+        
+        
     }
     
     @objc func closeView()
@@ -78,6 +93,31 @@ class ScheduleViewController: UIViewController {
     }
     
     @IBAction func setReminderAction(_ sender: UIButton) {
+        
+        guard let body = self.textView.text, body.characters.count > 0 else {
+            
+            return
+        }
+        
+        LocalNotificationsHelper.shared.requestAuthorization(inViewController: self) {[unowned self] (authorized) in
+            
+            if (authorized)
+            {
+                LocalNotificationsHelper.scheduleLocalNotification(title: "Personal Compass", body: body, date: self.datePicker.date, identifier: self.compass.id)
+                
+                self.dismiss(animated: true, completion: {
+                    SVProgressHUD.setDefaultMaskType(.black)
+                    SVProgressHUD.setMaximumDismissTimeInterval(1.0)
+                    SVProgressHUD.showSuccess(withStatus: "The reminder has been added to your calendar")
+                })
+            }
+            else
+            {
+                self.showAlert(title: "Error", message: "Notifications need to be enabled to set a reminder")
+            }
+            
+        }
+        
     }
     
 }
