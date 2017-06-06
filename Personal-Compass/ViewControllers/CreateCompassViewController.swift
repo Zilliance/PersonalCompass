@@ -168,6 +168,9 @@ class CreateCompassViewController: UIViewController {
             case .takeAction:
                 let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "schedule") as! InnerWisdomScheduleViewController
                 viewController.currentCompass = container.compass
+                viewController.done = {
+                    container.saveAction(nil)
+                }
                 self.viewController = viewController
     
             }
@@ -338,6 +341,11 @@ class CreateCompassViewController: UIViewController {
             return
         }
         
+        UIView.animate(withDuration: 0.3, animations: {
+            self.nextButton.alpha = 1
+        })
+
+        
         moveToPage(page: self.currentPageIndex - 1, direction: .reverse)
     }
     
@@ -347,15 +355,22 @@ class CreateCompassViewController: UIViewController {
             return
         }
         
+        typealias scene = Compass.Facet
+        
         if self.currentPageIndex == 0 {
             UIView.animate(withDuration: 0.3, animations: {
                 self.backButton.alpha = 1
             })
         }
         
+        if self.currentPageIndex == scene.takeAction.pageIndex {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.nextButton.alpha = 0
+            })
+        }
+        
+        
         if let error = self.checkError() {
-            
-            typealias scene = Compass.Facet
             
             switch error {
             case .selection:
@@ -434,7 +449,7 @@ class CreateCompassViewController: UIViewController {
         
     }
     
-    @IBAction func saveAction(_ sender: Any) {
+    @IBAction func saveAction(_ sender: Any?) {
         
         if let currentItem = self.compassItems[self.currentPageIndex].viewController as? CompassFacetEditor {
             currentItem.save()

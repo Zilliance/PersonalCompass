@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Feel Better Item View Controller-->
+        <scene sceneID="ezF-kP-P93">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VU8-nO-geh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="body" id="Qwt-3Z-Eoy" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ggZ-Ej-ZfK"/>
+                        <viewControllerLayoutGuide type="bottom" id="uQT-Sn-Pm7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hcO-v6-d4m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lFR-yj-aqK">
+                                <rect key="frame" x="12" y="36" width="351" height="615"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Doing something that feels good for your body (like going for a walk or getting a massage) is usually the easiest entry point into feeling better because you can almost always take immediate action to impact your body positively. 
+ 
+When you do something physical to interrupt the negativity you feel, you will positively impact your thoughts, behaviors, and emotions. </string>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lFR-yj-aqK" firstAttribute="leading" secondItem="hcO-v6-d4m" secondAttribute="leading" constant="12" id="Csn-r9-6rP"/>
+                            <constraint firstItem="uQT-Sn-Pm7" firstAttribute="top" secondItem="lFR-yj-aqK" secondAttribute="bottom" constant="16" id="XgC-eA-Qqa"/>
+                            <constraint firstAttribute="trailing" secondItem="lFR-yj-aqK" secondAttribute="trailing" constant="12" id="kdz-25-01N"/>
+                            <constraint firstItem="lFR-yj-aqK" firstAttribute="top" secondItem="ggZ-Ej-ZfK" secondAttribute="bottom" constant="16" id="vhl-Ub-dDV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="lFR-yj-aqK" id="lTv-kD-t2O"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1609" y="-1650"/>
+        </scene>
+        <!--Feel Better Item View Controller-->
+        <scene sceneID="M9h-ob-P46">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRC-3Z-k7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="thought" id="8lq-Fl-qYk" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xtr-Bp-yoO"/>
+                        <viewControllerLayoutGuide type="bottom" id="CQe-eO-uJP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PUM-aC-5aU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ifc-G9-H8P">
+                                <rect key="frame" x="12" y="36" width="351" height="615"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">It is never the stressor that causes you to suffer. Rather, your thoughts about the stressor cause you to suffer.
+ 
+So choose an empowering thought. Do not choose thoughts that you can’t actually believe, but when given a choice between one thought that is negative and one that is positive, both of which come with equal amounts of evidence, choose the positive thought. </string>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ifc-G9-H8P" firstAttribute="leading" secondItem="PUM-aC-5aU" secondAttribute="leading" constant="12" id="G1B-lj-QM2"/>
+                            <constraint firstItem="CQe-eO-uJP" firstAttribute="top" secondItem="Ifc-G9-H8P" secondAttribute="bottom" constant="16" id="Okh-PL-NA3"/>
+                            <constraint firstItem="Ifc-G9-H8P" firstAttribute="top" secondItem="Xtr-Bp-yoO" secondAttribute="bottom" constant="16" id="Rv1-2m-s0X"/>
+                            <constraint firstAttribute="trailing" secondItem="Ifc-G9-H8P" secondAttribute="trailing" constant="12" id="mlg-9f-hev"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Ifc-G9-H8P" id="YiW-Ue-8Iw"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-863" y="-1650"/>
+        </scene>
+        <!--Feel Better Item View Controller-->
+        <scene sceneID="qfG-qm-buK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIO-ZW-Ayx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="emotion" id="dgl-6L-rEA" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cdF-Bx-jhj"/>
+                        <viewControllerLayoutGuide type="bottom" id="uEd-XS-EeY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UGy-ni-dEh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ibm-m0-efW">
+                                <rect key="frame" x="12" y="36" width="351" height="615"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Most people have favorite activities that always make them feel better, like watching comedies, listening to music, or snuggling with their children. These are called "Instant Mood Shifters." 
+ 
+Identify your Instant Mood Shifters so that you have them on hand. This way, when you find your thoughts spiraling out of control, you can reach for an Instant Mood Shifter to improve your emotion. Later, you can revisit your stressor when you are feeling better about life.</string>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ibm-m0-efW" firstAttribute="leading" secondItem="UGy-ni-dEh" secondAttribute="leading" constant="12" id="7WG-4Q-gv3"/>
+                            <constraint firstAttribute="trailing" secondItem="Ibm-m0-efW" secondAttribute="trailing" constant="12" id="Fjg-og-Jml"/>
+                            <constraint firstItem="Ibm-m0-efW" firstAttribute="top" secondItem="cdF-Bx-jhj" secondAttribute="bottom" constant="16" id="kBu-S5-31V"/>
+                            <constraint firstItem="uEd-XS-EeY" firstAttribute="top" secondItem="Ibm-m0-efW" secondAttribute="bottom" constant="16" id="tEg-0C-vVs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Ibm-m0-efW" id="P97-zv-hTg"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="596" y="-1650"/>
+        </scene>
+        <!--Feel Better Item View Controller-->
+        <scene sceneID="k9C-Us-0E5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwU-8G-RNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="behavior" id="Cs4-YW-xeE" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n5D-bi-9dv"/>
+                        <viewControllerLayoutGuide type="bottom" id="eMC-vr-dEU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SmL-pu-XbA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GyL-w8-efE">
+                                <rect key="frame" x="12" y="36" width="351" height="615"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Rarely will you feel better about a stressor if you sit on the couch and ruminate about it. Instead, interrupt a downward spiral by doing something you enjoy doing. Call a friend, do something nice for someone else, or do something you get lost in. 
+ 
+We do not do our best thinking when we are flooded with emotion. Changing your behavior shifts your thoughts from your stressor to something you enjoy. This lifts your mood, and it allows you to come back to your stressor with a better frame of thought.</string>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GyL-w8-efE" firstAttribute="leading" secondItem="SmL-pu-XbA" secondAttribute="leading" constant="12" id="8eV-05-hKy"/>
+                            <constraint firstItem="GyL-w8-efE" firstAttribute="top" secondItem="n5D-bi-9dv" secondAttribute="bottom" constant="16" id="I9n-Rt-fBR"/>
+                            <constraint firstItem="eMC-vr-dEU" firstAttribute="top" secondItem="GyL-w8-efE" secondAttribute="bottom" constant="16" id="eSq-bS-Z0a"/>
+                            <constraint firstAttribute="trailing" secondItem="GyL-w8-efE" secondAttribute="trailing" constant="12" id="ebF-Zi-cWR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="GyL-w8-efE" id="3GD-Lk-xvV"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-119" y="-1650"/>
+        </scene>
+    </scenes>
+</document>

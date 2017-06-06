@@ -38,6 +38,7 @@ extension UIColor {
     static let behavior = UIColor.color(forRed: 101, green: 175, blue: 71, alpha: 1)
     static let assessment = UIColor.color(forRed: 234, green: 91, blue: 67, alpha: 1)
     static let innerWisdom = UIColor.color(forRed: 98.0, green: 109.0, blue: 218.0, alpha: 1)
+    static let feelBetter = UIColor.color(forRed: 98.0, green: 109.0, blue: 218.0, alpha: 1)
 }
 
 extension UIColor {
