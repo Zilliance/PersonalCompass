@@ -21,7 +21,7 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
     }
     
     func save() {
-        self.currentCompass.lastEditedFacet = .innerWisdomSchedule
+        self.currentCompass.lastEditedFacet = .takeAction
     }
     
     private func setupView() {
