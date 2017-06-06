@@ -79,7 +79,6 @@
 		8C54AD2D1EE619DA001EC903 /* FeelBetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C54AD2C1EE619DA001EC903 /* FeelBetterViewController.swift */; };
 		8C571D771EE7323900050B8D /* FeelBetterItems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C571D761EE7323900050B8D /* FeelBetterItems.storyboard */; };
 		8C571D791EE732A800050B8D /* FeelBetterItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C571D781EE732A800050B8D /* FeelBetterItemViewController.swift */; };
-		8C571D7B1EE7394200050B8D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C571D7A1EE7394200050B8D /* UIImage+Extensions.swift */; };
 		8C9166811ECCD0DD0072C19F /* Stressor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166801ECCD0DD0072C19F /* Stressor.storyboard */; };
 		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
@@ -188,7 +187,6 @@
 		8C54AD2C1EE619DA001EC903 /* FeelBetterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeelBetterViewController.swift; path = ViewControllers/FeelBetterViewController.swift; sourceTree = "<group>"; };
 		8C571D761EE7323900050B8D /* FeelBetterItems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FeelBetterItems.storyboard; sourceTree = "<group>"; };
 		8C571D781EE732A800050B8D /* FeelBetterItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeelBetterItemViewController.swift; path = ViewControllers/FeelBetterItemViewController.swift; sourceTree = "<group>"; };
-		8C571D7A1EE7394200050B8D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "Extensions/UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		8C9166801ECCD0DD0072C19F /* Stressor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Stressor.storyboard; sourceTree = "<group>"; };
 		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
@@ -346,7 +344,6 @@
 				8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */,
 				8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */,
 				8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */,
-				8C571D7A1EE7394200050B8D /* UIImage+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -904,7 +901,6 @@
 				8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */,
 				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
 				8C54AD1D1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift in Sources */,
-				8C571D7B1EE7394200050B8D /* UIImage+Extensions.swift in Sources */,
 				8C54AD211EE0AFAB001EC903 /* InnerWisdomScheduleViewController.swift in Sources */,
 				8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */,
 			);
