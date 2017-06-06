@@ -77,7 +77,7 @@ final class FeelBetterItemCell: UICollectionViewCell {
     }
 }
 
-class FeelBetterViewController: UIViewController , CompassFacetEditor, CompassValidation {
+class FeelBetterViewController: UIViewController {
     
     @IBOutlet weak var scheduleItButton: UIButton!
     @IBOutlet weak var vcContainerView: UIView!
@@ -85,27 +85,35 @@ class FeelBetterViewController: UIViewController , CompassFacetEditor, CompassVa
     
     fileprivate var currentViewController: UIViewController?
     
+    var compass: Compass!
+    
     fileprivate var items: [FeelBetterItem]!
     
     fileprivate var currentIndex = 0
     
     private let feelBetterItems: [FeelBetterItem] = [.body, .thought, .behavior, .emotion]
     
-    var currentCompass: Compass!
-    var error: CompassError? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = self.compass.stressor!
+        
         self.scheduleItButton.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.scheduleItButton.backgroundColor = FeelBetterItem.body.selectedColor
         
         self.items = self.feelBetterItems
         self.showViewController(controller: items[0].viewController)
         
+         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeView))
+        
         // pre select first position
         self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         
+    }
+    
+    @objc func closeView()
+    {
+        self.dismiss(animated: true, completion: nil)
     }
     
     fileprivate func showViewController(controller: UIViewController) {
@@ -134,11 +142,6 @@ class FeelBetterViewController: UIViewController , CompassFacetEditor, CompassVa
     }
     
     
-    
-    func save() {
-        
-    }
-    
     @IBAction func scheduleItAction(_ sender: UIButton) {
         
         guard let viewController = UIStoryboard(name: "Schedule", bundle: nil).instantiateInitialViewController() as? ScheduleViewController
@@ -147,6 +150,7 @@ class FeelBetterViewController: UIViewController , CompassFacetEditor, CompassVa
                 return
         }
         
+        viewController.compass = self.compass
         let navigationController = UINavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true, completion: nil)
 

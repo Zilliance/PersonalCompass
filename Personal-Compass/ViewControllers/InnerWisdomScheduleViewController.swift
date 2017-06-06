@@ -12,6 +12,8 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
 
     @IBOutlet weak var scheduleLabel: UILabel!
     
+    var done: (() -> ())?
+    
     var error: CompassError? = nil
     var currentCompass: Compass!
     
@@ -22,6 +24,7 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
     
     func save() {
         self.currentCompass.lastEditedFacet = .takeAction
+        self.currentCompass.completed = true
     }
     
     private func setupView() {
@@ -41,5 +44,21 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
         viewController.compass = currentCompass
         let navigationController = UINavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    @IBAction func tellMeMoreAction(_ sender: UIButton) {
+        
+        guard let viewController = UIStoryboard(name: "FeelBetter", bundle: nil).instantiateInitialViewController() as? FeelBetterViewController
+            else {
+                assertionFailure()
+                return
+        }
+        viewController.compass = self.currentCompass
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    @IBAction func doneAction(_ sender: UIButton) {
+        self.done?()
     }
 }
