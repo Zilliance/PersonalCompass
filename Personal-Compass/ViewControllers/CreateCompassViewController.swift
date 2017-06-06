@@ -29,7 +29,7 @@ enum CompassScene: String {
     case thought
     case body
     case behavior
-    case assessment
+    case summary
     case need
     case innerWisdom1
     case innerWisdom2
@@ -51,8 +51,8 @@ enum CompassScene: String {
             return .body
         case .behavior:
             return .behavior
-        case .assessment:
-            return .assessment
+        case .summary:
+            return .summary
         case .need:
             return .innerWisdom
         case .innerWisdom1:
@@ -116,8 +116,8 @@ class CreateCompassViewController: UIViewController {
                 viewController.currentCompass = container.compass
                 self.viewController = viewController
 
-            case .assessment:
-                let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! AssessmentViewController
+            case .summary:
+                let viewController = UIStoryboard(name: scene.rawValue.capitalized, bundle: nil).instantiateInitialViewController() as! SummaryViewController
                 viewController.currentCompass = container.compass
                 viewController.sceneSelectionAction = {[unowned container] selectedScene in
                     container.previousScene = scene
@@ -201,7 +201,7 @@ class CreateCompassViewController: UIViewController {
             CompassItem(for: .thought, container: self),
             CompassItem(for: .body, container: self),
             CompassItem(for: .behavior, container: self),
-            CompassItem(for: .assessment, container: self),
+            CompassItem(for: .summary, container: self),
             CompassItem(for: .need, container: self),
             CompassItem(for: .innerWisdom1, container: self),
             CompassItem(for: .innerWisdom2, container: self),

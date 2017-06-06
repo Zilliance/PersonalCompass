@@ -1,5 +1,5 @@
 //
-//  AssessmentViewController.swift
+//  SummaryViewController.swift
 //  Personal-Compass
 //
 //  Created by Ignacio Zunino on 24-05-17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AssessmentViewController: UIViewController {
+class SummaryViewController: UIViewController {
     
     enum RowType: Int {
         case feeling
@@ -74,7 +74,7 @@ class AssessmentViewController: UIViewController {
 
 }
 
-extension AssessmentViewController: UITableViewDataSource, UITableViewDelegate {
+extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
