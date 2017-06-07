@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
         </array>
@@ -468,7 +471,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pDN-cL-HIT" id="UCa-XL-E2F">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gUy-9l-yO3">
@@ -488,7 +491,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlj-SM-4ea">
-                                                    <rect key="frame" x="135" y="18" width="220" height="21.5"/>
+                                                    <rect key="frame" x="135" y="17.5" width="220" height="21.5"/>
                                                     <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -597,13 +600,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="What I have learned about myself:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvN-HW-eWH">
-                                <rect key="frame" x="49" y="40" width="222.5" height="18"/>
+                                <rect key="frame" x="49.5" y="40" width="222.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cda-D4-GRU">
-                                <rect key="frame" x="0.0" y="68" width="320" height="402"/>
+                                <rect key="frame" x="0.0" y="77" width="320" height="393"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6ri-BK-QnJ" id="l3f-kd-OgN"/>
@@ -617,7 +620,7 @@
                             <constraint firstItem="cda-D4-GRU" firstAttribute="leading" secondItem="MYI-CC-O5X" secondAttribute="leading" id="Qeo-0t-8OE"/>
                             <constraint firstAttribute="trailing" secondItem="cda-D4-GRU" secondAttribute="trailing" id="WdL-11-Yym"/>
                             <constraint firstItem="zvN-HW-eWH" firstAttribute="top" secondItem="HIU-PZ-Pz0" secondAttribute="bottom" constant="20" id="hAz-oX-jNU"/>
-                            <constraint firstItem="cda-D4-GRU" firstAttribute="top" secondItem="zvN-HW-eWH" secondAttribute="bottom" constant="10" id="lJQ-Pw-FNB"/>
+                            <constraint firstItem="cda-D4-GRU" firstAttribute="top" secondItem="zvN-HW-eWH" secondAttribute="bottom" constant="19" id="lJQ-Pw-FNB"/>
                             <constraint firstItem="ZHw-JG-kpX" firstAttribute="top" secondItem="cda-D4-GRU" secondAttribute="bottom" id="zTm-36-tZY"/>
                         </constraints>
                     </view>
