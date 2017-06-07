@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StressorViewController: UIViewController, CompassFacetEditor, CompassValidation {
+class StressorViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
 
     @IBOutlet weak var textView: UITextView!
     

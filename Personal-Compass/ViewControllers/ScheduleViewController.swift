@@ -34,7 +34,6 @@ class ScheduleViewController: UIViewController {
             
         }
         
-        
     }
     
     @objc func closeView()

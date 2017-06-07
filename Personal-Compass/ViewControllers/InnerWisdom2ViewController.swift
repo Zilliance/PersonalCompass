@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InnerWisdom2ViewController: UIViewController, CompassValidation, CompassFacetEditor {
+class InnerWisdom2ViewController: AutoscrollableViewController, CompassValidation, CompassFacetEditor {
     
     @IBOutlet weak var textView: UITextView!
     

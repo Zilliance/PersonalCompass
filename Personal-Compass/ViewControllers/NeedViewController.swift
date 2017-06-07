@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NeedViewController: UIViewController, CompassFacetEditor, CompassValidation {
+class NeedViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
 
     var currentCompass: Compass!
     var error: CompassError? {
