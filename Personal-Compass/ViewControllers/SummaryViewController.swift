@@ -38,7 +38,13 @@ class SummaryViewController: UIViewController {
     
     var currentCompass: Compass!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var headerView: UIStackView!
+    var shouldShowHeader: Bool = true
 
+    @IBOutlet weak var footerLabel: UILabel!
+    @IBOutlet weak var tableTopSeparation: NSLayoutConstraint!
+    @IBOutlet weak var tableBottomSeparation: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +55,14 @@ class SummaryViewController: UIViewController {
         additionalSeparator.backgroundColor = UIColor.silverColor
 
         self.tableView.tableHeaderView = additionalSeparator
+        
+        if (!self.shouldShowHeader) {
+            self.tableTopSeparation.constant = 0
+            self.headerView.isHidden = true
+            self.tableBottomSeparation.isActive = false
+            self.footerLabel.isHidden = true
+            self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        }
         
         loadCells()
 

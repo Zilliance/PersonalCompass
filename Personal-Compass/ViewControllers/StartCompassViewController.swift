@@ -113,7 +113,11 @@ extension StartCompassViewController: UICollectionViewDelegate {
         }
         
         else {
-            //go to summary
+            guard let compassSummaryViewController = UIStoryboard(name: "CompassSummary", bundle: nil).instantiateInitialViewController() as? CompassSummaryViewController else { return assertionFailure() }
+            
+            compassSummaryViewController.compass = compass
+            self.navigationController?.pushViewController(compassSummaryViewController, animated: true)
+            
         }
 
         

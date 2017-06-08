@@ -38,6 +38,10 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
     var currentCompass: Compass!
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet weak var tableTopSeparation: NSLayoutConstraint!
+    
+    var shouldShowHeader: Bool = true
+    
     var sceneSelectionAction: ((CompassScene) -> ())?
 
     override func viewDidLoad() {
@@ -47,6 +51,10 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 84
+        
+        if (!shouldShowHeader) {
+            self.tableTopSeparation.constant = 0
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
