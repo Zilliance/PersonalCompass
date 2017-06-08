@@ -38,7 +38,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuY-Gh-CzF" customClass="UIButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="96"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="F5F-8E-94U">
+                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="F5F-8E-94U">
                                                         <rect key="frame" x="44" y="11" width="100" height="71"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volunterring" translatesAutoresizingMaskIntoConstraints="NO" id="xD5-tL-ySz">
@@ -74,7 +74,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyW-1a-kS0" customClass="UIButton">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="96"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fif-wp-fhr">
+                                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fif-wp-fhr">
                                                         <rect key="frame" x="34" y="11" width="120" height="71"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volunterring" translatesAutoresizingMaskIntoConstraints="NO" id="JsP-oy-6SN">

@@ -600,13 +600,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="What I have learned about myself:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvN-HW-eWH">
-                                <rect key="frame" x="49.5" y="40" width="222.5" height="18"/>
+                                <rect key="frame" x="49" y="40" width="222.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cda-D4-GRU">
-                                <rect key="frame" x="0.0" y="68" width="320" height="402"/>
+                                <rect key="frame" x="0.0" y="77" width="320" height="393"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6ri-BK-QnJ" id="l3f-kd-OgN"/>
@@ -618,16 +618,17 @@
                         <constraints>
                             <constraint firstItem="zvN-HW-eWH" firstAttribute="centerX" secondItem="MYI-CC-O5X" secondAttribute="centerX" id="QLk-Pu-OrR"/>
                             <constraint firstItem="cda-D4-GRU" firstAttribute="leading" secondItem="MYI-CC-O5X" secondAttribute="leading" id="Qeo-0t-8OE"/>
-                            <constraint firstItem="cda-D4-GRU" firstAttribute="top" secondItem="HIU-PZ-Pz0" secondAttribute="bottom" constant="48" id="SDZ-mN-e5g"/>
                             <constraint firstAttribute="trailing" secondItem="cda-D4-GRU" secondAttribute="trailing" id="WdL-11-Yym"/>
                             <constraint firstItem="zvN-HW-eWH" firstAttribute="top" secondItem="HIU-PZ-Pz0" secondAttribute="bottom" constant="20" id="hAz-oX-jNU"/>
+                            <constraint firstItem="cda-D4-GRU" firstAttribute="top" secondItem="HIU-PZ-Pz0" secondAttribute="bottom" constant="57" id="kpS-RC-D9C"/>
                             <constraint firstItem="ZHw-JG-kpX" firstAttribute="top" secondItem="cda-D4-GRU" secondAttribute="bottom" id="zTm-36-tZY"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="470"/>
                     <connections>
-                        <outlet property="tableTopSeparation" destination="SDZ-mN-e5g" id="fEv-EV-Ors"/>
+                        <outlet property="headerLabel" destination="zvN-HW-eWH" id="4qQ-1r-r9o"/>
+                        <outlet property="tableTopSeparation" destination="kpS-RC-D9C" id="EtC-qG-LMz"/>
                         <outlet property="tableView" destination="cda-D4-GRU" id="mZM-ai-ctc"/>
                     </connections>
                 </viewController>

@@ -50,7 +50,7 @@ class CompassSummaryViewController: UIViewController {
         
         if let currentViewController = currentViewController {
             
-            if (currentViewController.isKind(of: InnerWisdomSummaryViewController.self)) {
+            if (currentViewController.isKind(of: SummaryViewController.self)) {
                 return
             }
             
@@ -59,7 +59,6 @@ class CompassSummaryViewController: UIViewController {
             currentViewController.didMove(toParentViewController: nil)
 
         }
-
         
         let viewController = UIStoryboard(name: "Summary", bundle: nil).instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
         viewController.currentCompass = compass
