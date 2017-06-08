@@ -12,6 +12,7 @@ target 'Personal-Compass' do
   pod 'SideMenuController'
   pod 'FXPageControl'
   pod 'SVProgressHUD'
+  pod 'AKPickerView-Swift'
 
   target 'Personal-CompassTests' do
     inherit! :search_paths
