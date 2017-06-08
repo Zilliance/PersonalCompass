@@ -44,17 +44,17 @@ final class LeftMenuViewController: UIViewController {
     }
     
     func showHTMLView(htmlFile: String, title: String) {
-//        let htmlFilePath = Bundle.main.path(forResource: htmlFile, ofType: "html")
-//        let url = URL(fileURLWithPath: htmlFilePath!)
-//        
-//        if let webController = UIStoryboard(name: "WebView", bundle: nil).instantiateInitialViewController() as? WebViewController {
-//            webController.title = title
-//            webController.url = url
-//            
-//            let navigationController = UINavigationController(rootViewController: webController)
-//            
-//            self.sideMenuController?.embed(centerViewController: navigationController)
-//        }
+        let htmlFilePath = Bundle.main.path(forResource: htmlFile, ofType: "html")
+        let url = URL(fileURLWithPath: htmlFilePath!)
+        
+        if let webController = UIStoryboard(name: "WebView", bundle: nil).instantiateInitialViewController() as? WebViewController {
+            webController.title = title
+            webController.url = url
+            
+            let navigationController = UINavigationController(rootViewController: webController)
+            
+            self.sideMenuController?.embed(centerViewController: navigationController)
+        }
     }
     
     var showingCompass: Bool {
@@ -86,11 +86,11 @@ final class LeftMenuViewController: UIViewController {
     }
     
     @IBAction func privacyPolicyTapped(_ sender: Any) {
-       // self.showHTMLView(htmlFile: "zilliance privacy policy", title: "Privacy Policy")
+        self.showHTMLView(htmlFile: "zilliance privacy policy", title: "Privacy Policy")
     }
     
     @IBAction func termsOfServicesTapped(_ sender: Any) {
-       // self.showHTMLView(htmlFile: "zilliance terms of service", title: "Terms Of Service")
+        self.showHTMLView(htmlFile: "zilliance terms of service", title: "Terms Of Service")
     }
     
     func showAboutCompany() {
@@ -118,7 +118,7 @@ final class LeftMenuViewController: UIViewController {
     }
     
     func showFaq() {
-//        self.showHTMLView(htmlFile: "faq", title: "FAQ")
+        self.showHTMLView(htmlFile: "faq", title: "FAQ")
     }
 }
 
