@@ -39,12 +39,15 @@ class SummaryViewController: UIViewController {
     var currentCompass: Compass!
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var headerView: UIStackView!
-    var shouldShowHeader: Bool = true
+    var shouldShowFooterHeader: Bool = true
 
     @IBOutlet weak var footerLabel: UILabel!
     @IBOutlet weak var tableTopSeparation: NSLayoutConstraint!
     @IBOutlet weak var tableBottomSeparation: NSLayoutConstraint!
+    @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var tableFooterSeparation: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,11 +59,13 @@ class SummaryViewController: UIViewController {
 
         self.tableView.tableHeaderView = additionalSeparator
         
-        if (!self.shouldShowHeader) {
+        if (!self.shouldShowFooterHeader) {
             self.tableTopSeparation.constant = 0
-            self.headerView.isHidden = true
+            self.headerLabel.isHidden = true
             self.tableBottomSeparation.isActive = false
             self.footerLabel.isHidden = true
+            self.tableFooterSeparation.isActive = false
+            self.tableHeightConstraint.isActive = false
             self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         }
         

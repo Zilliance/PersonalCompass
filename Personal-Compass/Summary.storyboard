@@ -26,24 +26,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="470"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="tit-Lm-HtY">
-                                <rect key="frame" x="0.0" y="15" width="320" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhH-9Z-J22">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
-                                        <string key="text">It's not my stressor that is causing me to suffer; it's my thoughts about it. In fact, this is how my thoughts are affecting my emotions, body and behavior.</string>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
-                                        <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhH-9Z-J22">
+                                <rect key="frame" x="12" y="15" width="296" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="Aa3-eO-zYa"/>
+                                    <constraint firstAttribute="height" constant="58" id="VBr-14-sgg"/>
                                 </constraints>
-                            </stackView>
+                                <string key="text">It's not my stressor that is causing me to suffer; it's my thoughts about it. In fact, this is how my thoughts are affecting my emotions, body and behavior.</string>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cr0-5n-2PU">
                                 <rect key="frame" x="0.0" y="92" width="320" height="335.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="338" id="1Oi-5j-yAn"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="p66-MD-3vQ" id="kDH-eC-pOO"/>
                                     <outlet property="delegate" destination="p66-MD-3vQ" id="Ocd-dF-JZd"/>
@@ -61,16 +59,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tit-Lm-HtY" secondAttribute="trailing" id="5bA-0m-h8x"/>
-                            <constraint firstItem="tit-Lm-HtY" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" id="FnS-iq-jKr"/>
                             <constraint firstItem="Rna-bf-aaY" firstAttribute="top" secondItem="cr0-5n-2PU" secondAttribute="bottom" constant="12" id="L7v-O8-qpV"/>
                             <constraint firstItem="Rna-bf-aaY" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" id="Ng0-qg-KyN"/>
                             <constraint firstItem="o1b-ap-5JS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cr0-5n-2PU" secondAttribute="bottom" constant="42.5" id="Qxp-Yk-Jw6"/>
                             <constraint firstAttribute="trailing" secondItem="Rna-bf-aaY" secondAttribute="trailing" id="V9L-PZ-3h0"/>
-                            <constraint firstItem="o1b-ap-5JS" firstAttribute="top" secondItem="Rna-bf-aaY" secondAttribute="bottom" priority="750" id="bO0-TA-h6D"/>
+                            <constraint firstItem="o1b-ap-5JS" firstAttribute="top" secondItem="Rna-bf-aaY" secondAttribute="bottom" priority="750" id="XTi-ry-Ojr"/>
                             <constraint firstItem="cr0-5n-2PU" firstAttribute="top" secondItem="yxx-0m-xrU" secondAttribute="bottom" constant="72" id="bd9-nM-LjQ"/>
+                            <constraint firstAttribute="trailing" secondItem="VhH-9Z-J22" secondAttribute="trailing" constant="12" id="fw9-Od-u51"/>
                             <constraint firstItem="cr0-5n-2PU" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" id="iPv-nd-DHH"/>
-                            <constraint firstItem="tit-Lm-HtY" firstAttribute="top" secondItem="aPI-kJ-IZd" secondAttribute="top" constant="15" id="uW2-bd-JUw"/>
+                            <constraint firstItem="VhH-9Z-J22" firstAttribute="top" secondItem="aPI-kJ-IZd" secondAttribute="top" constant="15" id="rXq-oC-3xA"/>
+                            <constraint firstItem="VhH-9Z-J22" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" constant="12" id="rs5-dE-dkd"/>
                             <constraint firstAttribute="trailing" secondItem="cr0-5n-2PU" secondAttribute="trailing" id="yA4-G4-Oa9"/>
                         </constraints>
                     </view>
@@ -78,8 +76,10 @@
                     <size key="freeformSize" width="320" height="470"/>
                     <connections>
                         <outlet property="footerLabel" destination="Rna-bf-aaY" id="7Of-Ic-NGE"/>
-                        <outlet property="headerView" destination="tit-Lm-HtY" id="GgS-iP-RwF"/>
+                        <outlet property="headerLabel" destination="VhH-9Z-J22" id="5PP-hg-hkK"/>
                         <outlet property="tableBottomSeparation" destination="Qxp-Yk-Jw6" id="4s7-R1-X5y"/>
+                        <outlet property="tableFooterSeparation" destination="L7v-O8-qpV" id="wkk-TU-ft8"/>
+                        <outlet property="tableHeightConstraint" destination="1Oi-5j-yAn" id="PSe-MB-Lph"/>
                         <outlet property="tableTopSeparation" destination="bd9-nM-LjQ" id="Jbi-OI-VTa"/>
                         <outlet property="tableView" destination="cr0-5n-2PU" id="s6h-e6-JV7"/>
                     </connections>

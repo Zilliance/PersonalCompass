@@ -62,7 +62,7 @@ class CompassSummaryViewController: UIViewController {
         
         let viewController = UIStoryboard(name: "Summary", bundle: nil).instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
         viewController.currentCompass = compass
-        viewController.shouldShowHeader = false
+        viewController.shouldShowFooterHeader = false
         
         viewController.willMove(toParentViewController: self)
         viewController.view.frame = tableContainerView.bounds
@@ -96,7 +96,7 @@ class CompassSummaryViewController: UIViewController {
         
         let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdomSummaryViewController") as! InnerWisdomSummaryViewController
         viewController.currentCompass = compass
-        viewController.shouldShowHeader = false
+        viewController.shouldShowFooterHeader = false
 
         viewController.willMove(toParentViewController: self)
         viewController.view.frame = tableContainerView.bounds

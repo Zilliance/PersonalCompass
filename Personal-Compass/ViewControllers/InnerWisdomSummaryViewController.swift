@@ -40,7 +40,7 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
     
     @IBOutlet weak var tableTopSeparation: NSLayoutConstraint!
     
-    var shouldShowHeader: Bool = true
+    var shouldShowFooterHeader: Bool = true
     
     @IBOutlet var headerLabel: UILabel!
     
@@ -54,7 +54,7 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 84
         
-        if (!shouldShowHeader) {
+        if (!shouldShowFooterHeader) {
             self.tableTopSeparation.constant = 0
             headerLabel.isHidden = true
         }
