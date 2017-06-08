@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SummaryViewController: UIViewController {
+class SummaryViewController: UIViewController, SummaryViewControllerProtocol {
     
     enum RowType: Int {
         case feeling

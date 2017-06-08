@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SummaryViewControllerProtocol {
     
     enum RowType: Int {
         case need

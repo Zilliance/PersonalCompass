@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SummaryViewControllerProtocol {
+    var currentCompass: Compass! {get set}
+    var shouldShowFooterHeader: Bool {get set}
+}
+
 class CompassSummaryViewController: UIViewController {
     @IBOutlet weak var tableContainerView: UIView!
     var compass: Compass!
@@ -27,64 +32,39 @@ class CompassSummaryViewController: UIViewController {
         super.viewDidLoad()
 
         showAssessmentView()
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     @IBAction private func showAssessmentView() {
-        
-        if let currentViewController = currentViewController {
-            
-            if (currentViewController.isKind(of: SummaryViewController.self)) {
-                return
-            }
-            
-            currentViewController.willMove(toParentViewController: nil)
-            currentViewController.view.removeFromSuperview()
-            currentViewController.didMove(toParentViewController: nil)
-
+        if let currentViewController = currentViewController, (currentViewController.isKind(of: SummaryViewController.self)) {
+            return
         }
         
         let viewController = UIStoryboard(name: "Summary", bundle: nil).instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
-        viewController.currentCompass = compass
-        viewController.shouldShowFooterHeader = false
-        
-        viewController.willMove(toParentViewController: self)
-        viewController.view.frame = tableContainerView.bounds
-        self.addChildViewController(viewController)
-        tableContainerView.addSubview(viewController.view)
-        
-        viewController.didMove(toParentViewController: self)
-        
-        currentViewController = viewController
-        
-        innerWisdomIcon.image = UIImage(named: "iconInnerWisdomGrey")
-        innerWisdomLabel.textColor = UIColor.silverColor
-        assessmentIcon.image = UIImage(named: "volunterring")
-        assessmentLabel.textColor = UIColor.darkGreyBlue
 
+        showViewController(viewController: viewController, innerWisdomImage: UIImage(named: "iconInnerWisdomGrey"), innerWisdomColor: UIColor.silverColor, assessmentImage: UIImage(named: "volunterring"), assessmentColor: UIColor.darkGreyBlue)
+        
     }
 
     @IBAction private func showInnerWisdomView() {
         
+        if let currentViewController = currentViewController, (currentViewController.isKind(of: InnerWisdomSummaryViewController.self)) {
+            return
+        }
+        
+        let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdomSummaryViewController") as! InnerWisdomSummaryViewController
+        
+        showViewController(viewController: viewController, innerWisdomImage: UIImage(named: "iconInnerWisdomDefault"), innerWisdomColor: UIColor.darkGreyBlue, assessmentImage: UIImage(named: "iconAssessmentGrey"), assessmentColor: UIColor.silverColor)
+    }
+    
+    private func showViewController<T>(viewController: T, innerWisdomImage: UIImage?, innerWisdomColor: UIColor, assessmentImage: UIImage?, assessmentColor: UIColor) where T: UIViewController, T: SummaryViewControllerProtocol {
+        
         if let currentViewController = currentViewController {
             
-            if (currentViewController.isKind(of: InnerWisdomSummaryViewController.self)) {
+            if (currentViewController.isKind(of: T.self)) {
                 return
             }
             
@@ -93,11 +73,10 @@ class CompassSummaryViewController: UIViewController {
             currentViewController.didMove(toParentViewController: nil)
             
         }
-        
-        let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdomSummaryViewController") as! InnerWisdomSummaryViewController
+        var viewController = viewController
         viewController.currentCompass = compass
         viewController.shouldShowFooterHeader = false
-
+        
         viewController.willMove(toParentViewController: self)
         viewController.view.frame = tableContainerView.bounds
         self.addChildViewController(viewController)
@@ -107,10 +86,11 @@ class CompassSummaryViewController: UIViewController {
         
         currentViewController = viewController
         
-        innerWisdomIcon.image = UIImage(named: "iconInnerWisdomDefault")
-        innerWisdomLabel.textColor = UIColor.darkGreyBlue
-        assessmentIcon.image = UIImage(named: "iconAssessmentGrey")
-        assessmentLabel.textColor = UIColor.silverColor
+        innerWisdomIcon.image = innerWisdomImage
+        innerWisdomLabel.textColor = innerWisdomColor
+        assessmentIcon.image = assessmentImage
+        assessmentLabel.textColor = assessmentColor
+        
     }
     
 }
