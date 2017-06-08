@@ -27,40 +27,93 @@ class EmotionCell: UITableViewCell {
     
 }
 
-class EmotionViewController: UIViewController, CompassFacetEditor, CompassValidation {
+class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
     
-    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var emotionLabel: UILabel!
+    @IBOutlet weak var pickerContainerView: UIView!
+    @IBOutlet weak var emotionTextField: UITextField!
+    
+    private let picker = AKPickerView()
+    
+    fileprivate var currentIndex = 0
+    
     var currentCompass: Compass!
     
-    var error: CompassError? {
-        if let _ = self.tableView.indexPathsForSelectedRows {
-            return nil
-        }
-        else {
-            return .selection
-        }
-    }
+    var error: CompassError? = nil
     
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let picker = AKPickerView(frame: CGRect(x: 0, y: 0, width: 375, height: 500))
-        self.view.addSubview(picker)
-            
-        picker.delegate = self
-        picker.dataSource = self
+        self.setupPicker()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.loadData()
+    }
+    
+    private func setupPicker() {
+        
+        self.picker.translatesAutoresizingMaskIntoConstraints = false
+        self.pickerContainerView.addSubview(self.picker)
+        
+        self.picker.topAnchor.constraint(equalTo: self.pickerContainerView.topAnchor).isActive = true
+        self.picker.leadingAnchor.constraint(equalTo: self.pickerContainerView.leadingAnchor).isActive = true
+        self.picker.trailingAnchor.constraint(equalTo: self.pickerContainerView.trailingAnchor).isActive = true
+        self.picker.bottomAnchor.constraint(equalTo: self.pickerContainerView.bottomAnchor).isActive = true
+        
+        self.picker.delegate = self
+        self.picker.dataSource = self
+        
+    }
+    
+    private func loadData() {
+        
+        if let emotion = self.currentCompass.emotion {
+            let index = self.emotions.index(of: emotion)
+            self.currentIndex = index!
+            self.picker.scrollToItem(self.currentIndex, animated: true)
+        }
+        
+        self.setupEmotionLabel()
+        
     }
     
     func save() {
         
-        if let index = self.tableView.indexPathsForSelectedRows?.first {
-            let emotion = self.emotions[index.row]
-            self.currentCompass.emotion = emotion
-            self.currentCompass.lastEditedFacet = .emotion
+        let emotion = self.emotions[self.currentIndex]
+        self.currentCompass.emotion = emotion
+        self.currentCompass.lastEditedFacet = .emotion
+        
+    }
+    
+    fileprivate func setupEmotionLabel() {
+        self.emotionLabel.text = self.emotions[self.currentIndex].longTitle
+    }
+    
+    @IBAction func rightArrowAction(_ sender: UIButton) {
+        
+        guard self.currentIndex < self.emotions.count - 1 else {
+           return
         }
+        
+        self.currentIndex += 1
+        self.picker.scrollToItem(self.currentIndex, animated: true)
+        self.setupEmotionLabel()
+
+    }
+    
+    @IBAction func leftArrowAction(_ sender: UIButton) {
+        
+        guard self.currentIndex > 0 else {
+            return
+        }
+        self.currentIndex -= 1
+        self.picker.scrollToItem(self.currentIndex, animated: true)
+        self.setupEmotionLabel()
     }
     
 }
@@ -76,7 +129,20 @@ extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
-        self.emotionLabel.text = self.emotions[item].shortTitle
+        self.currentIndex = item
+        self.setupEmotionLabel()
     }
+    
+    func pickerView(_ pickerView: AKPickerView, marginForItem item: Int) -> CGSize {
+        return CGSize(width: 20, height: 20)
+    }
+}
+
+extension EmotionViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
 }
 
