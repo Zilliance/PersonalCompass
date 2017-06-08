@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ThoughtViewController: UIViewController, CompassFacetEditor, CompassValidation {
+class ThoughtViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
     
     var currentCompass: Compass!
     
