@@ -39,7 +39,7 @@
                         <rect key="frame" x="13" y="27.5" width="104" height="28"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mK2-pt-eDU">
-                                <rect key="frame" x="33.5" y="4.5" width="38" height="20.5"/>
+                                <rect key="frame" x="33.5" y="4" width="38" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -81,11 +81,11 @@
                     <constraint firstItem="fBE-Gj-CEN" firstAttribute="leading" secondItem="vIH-8X-yTP" secondAttribute="trailing" constant="22" id="POP-tj-ROu"/>
                     <constraint firstItem="fBE-Gj-CEN" firstAttribute="centerY" secondItem="Hi1-dl-2KL" secondAttribute="centerY" id="UtG-Cz-uJ6"/>
                     <constraint firstItem="qWi-by-aa5" firstAttribute="top" secondItem="yuB-eB-Gva" secondAttribute="topMargin" constant="25" id="Vkd-cY-ARa"/>
-                    <constraint firstItem="Hi1-dl-2KL" firstAttribute="top" secondItem="yuB-eB-Gva" secondAttribute="topMargin" constant="19.5" id="Vzb-Rc-yHf"/>
                     <constraint firstItem="vIH-8X-yTP" firstAttribute="leading" secondItem="yuB-eB-Gva" secondAttribute="leadingMargin" constant="128" id="fTX-G1-qa3"/>
                     <constraint firstAttribute="trailing" secondItem="K1k-d9-uwV" secondAttribute="trailing" id="i2R-Lu-TQY"/>
                     <constraint firstItem="Hi1-dl-2KL" firstAttribute="leading" secondItem="yuB-eB-Gva" secondAttribute="leading" constant="13" id="j3T-P6-WVL"/>
                     <constraint firstItem="qWi-by-aa5" firstAttribute="leading" secondItem="fBE-Gj-CEN" secondAttribute="trailing" constant="12" id="ls6-7t-hU3"/>
+                    <constraint firstItem="Hi1-dl-2KL" firstAttribute="centerY" secondItem="yuB-eB-Gva" secondAttribute="centerY" id="tNH-QE-CIS"/>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="qWi-by-aa5" secondAttribute="bottom" constant="24" id="yt8-Hg-fCw"/>
                 </constraints>
             </tableViewCellContentView>
