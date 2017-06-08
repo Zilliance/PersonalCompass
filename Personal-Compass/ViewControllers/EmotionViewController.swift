@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AKPickerView_Swift
 
 class EmotionCell: UITableViewCell {
     
@@ -30,6 +31,7 @@ class EmotionViewController: UIViewController, CompassFacetEditor, CompassValida
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var emotionLabel: UILabel!
     var currentCompass: Compass!
     
     var error: CompassError? {
@@ -45,8 +47,11 @@ class EmotionViewController: UIViewController, CompassFacetEditor, CompassValida
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupTableView()
-        self.setupView()
+        let picker = AKPickerView(frame: CGRect(x: 0, y: 0, width: 375, height: 500))
+        self.view.addSubview(picker)
+            
+        picker.delegate = self
+        picker.dataSource = self
     }
     
     func save() {
@@ -58,33 +63,20 @@ class EmotionViewController: UIViewController, CompassFacetEditor, CompassValida
         }
     }
     
-    private func setupTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.tableFooterView = UIView()
+}
+
+extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
+    
+    func numberOfItemsInPickerView(_ pickerView: AKPickerView) -> Int {
+        return emotions.count
     }
     
-    private func setupView() {
-        guard let emotion = self.currentCompass.emotion else { return }
-        if let row = self.emotions.index(of: emotion) {
-            self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .middle)
-        }
+    func pickerView(_ pickerView: AKPickerView, imageForItem item: Int) -> UIImage {
+        return self.emotions[item].icon!
+    }
+    
+    func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
+        self.emotionLabel.text = self.emotions[item].shortTitle
     }
 }
 
-extension EmotionViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.emotions.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmotionCell", for: indexPath) as! EmotionCell
-        cell.setup(for: emotions[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return EmotionCell.cellHeight
-    }
-}

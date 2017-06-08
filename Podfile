@@ -12,7 +12,7 @@ target 'Personal-Compass' do
   pod 'SideMenuController'
   pod 'FXPageControl'
   pod 'SVProgressHUD'
-  pod 'AKPickerView-Swift'
+  pod 'AKPickerView-Swift', :git => 'https://github.com/Akkyie/AKPickerView-Swift.git'
 
   target 'Personal-CompassTests' do
     inherit! :search_paths
