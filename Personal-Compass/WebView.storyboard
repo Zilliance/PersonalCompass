@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ysj-9E-oTz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ysj-9E-oTz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Title-->
         <scene sceneID="o92-YT-VZ5">
             <objects>
-                <viewController storyboardIdentifier="WebViewController" id="Ysj-9E-oTz" customClass="WebViewController" customModule="Zilliance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="Ysj-9E-oTz" customClass="WebViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zjI-Qn-9LU"/>
                         <viewControllerLayoutGuide type="bottom" id="IED-YR-bnT"/>
@@ -35,7 +35,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="nOr-SH-el6">
-                        <barButtonItem key="leftBarButtonItem" image="drawer-toolbar-icon" id="FxP-hQ-z8P">
+                        <barButtonItem key="leftBarButtonItem" image="menu-icon" id="FxP-hQ-z8P">
                             <connections>
                                 <action selector="backTapped" destination="Ysj-9E-oTz" id="MIm-wy-mgF"/>
                             </connections>
@@ -52,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="drawer-toolbar-icon" width="20" height="20"/>
+        <image name="menu-icon" width="20" height="17"/>
     </resources>
 </document>

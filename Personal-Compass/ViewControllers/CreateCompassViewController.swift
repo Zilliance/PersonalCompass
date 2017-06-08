@@ -357,19 +357,6 @@ class CreateCompassViewController: UIViewController {
         
         typealias scene = Compass.Facet
         
-        if self.currentPageIndex == 0 {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.backButton.alpha = 1
-            })
-        }
-        
-        if self.currentPageIndex == scene.takeAction.pageIndex {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.nextButton.alpha = 0
-            })
-        }
-        
-        
         if let error = self.checkError() {
             
             switch error {
@@ -404,6 +391,18 @@ class CreateCompassViewController: UIViewController {
             
     
             return
+        }
+        
+        if self.currentPageIndex == 0 {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.backButton.alpha = 1
+            })
+        }
+        
+        if self.currentPageIndex == scene.takeAction.pageIndex {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.nextButton.alpha = 0
+            })
         }
 
         self.moveToPage(page: self.currentPageIndex + 1, direction: .forward)
