@@ -19,17 +19,11 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-    <key>NSCalendarsUsageDescription</key>
-    <string>Personal Compass would like to add a reminder to your calendar</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Personal Compass would like to add a reminder to your calendar</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-Black.ttf</string>
@@ -40,6 +34,12 @@
 		<string>Muli-Regular.ttf</string>
 		<string>Muli-Thin.ttf</string>
 		<string>Muli-LightItalic.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
