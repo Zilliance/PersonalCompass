@@ -161,12 +161,12 @@ class StartCompassViewController: UIViewController {
                 
                self.collectionView.performBatchUpdates({
                 
-                var compassesToDelete: [Compass] = []
-                for index in indexes {
-                    compassesToDelete.append(self.compasses[index.row])
+                let compasses = indexes.map { [unowned self] index in
+                    
+                    return self.compasses[index.row]
                 }
                 
-                for compass in compassesToDelete {
+                for compass in compasses {
                     Database.shared.delete(compass)
                 }
 
