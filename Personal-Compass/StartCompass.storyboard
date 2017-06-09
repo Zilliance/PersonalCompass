@@ -91,13 +91,22 @@
                                                                 <constraint firstAttribute="height" constant="1" id="9lM-AP-6G5"/>
                                                             </constraints>
                                                         </view>
+                                                        <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select-checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="rhx-Z0-2tL">
+                                                            <rect key="frame" x="83" y="2" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="20" id="K6Z-gS-mgn"/>
+                                                                <constraint firstAttribute="height" constant="20" id="VDW-vw-Ubh"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                 </view>
                                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Xhz-s0-UUW" secondAttribute="trailing" id="AZi-lX-YtD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rhx-Z0-2tL" secondAttribute="trailing" constant="2" id="BAG-Se-X3g"/>
                                                     <constraint firstItem="BO3-nZ-y38" firstAttribute="top" secondItem="lGd-Gd-Jhc" secondAttribute="bottom" id="Bk2-QQ-0U2"/>
                                                     <constraint firstAttribute="trailing" secondItem="eZ0-6D-j9T" secondAttribute="trailing" id="HnB-Iq-9nz"/>
+                                                    <constraint firstItem="rhx-Z0-2tL" firstAttribute="top" secondItem="1rD-pt-ued" secondAttribute="top" constant="2" id="QXx-nx-56x"/>
                                                     <constraint firstItem="eZ0-6D-j9T" firstAttribute="leading" secondItem="1rD-pt-ued" secondAttribute="leading" id="YCE-9n-8NS"/>
                                                     <constraint firstAttribute="bottom" secondItem="Xhz-s0-UUW" secondAttribute="bottom" id="YXE-dz-tOg"/>
                                                     <constraint firstItem="lGd-Gd-Jhc" firstAttribute="top" secondItem="1rD-pt-ued" secondAttribute="top" constant="4" id="gjc-6v-6lI"/>
@@ -110,6 +119,7 @@
                                                 </constraints>
                                                 <size key="customSize" width="105" height="105"/>
                                                 <connections>
+                                                    <outlet property="checkmarkView" destination="rhx-Z0-2tL" id="Gi1-GB-6Xz"/>
                                                     <outlet property="completedLabel" destination="Xhz-s0-UUW" id="pfM-AZ-dpg"/>
                                                     <outlet property="greyLineView" destination="eZ0-6D-j9T" id="dlq-Xo-OSa"/>
                                                     <outlet property="titleLabel" destination="BO3-nZ-y38" id="Ify-l6-GL2"/>
@@ -246,6 +256,7 @@
         <image name="green gradiant background" width="337" height="77"/>
         <image name="menu-icon" width="20" height="17"/>
         <image name="pc" width="48" height="48"/>
+        <image name="select-checkmark" width="20" height="20"/>
         <image name="trashcan" width="30" height="30"/>
     </resources>
 </document>

@@ -13,6 +13,7 @@ class CompassCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var completedLabel: UILabel!
     @IBOutlet weak var greyLineView: UIView!
+    @IBOutlet weak var checkmarkView: UIImageView!
     
     static let size = CGSize(width: 105.0, height: 105.0)
     
@@ -39,11 +40,14 @@ class CompassCollectionViewCell: UICollectionViewCell {
         
         self.contentView.layer.borderWidth = 2
         self.contentView.layer.borderColor = UIColor.aquaBlue.cgColor
+        self.checkmarkView.alpha = 1
         
     }
     
     private func removeBorder() {
+        
         self.contentView.layer.borderWidth = 0
+        self.checkmarkView.alpha = 0
         
     }
     
