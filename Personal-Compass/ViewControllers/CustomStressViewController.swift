@@ -16,12 +16,20 @@ final class CustomStressViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var topSubheading: UILabel!
     
     var type: StringItem.Type!
     weak var delegate: CustomStressViewControllerDelegate!
     
     var headerText: String!
     var placeholder: String!
+    var subheading: String? {
+        didSet {
+            if self.isViewLoaded {
+                self.topSubheading.text = subheading
+            }
+        }
+    }
     
     fileprivate let placeholderTextColor = UIColor.lightGray
     fileprivate let normalTextColor = UIColor.darkGray
@@ -29,7 +37,11 @@ final class CustomStressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.textView.becomeFirstResponder()
     }
     
     private func setupView() {
@@ -51,8 +63,9 @@ final class CustomStressViewController: UIViewController {
         ]
         
         self.textView.typingAttributes = attrs
-        self.textView.attributedText = NSAttributedString(string: placeholder, attributes: attrs)
+        // self.textView.attributedText = NSAttributedString(string: placeholder, attributes: attrs)
         
+        self.topSubheading.text = self.subheading
     }
     
     fileprivate func showPlaceholder() {
@@ -78,7 +91,7 @@ extension CustomStressViewController {
     @objc func save() {
         
         guard self.textView.text.characters.count > 0 else {
-            self.showAlert(title: "", message: "Please enter text")
+            self.showAlert(title: "Please enter text", message: "")
             return
         }
         
@@ -101,14 +114,14 @@ extension CustomStressViewController: UITextViewDelegate {
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == placeholder {
-            self.hidePlaceholder()
-        }
+        // if textView.text == placeholder {
+            // self.hidePlaceholder()
+        // }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text == "" {
-            self.showPlaceholder()
-        }
+        // if textView.text == "" {
+            // self.showPlaceholder()
+        // }
     }
 }
