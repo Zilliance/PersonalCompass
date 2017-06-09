@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p66-MD-3vQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p66-MD-3vQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -37,18 +37,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cr0-5n-2PU">
-                                <rect key="frame" x="0.0" y="92" width="320" height="335.5"/>
+                                <rect key="frame" x="0.0" y="85" width="320" height="330.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="338" id="1Oi-5j-yAn"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="p66-MD-3vQ" id="kDH-eC-pOO"/>
                                     <outlet property="delegate" destination="p66-MD-3vQ" id="Ocd-dF-JZd"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Now that I know how my thoughts about my stressor are affecting me, I can identify what I need to feel better." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rna-bf-aaY">
-                                <rect key="frame" x="0.0" y="439.5" width="320" height="30.5"/>
+                                <rect key="frame" x="12" y="427.5" width="296" height="30.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30.5" id="nUR-ZH-YAx"/>
                                 </constraints>
@@ -60,11 +57,10 @@
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Rna-bf-aaY" firstAttribute="top" secondItem="cr0-5n-2PU" secondAttribute="bottom" constant="12" id="L7v-O8-qpV"/>
-                            <constraint firstItem="Rna-bf-aaY" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" id="Ng0-qg-KyN"/>
-                            <constraint firstItem="o1b-ap-5JS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cr0-5n-2PU" secondAttribute="bottom" constant="42.5" id="Qxp-Yk-Jw6"/>
-                            <constraint firstAttribute="trailing" secondItem="Rna-bf-aaY" secondAttribute="trailing" id="V9L-PZ-3h0"/>
-                            <constraint firstItem="o1b-ap-5JS" firstAttribute="top" secondItem="Rna-bf-aaY" secondAttribute="bottom" priority="750" id="XTi-ry-Ojr"/>
-                            <constraint firstItem="cr0-5n-2PU" firstAttribute="top" secondItem="yxx-0m-xrU" secondAttribute="bottom" constant="72" id="bd9-nM-LjQ"/>
+                            <constraint firstItem="Rna-bf-aaY" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" constant="12" id="Ng0-qg-KyN"/>
+                            <constraint firstAttribute="trailing" secondItem="Rna-bf-aaY" secondAttribute="trailing" constant="12" id="V9L-PZ-3h0"/>
+                            <constraint firstItem="o1b-ap-5JS" firstAttribute="top" secondItem="Rna-bf-aaY" secondAttribute="bottom" priority="750" constant="12" id="XTi-ry-Ojr"/>
+                            <constraint firstItem="cr0-5n-2PU" firstAttribute="top" secondItem="VhH-9Z-J22" secondAttribute="bottom" constant="12" id="ZHi-2W-yQk"/>
                             <constraint firstAttribute="trailing" secondItem="VhH-9Z-J22" secondAttribute="trailing" constant="12" id="fw9-Od-u51"/>
                             <constraint firstItem="cr0-5n-2PU" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" id="iPv-nd-DHH"/>
                             <constraint firstItem="VhH-9Z-J22" firstAttribute="top" secondItem="aPI-kJ-IZd" secondAttribute="top" constant="15" id="rXq-oC-3xA"/>
@@ -77,10 +73,7 @@
                     <connections>
                         <outlet property="footerLabel" destination="Rna-bf-aaY" id="7Of-Ic-NGE"/>
                         <outlet property="headerLabel" destination="VhH-9Z-J22" id="5PP-hg-hkK"/>
-                        <outlet property="tableBottomSeparation" destination="Qxp-Yk-Jw6" id="4s7-R1-X5y"/>
                         <outlet property="tableFooterSeparation" destination="L7v-O8-qpV" id="wkk-TU-ft8"/>
-                        <outlet property="tableHeightConstraint" destination="1Oi-5j-yAn" id="PSe-MB-Lph"/>
-                        <outlet property="tableTopSeparation" destination="bd9-nM-LjQ" id="Jbi-OI-VTa"/>
                         <outlet property="tableView" destination="cr0-5n-2PU" id="s6h-e6-JV7"/>
                     </connections>
                 </viewController>

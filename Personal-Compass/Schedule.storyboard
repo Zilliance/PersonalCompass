@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wEt-bd-DK6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wEt-bd-DK6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -71,6 +71,11 @@
                                         <state key="normal" title="Add to Calendar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="addToCalendarAction:" destination="wEt-bd-DK6" eventType="touchUpInside" id="qUB-ZX-rgY"/>
                                         </connections>
@@ -95,7 +100,7 @@
                                         </connections>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpF-Pf-OA5">
-                                        <rect key="frame" x="169.5" y="484" width="12" height="22"/>
+                                        <rect key="frame" x="169.5" y="483" width="12" height="22"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -108,9 +113,14 @@
                                             <constraint firstAttribute="height" constant="44" id="udE-r4-HU0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="20"/>
-                                        <state key="normal" title="Set Reminder">
+                                        <state key="normal" title="Notify Me">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="setReminderAction:" destination="wEt-bd-DK6" eventType="touchUpInside" id="rVB-qq-lpg"/>
                                         </connections>
@@ -121,7 +131,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ARk-Af-1Ns" secondAttribute="trailing" constant="20" id="15x-UB-tSd"/>
                                     <constraint firstItem="GVA-66-HcP" firstAttribute="top" secondItem="HUt-AN-9Ff" secondAttribute="top" constant="8" id="8Hf-v7-FDC"/>
                                     <constraint firstAttribute="trailing" secondItem="NSn-Ab-T1L" secondAttribute="trailing" constant="207" id="96B-6U-gpa"/>
-                                    <constraint firstItem="UpF-Pf-OA5" firstAttribute="top" secondItem="QhY-Pv-YdG" secondAttribute="bottom" id="BLt-Yb-8hD"/>
+                                    <constraint firstItem="UpF-Pf-OA5" firstAttribute="top" secondItem="QhY-Pv-YdG" secondAttribute="bottom" constant="-1" id="BLt-Yb-8hD"/>
                                     <constraint firstItem="QhY-Pv-YdG" firstAttribute="top" secondItem="hVv-9h-ebO" secondAttribute="bottom" constant="20" id="Bhf-Fg-caA"/>
                                     <constraint firstAttribute="trailing" secondItem="QhY-Pv-YdG" secondAttribute="trailing" constant="16" id="FJ7-Nr-npd"/>
                                     <constraint firstItem="NSn-Ab-T1L" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="Hjm-oV-Qiw"/>
@@ -136,7 +146,7 @@
                                     <constraint firstItem="QhY-Pv-YdG" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="kYe-EQ-sh9"/>
                                     <constraint firstItem="hVv-9h-ebO" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="oFe-d2-ZAI"/>
                                     <constraint firstAttribute="bottom" secondItem="pz9-qF-xLk" secondAttribute="bottom" constant="16" id="p0G-gx-yEQ"/>
-                                    <constraint firstItem="pz9-qF-xLk" firstAttribute="top" secondItem="UpF-Pf-OA5" secondAttribute="bottom" id="qWg-or-TAU"/>
+                                    <constraint firstItem="pz9-qF-xLk" firstAttribute="top" secondItem="UpF-Pf-OA5" secondAttribute="bottom" constant="1" id="qWg-or-TAU"/>
                                     <constraint firstItem="GVA-66-HcP" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="qvs-wM-ljC"/>
                                     <constraint firstItem="OM2-74-mew" firstAttribute="top" secondItem="GVA-66-HcP" secondAttribute="bottom" constant="3" id="rAF-f0-vR7"/>
                                     <constraint firstItem="pz9-qF-xLk" firstAttribute="top" secondItem="QhY-Pv-YdG" secondAttribute="bottom" constant="22" id="wq2-wl-LcZ"/>
