@@ -196,6 +196,17 @@ extension Database {
         }
     }
     
+    func delete(_ object: Object) {
+        do {
+            try realm.write {
+                 realm.delete(object)
+            }
+        }
+        catch let error {
+            print(error)
+        }
+    }
+    
     func add(realmObject: Object, update: Bool = false) {
         do {
             try realm.write({
