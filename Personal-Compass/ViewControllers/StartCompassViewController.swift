@@ -57,6 +57,7 @@ class CompassCollectionViewCell: UICollectionViewCell {
     func setup(for compass: Compass) {
         
         self.contentView.layer.borderWidth = 0
+        self.titleLabel.text = compass.stressor
         
         if compass.completed {
             self.completedLabel.backgroundColor = .navBar
@@ -69,7 +70,6 @@ class CompassCollectionViewCell: UICollectionViewCell {
         else {
             
             self.completedLabel.text = "In progress"
-            self.titleLabel.text = compass.stressor
             
         }
     }
