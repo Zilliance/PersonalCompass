@@ -39,6 +39,9 @@
 		4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */; };
 		4FD5B6611ECF0CEA0017DC06 /* CompassStressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */; };
 		5DEF7E6D86CE1016EC333832 /* Pods_Personal_CompassTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */; };
+		8C42EB911EE9DE1700167EF4 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C42EB8E1EE9DE1700167EF4 /* faq.html */; };
+		8C42EB921EE9DE1700167EF4 /* zilliance privacy policy.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C42EB8F1EE9DE1700167EF4 /* zilliance privacy policy.html */; };
+		8C42EB931EE9DE1700167EF4 /* zilliance terms of service.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C42EB901EE9DE1700167EF4 /* zilliance terms of service.html */; };
 		8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B051ECA2D9700566531 /* Muli-Black.ttf */; };
 		8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */; };
 		8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C463B071ECA2D9700566531 /* Muli-Bold.ttf */; };
@@ -148,6 +151,9 @@
 		4FD5B65C1ECCDB200017DC06 /* StringSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringSelectionViewController.swift; path = ViewControllers/StringSelectionViewController.swift; sourceTree = "<group>"; };
 		4FD5B65E1ECCE0480017DC06 /* AddItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemCell.swift; path = Cells/AddItemCell.swift; sourceTree = "<group>"; };
 		4FD5B6601ECF0CEA0017DC06 /* CompassStressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompassStressViewController.swift; path = ViewControllers/CompassStressViewController.swift; sourceTree = "<group>"; };
+		8C42EB8E1EE9DE1700167EF4 /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
+		8C42EB8F1EE9DE1700167EF4 /* zilliance privacy policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zilliance privacy policy.html"; sourceTree = "<group>"; };
+		8C42EB901EE9DE1700167EF4 /* zilliance terms of service.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zilliance terms of service.html"; sourceTree = "<group>"; };
 		8C463B051ECA2D9700566531 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Black.ttf"; path = "Fonts/Muli-Black.ttf"; sourceTree = "<group>"; };
 		8C463B061ECA2D9700566531 /* Muli-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-BlackItalic.ttf"; path = "Fonts/Muli-BlackItalic.ttf"; sourceTree = "<group>"; };
 		8C463B071ECA2D9700566531 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Muli-Bold.ttf"; path = "Fonts/Muli-Bold.ttf"; sourceTree = "<group>"; };
@@ -327,6 +333,16 @@
 				8C54AD131ED72B33001EC903 /* CustomStressViewController.swift */,
 			);
 			name = StringSelectionItems;
+			sourceTree = "<group>";
+		};
+		8C42EB8D1EE9DDFC00167EF4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C42EB8E1EE9DE1700167EF4 /* faq.html */,
+				8C42EB8F1EE9DE1700167EF4 /* zilliance privacy policy.html */,
+				8C42EB901EE9DE1700167EF4 /* zilliance terms of service.html */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		8C463B041ECA2D8600566531 /* Fonts */ = {
@@ -512,6 +528,7 @@
 		E37C7A791EC9FBA300076737 /* Personal-Compass */ = {
 			isa = PBXGroup;
 			children = (
+				8C42EB8D1EE9DDFC00167EF4 /* Resources */,
 				4FCBA1AF1EDD951400B68A85 /* Utils */,
 				8C463B3D1ECB6E2300566531 /* App.swift */,
 				E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */,
@@ -680,6 +697,7 @@
 				8C54AD241EE0B7F5001EC903 /* Schedule.storyboard in Resources */,
 				8C463B1F1ECA2D9700566531 /* Muli-SemiBold.ttf in Resources */,
 				8C463B181ECA2D9700566531 /* Muli-ExtraBoldItalic.ttf in Resources */,
+				8C42EB931EE9DE1700167EF4 /* zilliance terms of service.html in Resources */,
 				8C463B1B1ECA2D9700566531 /* Muli-Italic.ttf in Resources */,
 				4FA8257E1EE1AD5F009AB272 /* CompassFacetSummaryCell.xib in Resources */,
 				8C463B1D1ECA2D9700566531 /* Muli-LightItalic.ttf in Resources */,
@@ -691,6 +709,7 @@
 				8C463B411ECB843400566531 /* CreateCompass.storyboard in Resources */,
 				8C54AD171ED89991001EC903 /* InnerWisdom.storyboard in Resources */,
 				8C54AD2B1EE610E4001EC903 /* FeelBetter.storyboard in Resources */,
+				8C42EB921EE9DE1700167EF4 /* zilliance privacy policy.html in Resources */,
 				8C54AD101ED5E262001EC903 /* Need.storyboard in Resources */,
 				8C463B341ECA63CB00566531 /* WebView.storyboard in Resources */,
 				8C463B151ECA2D9700566531 /* Muli-Bold.ttf in Resources */,
@@ -712,6 +731,7 @@
 				8C463B2E1ECA441100566531 /* SideMenu.storyboard in Resources */,
 				8C463B161ECA2D9700566531 /* Muli-BoldItalic.ttf in Resources */,
 				8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */,
+				8C42EB911EE9DE1700167EF4 /* faq.html in Resources */,
 				8C463B171ECA2D9700566531 /* Muli-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
