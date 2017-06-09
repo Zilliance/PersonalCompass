@@ -17,7 +17,7 @@ class CompassCollectionViewCell: UICollectionViewCell {
     
     static let size = CGSize(width: 105.0, height: 105.0)
     
-    var isEditing = true
+    var isDeleting = false
     
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -27,6 +27,9 @@ class CompassCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
+            guard isDeleting else {
+                return
+            }
             if isSelected {
                 self.addBorder()
             }
@@ -52,6 +55,8 @@ class CompassCollectionViewCell: UICollectionViewCell {
     }
     
     func setup(for compass: Compass) {
+        
+        self.contentView.layer.borderWidth = 0
         
         if compass.completed {
             self.completedLabel.backgroundColor = .navBar
@@ -111,7 +116,9 @@ class StartCompassViewController: UIViewController {
     }
     
     private func toogleDeleteMode() {
+        
         self.isDeleting = !self.isDeleting
+        self.collectionView.reloadData()
         self.editButton.title = self.isDeleting ? "Cancel" : "Edit"
         
         UIView.animate(withDuration: 0.3, animations: {
@@ -183,6 +190,7 @@ extension StartCompassViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "compassCell", for: indexPath) as! CompassCollectionViewCell
         let compass = self.compasses[indexPath.row]
+        cell.isDeleting = self.isDeleting
         cell.setup(for: compass)
     
         return cell
