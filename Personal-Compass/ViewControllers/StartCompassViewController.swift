@@ -120,12 +120,12 @@ class StartCompassViewController: UIViewController {
         
         self.isDeleting = !self.isDeleting
         self.collectionView.reloadData()
-        self.editButton.title = self.isDeleting ? "Cancel" : "Edit"
+        self.editButton.title = self.isDeleting ? "Done" : "Edit"
         
         UIView.animate(withDuration: 0.3, animations: {
             self.topOverlay.alpha = self.isDeleting ? 0.6 : 0
             self.deleteButtonContainer.alpha = self.isDeleting ? 1 : 0
-            self.SelectLabel.alpha = self.isDeleting ? 1 : 0 
+            self.SelectLabel.alpha = self.isDeleting ? 1 : 0
         }) { (complete) in
             
         }
