@@ -32,6 +32,9 @@ class CompassSummaryViewController: UIViewController {
         super.viewDidLoad()
 
         showAssessmentView()
+        
+        self.title = compass.stressor
+        
     }
 
     override func didReceiveMemoryWarning() {
