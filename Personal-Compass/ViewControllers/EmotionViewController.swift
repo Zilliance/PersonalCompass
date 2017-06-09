@@ -92,6 +92,7 @@ class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, C
     
     fileprivate func setupEmotionLabel() {
         self.emotionLabel.text = self.emotions[self.currentIndex].longTitle
+        self.emotionLabel.textColor = self.emotions[self.currentIndex].color
     }
     
     @IBAction func rightArrowAction(_ sender: UIButton) {

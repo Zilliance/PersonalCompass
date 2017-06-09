@@ -59,7 +59,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="QR5-we-Vae"/>
                                         </constraints>
-                                        <state key="normal" image="arrow-icon-right-slim"/>
+                                        <state key="normal" image="arrow-icon-left-slim"/>
                                         <connections>
                                             <action selector="leftArrowAction:" destination="AcN-T2-8PF" eventType="touchUpInside" id="e5q-xk-q8V"/>
                                         </connections>
@@ -171,6 +171,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-icon-left-slim" width="50" height="50"/>
         <image name="arrow-icon-right-slim" width="50" height="50"/>
     </resources>
 </document>
