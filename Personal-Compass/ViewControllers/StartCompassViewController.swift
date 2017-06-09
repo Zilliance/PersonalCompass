@@ -83,6 +83,7 @@ class StartCompassViewController: UIViewController {
     @IBOutlet weak var topOverlay: UIView!
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var deleteButtonContainer: UIView!
+    @IBOutlet weak var SelectLabel: UILabel!
     
     fileprivate var isDeleting = false
     
@@ -124,6 +125,7 @@ class StartCompassViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: {
             self.topOverlay.alpha = self.isDeleting ? 0.6 : 0
             self.deleteButtonContainer.alpha = self.isDeleting ? 1 : 0
+            self.SelectLabel.alpha = self.isDeleting ? 1 : 0 
         }) { (complete) in
             
         }

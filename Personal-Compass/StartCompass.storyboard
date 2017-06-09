@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
@@ -143,6 +146,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1D-Q5-I8Q">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                                 <color key="backgroundColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
                                                 <state key="normal" title="Delete">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -150,7 +154,7 @@
                                                     <action selector="deleteAction:" destination="D2h-TF-JmU" eventType="touchUpInside" id="Vbq-ZR-aNb"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trashcan" translatesAutoresizingMaskIntoConstraints="NO" id="cEd-7q-tC2">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trashcan" translatesAutoresizingMaskIntoConstraints="NO" id="cEd-7q-tC2">
                                                 <rect key="frame" x="333" y="15" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Oeg-nf-rfW"/>
@@ -169,6 +173,16 @@
                                             <constraint firstAttribute="bottom" secondItem="o1D-Q5-I8Q" secondAttribute="bottom" id="uyI-LN-E4h"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-qU-yD7">
+                                        <rect key="frame" x="301" y="15" width="54" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Ib5-6L-4i6"/>
+                                            <constraint firstAttribute="width" constant="54" id="K1d-cx-Cdq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.72156862745098038" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -180,7 +194,9 @@
                                     <constraint firstItem="7bn-1n-4ff" firstAttribute="leading" secondItem="XJm-xD-0QE" secondAttribute="leading" constant="20" id="Ljm-rv-RnT"/>
                                     <constraint firstItem="mHz-F7-JUf" firstAttribute="leading" secondItem="XJm-xD-0QE" secondAttribute="leading" id="Sf4-RV-f4h"/>
                                     <constraint firstItem="5LE-FS-IrB" firstAttribute="top" secondItem="XJm-xD-0QE" secondAttribute="top" constant="16" id="d0z-RY-9uP"/>
+                                    <constraint firstItem="9fg-qU-yD7" firstAttribute="top" secondItem="XJm-xD-0QE" secondAttribute="top" constant="15" id="d9U-Or-eQf"/>
                                     <constraint firstAttribute="bottom" secondItem="7bn-1n-4ff" secondAttribute="bottom" id="dfd-G9-2pb"/>
+                                    <constraint firstAttribute="trailing" secondItem="9fg-qU-yD7" secondAttribute="trailing" constant="20" id="yoV-6P-r6h"/>
                                     <constraint firstAttribute="bottom" secondItem="mHz-F7-JUf" secondAttribute="bottom" id="zh4-UH-e8e"/>
                                 </constraints>
                             </view>
@@ -198,7 +214,7 @@
                                             <action selector="startAction:" destination="D2h-TF-JmU" eventType="touchUpInside" id="ojv-F6-tg8"/>
                                         </connections>
                                     </button>
-                                    <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7H-b8-34b">
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7H-b8-34b">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -240,6 +256,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="SelectLabel" destination="9fg-qU-yD7" id="Otk-9a-1zF"/>
                         <outlet property="collectionView" destination="7bn-1n-4ff" id="7Ih-Yc-6Py"/>
                         <outlet property="deleteButtonContainer" destination="mHz-F7-JUf" id="95e-A3-Gie"/>
                         <outlet property="editButton" destination="gHN-cO-x3Q" id="rrd-zs-mZ2"/>
