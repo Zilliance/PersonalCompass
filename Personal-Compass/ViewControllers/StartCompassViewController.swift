@@ -54,6 +54,7 @@ class StartCompassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,6 +69,9 @@ class StartCompassViewController: UIViewController {
         layout.itemSize = CompassCollectionViewCell.size
         self.collectionView.collectionViewLayout = layout
         self.startCompassButton.layer.cornerRadius = App.Appearance.buttonCornerRadius
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
     }
     
     // MARK: -- User Actions
@@ -113,7 +117,11 @@ extension StartCompassViewController: UICollectionViewDelegate {
         }
         
         else {
-            //go to summary
+            guard let compassSummaryViewController = UIStoryboard(name: "CompassSummary", bundle: nil).instantiateInitialViewController() as? CompassSummaryViewController else { return assertionFailure() }
+            
+            compassSummaryViewController.compass = compass
+            self.navigationController?.pushViewController(compassSummaryViewController, animated: true)
+            
         }
 
         

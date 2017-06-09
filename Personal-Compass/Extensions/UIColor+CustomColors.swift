@@ -26,6 +26,8 @@ extension UIColor {
     
     static let contentBackground = UIColor.color(forRed: 250, green: 250, blue: 250, alpha: 1)
 
+    static let darkGreyBlue = UIColor.color(forRed: 51, green: 74, blue: 95, alpha: 1)
+
 }
 
 // MARK: - Scene Colors

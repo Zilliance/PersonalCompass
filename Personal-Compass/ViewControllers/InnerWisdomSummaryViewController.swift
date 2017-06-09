@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SummaryViewControllerProtocol {
     
     enum RowType: Int {
         case need
@@ -38,6 +38,12 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
     var currentCompass: Compass!
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet weak var tableTopSeparation: NSLayoutConstraint!
+    
+    var shouldShowFooterHeader: Bool = true
+    
+    @IBOutlet var headerLabel: UILabel!
+    
     var sceneSelectionAction: ((CompassScene) -> ())?
 
     override func viewDidLoad() {
@@ -47,6 +53,11 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 84
+        
+        if (!shouldShowFooterHeader) {
+            self.tableTopSeparation.constant = 0
+            headerLabel.isHidden = true
+        }
         
         let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 2))
         additionalSeparator.backgroundColor = UIColor.silverColor
