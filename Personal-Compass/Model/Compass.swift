@@ -47,6 +47,8 @@ final class Compass: Object {
     
     dynamic var stressor: String?
     
+    dynamic var compassEmotion: String?
+    
     dynamic var need: String?
     
     dynamic var editedNeed: String?

@@ -29,7 +29,7 @@ class EmotionCell: UITableViewCell {
 
 class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
     
-    
+
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
     @IBOutlet weak var emotionTextField: UITextField!
@@ -40,7 +40,15 @@ class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, C
     
     var currentCompass: Compass!
     
-    var error: CompassError? = nil
+    var error: CompassError? {
+        if self.emotionTextField.text?.characters.count == 0 {
+            return .text
+        }
+        else {
+            return nil
+        }
+    }
+
     
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
@@ -60,6 +68,8 @@ class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, C
         self.picker.translatesAutoresizingMaskIntoConstraints = false
         self.pickerContainerView.addSubview(self.picker)
         
+        self.picker.interitemSpacing = 13
+        
         self.picker.topAnchor.constraint(equalTo: self.pickerContainerView.topAnchor).isActive = true
         self.picker.leadingAnchor.constraint(equalTo: self.pickerContainerView.leadingAnchor).isActive = true
         self.picker.trailingAnchor.constraint(equalTo: self.pickerContainerView.trailingAnchor).isActive = true
@@ -76,6 +86,7 @@ class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, C
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
             self.picker.scrollToItem(self.currentIndex, animated: true)
+            self.emotionTextField.text = self.currentCompass.compassEmotion
         }
         
         self.setupEmotionLabel()
@@ -87,6 +98,7 @@ class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, C
         let emotion = self.emotions[self.currentIndex]
         self.currentCompass.emotion = emotion
         self.currentCompass.lastEditedFacet = .emotion
+        self.currentCompass.compassEmotion = self.emotionTextField.text
         
     }
     
@@ -132,10 +144,6 @@ extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
         self.currentIndex = item
         self.setupEmotionLabel()
-    }
-    
-    func pickerView(_ pickerView: AKPickerView, marginForItem item: Int) -> CGSize {
-        return CGSize(width: 20, height: 20)
     }
 }
 

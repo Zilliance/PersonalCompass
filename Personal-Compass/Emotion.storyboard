@@ -59,7 +59,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="QR5-we-Vae"/>
                                         </constraints>
-                                        <state key="normal" image="arrow-icon-left-slim"/>
+                                        <state key="normal" image="arrow-icon-left-20px"/>
                                         <connections>
                                             <action selector="leftArrowAction:" destination="AcN-T2-8PF" eventType="touchUpInside" id="e5q-xk-q8V"/>
                                         </connections>
@@ -69,7 +69,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="2Mo-pr-jah"/>
                                         </constraints>
-                                        <state key="normal" image="arrow-icon-right-slim"/>
+                                        <state key="normal" image="arrow-icon-right-20px"/>
                                         <connections>
                                             <action selector="rightArrowAction:" destination="AcN-T2-8PF" eventType="touchUpInside" id="zQF-zU-5Zz"/>
                                         </connections>
@@ -124,7 +124,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="IDF-9m-OR3"/>
                                 </constraints>
-                                <color key="textColor" red="0.36862745099999999" green="0.45098039220000002" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -171,7 +171,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow-icon-left-slim" width="50" height="50"/>
-        <image name="arrow-icon-right-slim" width="50" height="50"/>
+        <image name="arrow-icon-left-20px" width="20" height="20"/>
+        <image name="arrow-icon-right-20px" width="20" height="20"/>
     </resources>
 </document>
