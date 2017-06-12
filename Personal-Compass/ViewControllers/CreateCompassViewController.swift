@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FXPageControl
 
 protocol CompassValidation {
     var error: CompassError? { get }
@@ -181,7 +180,7 @@ class CreateCompassViewController: UIViewController {
     }
     
     @IBOutlet weak var topLabel: UILabel!
-    @IBOutlet weak var pageControl: FXPageControl!
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var pageContainerView: UIView!
     @IBOutlet weak var returnToSummaryButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -246,12 +245,10 @@ class CreateCompassViewController: UIViewController {
     private func setupView() {
         
         self.topLabel.backgroundColor = .clear
-        self.pageControl.dotSize = 8
         self.pageControl.numberOfPages = self.compassItems.count
-        self.pageControl.dotSpacing = 12
         self.pageControl.backgroundColor = .clear
-        self.pageControl.selectedDotImage = #imageLiteral(resourceName: "pageview-dot-on").resizedImage(newSize: CGSize(width: 12, height: 12))
-        self.pageControl.dotImage = #imageLiteral(resourceName: "pageview-dot-off").resizedImage(newSize: CGSize(width: 8, height: 8))
+        self.pageControl.pageIndicatorTintColor = .dotColor
+        self.pageControl.currentPageIndicatorTintColor = .white
         self.pageControl.isUserInteractionEnabled = false
         
         

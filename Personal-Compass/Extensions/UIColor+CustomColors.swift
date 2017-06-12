@@ -22,13 +22,15 @@ extension UIColor {
     
     static let aquaBlue = UIColor.color(forRed: 0, green: 184, blue: 231, alpha: 1)
     
-    class func color(forRed red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
-        return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
-    }
-    
     static let contentBackground = UIColor.color(forRed: 250, green: 250, blue: 250, alpha: 1)
 
     static let darkGreyBlue = UIColor.color(forRed: 51, green: 74, blue: 95, alpha: 1)
+    
+    static let dotColor = UIColor.color(forRed: 94, green: 115, blue: 134, alpha: 1)
+    
+    class func color(forRed red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
+        return UIColor(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: alpha)
+    }
 
 }
 
