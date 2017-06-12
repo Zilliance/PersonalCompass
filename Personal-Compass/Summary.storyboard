@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p66-MD-3vQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p66-MD-3vQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,17 +27,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhH-9Z-J22">
-                                <rect key="frame" x="12" y="15" width="296" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="VBr-14-sgg"/>
-                                </constraints>
+                                <rect key="frame" x="12" y="15" width="296" height="45.5"/>
                                 <string key="text">It's not my stressor that is causing me to suffer; it's my thoughts about it. In fact, this is how my thoughts are affecting my emotions, body and behavior.</string>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cr0-5n-2PU">
-                                <rect key="frame" x="0.0" y="85" width="320" height="330.5"/>
+                                <rect key="frame" x="0.0" y="72.5" width="320" height="328"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="p66-MD-3vQ" id="kDH-eC-pOO"/>
@@ -45,10 +42,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Now that I know how my thoughts about my stressor are affecting me, I can identify what I need to feel better." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rna-bf-aaY">
-                                <rect key="frame" x="12" y="427.5" width="296" height="30.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30.5" id="nUR-ZH-YAx"/>
-                                </constraints>
+                                <rect key="frame" x="12" y="412.5" width="296" height="45.5"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="12"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +53,7 @@
                             <constraint firstItem="Rna-bf-aaY" firstAttribute="top" secondItem="cr0-5n-2PU" secondAttribute="bottom" constant="12" id="L7v-O8-qpV"/>
                             <constraint firstItem="Rna-bf-aaY" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" constant="12" id="Ng0-qg-KyN"/>
                             <constraint firstAttribute="trailing" secondItem="Rna-bf-aaY" secondAttribute="trailing" constant="12" id="V9L-PZ-3h0"/>
-                            <constraint firstItem="o1b-ap-5JS" firstAttribute="top" secondItem="Rna-bf-aaY" secondAttribute="bottom" priority="750" constant="12" id="XTi-ry-Ojr"/>
+                            <constraint firstItem="o1b-ap-5JS" firstAttribute="top" secondItem="Rna-bf-aaY" secondAttribute="bottom" constant="12" id="X81-Fj-hV1"/>
                             <constraint firstItem="cr0-5n-2PU" firstAttribute="top" secondItem="VhH-9Z-J22" secondAttribute="bottom" constant="12" id="ZHi-2W-yQk"/>
                             <constraint firstAttribute="trailing" secondItem="VhH-9Z-J22" secondAttribute="trailing" constant="12" id="fw9-Od-u51"/>
                             <constraint firstItem="cr0-5n-2PU" firstAttribute="leading" secondItem="aPI-kJ-IZd" secondAttribute="leading" id="iPv-nd-DHH"/>
@@ -73,8 +67,9 @@
                     <connections>
                         <outlet property="footerLabel" destination="Rna-bf-aaY" id="7Of-Ic-NGE"/>
                         <outlet property="headerLabel" destination="VhH-9Z-J22" id="5PP-hg-hkK"/>
-                        <outlet property="tableFooterSeparation" destination="L7v-O8-qpV" id="wkk-TU-ft8"/>
                         <outlet property="tableView" destination="cr0-5n-2PU" id="s6h-e6-JV7"/>
+                        <outlet property="tableViewBottomConstraint" destination="L7v-O8-qpV" id="LFy-AK-odO"/>
+                        <outlet property="tableViewTopConstraint" destination="ZHi-2W-yQk" id="Pgf-5n-39n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXb-hK-dmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
