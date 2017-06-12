@@ -10,7 +10,6 @@ target 'Personal-Compass' do
   pod 'Realm'
   pod 'RealmSwift'
   pod 'SideMenuController'
-  pod 'FXPageControl'
   pod 'SVProgressHUD'
   pod 'AKPickerView-Swift', :git => 'https://github.com/Akkyie/AKPickerView-Swift.git'
 
