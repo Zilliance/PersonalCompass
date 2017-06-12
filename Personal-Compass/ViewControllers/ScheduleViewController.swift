@@ -57,10 +57,18 @@ class ScheduleViewController: UIViewController {
     }
     
     // MARK: -- User Actions
+    
+    private func showErrorNoReminder() {
+        let alert = UIAlertController(title: nil, message: "Please enter your reminder", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
     @IBAction func addToCalendarAction(_ sender: UIButton) {
         
         guard let body = self.textView.text, body.characters.count > 0 else {
+            
+            self.showErrorNoReminder()
             
             return
         }
@@ -94,6 +102,8 @@ class ScheduleViewController: UIViewController {
     @IBAction func setReminderAction(_ sender: UIButton) {
         
         guard let body = self.textView.text, body.characters.count > 0 else {
+            
+            self.showErrorNoReminder()
             
             return
         }
