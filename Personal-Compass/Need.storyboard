@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g5q-sN-oXo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g5q-sN-oXo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,6 +17,9 @@
         </array>
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
+        </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -38,8 +41,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1RR-MN-alT">
-                                <rect key="frame" x="20" y="121.5" width="335" height="128"/>
+                            <textView clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1RR-MN-alT">
+                                <rect key="frame" x="20" y="147" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Apn-bx-oen"/>
@@ -51,16 +54,22 @@
                                     <outlet property="delegate" destination="g5q-sN-oXo" id="tXf-Df-b5G"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pib-WR-Kg3">
-                                <rect key="frame" x="20" y="289.5" width="335" height="21.5"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pib-WR-Kg3">
+                                <rect key="frame" x="20" y="315" width="335" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2U-dk-bIB">
-                                <rect key="frame" x="20" y="331" width="335" height="21.5"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2U-dk-bIB">
+                                <rect key="frame" x="20" y="356.5" width="335" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write the first thing that comes to mind when you ask yourself, &quot;What do I need to feel better?&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5M-ux-RTV">
+                                <rect key="frame" x="20" y="91.5" width="335" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                <color key="textColor" white="0.5634765625" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -70,14 +79,17 @@
                             <constraint firstItem="W2U-dk-bIB" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="43I-Rk-kpT"/>
                             <constraint firstItem="1RR-MN-alT" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="97n-sK-kNg"/>
                             <constraint firstItem="fLS-yy-axy" firstAttribute="top" secondItem="1Pr-ZN-C0i" secondAttribute="bottom" constant="40" id="Adw-A7-xuf"/>
+                            <constraint firstAttribute="trailing" secondItem="M5M-ux-RTV" secondAttribute="trailing" constant="20" id="Man-ee-Ya2"/>
                             <constraint firstAttribute="trailing" secondItem="fLS-yy-axy" secondAttribute="trailing" constant="20" id="Nz8-dr-CRH"/>
+                            <constraint firstItem="M5M-ux-RTV" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="SFt-sH-ZVN"/>
                             <constraint firstAttribute="trailing" secondItem="W2U-dk-bIB" secondAttribute="trailing" constant="20" id="XxL-JT-Zat"/>
                             <constraint firstAttribute="trailing" secondItem="1RR-MN-alT" secondAttribute="trailing" constant="20" id="Y8U-nP-XEz"/>
                             <constraint firstItem="pib-WR-Kg3" firstAttribute="top" secondItem="1RR-MN-alT" secondAttribute="bottom" constant="40" id="ci1-1n-iUV"/>
                             <constraint firstItem="W2U-dk-bIB" firstAttribute="top" secondItem="pib-WR-Kg3" secondAttribute="bottom" constant="20" id="dKl-Y9-IVf"/>
                             <constraint firstItem="fLS-yy-axy" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="efv-0Q-wXY"/>
                             <constraint firstItem="pib-WR-Kg3" firstAttribute="leading" secondItem="nX8-Ba-cXY" secondAttribute="leading" constant="20" id="f8i-Lc-73V"/>
-                            <constraint firstItem="1RR-MN-alT" firstAttribute="top" secondItem="fLS-yy-axy" secondAttribute="bottom" constant="40" id="vmq-qG-Cor"/>
+                            <constraint firstItem="1RR-MN-alT" firstAttribute="top" secondItem="M5M-ux-RTV" secondAttribute="bottom" constant="20" id="her-A7-O6A"/>
+                            <constraint firstItem="M5M-ux-RTV" firstAttribute="top" secondItem="fLS-yy-axy" secondAttribute="bottom" constant="10" id="yym-62-SQA"/>
                         </constraints>
                     </view>
                     <connections>
