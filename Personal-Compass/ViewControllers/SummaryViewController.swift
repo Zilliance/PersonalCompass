@@ -62,8 +62,6 @@ class SummaryViewController: UIViewController, SummaryViewControllerProtocol {
             self.headerLabel.isHidden = true
             self.footerLabel.isHidden = true
             
-            // self.tableView.removeConstraint(self.tableViewTopConstraint)
-            // self.tableView.removeConstraint(self.tableViewBottomConstraint)
             self.tableViewTopConstraint.isActive = false
             self.tableViewBottomConstraint.isActive = false
             
