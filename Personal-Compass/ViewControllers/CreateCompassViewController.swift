@@ -170,6 +170,7 @@ class CreateCompassViewController: UIViewController {
                 viewController.currentCompass = container.compass
                 viewController.done = {
                     container.save()
+                    container.navigationController?.popViewController(animated: true)
                 }
                 self.viewController = viewController
     
@@ -276,32 +277,6 @@ class CreateCompassViewController: UIViewController {
         if scene == .stressor {
             self.backButton.alpha = 0
         }
-        
-//        UIView.animate(withDuration: 0.3, animations: { 
-//            self.topLabel.layer.backgroundColor = scene.color.cgColor
-//            switch scene {
-//            case .stressor:
-//                self.topLabel.text = scene.rawValue.capitalized
-//                self.backButton.alpha = 0
-//            default:
-//                self.stressorLabel.alpha = 1
-//            }
-//
-//        }) { _ in
-//        
-//            switch scene {
-//            case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5, .innerWisdomSummary:
-//                self.topLabel.text = "Inner Wisdom"
-//                self.stressorLabel.text = self.compass.stressor?.uppercased()
-//            case .takeAction:
-//                self.topLabel.text = "Take Action"
-//                self.stressorLabel.text = self.compass.stressor?.uppercased()
-//            default:
-//                self.topLabel.text = scene.rawValue.capitalized
-//                self.stressorLabel.text = self.compass.stressor?.uppercased()
-//            }
-//            
-//        }
         
         switch scene {
         case .innerWisdom1, .innerWisdom2, .innerWisdom3, .innerWisdom4, .innerWisdom5, .innerWisdomSummary:
@@ -430,41 +405,6 @@ class CreateCompassViewController: UIViewController {
     }
     
     @IBAction func cancelAction(_ sender: Any) {
-        
-//        let update = Database.shared.user.compasses.filter { $0.id == self.compass.id }.count > 0
-//        
-//        var alertController: UIAlertController
-//        
-//        if (update) {
-//            
-//            alertController = UIAlertController(title: nil, message: "Cancelling will discard changes to your compass. Are you sure you want to cancel?", preferredStyle: .alert)
-//            
-//            alertController.addAction(UIAlertAction(title: "Don't Cancel", style: .default) { _ in
-//                alertController.dismiss(animated: true, completion: nil)
-//            })
-//            
-//            alertController.addAction(UIAlertAction(title: "Discard Changes", style: .destructive) { _ in
-//                alertController.dismiss(animated: true, completion: nil)
-//                self.navigationController?.popViewController(animated: true)
-//            })
-//
-//        }
-//        else {
-//            alertController = UIAlertController(title: nil, message: "Cancelling will discard your new compass. Are you sure you want to cancel?", preferredStyle: .alert)
-//            
-//            alertController.addAction(UIAlertAction(title: "Don't Cancel", style: .default) { _ in
-//                alertController.dismiss(animated: true, completion: nil)
-//            })
-//            
-//            alertController.addAction(UIAlertAction(title: "Discard New Compass", style: .destructive) { _ in
-//                alertController.dismiss(animated: true, completion: nil)
-//                self.navigationController?.popViewController(animated: true)
-//            })
-//            
-//        }
-//        
-//        
-//        self.present(alertController, animated: true, completion: nil)
         
         if (self.compass.stressor != nil) {
             save()
