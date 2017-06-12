@@ -56,7 +56,9 @@ extension StressorViewController: CompassValidation {
 
 extension StressorViewController: CompassFacetEditor {
     func save() {
-        self.currentCompass.stressor = self.textView.text
+        if self.textView.text != self.placeholder(for: self.textView) {
+            self.currentCompass.stressor = self.textView.text
+        }
         self.currentCompass.lastEditedFacet = .stressor
     }
 }

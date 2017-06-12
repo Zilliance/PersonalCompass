@@ -52,7 +52,11 @@ class ThoughtViewController: AutoscrollableViewController {
 
 extension ThoughtViewController: CompassFacetEditor {
     func save() {
-        self.currentCompass.thoughtAboutEmotion = self.textView.text
+        if self.textView.text != self.placeholder(for: self.textView) {
+            self.currentCompass.thoughtAboutEmotion = self.textView.text
+        } else {
+            
+        }
         self.currentCompass.lastEditedFacet = .thought
     }
 }
