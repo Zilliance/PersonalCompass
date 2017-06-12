@@ -115,7 +115,7 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
             let emotionCell = tableView.dequeueReusableCell(withIdentifier: "EmotionSummaryCell", for: indexPath) as! EmotionSummaryCell
 
             emotionCell.title.text = "Emotion"
-            emotionCell.label.text = self.currentCompass.needMetEmotion?.shortTitle
+            emotionCell.label.text = self.currentCompass.compassNeedMet
             emotionCell.iconView.image = self.currentCompass.needMetEmotion?.icon
             
             cell = emotionCell

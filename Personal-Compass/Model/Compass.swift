@@ -49,6 +49,8 @@ final class Compass: Object {
     
     dynamic var compassEmotion: String?
     
+    dynamic var compassNeedMet: String?
+    
     dynamic var need: String?
     
     dynamic var editedNeed: String?

@@ -7,83 +7,132 @@
 //
 
 import UIKit
+import AKPickerView_Swift
 
 class InnerWisdom4ViewController: UIViewController, CompassValidation, CompassFacetEditor {
+
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var emotionLabel: UILabel!
+    @IBOutlet weak var pickerContainerView: UIView!
+    @IBOutlet weak var needMetTextField: UITextField!
     
     var currentCompass: Compass!
     
     var error: CompassError? {
-        if let _ = self.tableView.indexPathsForSelectedRows {
-            return nil
+        if self.needMetTextField.text?.characters.count == 0 {
+            return .text
         }
         else {
-            return .selection
+            return nil
         }
     }
-
-
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var textView: UITextView!
+    
+    private let picker = AKPickerView()
+    
+    fileprivate var currentIndex = 0
     
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions()).reversed()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func save() {
-        if let index = self.tableView.indexPathsForSelectedRows?.first {
-            let emotion = self.emotions[index.row]
-            self.currentCompass.needMetEmotion = emotion
-            self.currentCompass.lastEditedFacet = .innerWisdom4
-        }
-    }
-    
-    private func setupView() {
-        if let need = self.currentCompass.editedNeed {
-            self.textView.text = need
-        }
-        
-        self.tableView.tableFooterView = UIView()
-        
-        guard let emotion = self.currentCompass.needMetEmotion else { return }
-        if let row = self.emotions.index(of: emotion) {
-            self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .middle)
-        }
+        self.setupPicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupView()
-    }
-
-
-}
-
-extension InnerWisdom4ViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.emotions.count
+        super.viewWillAppear(animated)
+        self.loadData()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmotionCell", for: indexPath) as! EmotionCell
-        cell.setup(for: emotions[indexPath.row])
-        return cell
+    func save() {
+        let emotion = self.emotions[self.currentIndex]
+        self.currentCompass.needMetEmotion = emotion
+        self.currentCompass.compassNeedMet = self.needMetTextField.text
+        self.currentCompass.lastEditedFacet = .innerWisdom4
+        
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return EmotionCell.cellHeight
+    private func setupPicker() {
+        
+        self.picker.translatesAutoresizingMaskIntoConstraints = false
+        self.pickerContainerView.addSubview(self.picker)
+        
+        self.picker.interitemSpacing = 13
+        
+        self.picker.topAnchor.constraint(equalTo: self.pickerContainerView.topAnchor).isActive = true
+        self.picker.leadingAnchor.constraint(equalTo: self.pickerContainerView.leadingAnchor).isActive = true
+        self.picker.trailingAnchor.constraint(equalTo: self.pickerContainerView.trailingAnchor).isActive = true
+        self.picker.bottomAnchor.constraint(equalTo: self.pickerContainerView.bottomAnchor).isActive = true
+        
+        self.picker.delegate = self
+        self.picker.dataSource = self
+        
     }
-}
-
-extension InnerWisdom4ViewController: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n")
-        {
-            textView.resignFirstResponder()
-            return false
+    
+    private func loadData() {
+        
+        if let emotion = self.currentCompass.needMetEmotion {
+            let index = self.emotions.index(of: emotion)
+            self.currentIndex = index!
+            self.picker.scrollToItem(self.currentIndex, animated: true)
+            self.needMetTextField.text = self.currentCompass.compassNeedMet
         }
         
+        self.textView.text = self.currentCompass.concreteStep
+        
+        self.setupEmotionLabel()
+        
+    }
+    
+    fileprivate func setupEmotionLabel() {
+        self.emotionLabel.text = self.emotions[self.currentIndex].longTitle
+        self.emotionLabel.textColor = self.emotions[self.currentIndex].color
+    }
+    
+    @IBAction func rightArrowAction(_ sender: UIButton) {
+        
+        guard self.currentIndex < self.emotions.count - 1 else {
+            return
+        }
+        
+        self.currentIndex += 1
+        self.picker.scrollToItem(self.currentIndex, animated: true)
+        self.setupEmotionLabel()
+        
+    }
+    
+    @IBAction func leftArrowAction(_ sender: UIButton) {
+        
+        guard self.currentIndex > 0 else {
+            return
+        }
+        self.currentIndex -= 1
+        self.picker.scrollToItem(self.currentIndex, animated: true)
+        self.setupEmotionLabel()
+    }
+
+
+}
+
+extension InnerWisdom4ViewController: AKPickerViewDataSource, AKPickerViewDelegate {
+    
+    func numberOfItemsInPickerView(_ pickerView: AKPickerView) -> Int {
+        return emotions.count
+    }
+    
+    func pickerView(_ pickerView: AKPickerView, imageForItem item: Int) -> UIImage {
+        return self.emotions[item].icon!
+    }
+    
+    func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
+        self.currentIndex = item
+        self.setupEmotionLabel()
+    }
+}
+
+extension InnerWisdom4ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
+    
 }

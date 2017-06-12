@@ -9,24 +9,6 @@
 import UIKit
 import AKPickerView_Swift
 
-class EmotionCell: UITableViewCell {
-    
-    var currentCompass: Compass!
-    
-    static let cellHeight: CGFloat = 56.0
-    
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    func setup(for emotion: Emotion) {
-        self.titleLabel.text = emotion.shortTitle
-        self.numberLabel.text = "\(emotion.level + 1)"
-        self.iconImageView.image = emotion.icon
-    }
-    
-}
-
 class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
     
 

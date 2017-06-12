@@ -44,9 +44,9 @@ class ThoughtViewController: AutoscrollableViewController, CompassFacetEditor, C
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
         
-        if let emotion = self.currentCompass.emotion {
+        if let emotion = self.currentCompass.emotion, let compassEmotion = self.currentCompass.compassEmotion {
             self.emotionIconImageView.image = emotion.icon
-            self.emotionLabel.text = emotion.shortTitle
+            self.emotionLabel.text = compassEmotion
         }
     }
     
