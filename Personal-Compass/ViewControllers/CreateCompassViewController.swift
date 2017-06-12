@@ -272,8 +272,8 @@ class CreateCompassViewController: UIViewController {
         
         //override back button behaviour
         backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
-        backcustomButton?.backgroundColor = UIColor.clear
-        backcustomButton?.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
+        backcustomButton.backgroundColor = UIColor.clear
+        backcustomButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
         self.navigationController?.navigationBar.addSubview(backcustomButton)
         
     }
