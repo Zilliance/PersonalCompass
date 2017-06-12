@@ -63,10 +63,20 @@ class ScheduleViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    private func showSuccessHUD(message: String) {
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.setMaximumDismissTimeInterval(1.0)
+        SVProgressHUD.showSuccess(withStatus: message)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.dismiss(animated: true, completion: nil)
+        })
+
+    }
 
     @IBAction func addToCalendarAction(_ sender: UIButton) {
         
-        guard let body = self.textView.text, body.characters.count > 0 else {
+        guard let body = self.textView.text, body.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 else {
             
             self.showErrorNoReminder()
             
@@ -89,19 +99,15 @@ class ScheduleViewController: UIViewController {
                 return
             }
             
-            SVProgressHUD.setDefaultMaskType(.black)
-            SVProgressHUD.setMaximumDismissTimeInterval(1.0)
-            SVProgressHUD.showSuccess(withStatus: "The reminder has been added to your calendar")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                self.dismiss(animated: true, completion: nil)
-            })
+            self.showSuccessHUD(message: "Added to Calendar")
+            
         }
 
     }
     
     @IBAction func setReminderAction(_ sender: UIButton) {
         
-        guard let body = self.textView.text, body.characters.count > 0 else {
+        guard let body = self.textView.text, body.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 else {
             
             self.showErrorNoReminder()
             
@@ -115,9 +121,8 @@ class ScheduleViewController: UIViewController {
                 LocalNotificationsHelper.scheduleLocalNotification(title: "Personal Compass", body: body, date: self.datePicker.date, identifier: self.compass.id)
                 
                 self.dismiss(animated: true, completion: {
-                    SVProgressHUD.setDefaultMaskType(.black)
-                    SVProgressHUD.setMaximumDismissTimeInterval(1.0)
-                    SVProgressHUD.showSuccess(withStatus: "The reminder has been added to your calendar")
+                    self.showSuccessHUD(message: "Set Reminder")
+
                 })
             }
             else
