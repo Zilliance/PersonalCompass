@@ -389,6 +389,8 @@ class CreateCompassViewController: UIViewController {
                     self.showAlert(title: "Please enter what you need to feel better", message: "")
                 case scene.innerWisdom3.pageIndex:
                     self.showAlert(title: "Please enter a concrete step", message: "")
+                case scene.innerWisdom4.pageIndex:
+                    self.showAlert(title: "Please enter your better feeling emotion", message: "")
                 default:
                     self.showAlert(title: "Please enter text", message: "")
                 }
