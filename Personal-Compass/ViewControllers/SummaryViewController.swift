@@ -37,11 +37,10 @@ class SummaryViewController: UIViewController, SummaryViewControllerProtocol {
     var sceneSelectionAction: ((CompassScene) -> ())?
     
     var currentCompass: Compass!
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var headerView: UIStackView!
-    @IBOutlet weak var headerLabel: UILabel!
     var shouldShowFooterHeader: Bool = true
-
+    
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var footerLabel: UILabel!
     
     @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
@@ -63,8 +62,10 @@ class SummaryViewController: UIViewController, SummaryViewControllerProtocol {
             self.headerLabel.isHidden = true
             self.footerLabel.isHidden = true
             
-            self.tableView.removeConstraint(self.tableViewTopConstraint)
-            self.tableView.removeConstraint(self.tableViewBottomConstraint)
+            // self.tableView.removeConstraint(self.tableViewTopConstraint)
+            // self.tableView.removeConstraint(self.tableViewBottomConstraint)
+            self.tableViewTopConstraint.isActive = false
+            self.tableViewBottomConstraint.isActive = false
             
             self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
             self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
