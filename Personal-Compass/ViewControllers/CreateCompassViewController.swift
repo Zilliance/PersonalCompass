@@ -379,6 +379,8 @@ class CreateCompassViewController: UIViewController {
                 switch self.currentPageIndex {
                 case scene.stressor.pageIndex:
                     self.showAlert(title: "Please enter a stressor", message: "")
+                case scene.emotion.pageIndex:
+                    self.showAlert(title: "Please enter your emotion", message: "")
                 case scene.thought.pageIndex:
                     self.showAlert(title: "Please enter why you're feeling this way", message: "")
                 case scene.need.pageIndex:

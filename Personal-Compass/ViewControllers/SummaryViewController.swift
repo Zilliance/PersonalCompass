@@ -112,7 +112,7 @@ extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
         switch row {
         case .feeling:
             let emotionCell = tableView.dequeueReusableCell(withIdentifier: "EmotionSummaryCell", for: indexPath) as! EmotionSummaryCell
-            emotionCell.label.text = (currentCompass.emotion?.longTitle.components(separatedBy: ",").first ?? "")
+            emotionCell.label.text = (currentCompass.compassEmotion?.components(separatedBy: ",").first ?? "")
             emotionCell.iconView.image = currentCompass.emotion?.icon
             emotionCell.label.textColor = row.sceneAssociated.color
             

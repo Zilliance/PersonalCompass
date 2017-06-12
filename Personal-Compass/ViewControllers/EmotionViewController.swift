@@ -7,84 +7,133 @@
 //
 
 import UIKit
+import AKPickerView_Swift
 
-class EmotionCell: UITableViewCell {
+class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
     
-    var currentCompass: Compass!
-    
-    static let cellHeight: CGFloat = 56.0
-    
-    @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    func setup(for emotion: Emotion) {
-        self.titleLabel.text = emotion.shortTitle
-        self.numberLabel.text = "\(emotion.level + 1)"
-        self.iconImageView.image = emotion.icon
-    }
-    
-}
 
-class EmotionViewController: UIViewController, CompassFacetEditor, CompassValidation {
+    @IBOutlet weak var emotionLabel: UILabel!
+    @IBOutlet weak var pickerContainerView: UIView!
+    @IBOutlet weak var emotionTextField: UITextField!
     
-    @IBOutlet weak var tableView: UITableView!
+    private let picker = AKPickerView()
+    
+    fileprivate var currentIndex = 0
     
     var currentCompass: Compass!
     
     var error: CompassError? {
-        if let _ = self.tableView.indexPathsForSelectedRows {
-            return nil
+        if self.emotionTextField.text?.characters.count == 0 {
+            return .text
         }
         else {
-            return .selection
+            return nil
         }
     }
+
     
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupTableView()
-        self.setupView()
+        self.setupPicker()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.loadData()
+    }
+    
+    private func setupPicker() {
+        
+        self.picker.translatesAutoresizingMaskIntoConstraints = false
+        self.pickerContainerView.addSubview(self.picker)
+        
+        self.picker.interitemSpacing = 13
+        
+        self.picker.topAnchor.constraint(equalTo: self.pickerContainerView.topAnchor).isActive = true
+        self.picker.leadingAnchor.constraint(equalTo: self.pickerContainerView.leadingAnchor).isActive = true
+        self.picker.trailingAnchor.constraint(equalTo: self.pickerContainerView.trailingAnchor).isActive = true
+        self.picker.bottomAnchor.constraint(equalTo: self.pickerContainerView.bottomAnchor).isActive = true
+        
+        self.picker.delegate = self
+        self.picker.dataSource = self
+        
+    }
+    
+    private func loadData() {
+        
+        if let emotion = self.currentCompass.emotion {
+            let index = self.emotions.index(of: emotion)
+            self.currentIndex = index!
+            self.picker.scrollToItem(self.currentIndex, animated: true)
+            self.emotionTextField.text = self.currentCompass.compassEmotion
+        }
+        
+        self.setupEmotionLabel()
+        
     }
     
     func save() {
         
-        if let index = self.tableView.indexPathsForSelectedRows?.first {
-            let emotion = self.emotions[index.row]
-            self.currentCompass.emotion = emotion
-            self.currentCompass.lastEditedFacet = .emotion
-        }
+        let emotion = self.emotions[self.currentIndex]
+        self.currentCompass.emotion = emotion
+        self.currentCompass.lastEditedFacet = .emotion
+        self.currentCompass.compassEmotion = self.emotionTextField.text
+        
     }
     
-    private func setupTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.tableFooterView = UIView()
+    fileprivate func setupEmotionLabel() {
+        self.emotionLabel.text = self.emotions[self.currentIndex].longTitle
+        self.emotionLabel.textColor = self.emotions[self.currentIndex].color
     }
     
-    private func setupView() {
-        guard let emotion = self.currentCompass.emotion else { return }
-        if let row = self.emotions.index(of: emotion) {
-            self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .middle)
+    @IBAction func rightArrowAction(_ sender: UIButton) {
+        
+        guard self.currentIndex < self.emotions.count - 1 else {
+           return
         }
+        
+        self.currentIndex += 1
+        self.picker.scrollToItem(self.currentIndex, animated: true)
+        self.setupEmotionLabel()
+
+    }
+    
+    @IBAction func leftArrowAction(_ sender: UIButton) {
+        
+        guard self.currentIndex > 0 else {
+            return
+        }
+        self.currentIndex -= 1
+        self.picker.scrollToItem(self.currentIndex, animated: true)
+        self.setupEmotionLabel()
+    }
+    
+}
+
+extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
+    
+    func numberOfItemsInPickerView(_ pickerView: AKPickerView) -> Int {
+        return emotions.count
+    }
+    
+    func pickerView(_ pickerView: AKPickerView, imageForItem item: Int) -> UIImage {
+        return self.emotions[item].icon!
+    }
+    
+    func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
+        self.currentIndex = item
+        self.setupEmotionLabel()
     }
 }
 
-extension EmotionViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.emotions.count
+extension EmotionViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmotionCell", for: indexPath) as! EmotionCell
-        cell.setup(for: emotions[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return EmotionCell.cellHeight
-    }
+
 }
+

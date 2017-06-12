@@ -1,4 +1,5 @@
 PODS:
+  - AKPickerView-Swift (2.0.1)
   - FXPageControl (1.5)
   - Realm (2.8.0):
     - Realm/Headers (= 2.8.0)
@@ -9,19 +10,30 @@ PODS:
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
+  - AKPickerView-Swift (from `https://github.com/Akkyie/AKPickerView-Swift.git`)
   - FXPageControl
   - Realm
   - RealmSwift
   - SideMenuController
   - SVProgressHUD
 
+EXTERNAL SOURCES:
+  AKPickerView-Swift:
+    :git: https://github.com/Akkyie/AKPickerView-Swift.git
+
+CHECKOUT OPTIONS:
+  AKPickerView-Swift:
+    :commit: 1ee8c7310bdef0f31f8fb92fbab0ab05978539f6
+    :git: https://github.com/Akkyie/AKPickerView-Swift.git
+
 SPEC CHECKSUMS:
+  AKPickerView-Swift: 4969de689bee54f720dd64700f7aaab02a8f2ddc
   FXPageControl: 97620412515365d10a3282ec0660f49f6401a8f0
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: a5e4ee7d0053c1389477218f7b3bb3907e756e17
+PODFILE CHECKSUM: 9a0d9ca22e56ba54cfeecb8b23744a8a5b6966e7
 
 COCOAPODS: 1.2.1
