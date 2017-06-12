@@ -43,10 +43,9 @@ class StressorViewController: AutoscrollableViewController {
 
 extension StressorViewController: CompassValidation {
     var error: CompassError? {
-        if self.textView.text.characters.count == 0 || self.textView.text == self.placeholder(for: self.textView) {
+        if self.textView.text.isEmpty || self.textView.text == self.placeholder(for: self.textView) {
             return .text
-        }
-        else {
+        } else {
             return nil
         }
     }
