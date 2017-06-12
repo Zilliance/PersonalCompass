@@ -240,7 +240,7 @@ class CreateCompassViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        backcustomButton.removeFromSuperview()
+        self.backcustomButton.removeFromSuperview()
     }
     
     private func setupView() {
@@ -271,9 +271,9 @@ class CreateCompassViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         //override back button behaviour
-        backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
-        backcustomButton.backgroundColor = UIColor.clear
-        backcustomButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
+        self.backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        self.backcustomButton.backgroundColor = UIColor.clear
+        self.backcustomButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
         self.navigationController?.navigationBar.addSubview(backcustomButton)
         
     }
