@@ -67,7 +67,8 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

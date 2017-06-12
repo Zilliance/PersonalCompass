@@ -40,7 +40,8 @@ class NeedViewController: AutoscrollableViewController, CompassFacetEditor, Comp
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupView()
+        super.viewWillAppear(animated)
+        self.setupView()
     }
 
 }

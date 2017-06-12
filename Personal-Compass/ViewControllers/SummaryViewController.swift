@@ -88,7 +88,8 @@ class SummaryViewController: UIViewController, SummaryViewControllerProtocol {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
 
 }

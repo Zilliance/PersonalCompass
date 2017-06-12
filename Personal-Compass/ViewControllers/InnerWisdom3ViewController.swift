@@ -52,10 +52,9 @@ class InnerWisdom3ViewController: AutoscrollableViewController, CompassValidatio
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupView()
+        super.viewWillAppear(animated)
+        self.setupView()
     }
-
-
 }
 
 extension InnerWisdom3ViewController: UITextViewDelegate {

@@ -46,7 +46,8 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupView()
+        super.viewWillAppear(animated)
+        self.setupView()
     }
     
     private func setupView() {

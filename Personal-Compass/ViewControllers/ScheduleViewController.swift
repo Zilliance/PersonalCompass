@@ -28,6 +28,7 @@ class ScheduleViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         //load data
         
         if let previousInformation = LocalNotificationsHelper.getInformationForStoredNotification(identifier: self.compass.id) {

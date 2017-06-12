@@ -9,27 +9,17 @@
 import UIKit
 import RealmSwift
 
-class ThoughtViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
+class ThoughtViewController: AutoscrollableViewController {
     
     var currentCompass: Compass!
     
-    var error: CompassError? {
-        if textView.text.characters.count == 0 {
-            return .text
-        }
-        else {
-            return nil
-        }
-    }
-
     @IBOutlet weak var emotionIconImageView: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
-    
-    func save() {
-        self.currentCompass.thoughtAboutEmotion = self.textView.text
-        self.currentCompass.lastEditedFacet = .thought
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupView()
     }
     
     private func setupView() {
@@ -49,12 +39,28 @@ class ThoughtViewController: AutoscrollableViewController, CompassFacetEditor, C
             self.emotionLabel.text = compassEmotion
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.setupView()
-    }
 
 }
+
+extension ThoughtViewController: CompassFacetEditor {
+    func save() {
+        self.currentCompass.thoughtAboutEmotion = self.textView.text
+        self.currentCompass.lastEditedFacet = .thought
+    }
+}
+
+extension ThoughtViewController: CompassValidation {
+    var error: CompassError? {
+        if textView.text.characters.count == 0 {
+            return .text
+        }
+        else {
+            return nil
+        }
+    }
+}
+
+// MARK: - UITextViewDelegate
 
 extension ThoughtViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

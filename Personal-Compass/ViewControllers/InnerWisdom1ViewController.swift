@@ -37,7 +37,8 @@ class InnerWisdom1ViewController: UIViewController, CompassValidation, CompassFa
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupView()
+        super.viewWillAppear(animated)
+        self.setupView()
     }
     
     @IBAction func listenAction(_ sender: UIButton) {

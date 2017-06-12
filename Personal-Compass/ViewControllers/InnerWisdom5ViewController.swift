@@ -38,7 +38,8 @@ final class InnerWisdom5ViewController: UIViewController, CompassFacetEditor, Co
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupView()
+        super.viewWillAppear(animated)
+        self.setupView()
     }
     
     private func setupView() {

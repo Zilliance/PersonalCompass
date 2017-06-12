@@ -109,8 +109,6 @@ class InnerWisdom4ViewController: AutoscrollableViewController, CompassValidatio
         self.picker.scrollToItem(self.currentIndex, animated: true)
         self.setupEmotionLabel()
     }
-
-
 }
 
 extension InnerWisdom4ViewController: AKPickerViewDataSource, AKPickerViewDelegate {
