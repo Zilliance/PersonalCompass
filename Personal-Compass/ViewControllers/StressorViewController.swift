@@ -21,10 +21,6 @@ class StressorViewController: AutoscrollableViewController {
     
     private func setupView() {
         
-        if let stressor = self.currentCompass.stressor {
-            self.textView.text = stressor
-        }
-        
         self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
@@ -35,6 +31,11 @@ class StressorViewController: AutoscrollableViewController {
             NSFontAttributeName: UIFont.muliRegular(size: 14),
             NSForegroundColorAttributeName: self.placeholderTextColor(for: self.textView)
         ])
+
+        if let stressor = self.currentCompass.stressor {
+            self.textView.textColor = self.normalTextColor(for: textView)
+            self.textView.text = stressor
+        }
     }
     
 }
