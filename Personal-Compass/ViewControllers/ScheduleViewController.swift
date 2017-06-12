@@ -76,7 +76,7 @@ class ScheduleViewController: UIViewController {
 
     @IBAction func addToCalendarAction(_ sender: UIButton) {
         
-        guard let body = self.textView.text, body.characters.count > 0 else {
+        guard let body = self.textView.text, body.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 else {
             
             self.showErrorNoReminder()
             
@@ -107,7 +107,7 @@ class ScheduleViewController: UIViewController {
     
     @IBAction func setReminderAction(_ sender: UIButton) {
         
-        guard let body = self.textView.text, body.characters.count > 0 else {
+        guard let body = self.textView.text, body.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 else {
             
             self.showErrorNoReminder()
             
