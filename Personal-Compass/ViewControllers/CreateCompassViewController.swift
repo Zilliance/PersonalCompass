@@ -191,6 +191,8 @@ class CreateCompassViewController: UIViewController {
     var compass: Compass = Compass()
     
     var previousScene: CompassScene?
+    
+    var backcustomButton: UIButton!
 
     private var currentPageIndex = 0
     
@@ -236,6 +238,11 @@ class CreateCompassViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        backcustomButton.removeFromSuperview()
+    }
+    
     private func setupView() {
         
         self.topLabel.backgroundColor = .clear
@@ -260,15 +267,14 @@ class CreateCompassViewController: UIViewController {
         self.pageControlViewController.view.trailingAnchor.constraint(equalTo: self.pageContainerView.trailingAnchor).isActive = true
         self.pageControlViewController.view.bottomAnchor.constraint(equalTo: self.pageContainerView.bottomAnchor).isActive = true
         
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         //override back button behaviour
-        let backTransparentButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
-        backTransparentButton.backgroundColor = UIColor.clear
-        backTransparentButton.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
-        self.navigationController?.navigationBar.addSubview(backTransparentButton)
+        backcustomButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        backcustomButton?.backgroundColor = UIColor.clear
+        backcustomButton?.addTarget(self, action: #selector(self.cancelAction(_:)), for: .touchUpInside)
+        self.navigationController?.navigationBar.addSubview(backcustomButton)
         
     }
     
@@ -287,6 +293,8 @@ class CreateCompassViewController: UIViewController {
         default:
             self.topLabel.text = scene.rawValue.capitalized
         }
+        
+        self.topLabel.layer.backgroundColor = scene.color.cgColor
         
         self.title = self.compass.stressor?.uppercased()
         
