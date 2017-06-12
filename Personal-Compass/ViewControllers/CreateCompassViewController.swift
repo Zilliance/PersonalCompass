@@ -294,7 +294,7 @@ class CreateCompassViewController: UIViewController {
             self.topLabel.text = scene.rawValue.capitalized
         }
         
-        self.topLabel.layer.backgroundColor = scene.color.cgColor
+        self.topLabel.backgroundColor = scene.color
         
         self.title = self.compass.stressor?.uppercased()
         
