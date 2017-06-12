@@ -37,17 +37,15 @@ class SummaryViewController: UIViewController, SummaryViewControllerProtocol {
     var sceneSelectionAction: ((CompassScene) -> ())?
     
     var currentCompass: Compass!
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var headerView: UIStackView!
     var shouldShowFooterHeader: Bool = true
-
-    @IBOutlet weak var footerLabel: UILabel!
-    @IBOutlet weak var tableTopSeparation: NSLayoutConstraint!
-    @IBOutlet weak var tableBottomSeparation: NSLayoutConstraint!
-    @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet var tableView: UITableView!
     @IBOutlet weak var headerLabel: UILabel!
-    @IBOutlet weak var tableFooterSeparation: NSLayoutConstraint!
+    @IBOutlet weak var footerLabel: UILabel!
+    
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,12 +58,14 @@ class SummaryViewController: UIViewController, SummaryViewControllerProtocol {
         self.tableView.tableHeaderView = additionalSeparator
         
         if (!self.shouldShowFooterHeader) {
-            self.tableTopSeparation.constant = 0
+            
             self.headerLabel.isHidden = true
-            self.tableBottomSeparation.isActive = false
             self.footerLabel.isHidden = true
-            self.tableFooterSeparation.isActive = false
-            self.tableHeightConstraint.isActive = false
+            
+            self.tableViewTopConstraint.isActive = false
+            self.tableViewBottomConstraint.isActive = false
+            
+            self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
             self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         }
         
