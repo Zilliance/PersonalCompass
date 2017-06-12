@@ -9,7 +9,7 @@
 import UIKit
 import AKPickerView_Swift
 
-class InnerWisdom4ViewController: UIViewController, CompassValidation, CompassFacetEditor {
+class InnerWisdom4ViewController: AutoscrollableViewController, CompassValidation, CompassFacetEditor {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var emotionLabel: UILabel!

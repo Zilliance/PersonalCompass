@@ -43,7 +43,7 @@ final class InnerWisdom5ViewController: UIViewController, CompassFacetEditor, Co
     
     private func setupView() {
         emotionIcon.image = currentCompass.needMetEmotion?.icon
-        emotionLabel.text = currentCompass.needMetEmotion?.longTitle
+        emotionLabel.text = currentCompass.compassNeedMet
         emotionLabel.textColor = currentCompass.needMetEmotion?.color
     }
     
