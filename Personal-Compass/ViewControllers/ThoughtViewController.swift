@@ -24,15 +24,21 @@ class ThoughtViewController: AutoscrollableViewController {
     
     private func setupView() {
         
-        if let thought = self.currentCompass.thoughtAboutEmotion {
-            self.textView.text = thought
-        }
-        
-         self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        self.setupPlaceholderTextView(self.textView, placeholder: self.placeholder(for: self.textView), attributes: [
+            NSFontAttributeName: UIFont.muliLight(size: 14),
+            NSForegroundColorAttributeName: self.placeholderTextColor(for: self.textView)
+        ])
+        
+        if let thought = self.currentCompass.thoughtAboutEmotion {
+            self.textView.textColor = self.normalTextColor(for: textView)
+            self.textView.text = thought
+        }
         
         if let emotion = self.currentCompass.emotion, let compassEmotion = self.currentCompass.compassEmotion {
             self.emotionIconImageView.image = emotion.icon
@@ -42,6 +48,8 @@ class ThoughtViewController: AutoscrollableViewController {
 
 }
 
+// MARK: - CompassFacetEditor
+
 extension ThoughtViewController: CompassFacetEditor {
     func save() {
         self.currentCompass.thoughtAboutEmotion = self.textView.text
@@ -49,14 +57,29 @@ extension ThoughtViewController: CompassFacetEditor {
     }
 }
 
+// MARK: - CompassValidation
+
 extension ThoughtViewController: CompassValidation {
     var error: CompassError? {
-        if textView.text.characters.count == 0 {
+        if self.textView.text.isEmpty || self.textView.text == self.placeholder(for: self.textView) {
             return .text
-        }
-        else {
+        } else {
             return nil
         }
+    }
+}
+
+// MARK: - TextViewPlaceholder
+
+extension ThoughtViewController: TextViewPlaceholder {
+    func placeholder(for textView: UITextView) -> String {
+        return "For example, I am feeling fearful because I need to find a new job. Money is tight and time is running out. I have sent out a ton of resumes. I don’t know what else to do."
+    }
+    func placeholderTextColor(for textView: UITextView) -> UIColor {
+        return .textPlaceholderColor
+    }
+    func normalTextColor(for textView: UITextView) -> UIColor {
+        return .textInputColor
     }
 }
 
@@ -71,6 +94,14 @@ extension ThoughtViewController: UITextViewDelegate {
         }
         
         return true
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        self.placeholderTextViewDidBeginEditing(textView)
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        self.placeholderTextViewDidEndEditing(textView)
     }
 }
 

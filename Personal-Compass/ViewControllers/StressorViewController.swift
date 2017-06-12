@@ -28,7 +28,7 @@ class StressorViewController: AutoscrollableViewController {
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
         
         self.setupPlaceholderTextView(self.textView, placeholder: self.placeholder(for: self.textView), attributes: [
-            NSFontAttributeName: UIFont.muliRegular(size: 14),
+            NSFontAttributeName: UIFont.muliLight(size: 14),
             NSForegroundColorAttributeName: self.placeholderTextColor(for: self.textView)
         ])
 
