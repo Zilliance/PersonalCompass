@@ -49,6 +49,7 @@ final class CustomStressViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.closeView))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save))
         
+        self.topSubheading.text = self.subheading
         self.topLabel.text = self.headerText
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
@@ -64,17 +65,15 @@ final class CustomStressViewController: UIViewController {
         
         self.textView.typingAttributes = attrs
         // self.textView.attributedText = NSAttributedString(string: placeholder, attributes: attrs)
-        
-        self.topSubheading.text = self.subheading
     }
     
     fileprivate func showPlaceholder() {
-        self.textView.textColor = placeholderTextColor
-        self.textView.text = placeholder
+        self.textView.textColor = self.placeholderTextColor
+        self.textView.text = self.placeholder
     }
     
     fileprivate func hidePlaceholder() {
-        self.textView.textColor = normalTextColor
+        self.textView.textColor = self.normalTextColor
         self.textView.text = ""
     }
 
