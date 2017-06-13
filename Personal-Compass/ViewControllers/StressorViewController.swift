@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 class StressorViewController: AutoscrollableViewController {
 
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: KMPlaceholderTextView!
     
     var currentCompass: Compass!
     
@@ -26,25 +27,18 @@ class StressorViewController: AutoscrollableViewController {
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
-        
-        self.setupPlaceholderTextView(self.textView, placeholder: self.placeholder(for: self.textView), attributes: [
-            NSFontAttributeName: UIFont.muliLight(size: 14),
-            NSForegroundColorAttributeName: self.placeholderTextColor(for: self.textView)
-        ])
 
         if let stressor = self.currentCompass.stressor {
-            self.textView.textColor = self.normalTextColor(for: textView)
             self.textView.text = stressor
         }
     }
-    
 }
 
 // MARK: - CompassValidation
 
 extension StressorViewController: CompassValidation {
     var error: CompassError? {
-        if self.textView.text.isEmpty || self.textView.text == self.placeholder(for: self.textView) {
+        if self.textView.text.isEmpty {
             return .text
         } else {
             return nil
@@ -56,24 +50,8 @@ extension StressorViewController: CompassValidation {
 
 extension StressorViewController: CompassFacetEditor {
     func save() {
-        if self.textView.text != self.placeholder(for: self.textView) {
-            self.currentCompass.stressor = self.textView.text
-        }
+        self.currentCompass.stressor = self.textView.text
         self.currentCompass.lastEditedFacet = .stressor
-    }
-}
-
-// MARK: - TextViewPlaceholder
-
-extension StressorViewController: TextViewPlaceholder {
-    func placeholder(for textView: UITextView) -> String {
-        return "Enter one or two words that describe your stressor, for example: Money, Relationship with Mom, or Work"
-    }
-    func placeholderTextColor(for textView: UITextView) -> UIColor {
-        return .textPlaceholderColor
-    }
-    func normalTextColor(for textView: UITextView) -> UIColor {
-        return .textInputColor
     }
 }
 
@@ -88,13 +66,5 @@ extension StressorViewController: UITextViewDelegate {
         }
 
         return true
-    }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        self.placeholderTextViewDidBeginEditing(textView)
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        self.placeholderTextViewDidEndEditing(textView)
     }
 }
