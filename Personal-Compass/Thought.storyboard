@@ -47,7 +47,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IHa-ko-eTm">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IHa-ko-eTm" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                 <rect key="frame" x="20" y="213" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -56,6 +56,14 @@
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.65980360243055558" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
+                                        <string key="value">For example, I am feeling fearful because I need to find a new job. Money is tight and time is running out. I have sent out a ton of resumes. I don’t know what else to do.</string>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="g9l-os-V6r" id="Hnq-fh-LXM"/>
                                 </connections>
@@ -80,16 +88,11 @@
                                     <constraint firstAttribute="height" constant="50" id="pB9-ew-ymL"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEa-MR-r9D">
-                                <rect key="frame" x="148" y="361" width="78" height="30"/>
-                                <state key="normal" title="Learn More"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fZ1-8y-9Os" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" id="7gg-Xy-s3p"/>
                             <constraint firstItem="n0c-IZ-fsP" firstAttribute="top" secondItem="YPt-St-839" secondAttribute="bottom" constant="20" id="Bgv-PW-fYt"/>
-                            <constraint firstItem="fEa-MR-r9D" firstAttribute="top" secondItem="IHa-ko-eTm" secondAttribute="bottom" constant="20" id="CzU-qw-sz4"/>
                             <constraint firstItem="YCh-BD-kcc" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" constant="20" id="KOK-De-ZkQ"/>
                             <constraint firstItem="YCh-BD-kcc" firstAttribute="top" secondItem="IHa-ko-eTm" secondAttribute="bottom" constant="20" id="MEJ-Hb-vTz"/>
                             <constraint firstItem="1vt-uD-pDv" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="34.5" id="Mbe-pQ-J1v"/>
@@ -102,7 +105,6 @@
                             <constraint firstItem="IHa-ko-eTm" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" constant="20" id="nsv-jZ-NVY"/>
                             <constraint firstAttribute="trailing" secondItem="fZ1-8y-9Os" secondAttribute="trailing" id="rzb-AP-fje"/>
                             <constraint firstAttribute="trailing" secondItem="n0c-IZ-fsP" secondAttribute="trailing" id="skU-KW-jnk"/>
-                            <constraint firstItem="fEa-MR-r9D" firstAttribute="centerX" secondItem="nlG-po-c2V" secondAttribute="centerX" id="vhr-R5-Cnf"/>
                             <constraint firstItem="fZ1-8y-9Os" firstAttribute="top" secondItem="jvH-Hc-0OV" secondAttribute="bottom" constant="40" id="z9b-zI-hc2"/>
                             <constraint firstItem="n0c-IZ-fsP" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" id="zUZ-hc-5ir"/>
                         </constraints>
