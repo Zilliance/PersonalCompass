@@ -9,6 +9,8 @@
 import UIKit
 import AKPickerView_Swift
 
+// Feel Better Emotion
+
 class InnerWisdom4ViewController: AutoscrollableViewController, CompassValidation, CompassFacetEditor {
 
     @IBOutlet weak var textView: UITextView!
@@ -77,7 +79,7 @@ class InnerWisdom4ViewController: AutoscrollableViewController, CompassValidatio
             self.needMetTextField.text = self.currentCompass.compassNeedMet
         }
         
-        self.textView.text = self.currentCompass.concreteStep
+        self.textView.text = self.currentCompass.editedNeed
         
         self.setupEmotionLabel()
         
