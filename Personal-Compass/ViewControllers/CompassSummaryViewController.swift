@@ -7,10 +7,28 @@
 //
 
 import UIKit
+import PDFGenerator
 
 protocol SummaryViewControllerProtocol {
+    var tableView: UITableView! {get}
     var currentCompass: Compass! {get set}
     var shouldShowFooterHeader: Bool {get set}
+    var contentSize: CGSize {get}
+    var size: CGSize {get}
+}
+
+extension SummaryViewControllerProtocol where Self: UIViewController {
+
+    var contentSize: CGSize {
+        var size = self.view.frame.size
+        size.height += self.tableView.contentSize.height - self.tableView.frame.size.height
+        return size
+    }
+    
+    var size: CGSize {
+        return self.view.frame.size
+    }
+
 }
 
 class CompassSummaryViewController: UIViewController {
@@ -36,12 +54,32 @@ class CompassSummaryViewController: UIViewController {
         self.title = compass.stressor
         
     }
+    
+    @IBAction func shareSummaryAction(_ sender: Any) {
+        self.generatePDF { [unowned self] (destinationURL,error) in
+            
+            if let destinationURL = destinationURL {
+                
+                let activityViewController = UIActivityViewController(activityItems: [destinationURL] , applicationActivities: nil)
+                
+                self.present(activityViewController,
+                                      animated: true,
+                                      completion: nil)
+            }
+            else {
+                
+                //todo handle errors?
+                
+            }
+            
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction private func showAssessmentView() {
+    @IBAction fileprivate func showAssessmentView() {
         if let currentViewController = currentViewController, (currentViewController.isKind(of: SummaryViewController.self)) {
             return
         }
@@ -52,7 +90,7 @@ class CompassSummaryViewController: UIViewController {
         
     }
 
-    @IBAction private func showInnerWisdomView() {
+    @IBAction fileprivate func showInnerWisdomView() {
         
         if let currentViewController = currentViewController, (currentViewController.isKind(of: InnerWisdomSummaryViewController.self)) {
             return
@@ -94,6 +132,58 @@ class CompassSummaryViewController: UIViewController {
         assessmentIcon.image = assessmentImage
         assessmentLabel.textColor = assessmentColor
         
+    }
+    
+}
+
+
+//share functionality
+
+extension CompassSummaryViewController {
+    
+    func resizeToFitContent() {
+        guard let currentVC = currentViewController as? SummaryViewControllerProtocol else {
+            return assertionFailure()
+        }
+        
+        //we need to layout the view before getting the current VC content size
+        self.view.layoutIfNeeded()
+
+        var newFrame = self.view.frame
+        newFrame.size.height += currentVC.contentSize.height - tableContainerView.frame.size.height
+        self.view.frame = newFrame
+
+        self.view.layoutIfNeeded()
+        
+    }
+    
+    func generatePDF(completion: (URL?, Error?) -> ()) {
+        
+        let assesmentViewController = UIStoryboard(name: "CompassSummary", bundle: nil).instantiateInitialViewController() as! CompassSummaryViewController
+        assesmentViewController.compass = self.compass
+        assesmentViewController.view.frame = self.view.frame
+        assesmentViewController.showAssessmentView()
+        assesmentViewController.resizeToFitContent()
+        
+        let innerWisdomViewController = UIStoryboard(name: "CompassSummary", bundle: nil).instantiateInitialViewController() as! CompassSummaryViewController
+        innerWisdomViewController.compass = self.compass
+        innerWisdomViewController.view.frame = self.view.frame
+        innerWisdomViewController.showInnerWisdomView()
+        innerWisdomViewController.resizeToFitContent()
+        
+        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending((self.compass.stressor ?? "compass") + ".pdf"))
+        
+        // writes to Disk directly.
+        do {
+            try PDFGenerator.generate([assesmentViewController.view, innerWisdomViewController.view], to: dst)
+            
+            print("PDF sample saved in: " + dst.absoluteString)
+            completion(dst, nil)
+            
+        } catch (let error) {
+            print(error)
+            completion(nil, error)
+        }
     }
     
 }

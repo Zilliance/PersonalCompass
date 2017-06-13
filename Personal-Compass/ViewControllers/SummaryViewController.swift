@@ -164,5 +164,4 @@ extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
         sceneSelectionAction?(row.sceneAssociated)
     }
 
-    
 }
