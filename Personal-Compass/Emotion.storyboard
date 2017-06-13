@@ -126,7 +126,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <outlet property="delegate" destination="AcN-T2-8PF" id="Qam-BU-zOM"/>
                                 </connections>
