@@ -43,7 +43,7 @@ class ScheduleViewController: UIViewController {
     
     private func setupView() {
         
-        self.title = "Schedule actions"
+        self.title = "Schedule Actions"
         self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
         // date picker
