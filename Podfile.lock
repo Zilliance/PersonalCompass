@@ -1,5 +1,6 @@
 PODS:
   - AKPickerView-Swift (2.0.1)
+  - PDFGenerator (2.0.1)
   - Realm (2.8.0):
     - Realm/Headers (= 2.8.0)
   - Realm/Headers (2.8.0)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - AKPickerView-Swift (from `https://github.com/Akkyie/AKPickerView-Swift.git`)
+  - PDFGenerator (~> 2.0.1)
   - Realm
   - RealmSwift
   - SideMenuController
@@ -26,11 +28,12 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AKPickerView-Swift: 4969de689bee54f720dd64700f7aaab02a8f2ddc
+  PDFGenerator: 69cf0787767d501a10b6b85492b1f27fd23b00e8
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 9eea22f2a7e8c74c94f2717ea318390e950bed69
+PODFILE CHECKSUM: 30d7e01d6ff89b4956713d544b00c8a8539c92f7
 
 COCOAPODS: 1.2.1

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PDFGenerator
 
 protocol SummaryViewControllerProtocol {
     var currentCompass: Compass! {get set}
@@ -94,6 +95,32 @@ class CompassSummaryViewController: UIViewController {
         assessmentIcon.image = assessmentImage
         assessmentLabel.textColor = assessmentColor
         
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        generatePDF()
+        
+    }
+    
+    func generatePDF() {
+        
+        let stressorViewController = UIStoryboard(name: "Stressor", bundle: nil).instantiateInitialViewController() as! StressorViewController
+        stressorViewController.currentCompass = self.compass
+        stressorViewController.view.frame = self.view.frame
+        stressorViewController.view.setNeedsLayout()
+        stressorViewController.view.layoutIfNeeded()
+        
+        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending("sample1.pdf"))
+        
+        // writes to Disk directly.
+        do {
+            try PDFGenerator.generate([stressorViewController.view, self.view], to: dst)
+        } catch (let error) {
+            print(error)
+        }
     }
     
 }
