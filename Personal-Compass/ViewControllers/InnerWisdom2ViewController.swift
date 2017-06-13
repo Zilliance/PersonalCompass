@@ -7,29 +7,18 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
-class InnerWisdom2ViewController: AutoscrollableViewController, CompassValidation, CompassFacetEditor {
+// Update Need
+
+class InnerWisdom2ViewController: AutoscrollableViewController {
     
-    @IBOutlet weak var textView: UITextView!
-    
-    var error: CompassError? {
-        if textView.text.characters.count == 0 {
-            return .text
-        }
-        else {
-            return nil
-        }
-    }
+    @IBOutlet weak var textView: KMPlaceholderTextView!
     
     var currentCompass: Compass!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func save() {
-        self.currentCompass.editedNeed = self.textView.text
-        self.currentCompass.lastEditedFacet = .innerWisdom2
     }
     
     private func setupView() {
@@ -49,6 +38,29 @@ class InnerWisdom2ViewController: AutoscrollableViewController, CompassValidatio
         self.setupView()
     }
 }
+
+// MARK: - CompassValidation
+
+extension InnerWisdom2ViewController: CompassValidation {
+    var error: CompassError? {
+        if textView.text.isEmpty {
+            return .text
+        } else {
+            return nil
+        }
+    }
+}
+
+// MARK: - CompassFacetEditor
+
+extension InnerWisdom2ViewController: CompassFacetEditor {
+    func save() {
+        self.currentCompass.editedNeed = self.textView.text
+        self.currentCompass.lastEditedFacet = .innerWisdom2
+    }
+}
+
+// MARK: - UITextViewDelegate
 
 extension InnerWisdom2ViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
