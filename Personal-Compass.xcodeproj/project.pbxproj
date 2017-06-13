@@ -89,6 +89,7 @@
 		8C9166831ECCDA090072C19F /* StressorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166821ECCDA090072C19F /* StressorViewController.swift */; };
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
 		8C9166881ECCF2030072C19F /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166871ECCF2030072C19F /* EmotionViewController.swift */; };
+		8CAF52511EF043EE00E5F2DE /* ZillianceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF52501EF043EE00E5F2DE /* ZillianceTextViewController.swift */; };
 		8CF78EC94537B4F6424BE525 /* Pods_Personal_CompassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */; };
 		8CFC6D491ECE4E6000F44B95 /* Thought.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC6D481ECE4E6000F44B95 /* Thought.storyboard */; };
 		8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */; };
@@ -203,6 +204,7 @@
 		8C9166821ECCDA090072C19F /* StressorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StressorViewController.swift; path = ViewControllers/StressorViewController.swift; sourceTree = "<group>"; };
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
 		8C9166871ECCF2030072C19F /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionViewController.swift; path = ViewControllers/EmotionViewController.swift; sourceTree = "<group>"; };
+		8CAF52501EF043EE00E5F2DE /* ZillianceTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZillianceTextViewController.swift; path = ViewControllers/ZillianceTextViewController.swift; sourceTree = "<group>"; };
 		8CFC6D481ECE4E6000F44B95 /* Thought.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Thought.storyboard; sourceTree = "<group>"; };
 		8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThoughtViewController.swift; path = ViewControllers/ThoughtViewController.swift; sourceTree = "<group>"; };
 		8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 			children = (
 				8C54AD231EE0B7F5001EC903 /* Schedule.storyboard */,
 				8C54AD251EE0B88D001EC903 /* ScheduleViewController.swift */,
+				8CAF52501EF043EE00E5F2DE /* ZillianceTextViewController.swift */,
 			);
 			name = Schedule;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CAF52511EF043EE00E5F2DE /* ZillianceTextViewController.swift in Sources */,
 				8C9166881ECCF2030072C19F /* EmotionViewController.swift in Sources */,
 				4FD5B64C1ECBD9550017DC06 /* UIFont+CustomFonts.swift in Sources */,
 				4F8C2E2E1ED5BD8600A24A40 /* SummaryViewController.swift in Sources */,
