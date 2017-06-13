@@ -7,30 +7,24 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
-class InnerWisdom3ViewController: AutoscrollableViewController, CompassValidation, CompassFacetEditor {
+// Concrete Step
+
+class InnerWisdom3ViewController: AutoscrollableViewController {
     
     @IBOutlet weak var needTextView: UITextView!
-    @IBOutlet weak var concreteTextView: UITextView!
+    @IBOutlet weak var concreteTextView: KMPlaceholderTextView!
     
     var currentCompass: Compass!
-    
-    var error: CompassError? {
-        if concreteTextView.text.characters.count == 0 {
-            return .text
-        }
-        else {
-            return nil
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func save() {
-        self.currentCompass.concreteStep = self.concreteTextView.text
-        self.currentCompass.lastEditedFacet = .innerWisdom3
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupView()
     }
     
     private func setupView() {
@@ -48,15 +42,31 @@ class InnerWisdom3ViewController: AutoscrollableViewController, CompassValidatio
         if let need = self.currentCompass.editedNeed {
             self.needTextView.text = need
         }
-        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        setupView()
-    }
+}
 
+// MARK: - CompassValidation
+
+extension InnerWisdom3ViewController: CompassValidation {
+    var error: CompassError? {
+        if concreteTextView.text.isEmpty {
+            return .text
+        }
+        else {
+            return nil
+        }
+    }
+}
+
+extension InnerWisdom3ViewController: CompassFacetEditor {
+    func save() {
+        self.currentCompass.concreteStep = self.concreteTextView.text
+        self.currentCompass.lastEditedFacet = .innerWisdom3
+    }
 
 }
+
+// MARK: - UITextViewDelegate
 
 extension InnerWisdom3ViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

@@ -95,6 +95,8 @@
 		8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */; };
 		8CFC6D4D1ED3A0D600F44B95 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */; };
 		CBF5C2B987593B1534F06EDA /* Pods_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */; };
+		E30CFB1A1EEF13AD00ACE42B /* TextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */; };
+		E30CFB1C1EEF171200ACE42B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
 		E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A811EC9FBA300076737 /* Assets.xcassets */; };
 		E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A831EC9FBA300076737 /* LaunchScreen.storyboard */; };
@@ -212,6 +214,8 @@
 		978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2CF0E80AFBAC596BA0EBC /* Pods-Personal-Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F1D4F40C4085A19441E40F /* Pods-Personal-CompassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassTests/Pods-Personal-CompassTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewPlaceholder.swift; path = Utils/TextViewPlaceholder.swift; sourceTree = "<group>"; };
+		E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
 		E37C7A771EC9FBA300076737 /* Personal-Compass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal-Compass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37C7A811EC9FBA300076737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -320,6 +324,7 @@
 				8C54AD271EE0D27D001EC903 /* CalendarHelper.swift */,
 				4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */,
 				4FB5AF161EE5F7E600837FF0 /* LocalNotificationsHelper.swift */,
+				E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				8C463B221ECA2ED600566531 /* UIColor+CustomColors.swift */,
 				8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */,
 				8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */,
+				E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -912,6 +918,7 @@
 				4FB5AF171EE5F7E600837FF0 /* LocalNotificationsHelper.swift in Sources */,
 				8C54AD281EE0D27D001EC903 /* CalendarHelper.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
+				E30CFB1A1EEF13AD00ACE42B /* TextViewPlaceholder.swift in Sources */,
 				047A58091ECB36F100BC7650 /* Database.swift in Sources */,
 				4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */,
 				047A58051ECB2DBC00BC7650 /* BehaviorStress.swift in Sources */,
@@ -938,6 +945,7 @@
 				4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */,
 				8C571D791EE732A800050B8D /* FeelBetterItemViewController.swift in Sources */,
 				8C54AD1F1EDE1A34001EC903 /* InnerWisdom4ViewController.swift in Sources */,
+				E30CFB1C1EEF171200ACE42B /* String+Extensions.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
 				8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */,
 				8C54AD121ED5E4C6001EC903 /* NeedViewController.swift in Sources */,

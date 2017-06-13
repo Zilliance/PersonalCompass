@@ -7,48 +7,64 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
-class NeedViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
+class NeedViewController: AutoscrollableViewController {
 
     var currentCompass: Compass!
-    var error: CompassError? {
-        return self.textView.text.characters.count == 0 ? .text : nil
-    }
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: KMPlaceholderTextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupView()
+    }
 
     private func setupView() {
-        
-        if let need = self.currentCompass.need {
-            self.textView.text = need
-        }
         
         self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
         self.textView.layer.borderWidth = App.Appearance.borderWidth
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        if let need = self.currentCompass.need {
+            self.textView.text = need
+        }
     }
     
+}
+
+// MARK: - CompassFacetEditor
+
+extension NeedViewController: CompassFacetEditor {
     func save() {
         self.currentCompass.need = self.textView.text
         self.currentCompass.lastEditedFacet = .need
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        setupView()
-    }
-
 }
+
+// MARK: - CompassValidation
+
+extension NeedViewController: CompassValidation {
+    var error: CompassError? {
+        if self.textView.text.isEmpty {
+            return .text
+        } else {
+            return nil
+        }
+    }
+}
+
+//MARK: - UITextViewDelegate
 
 extension NeedViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n")
-        {
+        if (text == "\n") {
             textView.resignFirstResponder()
             return false
         }
