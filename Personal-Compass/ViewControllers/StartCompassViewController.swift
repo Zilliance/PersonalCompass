@@ -61,14 +61,16 @@ class CompassCollectionViewCell: UICollectionViewCell {
         
         if compass.completed {
             self.completedLabel.backgroundColor = .navBar
-            self.completedLabel.textColor = .silverColor
+            self.completedLabel.textColor = .contentBackground
             self.greyLineView.isHidden = true
             self.completedLabel.text = CompassCollectionViewCell.dateFormatter.string(from: compass.dateCreated)
             
         }
             
         else {
-            
+            self.completedLabel.backgroundColor = .contentBackground
+            self.completedLabel.textColor = .black
+            self.greyLineView.isHidden = false
             self.completedLabel.text = "In progress"
             
         }
