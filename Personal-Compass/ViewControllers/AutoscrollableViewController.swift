@@ -31,7 +31,7 @@ class AutoscrollableViewController: UIViewController {
             
             if (diff < 0) {
                 
-                self.view.frame.origin.y = max(self.view.frame.origin.y + diff, self.view.frame.origin.y - editingView.frame.origin.y)
+                self.view.frame.origin.y = max(self.view.frame.origin.y + diff, self.view.frame.origin.y - editingView.frame.origin.y + 20)
                 
             }
             
