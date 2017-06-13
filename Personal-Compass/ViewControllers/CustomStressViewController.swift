@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KMPlaceholderTextView
 
 protocol CustomStressViewControllerDelegate: class {
     func newItemSaved(newItem: StringItem)
@@ -14,7 +15,7 @@ protocol CustomStressViewControllerDelegate: class {
 
 final class CustomStressViewController: UIViewController {
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: KMPlaceholderTextView!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var topSubheading: UILabel!
     
@@ -22,11 +23,11 @@ final class CustomStressViewController: UIViewController {
     weak var delegate: CustomStressViewControllerDelegate!
     
     var headerText: String!
-    var placeholder: String!
-    var subheading: String? {
+    
+    var placeholder: String! {
         didSet {
             if self.isViewLoaded {
-                self.topSubheading.text = subheading
+                self.textView.placeholder = placeholder
             }
         }
     }
@@ -49,7 +50,7 @@ final class CustomStressViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.closeView))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save))
         
-        self.topSubheading.text = self.subheading
+        self.textView.placeholder = self.placeholder
         self.topLabel.text = self.headerText
         
         self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
@@ -57,27 +58,7 @@ final class CustomStressViewController: UIViewController {
         self.textView.layer.borderColor = UIColor.lightGray.cgColor
 
         self.textView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        
-        let attrs = [
-            NSFontAttributeName: UIFont.muliRegular(size: 17),
-            NSForegroundColorAttributeName: self.placeholderTextColor
-        ]
-        
-        self.textView.typingAttributes = attrs
-        // self.textView.attributedText = NSAttributedString(string: placeholder, attributes: attrs)
     }
-    
-    fileprivate func showPlaceholder() {
-        self.textView.textColor = self.placeholderTextColor
-        self.textView.text = self.placeholder
-    }
-    
-    fileprivate func hidePlaceholder() {
-        self.textView.textColor = self.normalTextColor
-        self.textView.text = ""
-    }
-
-    
 }
 
 extension CustomStressViewController {
@@ -110,17 +91,5 @@ extension CustomStressViewController: UITextViewDelegate {
             return false
         }
         return true
-    }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        // if textView.text == placeholder {
-            // self.hidePlaceholder()
-        // }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        // if textView.text == "" {
-            // self.showPlaceholder()
-        // }
     }
 }
