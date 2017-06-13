@@ -8,12 +8,12 @@
 
 import UIKit
 
-class InnerWisdom1ViewController: UIViewController, CompassValidation, CompassFacetEditor {
+// Meditation
+
+class InnerWisdom1ViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var listenLabel: UILabel!
-    
-    var error: CompassError? = nil
     
     var currentCompass: Compass! 
     
@@ -22,15 +22,9 @@ class InnerWisdom1ViewController: UIViewController, CompassValidation, CompassFa
         
         self.listenLabel.clipsToBounds = true
         self.listenLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
-        
-    }
-    
-    func save() {
-         self.currentCompass.lastEditedFacet = .innerWisdom1
     }
     
     private func setupView() {
-        
         if let need = self.currentCompass.need {
             self.textView.text = need
         }
@@ -43,5 +37,19 @@ class InnerWisdom1ViewController: UIViewController, CompassValidation, CompassFa
     
     @IBAction func listenAction(_ sender: UIButton) {
         print("todo")
+    }
+}
+
+// MARK: - CompassValidation
+
+extension InnerWisdom1ViewController: CompassValidation {
+    var error: CompassError? {
+        return nil
+    }
+}
+
+extension InnerWisdom1ViewController: CompassFacetEditor {
+    func save() {
+        self.currentCompass.lastEditedFacet = .innerWisdom1
     }
 }
