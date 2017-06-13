@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Compass Summary View Controller-->
+        <!--Title-->
         <scene sceneID="fjd-Pk-3Dh">
             <objects>
                 <viewController id="sE8-Lb-XQX" customClass="CompassSummaryViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LgC-bh-9Xn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xwi-gi-TXW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogi-Rg-tN0">
@@ -138,7 +138,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyb-sb-pj0">
-                                <rect key="frame" x="0.0" y="182" width="375" height="485"/>
+                                <rect key="frame" x="0.0" y="182" width="375" height="421"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -156,6 +156,14 @@
                             <constraint firstItem="LgC-bh-9Xn" firstAttribute="top" secondItem="wyb-sb-pj0" secondAttribute="bottom" id="zYR-oM-b9u"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="FNK-tb-Lje">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="3dw-cv-DNB">
+                            <connections>
+                                <action selector="shareSummaryAction:" destination="sE8-Lb-XQX" id="j6g-r4-hsR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="assessmentHeaderView" destination="wuY-Gh-CzF" id="RAO-b4-o2L"/>
                         <outlet property="assessmentIcon" destination="xD5-tL-ySz" id="9bJ-aL-Kq9"/>
@@ -163,7 +171,7 @@
                         <outlet property="innerWisdomIcon" destination="JsP-oy-6SN" id="1ef-YW-Bcg"/>
                         <outlet property="innerWisdomLabel" destination="crB-Ce-YQ4" id="JwC-Cg-js1"/>
                         <outlet property="innerWisdomSummaryHeaderView" destination="lyW-1a-kS0" id="vh6-eP-AhT"/>
-                        <outlet property="tableContainerView" destination="wyb-sb-pj0" id="gfK-3Z-4nw"/>
+                        <outlet property="tableContainerView" destination="wyb-sb-pj0" id="gOf-C8-23y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15F-KP-3y9" userLabel="First Responder" sceneMemberID="firstResponder"/>

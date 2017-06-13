@@ -36,6 +36,7 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
     }
 
     var currentCompass: Compass!
+    
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet weak var tableTopSeparation: NSLayoutConstraint!

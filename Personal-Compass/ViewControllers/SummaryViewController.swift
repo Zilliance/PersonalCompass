@@ -50,7 +50,7 @@ class SummaryViewController: UIViewController, SummaryViewControllerProtocol {
         super.viewDidLoad()
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 84
+        self.tableView.estimatedRowHeight = 300
         
         let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 2))
         additionalSeparator.backgroundColor = UIColor.silverColor
@@ -164,5 +164,4 @@ extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
         sceneSelectionAction?(row.sceneAssociated)
     }
 
-    
 }
