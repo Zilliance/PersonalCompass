@@ -11,12 +11,13 @@ import Foundation
 import UIKit
 import RealmSwift
 
+// How Else Can I Feel
 
-final class InnerWisdom5ViewController: UIViewController, CompassFacetEditor, CompassValidation {
+final class InnerWisdom5ViewController: UIViewController {
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
-    private var tableViewController: ItemsSelectionViewController!
+    private(set) var tableViewController: ItemsSelectionViewController!
     
     var currentCompass: Compass!
     
@@ -25,17 +26,6 @@ final class InnerWisdom5ViewController: UIViewController, CompassFacetEditor, Co
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var emotionIcon: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!
-    
-    
-    var error: CompassError? {
-        if let items = self.tableViewController?.selectedItems, items.count > 0 {
-            return nil
-        }
-        else {
-            return .selection
-        }
-        
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,14 +37,6 @@ final class InnerWisdom5ViewController: UIViewController, CompassFacetEditor, Co
         emotionLabel.text = currentCompass.compassNeedMet
         emotionLabel.textColor = currentCompass.needMetEmotion?.color
     }
-    
-    func save() {
-        
-        self.tableViewController.saveAction(self.tableViewController.selectedItems)
-        self.currentCompass.lastEditedFacet = .innerWisdom5
-        
-    }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -76,12 +58,28 @@ final class InnerWisdom5ViewController: UIViewController, CompassFacetEditor, Co
                     self.currentCompass.positiveActivities.removeAll()
                     self.currentCompass.positiveActivities.append(objectsIn: items)
                 }
-                
             }
-
-            
         }
-        
     }
-    
+}
+
+// MARK: - CompassValidation
+
+extension InnerWisdom5ViewController: CompassValidation {
+    var error: CompassError? {
+        if let items = self.tableViewController?.selectedItems, items.count > 0 {
+            return nil
+        } else {
+            return .selection
+        }
+    }
+}
+
+// MARK: - CompassFacetEditor
+
+extension InnerWisdom5ViewController: CompassFacetEditor {
+    func save() {
+        self.tableViewController.saveAction(self.tableViewController.selectedItems)
+        self.currentCompass.lastEditedFacet = .innerWisdom5
+    }
 }
