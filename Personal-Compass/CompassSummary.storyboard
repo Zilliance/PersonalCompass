@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Title-->
+        <!--CompassSummaryViewController-->
         <scene sceneID="fjd-Pk-3Dh">
             <objects>
-                <viewController id="sE8-Lb-XQX" customClass="CompassSummaryViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sE8-Lb-XQX" userLabel="CompassSummaryViewController" customClass="CompassSummaryViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KbO-7B-MdH"/>
                         <viewControllerLayoutGuide type="bottom" id="LgC-bh-9Xn"/>
