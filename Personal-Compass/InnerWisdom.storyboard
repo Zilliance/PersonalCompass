@@ -311,15 +311,21 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                 <color key="textColor" red="0.15294117647058825" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HSN-RG-ez3">
-                                <rect key="frame" x="20" y="153" width="335" height="166"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HSN-RG-ez3" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                <rect key="frame" x="20" y="153" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="hTk-68-TpQ"/>
+                                    <constraint firstAttribute="height" constant="128" id="hTk-68-TpQ"/>
                                 </constraints>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.65855577256944442" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="For example, I need a job, I need my friend to understand how I feel, or I need some quiet downtime to recharge."/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="uas-i1-8Ub" id="FWd-1I-B8I"/>
                                 </connections>
@@ -332,8 +338,8 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                     <constraint firstAttribute="height" constant="2" id="jaD-Tj-6jR"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: “I need a …”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUI-jD-r9x">
-                                <rect key="frame" x="20" y="329" width="335" height="18"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: “I need a …”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUI-jD-r9x">
+                                <rect key="frame" x="20" y="291" width="335" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -397,30 +403,38 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Muy-cC-aGL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
-                                <color key="textColor" red="0.12549019607843137" green="0.19215686274509802" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.1529411765" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MC3-wX-h0D">
-                                <rect key="frame" x="20" y="269" width="335" height="112"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MC3-wX-h0D" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                <rect key="frame" x="20" y="269" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="112" id="UjN-k9-Jmz"/>
+                                    <constraint firstAttribute="height" constant="128" id="UjN-k9-Jmz"/>
                                 </constraints>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66220969292852616" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
+                                        <string key="value">For example, I can ask Mark to help me make a plan for finding a job, or, I will ask my friend to come over this week so we can talk.</string>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="zj9-2b-aXb" id="7U8-MA-vqf"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO4-fW-DHZ">
-                                <rect key="frame" x="20" y="386" width="335" height="18"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO4-fW-DHZ">
+                                <rect key="frame" x="20" y="402" width="335" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V42-8K-bD6">
-                                <rect key="frame" x="20" y="409" width="335" height="18"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V42-8K-bD6">
+                                <rect key="frame" x="20" y="425" width="335" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -483,7 +497,7 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                     <constraint firstAttribute="width" constant="275" id="aJ4-ZD-bwt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
-                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.1529411765" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUn-wd-uZY">
