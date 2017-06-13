@@ -118,6 +118,8 @@ class CompassSummaryViewController: UIViewController {
         // writes to Disk directly.
         do {
             try PDFGenerator.generate([stressorViewController.view, self.view], to: dst)
+            
+            print("PDF sample saved in: " + dst.absoluteString)
         } catch (let error) {
             print(error)
         }
