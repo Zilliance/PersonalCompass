@@ -11,12 +11,15 @@ import SVProgressHUD
 
 class ScheduleViewController: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
+ 
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var addToCalendarButton: UIButton!
     @IBOutlet weak var setReminderButton: UIButton!
     
+    private var zillianceTextViewController: ZillianceTextViewController!
+    
     var compass: Compass!
+    var feelBetterType : FeelBetterType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,7 @@ class ScheduleViewController: UIViewController {
         
         if let previousInformation = LocalNotificationsHelper.getInformationForStoredNotification(identifier: self.compass.id) {
             
-            textView.text = previousInformation.0
+            zillianceTextViewController.textView.text = previousInformation.0
             datePicker.date = previousInformation.1
             
         }
@@ -43,12 +46,11 @@ class ScheduleViewController: UIViewController {
     
     private func setupView() {
         
-        self.title = "Schedule actions"
-        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        self.title = "Schedule Actions"
         
         // date picker
         
-        for view in [self.datePicker, self.textView] as [UIView] {
+        for view in [self.datePicker] as [UIView] {
             view.layer.cornerRadius = App.Appearance.buttonCornerRadius
             view.layer.borderWidth = App.Appearance.borderWidth
             view.layer.borderColor = UIColor.lightGray.cgColor
@@ -76,7 +78,7 @@ class ScheduleViewController: UIViewController {
 
     @IBAction func addToCalendarAction(_ sender: UIButton) {
         
-        guard let body = self.textView.text, body.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 else {
+        guard let body = self.zillianceTextViewController.textView.text, body.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 else {
             
             self.showErrorNoReminder()
             
@@ -107,7 +109,7 @@ class ScheduleViewController: UIViewController {
     
     @IBAction func setReminderAction(_ sender: UIButton) {
         
-        guard let body = self.textView.text, body.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 else {
+        guard let body = self.zillianceTextViewController.textView.text, body.trimmingCharacters(in: .whitespacesAndNewlines).characters.count > 0 else {
             
             self.showErrorNoReminder()
             
@@ -133,6 +135,17 @@ class ScheduleViewController: UIViewController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.zillianceTextViewController = segue.destination as! ZillianceTextViewController
+        print("")
+        if let type = self.feelBetterType {
+             self.zillianceTextViewController.feelBetterType = type
+        }
+        
+        self.zillianceTextViewController.compass = self.compass
+    }
+    
     
 }
 
