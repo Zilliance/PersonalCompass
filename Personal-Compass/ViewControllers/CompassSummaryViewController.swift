@@ -171,7 +171,7 @@ extension CompassSummaryViewController {
         innerWisdomViewController.showInnerWisdomView()
         innerWisdomViewController.resizeToFitContent()
         
-        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending("sample1.pdf"))
+        let dst = URL(fileURLWithPath: NSTemporaryDirectory().appending((self.compass.stressor ?? "compass") + ".pdf"))
         
         // writes to Disk directly.
         do {
