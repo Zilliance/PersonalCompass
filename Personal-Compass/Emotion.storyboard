@@ -12,9 +12,6 @@
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
         </array>
-        <array key="Muli-LightItalic.ttf">
-            <string>Muli-LightItalic</string>
-        </array>
         <array key="Muli-SemiBold.ttf">
             <string>Muli-SemiBold</string>
         </array>
@@ -100,37 +97,6 @@
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUC-bQ-BU8">
-                                <rect key="frame" x="20" y="356" width="335" height="1"/>
-                                <color key="backgroundColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="Ree-Oc-QyW"/>
-                                </constraints>
-                            </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soA-Ev-4Qv">
-                                <rect key="frame" x="20" y="377" width="335" height="18"/>
-                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ox-Cq-go7">
-                                <rect key="frame" x="20" y="399" width="335" height="18"/>
-                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="For example, Angry, Hurt, or Frustrated" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQB-bT-OIe">
-                                <rect key="frame" x="20" y="325" width="335" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IDF-9m-OR3"/>
-                                </constraints>
-                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <outlet property="delegate" destination="AcN-T2-8PF" id="Qam-BU-zOM"/>
-                                </connections>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ueG-Nu-AjH" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                 <rect key="frame" x="20" y="241" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,37 +119,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aUC-bQ-BU8" secondAttribute="trailing" constant="20" id="0pp-oS-UBk"/>
-                            <constraint firstItem="soA-Ev-4Qv" firstAttribute="top" secondItem="aUC-bQ-BU8" secondAttribute="bottom" constant="20" id="5mB-fB-Kmt"/>
-                            <constraint firstItem="aUC-bQ-BU8" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="7Vy-hX-MYZ"/>
-                            <constraint firstItem="aUC-bQ-BU8" firstAttribute="top" secondItem="aQB-bT-OIe" secondAttribute="bottom" constant="1" id="BVJ-GS-t3t"/>
-                            <constraint firstAttribute="trailing" secondItem="soA-Ev-4Qv" secondAttribute="trailing" constant="20" id="GyX-hx-cz8"/>
-                            <constraint firstAttribute="trailing" secondItem="1ox-Cq-go7" secondAttribute="trailing" constant="20" id="HsH-bq-Wtq"/>
                             <constraint firstItem="cRc-8L-ur7" firstAttribute="top" secondItem="leO-Le-CAU" secondAttribute="bottom" constant="10" id="Jr6-hH-2DW"/>
                             <constraint firstAttribute="trailing" secondItem="cRc-8L-ur7" secondAttribute="trailing" constant="20" id="M0c-s2-BEB"/>
-                            <constraint firstItem="1ox-Cq-go7" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="RLb-xl-j22"/>
                             <constraint firstItem="b6v-49-9Xn" firstAttribute="top" secondItem="9mg-7X-hab" secondAttribute="bottom" constant="20" id="TPt-DX-CyP"/>
-                            <constraint firstItem="aQB-bT-OIe" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="TzH-OU-joV"/>
                             <constraint firstItem="leO-Le-CAU" firstAttribute="top" secondItem="TSg-R3-sjH" secondAttribute="bottom" constant="35" id="U3m-me-mbv"/>
                             <constraint firstItem="b6v-49-9Xn" firstAttribute="centerX" secondItem="IRz-2L-ilJ" secondAttribute="centerX" id="WCD-Mn-ZFH"/>
                             <constraint firstItem="9mg-7X-hab" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" id="Y5d-gY-Mji"/>
                             <constraint firstAttribute="trailing" secondItem="leO-Le-CAU" secondAttribute="trailing" id="YUX-UM-ZVK"/>
-                            <constraint firstItem="aQB-bT-OIe" firstAttribute="top" secondItem="b6v-49-9Xn" secondAttribute="bottom" constant="20" id="by0-FL-oKa"/>
-                            <constraint firstItem="soA-Ev-4Qv" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="c2c-fs-zLB"/>
                             <constraint firstItem="9mg-7X-hab" firstAttribute="top" secondItem="cRc-8L-ur7" secondAttribute="bottom" constant="16" id="c3T-ab-QJt"/>
                             <constraint firstItem="cRc-8L-ur7" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="eHh-5P-yNf"/>
                             <constraint firstItem="ueG-Nu-AjH" firstAttribute="top" secondItem="9mg-7X-hab" secondAttribute="bottom" constant="34" id="iSE-7d-OG7"/>
-                            <constraint firstAttribute="trailing" secondItem="aQB-bT-OIe" secondAttribute="trailing" constant="20" id="krZ-XS-H4U"/>
                             <constraint firstItem="leO-Le-CAU" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" id="mWJ-hX-ooV"/>
                             <constraint firstItem="ueG-Nu-AjH" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="oxU-K5-Rmo"/>
                             <constraint firstAttribute="trailing" secondItem="ueG-Nu-AjH" secondAttribute="trailing" constant="20" id="rL4-rI-aib"/>
                             <constraint firstAttribute="trailing" secondItem="9mg-7X-hab" secondAttribute="trailing" id="smF-uT-hIG"/>
-                            <constraint firstItem="1ox-Cq-go7" firstAttribute="top" secondItem="soA-Ev-4Qv" secondAttribute="bottom" constant="4" id="yoW-0m-GEr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emotionLabel" destination="cRc-8L-ur7" id="QRV-a3-np2"/>
-                        <outlet property="emotionTextField" destination="aQB-bT-OIe" id="Ncg-P0-0XZ"/>
                         <outlet property="pickerContainerView" destination="koN-fM-4mY" id="WI5-Fb-Ofv"/>
                         <outlet property="textView" destination="ueG-Nu-AjH" id="jjB-tp-vRY"/>
                     </connections>

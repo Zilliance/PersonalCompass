@@ -59,26 +59,8 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1: &quot;Money&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCj-Dl-7Hq">
-                                <rect key="frame" x="20" y="309.5" width="335" height="19"/>
-                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2: &quot;Relationship with mom&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7c-Vc-qta">
-                                <rect key="frame" x="20" y="343.5" width="335" height="19"/>
-                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 3: &quot;Work&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxM-fu-uAo">
-                                <rect key="frame" x="20" y="377.5" width="335" height="19"/>
-                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="15"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you dealing with multiple stressors? Do a compass for each one." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jl5-zx-FRA">
-                                <rect key="frame" x="30" y="94" width="315" height="33"/>
+                                <rect key="frame" x="30" y="91.5" width="315" height="33"/>
                                 <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -87,23 +69,14 @@
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Jl5-zx-FRA" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" constant="30" id="1tW-SQ-V8W"/>
-                            <constraint firstItem="Jl5-zx-FRA" firstAttribute="top" secondItem="CmV-6X-XAu" secondAttribute="bottom" constant="12.5" id="2EM-WB-960"/>
-                            <constraint firstAttribute="trailing" secondItem="AxM-fu-uAo" secondAttribute="trailing" constant="20" id="BVn-YA-etn"/>
-                            <constraint firstItem="XCj-Dl-7Hq" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" constant="20" id="CUt-ZL-mP4"/>
+                            <constraint firstItem="Jl5-zx-FRA" firstAttribute="top" secondItem="CmV-6X-XAu" secondAttribute="bottom" constant="10" id="2EM-WB-960"/>
+                            <constraint firstItem="dlH-Z5-evW" firstAttribute="top" secondItem="Jl5-zx-FRA" secondAttribute="bottom" constant="17" id="2VU-Dv-uNQ"/>
                             <constraint firstAttribute="trailing" secondItem="CmV-6X-XAu" secondAttribute="trailing" id="JFQ-f1-zfJ"/>
                             <constraint firstItem="dlH-Z5-evW" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" constant="20" id="Jwa-bg-nCH"/>
                             <constraint firstAttribute="trailing" secondItem="dlH-Z5-evW" secondAttribute="trailing" constant="20" id="LJp-8b-dJi"/>
-                            <constraint firstAttribute="trailing" secondItem="z7c-Vc-qta" secondAttribute="trailing" constant="20" id="OjR-CW-sah"/>
                             <constraint firstAttribute="trailing" secondItem="Jl5-zx-FRA" secondAttribute="trailing" constant="30" id="Pbf-p3-IFY"/>
-                            <constraint firstItem="z7c-Vc-qta" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" constant="20" id="SmQ-4T-UOX"/>
-                            <constraint firstItem="AxM-fu-uAo" firstAttribute="top" secondItem="z7c-Vc-qta" secondAttribute="bottom" constant="15" id="YaK-4u-Ibt"/>
-                            <constraint firstItem="AxM-fu-uAo" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" constant="20" id="Z7V-Jz-UJq"/>
-                            <constraint firstItem="XCj-Dl-7Hq" firstAttribute="top" secondItem="dlH-Z5-evW" secondAttribute="bottom" constant="40" id="dVZ-Bm-VmD"/>
-                            <constraint firstAttribute="trailing" secondItem="XCj-Dl-7Hq" secondAttribute="trailing" constant="20" id="mzY-xl-XJW"/>
                             <constraint firstItem="CmV-6X-XAu" firstAttribute="top" secondItem="73D-GR-5z2" secondAttribute="bottom" constant="40" id="oPv-K7-kmL"/>
-                            <constraint firstItem="z7c-Vc-qta" firstAttribute="top" secondItem="XCj-Dl-7Hq" secondAttribute="bottom" constant="15" id="rBK-OE-wHf"/>
                             <constraint firstItem="CmV-6X-XAu" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" id="v2n-zU-Eto"/>
-                            <constraint firstItem="dlH-Z5-evW" firstAttribute="top" secondItem="CmV-6X-XAu" secondAttribute="bottom" constant="60" id="y6z-w2-eJn"/>
                         </constraints>
                     </view>
                     <connections>

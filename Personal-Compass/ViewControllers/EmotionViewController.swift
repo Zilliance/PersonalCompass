@@ -10,17 +10,17 @@ import UIKit
 import AKPickerView_Swift
 import KMPlaceholderTextView
 
+private let indexOfNeutralEmotion = 5
+
 class EmotionViewController: AutoscrollableViewController {
     
-
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
-    @IBOutlet weak var emotionTextField: UITextField!
     @IBOutlet weak var textView: KMPlaceholderTextView!
     
     private let picker = AKPickerView()
     
-    fileprivate var currentIndex = 0
+    fileprivate var currentIndex = indexOfNeutralEmotion
     
     var currentCompass: Compass!
 
@@ -56,6 +56,7 @@ class EmotionViewController: AutoscrollableViewController {
         
         self.picker.delegate = self
         self.picker.dataSource = self
+        self.picker.reloadData()
         
     }
     
@@ -64,12 +65,14 @@ class EmotionViewController: AutoscrollableViewController {
         if let emotion = self.currentCompass.emotion {
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
-            self.picker.scrollToItem(self.currentIndex, animated: true)
-            self.emotionTextField.text = self.currentCompass.compassEmotion
+            self.picker.scrollToItem(self.currentIndex)
+            self.textView.text = self.currentCompass.compassEmotion
+        } else {
+            self.currentIndex = indexOfNeutralEmotion
+            self.picker.scrollToItem(indexOfNeutralEmotion)
         }
         
         self.setupEmotionLabel()
-        
     }
     
     fileprivate func setupEmotionLabel() {
@@ -105,7 +108,6 @@ class EmotionViewController: AutoscrollableViewController {
 
 extension EmotionViewController: CompassValidation {
     var error: CompassError? {
-        // if self.emotionTextField.text?.isEmpty == true {
         if self.textView.text.isEmpty {
             return .text
         } else {
@@ -122,7 +124,7 @@ extension EmotionViewController: CompassFacetEditor {
         
         self.currentCompass.emotion = emotion
         self.currentCompass.lastEditedFacet = .emotion
-        self.currentCompass.compassEmotion = self.textView.text // self.emotionTextField.text
+        self.currentCompass.compassEmotion = self.textView.text
     }
 }
 
