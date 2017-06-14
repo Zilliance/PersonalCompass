@@ -118,9 +118,23 @@
                                             <segue destination="YZl-AO-1By" kind="embed" id="LN2-17-f6c"/>
                                         </connections>
                                     </containerView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulg-Eg-Xz6">
+                                        <rect key="frame" x="256" y="11" width="74" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="NxE-6I-Ozf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                        <state key="normal" title="Example">
+                                            <color key="titleColor" red="0.38431372549019605" green="0.42745098039215684" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exampleAction:" destination="wEt-bd-DK6" eventType="touchUpInside" id="qnY-eZ-hWu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="m2v-te-rI1" firstAttribute="top" secondItem="Ulg-Eg-Xz6" secondAttribute="bottom" constant="11" id="4eW-B0-jKp"/>
                                     <constraint firstItem="GVA-66-HcP" firstAttribute="top" secondItem="HUt-AN-9Ff" secondAttribute="top" constant="8" id="8Hf-v7-FDC"/>
                                     <constraint firstAttribute="trailing" secondItem="NSn-Ab-T1L" secondAttribute="trailing" constant="207" id="96B-6U-gpa"/>
                                     <constraint firstItem="UpF-Pf-OA5" firstAttribute="top" secondItem="QhY-Pv-YdG" secondAttribute="bottom" constant="-1" id="BLt-Yb-8hD"/>
@@ -130,6 +144,7 @@
                                     <constraint firstItem="NSn-Ab-T1L" firstAttribute="top" secondItem="m2v-te-rI1" secondAttribute="bottom" constant="10" id="M71-f9-jZf"/>
                                     <constraint firstItem="hVv-9h-ebO" firstAttribute="top" secondItem="NSn-Ab-T1L" secondAttribute="bottom" constant="8" id="M8l-LN-CTz"/>
                                     <constraint firstAttribute="trailing" secondItem="pz9-qF-xLk" secondAttribute="trailing" constant="16" id="OuF-Cm-qJ2"/>
+                                    <constraint firstItem="Ulg-Eg-Xz6" firstAttribute="top" secondItem="HUt-AN-9Ff" secondAttribute="top" constant="11" id="Pd3-EZ-sAS"/>
                                     <constraint firstItem="pz9-qF-xLk" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="TYB-T7-Rdb"/>
                                     <constraint firstItem="m2v-te-rI1" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="20" id="ai2-DI-9Ni"/>
                                     <constraint firstItem="m2v-te-rI1" firstAttribute="top" secondItem="OM2-74-mew" secondAttribute="bottom" constant="10" id="cfj-NH-tqx"/>
@@ -138,6 +153,7 @@
                                     <constraint firstItem="QhY-Pv-YdG" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="kYe-EQ-sh9"/>
                                     <constraint firstAttribute="trailing" secondItem="m2v-te-rI1" secondAttribute="trailing" constant="20" id="lTI-W4-7xC"/>
                                     <constraint firstItem="hVv-9h-ebO" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="oFe-d2-ZAI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ulg-Eg-Xz6" secondAttribute="trailing" constant="20" id="oXF-fp-8WR"/>
                                     <constraint firstAttribute="bottom" secondItem="pz9-qF-xLk" secondAttribute="bottom" constant="16" id="p0G-gx-yEQ"/>
                                     <constraint firstItem="pz9-qF-xLk" firstAttribute="top" secondItem="UpF-Pf-OA5" secondAttribute="bottom" constant="1" id="qWg-or-TAU"/>
                                     <constraint firstItem="GVA-66-HcP" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="qvs-wM-ljC"/>
@@ -163,6 +179,7 @@
                     <connections>
                         <outlet property="addToCalendarButton" destination="QhY-Pv-YdG" id="88M-J1-b2h"/>
                         <outlet property="datePicker" destination="hVv-9h-ebO" id="Mjx-dO-8bu"/>
+                        <outlet property="exampleButton" destination="Ulg-Eg-Xz6" id="ZNi-cg-8sX"/>
                         <outlet property="setReminderButton" destination="pz9-qF-xLk" id="8Ej-s7-xj6"/>
                     </connections>
                 </viewController>
@@ -174,6 +191,10 @@
         <scene sceneID="gZK-1n-y6H">
             <objects>
                 <viewController id="YZl-AO-1By" customClass="ZillianceTextViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NWH-47-PXy"/>
+                        <viewControllerLayoutGuide type="bottom" id="0xW-Kg-89K"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fOm-o8-cO8">
                         <rect key="frame" x="0.0" y="0.0" width="310" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

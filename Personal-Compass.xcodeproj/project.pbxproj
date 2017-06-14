@@ -90,6 +90,8 @@
 		8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9166851ECCF1F20072C19F /* Emotion.storyboard */; };
 		8C9166881ECCF2030072C19F /* EmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9166871ECCF2030072C19F /* EmotionViewController.swift */; };
 		8CAF52511EF043EE00E5F2DE /* ZillianceTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF52501EF043EE00E5F2DE /* ZillianceTextViewController.swift */; };
+		8CAF52541EF1CCED00E5F2DE /* ExamplePopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAF52531EF1CCED00E5F2DE /* ExamplePopUp.storyboard */; };
+		8CAF52561EF1CD0400E5F2DE /* ExamplePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF52551EF1CD0400E5F2DE /* ExamplePopUpViewController.swift */; };
 		8CF78EC94537B4F6424BE525 /* Pods_Personal_CompassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */; };
 		8CFC6D491ECE4E6000F44B95 /* Thought.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC6D481ECE4E6000F44B95 /* Thought.storyboard */; };
 		8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */; };
@@ -207,6 +209,8 @@
 		8C9166851ECCF1F20072C19F /* Emotion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Emotion.storyboard; sourceTree = "<group>"; };
 		8C9166871ECCF2030072C19F /* EmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionViewController.swift; path = ViewControllers/EmotionViewController.swift; sourceTree = "<group>"; };
 		8CAF52501EF043EE00E5F2DE /* ZillianceTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZillianceTextViewController.swift; path = ViewControllers/ZillianceTextViewController.swift; sourceTree = "<group>"; };
+		8CAF52531EF1CCED00E5F2DE /* ExamplePopUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExamplePopUp.storyboard; sourceTree = "<group>"; };
+		8CAF52551EF1CD0400E5F2DE /* ExamplePopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExamplePopUpViewController.swift; path = ViewControllers/ExamplePopUpViewController.swift; sourceTree = "<group>"; };
 		8CFC6D481ECE4E6000F44B95 /* Thought.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Thought.storyboard; sourceTree = "<group>"; };
 		8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThoughtViewController.swift; path = ViewControllers/ThoughtViewController.swift; sourceTree = "<group>"; };
 		8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 		8C463B261ECA356F00566531 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8CAF52521EF1CCDC00E5F2DE /* Example */,
 				4FB5AF1C1EE838A000837FF0 /* CompassSummary */,
 				8C54AD291EE602BD001EC903 /* FeelBetter */,
 				4FA825761EE1AC6A009AB272 /* Cells */,
@@ -501,6 +506,15 @@
 				8C9166871ECCF2030072C19F /* EmotionViewController.swift */,
 			);
 			name = Emotion;
+			sourceTree = "<group>";
+		};
+		8CAF52521EF1CCDC00E5F2DE /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				8CAF52531EF1CCED00E5F2DE /* ExamplePopUp.storyboard */,
+				8CAF52551EF1CD0400E5F2DE /* ExamplePopUpViewController.swift */,
+			);
+			name = Example;
 			sourceTree = "<group>";
 		};
 		8CFC6D471ECE4C4D00F44B95 /* Thought */ = {
@@ -737,6 +751,7 @@
 				4FD5B6541ECCD8110017DC06 /* StringItems.storyboard in Resources */,
 				8C463B281ECA358F00566531 /* StartCompass.storyboard in Resources */,
 				8C463B141ECA2D9700566531 /* Muli-BlackItalic.ttf in Resources */,
+				8CAF52541EF1CCED00E5F2DE /* ExamplePopUp.storyboard in Resources */,
 				8C463B2E1ECA441100566531 /* SideMenu.storyboard in Resources */,
 				8C463B161ECA2D9700566531 /* Muli-BoldItalic.ttf in Resources */,
 				8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */,
@@ -932,6 +947,7 @@
 				4FD5B65D1ECCDB200017DC06 /* StringSelectionViewController.swift in Sources */,
 				4F7D86E91EDF5198002C63A4 /* CompassFacetSummaryCell.swift in Sources */,
 				8C463B3E1ECB6E2300566531 /* App.swift in Sources */,
+				8CAF52561EF1CD0400E5F2DE /* ExamplePopUpViewController.swift in Sources */,
 				4FD5B65A1ECCD9680017DC06 /* StringItemSelectionCell.swift in Sources */,
 				8C54AD191ED8DF0E001EC903 /* InnerWisdom1ViewController.swift in Sources */,
 				8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */,
