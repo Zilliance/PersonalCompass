@@ -8,36 +8,33 @@
 
 import UIKit
 import AKPickerView_Swift
+import KMPlaceholderTextView
 
-class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, CompassValidation {
+class EmotionViewController: AutoscrollableViewController {
     
 
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
     @IBOutlet weak var emotionTextField: UITextField!
+    @IBOutlet weak var textView: KMPlaceholderTextView!
     
     private let picker = AKPickerView()
     
     fileprivate var currentIndex = 0
     
     var currentCompass: Compass!
-    
-    var error: CompassError? {
-        if self.emotionTextField.text?.characters.count == 0 {
-            return .text
-        }
-        else {
-            return nil
-        }
-    }
 
-    
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPicker()
         
+        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        
+        self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
+        self.textView.layer.borderWidth = App.Appearance.borderWidth
+        self.textView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,15 +72,6 @@ class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, C
         
     }
     
-    func save() {
-        
-        let emotion = self.emotions[self.currentIndex]
-        self.currentCompass.emotion = emotion
-        self.currentCompass.lastEditedFacet = .emotion
-        self.currentCompass.compassEmotion = self.emotionTextField.text
-        
-    }
-    
     fileprivate func setupEmotionLabel() {
         self.emotionLabel.text = self.emotions[self.currentIndex].longTitle
         self.emotionLabel.textColor = self.emotions[self.currentIndex].color
@@ -113,6 +101,33 @@ class EmotionViewController: AutoscrollableViewController, CompassFacetEditor, C
     
 }
 
+// MARK: - CompassValidation
+
+extension EmotionViewController: CompassValidation {
+    var error: CompassError? {
+        // if self.emotionTextField.text?.isEmpty == true {
+        if self.textView.text.isEmpty {
+            return .text
+        } else {
+            return nil
+        }
+    }
+}
+
+// MARK: - CompassFacetEditor
+
+extension EmotionViewController: CompassFacetEditor {
+    func save() {
+        let emotion = self.emotions[self.currentIndex]
+        
+        self.currentCompass.emotion = emotion
+        self.currentCompass.lastEditedFacet = .emotion
+        self.currentCompass.compassEmotion = self.textView.text // self.emotionTextField.text
+    }
+}
+
+// MARK: - AKPicker
+
 extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
     
     func numberOfItemsInPickerView(_ pickerView: AKPickerView) -> Int {
@@ -129,11 +144,25 @@ extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
     }
 }
 
+// MARK: - Text View Delegate
+
+extension EmotionViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        return true
+    }
+}
+
+// MARK: - Text Field Delegate
+
 extension EmotionViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-
 }
 
