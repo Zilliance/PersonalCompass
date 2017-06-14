@@ -20,7 +20,7 @@ class EmotionViewController: AutoscrollableViewController {
     
     private let picker = AKPickerView()
     
-    fileprivate var currentIndex = indexOfNeutralEmotion
+    fileprivate var currentIndex = 0 // indexOfNeutralEmotion
     
     var currentCompass: Compass!
 
@@ -56,8 +56,9 @@ class EmotionViewController: AutoscrollableViewController {
         
         self.picker.delegate = self
         self.picker.dataSource = self
-        self.picker.reloadData()
         
+        self.picker.reloadData()
+        self.picker.layoutSubviews()
     }
     
     private func loadData() {
@@ -68,8 +69,8 @@ class EmotionViewController: AutoscrollableViewController {
             self.picker.scrollToItem(self.currentIndex)
             self.textView.text = self.currentCompass.compassEmotion
         } else {
-            self.currentIndex = indexOfNeutralEmotion
-            self.picker.scrollToItem(indexOfNeutralEmotion)
+            // self.currentIndex = indexOfNeutralEmotion
+            // self.picker.scrollToItem(indexOfNeutralEmotion)
         }
         
         self.setupEmotionLabel()
