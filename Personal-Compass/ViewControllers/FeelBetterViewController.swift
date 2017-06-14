@@ -50,15 +50,14 @@ final class FeelBetterItemCell: UICollectionViewCell {
     var item: FeelBetterItem = .body {
         didSet {
             self.label.text = item.title
-            self.imageView.image = item.image.tinted(color: self.isSelected ? item.selectedColor: .navBar)
+            self.imageView.image = item.image.tinted(color: self.isSelected ? .navBar : .white)
+            self.contentView.backgroundColor = self.isSelected ? .contentBackground : item.selectedColor
+            self.label.textColor = self.isSelected ? .navBar : .white
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        //rounded image
-        imageView.layer.cornerRadius = imageView.frame.size.width / 2
         
         if UIDevice.isSmallerThaniPhone6 {
             label.font = UIFont.muliRegular(size: 12)
@@ -69,9 +68,9 @@ final class FeelBetterItemCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            self.imageView.image = self.item.image.tinted(color: isSelected ? self.item.selectedColor : .navBar)
-            self.label.textColor = isSelected ? self.item.selectedColor : .navBar
-            
+            self.imageView.image = self.item.image.tinted(color: isSelected ? .navBar : .white)
+            self.contentView.backgroundColor = isSelected  ? .contentBackground : self.item.selectedColor
+            self.label.textColor = isSelected ? .navBar : .white
             
         }
     }
@@ -95,7 +94,7 @@ class FeelBetterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = self.compass.stressor!
         
         self.scheduleItButton.layer.cornerRadius = App.Appearance.buttonCornerRadius
@@ -104,9 +103,8 @@ class FeelBetterViewController: UIViewController {
         self.items = self.feelBetterItems
         self.showViewController(controller: items[0].viewController)
         
-         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeView))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeView))
         
-        // pre select first position
         self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
         
     }
@@ -203,9 +201,7 @@ extension FeelBetterViewController: UICollectionViewDelegate
 extension FeelBetterViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemRatio = UIDevice.isSmallerThaniPhone6 ? self.items.count + 1 : self.items.count
-        return CGSize(width: collectionView.bounds.size.width / CGFloat(itemRatio) , height: 84)
+        return CGSize(width: UIScreen.main.bounds.width / CGFloat(self.items.count) , height: 84)
     }
-    
 }
 
