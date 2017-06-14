@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MZFormSheetController
 
 class ExamplePopUpViewController: UIViewController {
     
@@ -46,10 +45,10 @@ class ExamplePopUpViewController: UIViewController {
 
     @IBAction func okAction(_ sender: Any) {
         self.doneAction?(self.text)
-        self.mz_dismissFormSheetController(animated: true, completionHandler: nil)
+        self.dismiss(animated: true, completion: nil)
     }
    
     @IBAction func closeAction(_ sender: Any) {
-         self.mz_dismissFormSheetController(animated: true, completionHandler: nil)
+         self.dismiss(animated: true, completion: nil)
     }
 }

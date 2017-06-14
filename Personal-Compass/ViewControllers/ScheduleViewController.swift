@@ -8,7 +8,7 @@
 
 import UIKit
 import SVProgressHUD
-import MZFormSheetController
+import MZFormSheetPresentationController
 
 class ScheduleViewController: UIViewController {
 
@@ -95,12 +95,10 @@ class ScheduleViewController: UIViewController {
             self.zillianceTextViewController.setupForExample(with: text)
         }
         
-        let formSheet = MZFormSheetController(viewController: exampleViewController)
-        formSheet.shouldDismissOnBackgroundViewTap = true
-        formSheet.presentedFormSheetSize = CGSize(width: 300, height: 400)
-        formSheet.transitionStyle = .bounce
-        
-        self.mz_present(formSheet, animated: true, completionHandler: nil)
+        let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
+        formSheet.presentationController?.contentViewSize = CGSize(width: 300, height: 400)
+        formSheet.contentViewControllerTransitionStyle = .bounce
+        self.present(formSheet, animated: true, completion: nil)
     }
 
     @IBAction func addToCalendarAction(_ sender: UIButton) {
