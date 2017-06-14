@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Muli-Regular.ttf">
-            <string>Muli-Regular</string>
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
         </array>
         <array key="Muli-SemiBold.ttf">
             <string>Muli-SemiBold</string>
@@ -49,28 +49,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="igu-cF-vYG">
-                                                    <rect key="frame" x="26" y="18" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="JJz-FD-1Ed"/>
-                                                        <constraint firstAttribute="width" constant="32" id="NZg-qj-EOh"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyh-sZ-xCX">
-                                                    <rect key="frame" x="5" y="55" width="74" height="26"/>
-                                                    <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                                    <rect key="frame" x="5" y="8" width="74" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.29019607843137252" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="igu-cF-vYG">
+                                                    <rect key="frame" x="17" y="29" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="TDK-qV-mCT"/>
+                                                        <constraint firstAttribute="width" constant="50" id="s89-hZ-sq0"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Cyh-sZ-xCX" secondAttribute="bottom" constant="3" id="4GB-J9-FLd"/>
-                                            <constraint firstItem="igu-cF-vYG" firstAttribute="centerY" secondItem="7JZ-Sr-2yM" secondAttribute="centerY" constant="-8" id="RF8-x2-H64"/>
-                                            <constraint firstItem="igu-cF-vYG" firstAttribute="centerX" secondItem="7JZ-Sr-2yM" secondAttribute="centerX" id="Uyl-Jq-P8h"/>
-                                            <constraint firstItem="Cyh-sZ-xCX" firstAttribute="leading" secondItem="7JZ-Sr-2yM" secondAttribute="leading" constant="5" id="VZn-Zn-UfW"/>
-                                            <constraint firstAttribute="trailing" secondItem="Cyh-sZ-xCX" secondAttribute="trailing" constant="5" id="bJB-Ft-fx8"/>
-                                            <constraint firstItem="Cyh-sZ-xCX" firstAttribute="top" secondItem="igu-cF-vYG" secondAttribute="bottom" constant="5" id="qzm-dJ-GEY"/>
+                                            <constraint firstItem="Cyh-sZ-xCX" firstAttribute="leading" secondItem="7JZ-Sr-2yM" secondAttribute="leading" constant="5" id="5nU-Tc-m7e"/>
+                                            <constraint firstItem="igu-cF-vYG" firstAttribute="centerX" secondItem="7JZ-Sr-2yM" secondAttribute="centerX" id="Gg2-nS-zGf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cyh-sZ-xCX" secondAttribute="trailing" constant="5" id="kCS-sG-jtM"/>
+                                            <constraint firstItem="Cyh-sZ-xCX" firstAttribute="top" secondItem="7JZ-Sr-2yM" secondAttribute="top" constant="8" id="ktY-yz-1SG"/>
+                                            <constraint firstItem="igu-cF-vYG" firstAttribute="top" secondItem="Cyh-sZ-xCX" secondAttribute="bottom" constant="3" id="mFM-OE-XsF"/>
+                                            <constraint firstAttribute="bottom" secondItem="igu-cF-vYG" secondAttribute="bottom" constant="5" id="qCt-0L-E12"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="igu-cF-vYG" id="x8I-o0-DdI"/>
@@ -90,7 +90,7 @@
                                     <constraint firstAttribute="height" constant="44" id="lj1-kA-ZN9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="23"/>
-                                <state key="normal" title="Schedule it">
+                                <state key="normal" title="Take Action">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -99,10 +99,10 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5W-IQ-oV9">
                                 <rect key="frame" x="0.0" y="104" width="375" height="493"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nSw-7K-Dxe" secondAttribute="trailing" id="3nN-zV-iN7"/>
                             <constraint firstItem="C5W-IQ-oV9" firstAttribute="top" secondItem="nSw-7K-Dxe" secondAttribute="bottom" id="8uq-Dh-Fcu"/>
