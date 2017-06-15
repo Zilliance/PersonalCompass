@@ -118,6 +118,20 @@
                                             <segue destination="YZl-AO-1By" kind="embed" id="LN2-17-f6c"/>
                                         </connections>
                                     </containerView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulg-Eg-Xz6">
+                                        <rect key="frame" x="262" y="18" width="68" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="Y9o-SD-hNZ"/>
+                                            <constraint firstAttribute="height" constant="30" id="ftQ-bV-rRh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                        <state key="normal" title="Example">
+                                            <color key="titleColor" red="0.38431372549019605" green="0.42745098039215684" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exampleAction:" destination="wEt-bd-DK6" eventType="touchUpInside" id="qnY-eZ-hWu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -131,6 +145,7 @@
                                     <constraint firstItem="hVv-9h-ebO" firstAttribute="top" secondItem="NSn-Ab-T1L" secondAttribute="bottom" constant="8" id="M8l-LN-CTz"/>
                                     <constraint firstAttribute="trailing" secondItem="pz9-qF-xLk" secondAttribute="trailing" constant="16" id="OuF-Cm-qJ2"/>
                                     <constraint firstItem="pz9-qF-xLk" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="TYB-T7-Rdb"/>
+                                    <constraint firstItem="m2v-te-rI1" firstAttribute="top" secondItem="Ulg-Eg-Xz6" secondAttribute="bottom" constant="4" id="V8b-d8-sf7"/>
                                     <constraint firstItem="m2v-te-rI1" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="20" id="ai2-DI-9Ni"/>
                                     <constraint firstItem="m2v-te-rI1" firstAttribute="top" secondItem="OM2-74-mew" secondAttribute="bottom" constant="10" id="cfj-NH-tqx"/>
                                     <constraint firstAttribute="trailing" secondItem="hVv-9h-ebO" secondAttribute="trailing" constant="16" id="d2H-vv-gPC"/>
@@ -140,6 +155,7 @@
                                     <constraint firstItem="hVv-9h-ebO" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="oFe-d2-ZAI"/>
                                     <constraint firstAttribute="bottom" secondItem="pz9-qF-xLk" secondAttribute="bottom" constant="16" id="p0G-gx-yEQ"/>
                                     <constraint firstItem="pz9-qF-xLk" firstAttribute="top" secondItem="UpF-Pf-OA5" secondAttribute="bottom" constant="1" id="qWg-or-TAU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ulg-Eg-Xz6" secondAttribute="trailing" constant="20" id="qcZ-i1-iBo"/>
                                     <constraint firstItem="GVA-66-HcP" firstAttribute="leading" secondItem="HUt-AN-9Ff" secondAttribute="leading" constant="16" id="qvs-wM-ljC"/>
                                     <constraint firstItem="OM2-74-mew" firstAttribute="top" secondItem="GVA-66-HcP" secondAttribute="bottom" constant="3" id="rAF-f0-vR7"/>
                                     <constraint firstItem="pz9-qF-xLk" firstAttribute="top" secondItem="QhY-Pv-YdG" secondAttribute="bottom" constant="22" id="wq2-wl-LcZ"/>
@@ -163,6 +179,7 @@
                     <connections>
                         <outlet property="addToCalendarButton" destination="QhY-Pv-YdG" id="88M-J1-b2h"/>
                         <outlet property="datePicker" destination="hVv-9h-ebO" id="Mjx-dO-8bu"/>
+                        <outlet property="exampleButton" destination="Ulg-Eg-Xz6" id="ZNi-cg-8sX"/>
                         <outlet property="setReminderButton" destination="pz9-qF-xLk" id="8Ej-s7-xj6"/>
                     </connections>
                 </viewController>
@@ -174,6 +191,10 @@
         <scene sceneID="gZK-1n-y6H">
             <objects>
                 <viewController id="YZl-AO-1By" customClass="ZillianceTextViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NWH-47-PXy"/>
+                        <viewControllerLayoutGuide type="bottom" id="0xW-Kg-89K"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fOm-o8-cO8">
                         <rect key="frame" x="0.0" y="0.0" width="310" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

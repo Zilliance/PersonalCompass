@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import MZFormSheetPresentationController
 
 class ScheduleViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class ScheduleViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var addToCalendarButton: UIButton!
     @IBOutlet weak var setReminderButton: UIButton!
+    @IBOutlet weak var exampleButton: UIButton!
     
     private var zillianceTextViewController: ZillianceTextViewController!
     
@@ -57,6 +59,9 @@ class ScheduleViewController: UIViewController {
             view.layer.borderColor = UIColor.lightGray.cgColor
         }
         
+        if let _ = self.feelBetterType {
+            self.exampleButton.isHidden = false
+        }
     }
     
     // MARK: -- User Actions
@@ -75,6 +80,25 @@ class ScheduleViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         })
 
+    }
+    
+    @IBAction func exampleAction(_ sender: Any) {
+        
+        guard let exampleViewController = UIStoryboard(name: "ExamplePopUp", bundle: nil).instantiateInitialViewController() as? ExamplePopUpViewController else {
+            assertionFailure()
+            return
+        }
+        
+        exampleViewController.type = self.feelBetterType
+        
+        exampleViewController.doneAction = {[unowned self] text in
+            self.zillianceTextViewController.setupForExample(with: text)
+        }
+        
+        let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
+        formSheet.presentationController?.contentViewSize = CGSize(width: 300, height: 400)
+        formSheet.contentViewControllerTransitionStyle = .bounce
+        self.present(formSheet, animated: true, completion: nil)
     }
 
     @IBAction func addToCalendarAction(_ sender: UIButton) {
