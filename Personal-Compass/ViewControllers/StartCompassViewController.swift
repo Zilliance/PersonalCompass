@@ -95,15 +95,10 @@ class StartCompassViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.setupView()
         
-        if #available(iOS 10.0, *) {
-            //UNUserNotificationCenter.current().delegate = self
-        } else {
-            // iOS 9 is showing an alert view in the app delegate
-        }
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
