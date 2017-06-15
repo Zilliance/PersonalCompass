@@ -13,10 +13,11 @@ class ExamplePopUpViewController: UIViewController {
     var doneAction: ((String) -> ())?
     var type: FeelBetterType?
     
-    private var text = ""
+    var text = ""
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var exampleTextView: UITextView!
+    @IBOutlet weak var exampleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,12 @@ class ExamplePopUpViewController: UIViewController {
     }
     
     private func setupView() {
-        self.titleLabel.text = "Example"
+        
+        self.titleLabel.text = self.title
+        
         if let type = self.type {
+            
+            self.exampleButton.isHidden = false
             
             switch type {
             case .body:

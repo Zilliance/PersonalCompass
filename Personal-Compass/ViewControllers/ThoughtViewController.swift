@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import KMPlaceholderTextView
+import MZFormSheetPresentationController
 
 class ThoughtViewController: AutoscrollableViewController {
     
@@ -65,7 +66,18 @@ class ThoughtViewController: AutoscrollableViewController {
     }
 
     @IBAction func learnMore(_ sender: Any) {
-        print("learn more")
+        guard let exampleViewController = UIStoryboard(name: "ExamplePopUp", bundle: nil).instantiateInitialViewController() as? ExamplePopUpViewController else {
+            assertionFailure()
+            return
+        }
+        
+        exampleViewController.title = "Learn More"
+        exampleViewController.text = "Every emotion is caused by a thought or a stream of thoughts. We call these thoughts your “Ticker Tape.” Write your Ticker Tape here, expressing all of your thoughts about your stressor that are causing you to feel the way you do."
+        
+        let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
+        formSheet.presentationController?.contentViewSize = CGSize(width: 300, height: 300)
+        formSheet.contentViewControllerTransitionStyle = .bounce
+        self.present(formSheet, animated: true, completion: nil)
     }
 }
 

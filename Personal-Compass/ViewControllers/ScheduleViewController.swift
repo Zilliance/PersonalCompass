@@ -90,6 +90,7 @@ class ScheduleViewController: UIViewController {
         }
         
         exampleViewController.type = self.feelBetterType
+        exampleViewController.title = "Example"
         
         exampleViewController.doneAction = {[unowned self] text in
             self.zillianceTextViewController.setupForExample(with: text)
