@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class CompassCollectionViewCell: UICollectionViewCell {
     
@@ -94,6 +95,7 @@ class StartCompassViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.setupView()
         
