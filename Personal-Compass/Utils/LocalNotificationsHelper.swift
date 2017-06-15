@@ -12,7 +12,7 @@ import Foundation
 import UserNotifications
 import UIKit
 
-final class LocalNotificationsHelper
+final class LocalNotificationsHelper: NSObject
 {
     static let notificationCategory = "reminderNotification"
     
@@ -228,3 +228,29 @@ final class LocalNotificationsHelper
     
 }
 
+
+extension LocalNotificationsHelper: UNUserNotificationCenterDelegate {
+    
+    func listenToNotifications() {
+        
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+        } 
+        
+    }
+    
+    //for displaying notification when app is in foreground
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        completionHandler([.alert,.badge])
+    }
+    
+    // For handling tap and user actions. We need to have this here if not the local notification is received and we would show an alert as in iOS 9
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+
+        completionHandler()
+    }
+    
+}

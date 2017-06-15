@@ -31,12 +31,12 @@ class ScheduleViewController: UIViewController {
         super.viewWillAppear(animated)
         //load data
         
-        if let previousInformation = LocalNotificationsHelper.getInformationForStoredNotification(identifier: self.compass.id) {
-            
-            zillianceTextViewController.textView.text = previousInformation.0
-            datePicker.date = previousInformation.1
-            
-        }
+//        if let previousInformation = LocalNotificationsHelper.getInformationForStoredNotification(identifier: self.compass.id) {
+//            
+//            zillianceTextViewController.textView.text = previousInformation.0
+//            datePicker.date = previousInformation.1
+//            
+//        }
         
     }
     
