@@ -15,6 +15,7 @@ class InnerWisdom1ViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var listenLabel: UILabel!
+    @IBOutlet weak var headphonesIcon: UIImageView!
     
     var currentCompass: Compass!
     
@@ -71,10 +72,14 @@ class InnerWisdom1ViewController: UIViewController {
                 
                 player.play()
                 self.listenLabel.text = "Pause"
+                self.listenLabel.backgroundColor = .pause
+                self.headphonesIcon.image = #imageLiteral(resourceName: "icon-headphones-puase")
             }
             else {
                 player.stop()
                 self.listenLabel.text = "Listen"
+                self.listenLabel.backgroundColor = .purple
+                self.headphonesIcon.image = #imageLiteral(resourceName: "icon-headphones-listen")
             }
         }
     }
@@ -100,6 +105,8 @@ extension InnerWisdom1ViewController: AVAudioPlayerDelegate {
         
         if flag {
             self.listenLabel.text = "Listen"
+            self.listenLabel.backgroundColor = .purple
+            self.headphonesIcon.image = #imageLiteral(resourceName: "icon-headphones-listen")
         }
         
     }
