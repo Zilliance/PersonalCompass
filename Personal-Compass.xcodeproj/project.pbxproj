@@ -105,6 +105,7 @@
 		E37C7A901EC9FBA300076737 /* Personal_CompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A8F1EC9FBA300076737 /* Personal_CompassTests.swift */; };
 		E37C7A9B1EC9FBA300076737 /* Personal_CompassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A9A1EC9FBA300076737 /* Personal_CompassUITests.swift */; };
 		E3E937A61EE7256F001F9035 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E937A51EE7256F001F9035 /* UIImage+Extensions.swift */; };
+		E3F1F0A41EF2E19400F6C9B4 /* mpthreetest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3F1F0A31EF2E19400F6C9B4 /* mpthreetest.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +233,7 @@
 		E37C7A9A1EC9FBA300076737 /* Personal_CompassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal_CompassUITests.swift; sourceTree = "<group>"; };
 		E37C7A9C1EC9FBA300076737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3E937A51EE7256F001F9035 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		E3F1F0A31EF2E19400F6C9B4 /* mpthreetest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mpthreetest.mp3; sourceTree = "<group>"; };
 		EC48FF912D8728C3ACC4D045 /* Pods-Personal-CompassUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F62DA2C8E59F11927015A9E2 /* Pods-Personal-CompassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassTests/Pods-Personal-CompassTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,6 +354,7 @@
 				8C42EB8E1EE9DE1700167EF4 /* faq.html */,
 				8C42EB8F1EE9DE1700167EF4 /* zilliance privacy policy.html */,
 				8C42EB901EE9DE1700167EF4 /* zilliance terms of service.html */,
+				E3F1F0A31EF2E19400F6C9B4 /* mpthreetest.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F1F0A41EF2E19400F6C9B4 /* mpthreetest.mp3 in Resources */,
 				8CFC6D491ECE4E6000F44B95 /* Thought.storyboard in Resources */,
 				8C54AD241EE0B7F5001EC903 /* Schedule.storyboard in Resources */,
 				8C463B1F1ECA2D9700566531 /* Muli-SemiBold.ttf in Resources */,
