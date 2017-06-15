@@ -37,10 +37,20 @@ class InnerWisdom1ViewController: UIViewController {
             try audioPlayer = AVAudioPlayer(contentsOf: url)
             audioPlayer?.delegate = self
             audioPlayer?.prepareToPlay()
+            
         } catch let error as NSError {
             print("audioPlayer error \(error.localizedDescription)")
         }
         
+        // background audio
+        
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+            try session.setActive(true)
+        } catch let error as NSError {
+            print("audio session error \(error.localizedDescription)")
+        }
     }
     
     private func setupView() {
@@ -60,7 +70,7 @@ class InnerWisdom1ViewController: UIViewController {
             if !player.isPlaying {
                 
                 player.play()
-                self.listenLabel.text = "Stop"
+                self.listenLabel.text = "Pause"
             }
             else {
                 player.stop()
