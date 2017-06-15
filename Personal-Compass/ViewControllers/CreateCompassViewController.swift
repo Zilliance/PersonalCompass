@@ -53,7 +53,7 @@ enum CompassScene: String {
         case .summary:
             return .summary
         case .need:
-            return .innerWisdom
+            return .need
         case .innerWisdom1:
             return .innerWisdom
         case .innerWisdom2:
@@ -67,7 +67,7 @@ enum CompassScene: String {
         case .innerWisdomSummary:
             return .innerWisdom
         case .takeAction:
-            return .innerWisdom
+            return .summary
         }
     }
 
