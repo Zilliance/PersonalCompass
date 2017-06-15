@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g9l-os-V6r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g9l-os-V6r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -62,19 +62,24 @@
                                     <outlet property="delegate" destination="g9l-os-V6r" id="Hnq-fh-LXM"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-uD-pDv">
-                                <rect key="frame" x="132.5" y="111" width="43" height="21.5"/>
-                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPt-St-839">
-                                <rect key="frame" x="62.5" y="96.5" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="bHz-q5-hmp"/>
-                                    <constraint firstAttribute="height" constant="50" id="pB9-ew-ymL"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-gx-eOk">
+                                <rect key="frame" x="131" y="96.5" width="113" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPt-St-839">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="bHz-q5-hmp"/>
+                                            <constraint firstAttribute="height" constant="50" id="pB9-ew-ymL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-uD-pDv">
+                                        <rect key="frame" x="70" y="0.0" width="43" height="50"/>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Express all of your thoughts about your stressor that are causing you to feel the way you do. Learn more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n1-QI-lsB">
                                 <rect key="frame" x="30" y="197" width="315" height="33"/>
                                 <gestureRecognizers/>
@@ -99,14 +104,12 @@
                             <constraint firstAttribute="trailing" secondItem="MtR-db-5RY" secondAttribute="trailing" id="BDC-t4-YBK"/>
                             <constraint firstItem="MtR-db-5RY" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" id="JWg-nH-flR"/>
                             <constraint firstAttribute="trailing" secondItem="3n1-QI-lsB" secondAttribute="trailing" constant="30" id="LUZ-Vj-KWQ"/>
-                            <constraint firstItem="1vt-uD-pDv" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="34.5" id="Mbe-pQ-J1v"/>
-                            <constraint firstItem="MtR-db-5RY" firstAttribute="top" secondItem="YPt-St-839" secondAttribute="bottom" constant="17.5" id="RVT-GH-Tca"/>
-                            <constraint firstItem="YPt-St-839" firstAttribute="centerX" secondItem="nlG-po-c2V" secondAttribute="centerX" constant="-100" id="Rbr-5w-Ozj"/>
-                            <constraint firstItem="1vt-uD-pDv" firstAttribute="leading" secondItem="YPt-St-839" secondAttribute="trailing" constant="20" id="Tyk-o1-Us2"/>
+                            <constraint firstItem="m9g-gx-eOk" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="20" id="Umg-pT-NIX"/>
                             <constraint firstAttribute="trailing" secondItem="IHa-ko-eTm" secondAttribute="trailing" constant="20" id="XWF-FD-oG1"/>
-                            <constraint firstItem="YPt-St-839" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="20" id="XeZ-c2-Xc9"/>
+                            <constraint firstItem="m9g-gx-eOk" firstAttribute="centerX" secondItem="nlG-po-c2V" secondAttribute="centerX" id="ccu-K4-yWf"/>
                             <constraint firstItem="IHa-ko-eTm" firstAttribute="top" secondItem="3n1-QI-lsB" secondAttribute="bottom" constant="13" id="dqz-MH-T3Z"/>
                             <constraint firstItem="IHa-ko-eTm" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" constant="20" id="nsv-jZ-NVY"/>
+                            <constraint firstItem="MtR-db-5RY" firstAttribute="top" secondItem="m9g-gx-eOk" secondAttribute="bottom" constant="17.5" id="puW-CN-fd0"/>
                             <constraint firstItem="3n1-QI-lsB" firstAttribute="top" secondItem="MtR-db-5RY" secondAttribute="bottom" constant="11.5" id="rbH-vm-TZz"/>
                             <constraint firstAttribute="trailing" secondItem="fZ1-8y-9Os" secondAttribute="trailing" id="rzb-AP-fje"/>
                             <constraint firstItem="fZ1-8y-9Os" firstAttribute="top" secondItem="jvH-Hc-0OV" secondAttribute="bottom" constant="35" id="z9b-zI-hc2"/>
