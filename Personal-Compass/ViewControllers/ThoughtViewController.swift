@@ -17,6 +17,7 @@ class ThoughtViewController: AutoscrollableViewController {
     @IBOutlet weak var emotionIconImageView: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var textView: KMPlaceholderTextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,6 +25,7 @@ class ThoughtViewController: AutoscrollableViewController {
     }
     
     private func setupView() {
+        self.setupDecriptionLabel()
         
         self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
@@ -40,7 +42,31 @@ class ThoughtViewController: AutoscrollableViewController {
             self.emotionLabel.text = compassEmotion
         }
     }
+    
+    private func setupDecriptionLabel() {
+        let express = "Express all of your thoughts about your stressor that are causing you to feel the way you do.  "
+        let learn = "Learn more."
+        
+        let expressAttr = NSAttributedString(string: express, attributes: [
+            NSFontAttributeName: UIFont.muliItalic(size: 13),
+            NSForegroundColorAttributeName: UIColor.darkBlueText
+        ])
+        
+        let learnAttr = NSAttributedString(string: learn, attributes: [
+            NSFontAttributeName: UIFont.muliItalic(size: 13),
+            NSForegroundColorAttributeName: UIColor.lightBlue
+        ])
+        
+        let attrString = NSMutableAttributedString()
+        attrString.append(expressAttr)
+        attrString.append(learnAttr)
+        
+        self.descriptionLabel.attributedText = attrString
+    }
 
+    @IBAction func learnMore(_ sender: Any) {
+        print("learn more")
+    }
 }
 
 // MARK: - CompassFacetEditor

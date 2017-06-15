@@ -4,13 +4,13 @@
 <array>
 	<dict>
 		<key>longTitle</key>
-		<string>Despairing, Ashamed, Fearful, Hopeless, Helpless</string>
+		<string>Despairing, Ashamed, Fearful, Hopeless</string>
 		<key>shortTitle</key>
 		<string>Despairing, Ashamed, ...</string>
 	</dict>
 	<dict>
 		<key>longTitle</key>
-		<string>Angry, Resentful, Disgusted, Hateful, Jealous, Depressed</string>
+		<string>Angry, Resentful, Jealous, Depressed</string>
 		<key>shortTitle</key>
 		<string>Angry, Resentful, Disgusted</string>
 	</dict>
@@ -22,13 +22,13 @@
 	</dict>
 	<dict>
 		<key>longTitle</key>
-		<string>Doubtful, Disappointed, Disillusioned, Worried, Anxious</string>
+		<string>Doubtful, Disappointed, Worried, Anxious</string>
 		<key>shortTitle</key>
 		<string>Doubtful, Disappointed</string>
 	</dict>
 	<dict>
 		<key>longTitle</key>
-		<string>Frustrated, Impatient, Overwhelmed, Confused, Embarrassed</string>
+		<string>Frustrated, Overwhelmed, Confused, Embarrassed</string>
 		<key>shortTitle</key>
 		<string>Frustrated, Impatient</string>
 	</dict>
@@ -46,7 +46,7 @@
 	</dict>
 	<dict>
 		<key>longTitle</key>
-		<string>Optimistic, Happy, Hopeful, Willing, Open</string>
+		<string>Happy, Hopeful, Willing, Open</string>
 		<key>shortTitle</key>
 		<string>Optimistic, Happy</string>
 	</dict>
@@ -64,7 +64,7 @@
 	</dict>
 	<dict>
 		<key>longTitle</key>
-		<string>Joyful, Appreciative, Loving, Empowered, Free</string>
+		<string>Joyful, Appreciative, Loving, Empowered</string>
 		<key>shortTitle</key>
 		<string>Joyful, Appreciative</string>
 	</dict>
