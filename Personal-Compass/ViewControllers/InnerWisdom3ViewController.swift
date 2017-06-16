@@ -29,6 +29,7 @@ class InnerWisdom3ViewController: AutoscrollableViewController {
     
     private func setupView() {
         
+        self.needTextView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.concreteTextView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
         self.concreteTextView.layer.cornerRadius = App.Appearance.buttonCornerRadius
