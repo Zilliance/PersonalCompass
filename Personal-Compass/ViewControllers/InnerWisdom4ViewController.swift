@@ -11,7 +11,7 @@ import AKPickerView_Swift
 
 // Feel Better Emotion
 
-class InnerWisdom4ViewController: AutoscrollableViewController, CompassValidation, CompassFacetEditor {
+class InnerWisdom4ViewController: AutoscrollableViewController {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var emotionLabel: UILabel!
@@ -19,15 +19,6 @@ class InnerWisdom4ViewController: AutoscrollableViewController, CompassValidatio
     @IBOutlet weak var needMetTextField: UITextField!
     
     var currentCompass: Compass!
-    
-    var error: CompassError? {
-        if self.needMetTextField.text?.characters.count == 0 {
-            return .text
-        }
-        else {
-            return nil
-        }
-    }
     
     private let picker = AKPickerView()
     
@@ -37,20 +28,13 @@ class InnerWisdom4ViewController: AutoscrollableViewController, CompassValidatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.setupPicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadData()
-    }
-    
-    func save() {
-        let emotion = self.emotions[self.currentIndex]
-        self.currentCompass.needMetEmotion = emotion
-        self.currentCompass.compassNeedMet = self.needMetTextField.text
-        self.currentCompass.lastEditedFacet = .innerWisdom4
-        
     }
     
     private func setupPicker() {
@@ -113,6 +97,31 @@ class InnerWisdom4ViewController: AutoscrollableViewController, CompassValidatio
     }
 }
 
+// MARK: - CompassFacetEditor
+
+extension InnerWisdom4ViewController: CompassFacetEditor {
+    func save() {
+        let emotion = self.emotions[self.currentIndex]
+        self.currentCompass.needMetEmotion = emotion
+        self.currentCompass.compassNeedMet = self.needMetTextField.text
+        self.currentCompass.lastEditedFacet = .innerWisdom4
+    }
+}
+
+// MARK: - CompassValidation
+
+extension InnerWisdom4ViewController: CompassValidation {
+    var error: CompassError? {
+        if self.needMetTextField.text?.isEmpty == true {
+            return .text
+        } else {
+            return nil
+        }
+    }
+}
+
+// MARK: - AKPicker
+
 extension InnerWisdom4ViewController: AKPickerViewDataSource, AKPickerViewDelegate {
     
     func numberOfItemsInPickerView(_ pickerView: AKPickerView) -> Int {
@@ -128,6 +137,8 @@ extension InnerWisdom4ViewController: AKPickerViewDataSource, AKPickerViewDelega
         self.setupEmotionLabel()
     }
 }
+
+// MARK: - UITextFieldDelegate
 
 extension InnerWisdom4ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

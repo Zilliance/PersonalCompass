@@ -125,7 +125,7 @@ class InnerWisdom1ViewController: UIViewController {
             return
         }
         
-        exampleViewController.title = "Learn More"
+        exampleViewController.title = "Your Inner Wisdom"
         exampleViewController.text = "See if your Inner Wisdom agrees with what you need to feel better.\n\nYour Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. It always knows what's best for you and never needs something outside of your control to change.\n\nTry this 2 minute meditation to see what your Inner Wisdom has to say about what you need to feel better that’s in your control."
         
         let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
