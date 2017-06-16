@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,6 +13,9 @@
     <customFonts key="customFonts">
         <array key="Muli-Bold.ttf">
             <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Italic.ttf">
+            <string>Muli-Italic</string>
         </array>
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
@@ -40,50 +43,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO1-G0-WM5">
-                                <rect key="frame" x="20" y="60" width="335" height="92"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Your need" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO1-G0-WM5">
+                                <rect key="frame" x="20" y="86" width="335" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="Rnq-Rh-81X"/>
+                                    <constraint firstAttribute="height" constant="80" id="Rnq-Rh-81X"/>
                                 </constraints>
                                 <color key="textColor" red="0.38431372549999998" green="0.42745098039215684" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLh-dr-JrE">
-                                <rect key="frame" x="126" y="172" width="122" height="2"/>
+                                <rect key="frame" x="126" y="186" width="122" height="2"/>
                                 <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="TlQ-W9-Djg"/>
                                     <constraint firstAttribute="width" constant="122" id="yTO-op-k2g"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNh-ro-hH3">
-                                <rect key="frame" x="20" y="192" width="335" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="26"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try this two minute meditation to see what your Inner Wisdom has to say about your need.  Learn more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-lp-yc3">
+                                <rect key="frame" x="16" y="203" width="343" height="33"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-lp-yc3">
-                                <rect key="frame" x="36" y="209" width="303" height="141"/>
-                                <string key="text">See if your Inner Wisdom agrees with what you need to feel better.   
-Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. It never needs something outside of your control to change. Try this 2 minute meditation to see what your Inner Wisdom has to say about what you need to feel better.</string>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0bf-gg-wtW" appends="YES" id="LFp-zq-Tn3"/>
+                                </connections>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3G-hd-Nz5">
-                                <rect key="frame" x="135.5" y="370" width="104" height="130"/>
+                                <rect key="frame" x="135.5" y="256" width="104" height="130"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-headphones-listen" translatesAutoresizingMaskIntoConstraints="NO" id="JrN-2R-qnf">
-                                        <rect key="frame" x="11" y="0.0" width="82" height="82"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="82" id="GDr-ZA-VJ2"/>
-                                            <constraint firstAttribute="height" constant="82" id="mwz-rY-FN6"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-headphones-listen" translatesAutoresizingMaskIntoConstraints="NO" id="JrN-2R-qnf">
+                                        <rect key="frame" x="8.5" y="0.0" width="87" height="86"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bre-2q-owR">
-                                        <rect key="frame" x="0.0" y="98" width="104" height="28"/>
+                                        <rect key="frame" x="0.0" y="102" width="104" height="28"/>
                                         <color key="backgroundColor" red="0.38431372549019605" green="0.42745098039215684" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="BIn-73-kus"/>
@@ -106,49 +101,67 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                     <constraint firstItem="N9k-aS-hGn" firstAttribute="leading" secondItem="g3G-hd-Nz5" secondAttribute="leading" id="3fD-fh-Z8W"/>
                                     <constraint firstAttribute="trailing" secondItem="N9k-aS-hGn" secondAttribute="trailing" id="6VO-1a-S09"/>
                                     <constraint firstItem="N9k-aS-hGn" firstAttribute="top" secondItem="g3G-hd-Nz5" secondAttribute="top" id="6dh-XB-Wv4"/>
+                                    <constraint firstAttribute="trailing" secondItem="JrN-2R-qnf" secondAttribute="trailing" constant="8.5" id="AWp-D2-YWU"/>
                                     <constraint firstAttribute="bottom" secondItem="N9k-aS-hGn" secondAttribute="bottom" id="GVs-g7-Hhl"/>
+                                    <constraint firstItem="JrN-2R-qnf" firstAttribute="top" secondItem="g3G-hd-Nz5" secondAttribute="top" id="Hfq-tk-fYO"/>
                                     <constraint firstItem="bre-2q-owR" firstAttribute="leading" secondItem="g3G-hd-Nz5" secondAttribute="leading" id="OUf-9b-FTG"/>
                                     <constraint firstAttribute="height" constant="130" id="OW4-Px-nIZ"/>
                                     <constraint firstAttribute="width" constant="104" id="TFE-l5-O1s"/>
+                                    <constraint firstItem="JrN-2R-qnf" firstAttribute="leading" secondItem="g3G-hd-Nz5" secondAttribute="leading" constant="8.5" id="fZT-Wr-LV8"/>
+                                    <constraint firstAttribute="bottom" secondItem="bre-2q-owR" secondAttribute="bottom" id="k0u-uR-GOf"/>
                                     <constraint firstItem="JrN-2R-qnf" firstAttribute="top" secondItem="g3G-hd-Nz5" secondAttribute="top" id="p3M-V4-12E"/>
                                     <constraint firstItem="bre-2q-owR" firstAttribute="top" secondItem="JrN-2R-qnf" secondAttribute="bottom" constant="16" id="rPZ-Iz-FnO"/>
-                                    <constraint firstItem="JrN-2R-qnf" firstAttribute="centerX" secondItem="g3G-hd-Nz5" secondAttribute="centerX" id="rcC-oz-b2t"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or skip to next." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbr-z3-OHF">
-                                <rect key="frame" x="141" y="512" width="92.5" height="18"/>
+                                <rect key="frame" x="141" y="398" width="92.5" height="18"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have identified your need as:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcK-P7-QSA">
+                                <rect key="frame" x="20" y="55" width="335" height="21"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="EO1-G0-WM5" firstAttribute="top" secondItem="Snc-z6-P4A" secondAttribute="bottom" constant="40" id="50Q-kQ-HH2"/>
                             <constraint firstItem="Zbr-z3-OHF" firstAttribute="top" secondItem="g3G-hd-Nz5" secondAttribute="bottom" constant="12" id="DdP-G4-SpA"/>
-                            <constraint firstAttribute="trailing" secondItem="CNh-ro-hH3" secondAttribute="trailing" constant="20" id="GaE-NJ-IFU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A7R-lp-yc3" secondAttribute="trailing" constant="20" id="HxY-2a-SAb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A7R-lp-yc3" secondAttribute="trailing" id="HxY-2a-SAb"/>
                             <constraint firstItem="SLh-dr-JrE" firstAttribute="centerX" secondItem="zhQ-W8-oRl" secondAttribute="centerX" id="M0M-iD-ciQ"/>
-                            <constraint firstItem="A7R-lp-yc3" firstAttribute="leading" secondItem="zhQ-W8-oRl" secondAttribute="leadingMargin" constant="20" id="OYc-cA-vdc"/>
-                            <constraint firstItem="A7R-lp-yc3" firstAttribute="top" secondItem="CNh-ro-hH3" secondAttribute="bottom" constant="17" id="UWI-g2-VJ7"/>
+                            <constraint firstItem="GcK-P7-QSA" firstAttribute="leading" secondItem="zhQ-W8-oRl" secondAttribute="leading" constant="20" id="Nd3-h6-MJe"/>
+                            <constraint firstItem="A7R-lp-yc3" firstAttribute="leading" secondItem="zhQ-W8-oRl" secondAttribute="leadingMargin" id="OYc-cA-vdc"/>
                             <constraint firstItem="Zbr-z3-OHF" firstAttribute="centerX" secondItem="zhQ-W8-oRl" secondAttribute="centerX" id="aWy-XK-3oG"/>
+                            <constraint firstItem="GcK-P7-QSA" firstAttribute="top" secondItem="Snc-z6-P4A" secondAttribute="bottom" constant="35" id="bu2-yU-m8a"/>
                             <constraint firstAttribute="trailing" secondItem="EO1-G0-WM5" secondAttribute="trailing" constant="20" id="e5M-fX-4vP"/>
                             <constraint firstItem="g3G-hd-Nz5" firstAttribute="top" secondItem="A7R-lp-yc3" secondAttribute="bottom" constant="20" id="iCl-VL-VbN"/>
                             <constraint firstItem="EO1-G0-WM5" firstAttribute="leading" secondItem="zhQ-W8-oRl" secondAttribute="leading" constant="20" id="ifa-O8-Rdq"/>
                             <constraint firstItem="g3G-hd-Nz5" firstAttribute="centerX" secondItem="zhQ-W8-oRl" secondAttribute="centerX" id="t73-W4-ZG2"/>
-                            <constraint firstItem="CNh-ro-hH3" firstAttribute="top" secondItem="SLh-dr-JrE" secondAttribute="bottom" constant="18" id="xZD-4m-s8b"/>
-                            <constraint firstItem="CNh-ro-hH3" firstAttribute="leading" secondItem="zhQ-W8-oRl" secondAttribute="leading" constant="20" id="zcz-R3-ryS"/>
+                            <constraint firstItem="A7R-lp-yc3" firstAttribute="top" secondItem="SLh-dr-JrE" secondAttribute="bottom" constant="15" id="tdj-CO-Omg"/>
+                            <constraint firstAttribute="trailing" secondItem="GcK-P7-QSA" secondAttribute="trailing" constant="20" id="u14-ev-yCO"/>
+                            <constraint firstItem="EO1-G0-WM5" firstAttribute="top" secondItem="GcK-P7-QSA" secondAttribute="bottom" constant="10" id="zgT-EN-15g"/>
                             <constraint firstItem="SLh-dr-JrE" firstAttribute="top" secondItem="EO1-G0-WM5" secondAttribute="bottom" constant="20" id="zh8-61-l8h"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonContainer" destination="g3G-hd-Nz5" id="CiX-md-tEQ"/>
+                        <outlet property="buttonContainerHeightConstraint" destination="OW4-Px-nIZ" id="ggI-FI-q09"/>
+                        <outlet property="buttonContainerWidthConstraint" destination="TFE-l5-O1s" id="mKC-Fi-A0j"/>
+                        <outlet property="descriptionLabel" destination="A7R-lp-yc3" id="VI2-Fy-tLd"/>
                         <outlet property="headphonesIcon" destination="JrN-2R-qnf" id="nHl-Vb-WSP"/>
                         <outlet property="listenLabel" destination="bre-2q-owR" id="gHO-il-zez"/>
                         <outlet property="textView" destination="EO1-G0-WM5" id="CQX-E5-NAr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoJ-Dz-Qva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0bf-gg-wtW">
+                    <connections>
+                        <action selector="learnMore:" destination="Eq7-Qq-x6S" id="nGZ-eH-y4y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-60" y="154.27286356821591"/>
         </scene>
@@ -308,7 +321,7 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                     <constraint firstAttribute="height" constant="46" id="4lO-Ii-XX5"/>
                                     <constraint firstAttribute="width" constant="242" id="Urv-GV-72f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                 <color key="textColor" red="0.15294117647058825" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -339,17 +352,9 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                     <constraint firstAttribute="height" constant="2" id="jaD-Tj-6jR"/>
                                 </constraints>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: “I need a …”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUI-jD-r9x">
-                                <rect key="frame" x="20" y="291" width="335" height="18"/>
-                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.45882352941176469" green="0.46666666666666667" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="bUI-jD-r9x" secondAttribute="trailing" constant="20" id="3K0-OA-SKg"/>
-                            <constraint firstItem="bUI-jD-r9x" firstAttribute="leading" secondItem="adR-5P-s3a" secondAttribute="leading" constant="20" id="4a0-qP-sXH"/>
                             <constraint firstItem="HSN-RG-ez3" firstAttribute="leading" secondItem="adR-5P-s3a" secondAttribute="leading" constant="20" id="8cy-3v-40b"/>
                             <constraint firstItem="fYh-yn-Vef" firstAttribute="top" secondItem="ibR-Nh-zKa" secondAttribute="bottom" constant="20" id="L4J-go-lYd"/>
                             <constraint firstItem="ibR-Nh-zKa" firstAttribute="centerX" secondItem="adR-5P-s3a" secondAttribute="centerX" id="W9q-sb-ZEf"/>
@@ -357,7 +362,6 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                             <constraint firstItem="ibR-Nh-zKa" firstAttribute="top" secondItem="aYJ-AI-jpl" secondAttribute="bottom" constant="35" id="fel-jw-hGz"/>
                             <constraint firstAttribute="trailing" secondItem="HSN-RG-ez3" secondAttribute="trailing" constant="20" id="gjb-BD-lWY"/>
                             <constraint firstItem="HSN-RG-ez3" firstAttribute="top" secondItem="fYh-yn-Vef" secondAttribute="bottom" constant="30" id="hAF-xR-S9e"/>
-                            <constraint firstItem="bUI-jD-r9x" firstAttribute="top" secondItem="HSN-RG-ez3" secondAttribute="bottom" constant="10" id="mNm-48-am1"/>
                         </constraints>
                     </view>
                     <connections>
@@ -403,7 +407,7 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Muy-cC-aGL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                 <color key="textColor" red="0.1529411765" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -428,18 +432,6 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                     <outlet property="delegate" destination="zj9-2b-aXb" id="7U8-MA-vqf"/>
                                 </connections>
                             </textView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO4-fW-DHZ">
-                                <rect key="frame" x="20" y="402" width="335" height="18"/>
-                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2: “…”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V42-8K-bD6">
-                                <rect key="frame" x="20" y="425" width="335" height="18"/>
-                                <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -449,17 +441,11 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                             <constraint firstItem="8md-by-F3n" firstAttribute="top" secondItem="gda-KX-9vn" secondAttribute="bottom" constant="26" id="7Dj-Fm-D2o"/>
                             <constraint firstAttribute="trailing" secondItem="8md-by-F3n" secondAttribute="trailing" constant="20" id="AKH-CN-Rca"/>
                             <constraint firstItem="EQl-I8-12b" firstAttribute="top" secondItem="FRE-Rr-O4A" secondAttribute="bottom" constant="40" id="EyL-La-ZuK"/>
-                            <constraint firstAttribute="trailing" secondItem="V42-8K-bD6" secondAttribute="trailing" constant="20" id="Pj6-yQ-WGG"/>
                             <constraint firstItem="8md-by-F3n" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="QNw-iv-cSv"/>
                             <constraint firstItem="MC3-wX-h0D" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="SQx-ct-Dok"/>
-                            <constraint firstItem="NO4-fW-DHZ" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="U5i-UQ-dsE"/>
                             <constraint firstItem="gda-KX-9vn" firstAttribute="top" secondItem="EQl-I8-12b" secondAttribute="bottom" constant="19" id="Wyk-HS-9lB"/>
-                            <constraint firstItem="V42-8K-bD6" firstAttribute="top" secondItem="NO4-fW-DHZ" secondAttribute="bottom" constant="5" id="b3a-yA-rSd"/>
                             <constraint firstItem="EQl-I8-12b" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="cJW-Mn-jc8"/>
-                            <constraint firstItem="NO4-fW-DHZ" firstAttribute="top" secondItem="MC3-wX-h0D" secondAttribute="bottom" constant="5" id="cSa-tG-gDh"/>
-                            <constraint firstAttribute="trailing" secondItem="NO4-fW-DHZ" secondAttribute="trailing" constant="20" id="dce-PK-JHt"/>
                             <constraint firstItem="gda-KX-9vn" firstAttribute="centerX" secondItem="Xi2-Z8-oH5" secondAttribute="centerX" id="jj1-Pq-JC7"/>
-                            <constraint firstItem="V42-8K-bD6" firstAttribute="leading" secondItem="Xi2-Z8-oH5" secondAttribute="leading" constant="20" id="vW4-TY-wZc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -497,7 +483,7 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                                     <constraint firstAttribute="height" constant="50" id="86y-Uc-iY5"/>
                                     <constraint firstAttribute="width" constant="275" id="aJ4-ZD-bwt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                 <color key="textColor" red="0.1529411765" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -635,7 +621,7 @@ Your Inner Wisdom is your intuition, gut feeling, inner voice or inner knowing. 
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="What I have learned about myself:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvN-HW-eWH">
-                                <rect key="frame" x="49" y="40" width="222.5" height="18"/>
+                                <rect key="frame" x="49.5" y="40" width="222.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

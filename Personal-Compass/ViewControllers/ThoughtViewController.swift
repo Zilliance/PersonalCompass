@@ -72,7 +72,7 @@ class ThoughtViewController: AutoscrollableViewController {
         }
         
         exampleViewController.title = "Learn More"
-        exampleViewController.text = "Every emotion is caused by a thought or a stream of thoughts. We call these thoughts your “Ticker Tape.” Write your Ticker Tape here, expressing all of your thoughts about your stressor that are causing you to feel the way you do."
+        exampleViewController.text = "Every emotion is caused by a thought or a stream of thoughts. We call these thoughts your “Ticker Tape.”\n\nWrite your Ticker Tape here, expressing all of your thoughts about your stressor that are causing you to feel the way you do."
         
         let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
         formSheet.presentationController?.contentViewSize = CGSize(width: 300, height: 300)
