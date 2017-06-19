@@ -24,7 +24,7 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
     
     fileprivate var currentIndex = 0
     
-    fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions()).reversed()
+    fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
     
     override func viewDidLoad() {
         super.viewDidLoad()
