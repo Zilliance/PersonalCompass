@@ -11,6 +11,8 @@ import AKPickerView_Swift
 
 // Feel Better Emotion
 
+private let indexOfNeutralEmotion = 5
+
 class InnerWisdom4ViewController: AutoscrollableViewController {
 
     @IBOutlet weak var textView: UITextView!
@@ -59,9 +61,17 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
         if let emotion = self.currentCompass.needMetEmotion {
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
-            self.picker.scrollToItem(self.currentIndex, animated: true)
+            self.picker.scrollToItem(self.currentIndex)
             self.needMetTextField.text = self.currentCompass.compassNeedMet
         }
+        else {
+            self.currentIndex = indexOfNeutralEmotion
+        }
+    
+        DispatchQueue.main.async {
+            self.picker.scrollToItem(self.currentIndex)
+        }
+
         
         self.textView.text = self.currentCompass.editedNeed
         
