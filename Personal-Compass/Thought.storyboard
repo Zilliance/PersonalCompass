@@ -55,7 +55,7 @@
                                         <color key="value" white="0.65980360243055558" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
-                                        <string key="value">For example, I am feeling fearful because I need to find a new job. Money is tight and time is running out. I have sent out a ton of resumes. I don’t know what else to do.</string>
+                                        <string key="value">For example, I need to find a new job. Money is tight and time is running out. I have sent out a ton of resumes. I don’t know what else to do.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>

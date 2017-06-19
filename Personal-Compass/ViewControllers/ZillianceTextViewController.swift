@@ -346,18 +346,18 @@ extension ZillianceTextViewController: UITextViewDelegate {
         switch feelBetterType {
         case .body:
             self.validation = .placeholder1
-            self.textView.text = "Stressor: \(self.compass.stressor!) \nTo find relief from this stressor, I will do this to feel better physically: yoga"
-            self.promptTexts = ["yoga"]
+            self.textView.text = "Stressor: \(self.compass.stressor!) \nTo find relief from this stressor, I will do this to feel better physically: Yoga"
+            self.promptTexts = ["Yoga"]
             self.setupTextView()
         case .thought:
             self.validation = .placeholder1
-            self.textView.text = "Stressor:  \(self.compass.stressor!) \nMy thoughts about this stressor impact how I feel. My best-feeling thought about this stressor that I can actually believe is: (Write-in)"
-            self.promptTexts = ["(Write-in)"]
+            self.textView.text = "Stressor:  \(self.compass.stressor!) \nMy thoughts about this stressor impact how I feel. My best-feeling thought about this stressor that I can actually believe is: I'm doing the best that I can"
+            self.promptTexts = ["I'm doing the best that I can"]
             self.setupTextView()
         case .behavior:
             self.validation = .placeholder1
-            self.textView.text = "Stressor: \(self.compass.stressor!) \nWhen I begin to worry about this stressor, I will change my behavior to something that lifts my mood by doing this: Garden"
-            self.promptTexts = ["Garden"]
+            self.textView.text = "Stressor: \(self.compass.stressor!) \nWhen I start to feel negatively about this stressor, I will change my behavior to something that lifts my mood by doing this: Gardening"
+            self.promptTexts = ["Gardening"]
             self.setupTextView()
         case .emotion:
             self.validation = .placeholder1

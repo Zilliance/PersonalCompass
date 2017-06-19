@@ -97,7 +97,7 @@ class ScheduleViewController: UIViewController {
         }
         
         let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
-        formSheet.presentationController?.contentViewSize = CGSize(width: 300, height: 400)
+        formSheet.presentationController?.contentViewSize = CGSize(width: UIDevice.isSmallerThaniPhone6 ? 260 : 300, height: 400)
         formSheet.contentViewControllerTransitionStyle = .bounce
         self.present(formSheet, animated: true, completion: nil)
     }

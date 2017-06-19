@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,7 +70,7 @@ When you do something physical to interrupt the negativity you feel, you will po
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">It is never the stressor that causes you to suffer. Rather, your thoughts about the stressor cause you to suffer.
  
-So choose an empowering thought. Do not choose thoughts that you can’t actually believe, but when given a choice between one thought that is negative and one that is positive, both of which come with equal amounts of evidence, choose the positive thought. </string>
+So choose an empowering thought. Do not choose a thought that you can’t actually believe, but when given a choice between one thought that is negative and one that is positive, both of which come with equal amounts of evidence, choose the positive thought. </string>
                                 <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -109,7 +109,7 @@ So choose an empowering thought. Do not choose thoughts that you can’t actuall
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Most people have favorite activities that always make them feel better, like watching comedies, listening to music, or snuggling with their children. These are called "Instant Mood Shifters." 
  
-Identify your Instant Mood Shifters so that you have them on hand. This way, when you find your thoughts spiraling out of control, you can reach for an Instant Mood Shifter to improve your emotion. Later, you can revisit your stressor when you are feeling better about life.</string>
+Identify your Instant Mood Shifters so that you have them on hand. This way, when you find yourself spiraling into negativity, you can reach for an Instant Mood Shifter to improve your emotion. Later, you can revisit your stressor when you are feeling better about life.</string>
                                 <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -148,7 +148,7 @@ Identify your Instant Mood Shifters so that you have them on hand. This way, whe
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Rarely will you feel better about a stressor if you sit on the couch and ruminate about it. Instead, interrupt a downward spiral by doing something you enjoy doing. Call a friend, do something nice for someone else, or do something you get lost in. 
  
-We do not do our best thinking when we are flooded with emotion. Changing your behavior shifts your thoughts from your stressor to something you enjoy. This lifts your mood, and it allows you to come back to your stressor with a better frame of thought.</string>
+Changing your behavior shifts your thoughts from your stressor to something you enjoy. This lifts your mood, and it allows you to come back to your stressor with a better frame of thought.</string>
                                 <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

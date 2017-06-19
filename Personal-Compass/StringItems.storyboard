@@ -84,7 +84,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-uH-Xi2">
-                                            <rect key="frame" x="28" y="12.5" width="187.5" height="19"/>
+                                            <rect key="frame" x="28" y="13" width="187.5" height="19"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the stress of this situation affecting me phisically" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-PR-eI6">
-                                        <rect key="frame" x="40" y="27" width="295" height="43"/>
+                                        <rect key="frame" x="20" y="27" width="335" height="43"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                         <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -163,8 +163,8 @@
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="0vL-tH-kmw"/>
-                                    <constraint firstAttribute="trailing" secondItem="5lq-PR-eI6" secondAttribute="trailing" constant="40" id="Ey2-3M-gVV"/>
-                                    <constraint firstItem="5lq-PR-eI6" firstAttribute="leading" secondItem="gB8-7J-FnL" secondAttribute="leading" constant="40" id="HSb-LD-MrX"/>
+                                    <constraint firstAttribute="trailing" secondItem="5lq-PR-eI6" secondAttribute="trailing" constant="20" id="Ey2-3M-gVV"/>
+                                    <constraint firstItem="5lq-PR-eI6" firstAttribute="leading" secondItem="gB8-7J-FnL" secondAttribute="leading" constant="20" id="HSb-LD-MrX"/>
                                     <constraint firstAttribute="bottom" secondItem="5lq-PR-eI6" secondAttribute="bottom" constant="10" id="QTq-yB-3wt"/>
                                 </constraints>
                             </view>
@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlM-Oa-09s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="-16"/>
+            <point key="canvasLocation" x="-60" y="-18"/>
         </scene>
         <!--Inner Wisdom5 View Controller-->
         <scene sceneID="K23-CF-wRi">
@@ -204,16 +204,13 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="221"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How else can I feel that emotion?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPq-P1-Jrk">
-                                        <rect key="frame" x="51" y="152" width="273" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="273" id="z3v-YU-TFb"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="152" width="335" height="45"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g29-At-nJm">
-                                        <rect key="frame" x="95.5" y="60" width="185" height="44"/>
+                                        <rect key="frame" x="95" y="60" width="185" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would feel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-0P-MfT">
                                                 <rect key="frame" x="0.0" y="0.0" width="73" height="44"/>
@@ -249,8 +246,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="221" id="849-KF-hbw"/>
                                     <constraint firstItem="eg5-33-iCS" firstAttribute="top" secondItem="g29-At-nJm" secondAttribute="bottom" constant="30" id="BAB-Rb-FUE"/>
-                                    <constraint firstItem="UPq-P1-Jrk" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="Lfo-1m-uzl"/>
+                                    <constraint firstAttribute="trailing" secondItem="UPq-P1-Jrk" secondAttribute="trailing" constant="20" id="Hhi-mJ-WOw"/>
                                     <constraint firstItem="UPq-P1-Jrk" firstAttribute="top" secondItem="eg5-33-iCS" secondAttribute="bottom" constant="16" id="TZ4-AT-v5g"/>
+                                    <constraint firstItem="UPq-P1-Jrk" firstAttribute="leading" secondItem="zid-CP-aUF" secondAttribute="leading" constant="20" id="YlY-wB-TbY"/>
                                     <constraint firstItem="g29-At-nJm" firstAttribute="top" secondItem="zid-CP-aUF" secondAttribute="top" constant="60" id="flm-fW-cTf"/>
                                     <constraint firstItem="g29-At-nJm" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="kHX-Mr-Obc"/>
                                     <constraint firstItem="eg5-33-iCS" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="lLV-oH-ddY"/>
