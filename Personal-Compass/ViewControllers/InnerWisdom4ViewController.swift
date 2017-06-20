@@ -19,7 +19,8 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
     @IBOutlet weak var needMetTextField: UITextField!
-    
+    @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
+
     var currentCompass: Compass!
     
     private let picker = AKPickerView()
@@ -32,6 +33,19 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
         super.viewDidLoad()
         self.textView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.setupPicker()
+    }
+    
+    
+    
+    override func viewDidLayoutSubviews() {
+        self.resetTextViewConstraint()
+    }
+    
+    private func resetTextViewConstraint() {
+        self.textView.isScrollEnabled = false
+        let fullSize = self.textView.sizeThatFits(self.textView.frame.size)
+        self.textViewHeightConstraint.constant = min(fullSize.height, 80)
+        self.textView.isScrollEnabled = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,6 +90,8 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
         self.textView.text = self.currentCompass.editedNeed
         
         self.setupEmotionLabel()
+        
+        self.resetTextViewConstraint()
         
     }
     

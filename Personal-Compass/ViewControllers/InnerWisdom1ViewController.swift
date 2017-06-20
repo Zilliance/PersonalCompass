@@ -18,7 +18,8 @@ class InnerWisdom1ViewController: UIViewController {
     @IBOutlet weak var listenLabel: UILabel!
     @IBOutlet weak var headphonesIcon: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
+
     @IBOutlet weak var buttonContainer: UIView!
     @IBOutlet weak var buttonContainerWidthConstraint: NSLayoutConstraint!  // 104
     @IBOutlet weak var buttonContainerHeightConstraint: NSLayoutConstraint! // 130
@@ -40,6 +41,19 @@ class InnerWisdom1ViewController: UIViewController {
             self.buttonContainerWidthConstraint.constant *= 0.8
             self.buttonContainerHeightConstraint.constant *= 0.8
         }
+    }
+    
+    private func resetTextViewConstraint() {
+        self.textView.isScrollEnabled = false
+        let fullSize = self.textView.sizeThatFits(self.textView.frame.size)
+        self.textViewHeightConstraint.constant = min(fullSize.height, 80)
+        self.textView.isScrollEnabled = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        self.resetTextViewConstraint()
+        
     }
     
     private func setupAudioPlayer() {
@@ -93,6 +107,9 @@ class InnerWisdom1ViewController: UIViewController {
         if let need = self.currentCompass.need {
             self.textView.text = need
         }
+
+        self.resetTextViewConstraint()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

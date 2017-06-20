@@ -15,11 +15,24 @@ class InnerWisdom3ViewController: AutoscrollableViewController {
     
     @IBOutlet weak var needTextView: UITextView!
     @IBOutlet weak var concreteTextView: KMPlaceholderTextView!
+    @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     
     var currentCompass: Compass!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    private func resetTextViewConstraint() {
+        self.needTextView.isScrollEnabled = false
+        let fullSize = self.needTextView.sizeThatFits(self.needTextView.frame.size)
+        self.textViewHeightConstraint.constant = min(fullSize.height, 80)
+        self.needTextView.isScrollEnabled = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.resetTextViewConstraint()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +56,9 @@ class InnerWisdom3ViewController: AutoscrollableViewController {
         if let need = self.currentCompass.editedNeed {
             self.needTextView.text = need
         }
+        
+        self.resetTextViewConstraint()
+
     }
 }
 

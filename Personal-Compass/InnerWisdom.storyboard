@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -154,6 +154,7 @@
                         <outlet property="headphonesIcon" destination="JrN-2R-qnf" id="nHl-Vb-WSP"/>
                         <outlet property="listenLabel" destination="bre-2q-owR" id="gHO-il-zez"/>
                         <outlet property="textView" destination="EO1-G0-WM5" id="CQX-E5-NAr"/>
+                        <outlet property="textViewHeightConstraint" destination="Rnq-Rh-81X" id="xdR-Wu-24h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoJ-Dz-Qva" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -462,6 +463,7 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                     <connections>
                         <outlet property="concreteTextView" destination="MC3-wX-h0D" id="G2K-mw-5x3"/>
                         <outlet property="needTextView" destination="EQl-I8-12b" id="Y5r-3m-d4n"/>
+                        <outlet property="textViewHeightConstraint" destination="l7O-UR-sBu" id="IhC-6Z-MHk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0c-we-nJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -622,6 +624,7 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                         <outlet property="needMetTextField" destination="QPB-xd-NtJ" id="qCc-qH-XT0"/>
                         <outlet property="pickerContainerView" destination="Kzo-eb-Pfu" id="8FR-gQ-hE1"/>
                         <outlet property="textView" destination="aUn-wd-uZY" id="ISi-ck-R3Q"/>
+                        <outlet property="textViewHeightConstraint" destination="qgy-Us-6Ci" id="YPM-hE-STe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5d-P9-54X" userLabel="First Responder" sceneMemberID="firstResponder"/>
