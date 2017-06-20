@@ -10,14 +10,22 @@ import UIKit
 import KMPlaceholderTextView
 
 class StressorViewController: AutoscrollableViewController {
+    
+    fileprivate let maxTextlenght = 25
 
     @IBOutlet weak var textView: KMPlaceholderTextView!
+    @IBOutlet weak var counterLabel: UILabel!
     
     var currentCompass: Compass!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.counterLabel.isHidden = true
     }
     
     private func setupView() {
@@ -59,11 +67,18 @@ extension StressorViewController: CompassFacetEditor {
 
 extension StressorViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
         if (text == "\n") {
             textView.resignFirstResponder()
             return false
         }
-
-        return true
+        
+        // check max character lenght
+        
+        self.counterLabel.isHidden = false
+        self.counterLabel.text = "\(maxTextlenght - textView.text.characters.count)"
+        
+        return textView.text.characters.count + (text.characters.count - range.length) <= maxTextlenght
+      
     }
 }
