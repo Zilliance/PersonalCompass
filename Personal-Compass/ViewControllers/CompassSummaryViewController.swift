@@ -34,8 +34,8 @@ extension SummaryViewControllerProtocol where Self: UIViewController {
 class CompassSummaryViewController: UIViewController {
     
     enum SummaryText: String {
-        case asseessment = "This is how my thoughts are affecting my emotions, body and behavior"
-        case innerWisdom = "What I have learned about myself"
+        case asseessment = "This is how my thoughts are affecting my emotions, body and behavior:"
+        case innerWisdom = "What I have learned about myself:"
     }
     
     @IBOutlet weak var tableContainerView: UIView!
