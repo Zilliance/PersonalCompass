@@ -45,7 +45,7 @@ class Database {
         do {
                         
             let config = Realm.Configuration(
-                schemaVersion: 9,
+                schemaVersion: 10,
                 
                 migrationBlock: { migration, oldSchemaVersion in
                     if (oldSchemaVersion < 1) {
@@ -126,13 +126,13 @@ extension Database {
         
             try! realm.write({
                 emotions.enumerated().forEach({ offset, emotion in
-                    guard let longTitle = emotion["longTitle"] else {
+                    guard let title = emotion["title"] else {
                         return assertionFailure()
                     }
                     
                     let newEmotion = Emotion()
                     newEmotion.level = offset
-                    newEmotion.longTitle = longTitle
+                    newEmotion.title = title
                     
                     realm.add(newEmotion)
                     

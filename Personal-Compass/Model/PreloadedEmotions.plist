@@ -3,47 +3,47 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Despairing, Ashamed, Fearful, Hopeless</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Angry, Resentful, Jealous, Depressed</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Rejected, Hurt, Discouraged, Deflated</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Doubtful, Disappointed, Worried, Anxious</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Frustrated, Overwhelmed, Confused, Embarrassed</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Neutral, Apathetic, Pessimistic, Distrustful</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Content, Peaceful, Calm</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Happy, Hopeful, Willing, Open</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Inspired, Confident, Trusting</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Passionate, Blissful, Delighted, Enthusiastic</string>
 	</dict>
 	<dict>
-		<key>longTitle</key>
+		<key>title</key>
 		<string>Joyful, Appreciative, Loving, Empowered</string>
 	</dict>
 </array>
