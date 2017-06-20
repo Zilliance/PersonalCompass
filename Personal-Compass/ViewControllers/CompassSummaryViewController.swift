@@ -170,7 +170,7 @@ class CompassSummaryViewController: UIViewController {
                 
                 ss.actionSheetHint = OnboardingPopover()
                 
-                ss.actionSheetHint?.title = "Save, print or share your action plan: take the steps and feel better immediately!"
+                ss.actionSheetHint?.title = "Save, print or share your action plan: take steps and feel better immediately!"
                 ss.actionSheetHint?.hasShadow = true
                 ss.actionSheetHint?.shadowColor = UIColor(white: 0, alpha: 0.4)
                 ss.actionSheetHint?.arrowLocation = .centeredOnTarget
