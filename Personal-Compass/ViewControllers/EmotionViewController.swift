@@ -66,13 +66,16 @@ class EmotionViewController: AutoscrollableViewController {
         if let emotion = self.currentCompass.emotion {
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
-            self.picker.scrollToItem(self.currentIndex)
             self.textView.text = self.currentCompass.compassEmotion
-        } else {
-            // self.currentIndex = indexOfNeutralEmotion
-            // self.picker.scrollToItem(indexOfNeutralEmotion)
+        }
+        else {
+             self.currentIndex = indexOfNeutralEmotion
         }
         
+        DispatchQueue.main.async {
+            self.picker.scrollToItem(self.currentIndex)
+        }
+
         self.setupEmotionLabel()
     }
     
