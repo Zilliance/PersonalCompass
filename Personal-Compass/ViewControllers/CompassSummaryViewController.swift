@@ -32,8 +32,16 @@ extension SummaryViewControllerProtocol where Self: UIViewController {
 }
 
 class CompassSummaryViewController: UIViewController {
+    
+    enum SummaryText: String {
+        case asseessment = "This is how my thoughts are affecting my emotions, body and behavior"
+        case innerWisdom = "What I have learned about myself"
+    }
+    
     @IBOutlet weak var tableContainerView: UIView!
     var compass: Compass!
+    
+    @IBOutlet weak var summaryLabel: UILabel!
     
     @IBOutlet weak var innerWisdomSummaryHeaderView: UIView!
     @IBOutlet weak var assessmentHeaderView: UIView!
@@ -52,6 +60,7 @@ class CompassSummaryViewController: UIViewController {
         showAssessmentView()
         
         self.title = compass.stressor
+        self.summaryLabel.text = SummaryText.asseessment.rawValue
         
     }
     
@@ -84,6 +93,8 @@ class CompassSummaryViewController: UIViewController {
             return
         }
         
+        self.summaryLabel.text = SummaryText.asseessment.rawValue
+        
         let viewController = UIStoryboard(name: "Summary", bundle: nil).instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
 
         showViewController(viewController: viewController, innerWisdomImage: UIImage(named: "iconInnerWisdomGrey"), innerWisdomColor: UIColor.silverColor, assessmentImage: UIImage(named: "volunterring"), assessmentColor: UIColor.darkGreyBlue)
@@ -95,6 +106,8 @@ class CompassSummaryViewController: UIViewController {
         if let currentViewController = currentViewController, (currentViewController.isKind(of: InnerWisdomSummaryViewController.self)) {
             return
         }
+        
+        self.summaryLabel.text = SummaryText.innerWisdom.rawValue
         
         let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdomSummaryViewController") as! InnerWisdomSummaryViewController
         
