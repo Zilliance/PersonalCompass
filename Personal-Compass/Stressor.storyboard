@@ -65,8 +65,8 @@
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-dZ-r5s">
-                                <rect key="frame" x="20" y="270.5" width="32.5" height="16.5"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-dZ-r5s">
+                                <rect key="frame" x="313" y="157.5" width="32" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                 <color key="textColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -81,9 +81,9 @@
                             <constraint firstItem="dlH-Z5-evW" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" constant="20" id="Jwa-bg-nCH"/>
                             <constraint firstAttribute="trailing" secondItem="dlH-Z5-evW" secondAttribute="trailing" constant="20" id="LJp-8b-dJi"/>
                             <constraint firstAttribute="trailing" secondItem="Jl5-zx-FRA" secondAttribute="trailing" constant="30" id="Pbf-p3-IFY"/>
-                            <constraint firstItem="2tw-dZ-r5s" firstAttribute="top" secondItem="dlH-Z5-evW" secondAttribute="bottom" constant="6" id="jAl-Kt-xIc"/>
+                            <constraint firstItem="2tw-dZ-r5s" firstAttribute="top" secondItem="Jl5-zx-FRA" secondAttribute="bottom" constant="38" id="ZJE-wp-EAa"/>
+                            <constraint firstAttribute="trailing" secondItem="2tw-dZ-r5s" secondAttribute="trailing" constant="30" id="i3t-ZP-FLh"/>
                             <constraint firstItem="CmV-6X-XAu" firstAttribute="top" secondItem="73D-GR-5z2" secondAttribute="bottom" constant="35" id="oPv-K7-kmL"/>
-                            <constraint firstItem="2tw-dZ-r5s" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" constant="20" id="uuq-nc-TIE"/>
                             <constraint firstItem="CmV-6X-XAu" firstAttribute="leading" secondItem="sHh-TR-8FY" secondAttribute="leading" id="v2n-zU-Eto"/>
                         </constraints>
                     </view>
