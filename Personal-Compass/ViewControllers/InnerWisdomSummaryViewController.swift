@@ -119,6 +119,7 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
             emotionCell.title.text = "Emotion"
             emotionCell.label.text = self.currentCompass.compassNeedMet
             emotionCell.iconView.image = self.currentCompass.needMetEmotion?.icon
+            emotionCell.label.textColor = .darkGray
             
             cell = emotionCell
             
@@ -126,7 +127,7 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
 
             let positiveActivities = (currentCompass.positiveActivities.flatMap { $0.title }).joined(separator: ",\n")
             
-            let attributes = [ NSFontAttributeName: UIFont.muliSemiBold(size: 14) ]
+            let attributes = [ NSFontAttributeName: UIFont.muliSemiBold(size: 14), NSForegroundColorAttributeName: UIColor.innerWisdom ]
             let attributedText = NSMutableAttributedString(string: "I can also feel this emotion by\n" + positiveActivities, attributes: attributes)
             let alsoTextRange = (attributedText.string as NSString).range(of: "I can also feel this emotion by")
             
