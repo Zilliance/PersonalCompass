@@ -53,15 +53,19 @@ class CompassSummaryViewController: UIViewController {
     @IBOutlet weak var innerWisdomIcon: UIImageView!
     
     var currentViewController: UIViewController?
-
+    var actionSheetHint: OnboardingPopover?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        showAssessmentView()
-        
+        self.showAssessmentView()
         self.title = compass.stressor
         self.summaryLabel.text = SummaryText.asseessment.rawValue
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.showActionSheetHint()
     }
     
     @IBAction func shareSummaryAction(_ sender: Any) {
@@ -147,6 +151,43 @@ class CompassSummaryViewController: UIViewController {
         
     }
     
+    // MARK: - Hint
+    
+    private func showActionSheetHint() {
+        if !UserDefaults.standard.bool(forKey: "ActionSheetHintShown") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                guard let ss = self, ss.view.window != nil else {
+                    return
+                }
+                
+                guard let view = self?.navigationItem.rightBarButtonItem?.value(forKey: "view") as? UIView, let superview = view.superview else {
+                    return
+                }
+                
+                let viewFrame = ss.view.convert(view.frame, from: superview)
+                var center = CGPoint(x: viewFrame.midX, y: viewFrame.midY)
+                center.y += 10
+                
+                ss.actionSheetHint = OnboardingPopover()
+                
+                ss.actionSheetHint?.title = "Save, print or share your action plan: take the steps and feel better immediately!"
+                ss.actionSheetHint?.hasShadow = true
+                ss.actionSheetHint?.shadowColor = UIColor(white: 0, alpha: 0.4)
+                ss.actionSheetHint?.arrowLocation = .centeredOnTarget
+                ss.actionSheetHint?.present(in: ss.view, at: center, from: .below)
+                
+                UserDefaults.standard.set(true, forKey: "ActionSheetHintShown")
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+                    self?.dismissImproveHint()
+                }
+            }
+        }
+    }
+    
+    private func dismissImproveHint() {
+        self.actionSheetHint?.dismiss()
+    }
 }
 
 
