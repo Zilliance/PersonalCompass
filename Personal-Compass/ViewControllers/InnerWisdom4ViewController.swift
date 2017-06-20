@@ -96,7 +96,7 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
     }
     
     fileprivate func setupEmotionLabel() {
-        self.emotionLabel.text = self.emotions[self.currentIndex].longTitle
+        self.emotionLabel.text = self.emotions[self.currentIndex].title
         self.emotionLabel.textColor = self.emotions[self.currentIndex].color
     }
     
