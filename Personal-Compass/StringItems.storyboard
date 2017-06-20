@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Italic.ttf">
+            <string>Muli-Italic</string>
+        </array>
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
         </array>
@@ -29,7 +32,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ItemsSelectionViewController" id="aiV-aJ-KyN" customClass="ItemsSelectionViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qdU-Vc-IWr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="426"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -84,7 +87,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-uH-Xi2">
-                                            <rect key="frame" x="28" y="13" width="187.5" height="19"/>
+                                            <rect key="frame" x="28" y="12.5" width="187.5" height="19"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -129,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlD-gQ-G8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-634" y="254"/>
+            <point key="canvasLocation" x="-774" y="291"/>
         </scene>
         <!--Compass Stress View Controller-->
         <scene sceneID="dgx-r3-EC2">
@@ -201,7 +204,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zid-CP-aUF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="221"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="231"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How else can I feel that emotion?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPq-P1-Jrk">
                                         <rect key="frame" x="20" y="152" width="335" height="45"/>
@@ -210,7 +213,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g29-At-nJm">
-                                        <rect key="frame" x="95" y="60" width="185" height="44"/>
+                                        <rect key="frame" x="95.5" y="60" width="185" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would feel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-0P-MfT">
                                                 <rect key="frame" x="0.0" y="0.0" width="73" height="44"/>
@@ -241,10 +244,21 @@
                                             <constraint firstAttribute="height" constant="2" id="qud-gs-gMo"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn more" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-4g-YlV">
+                                        <rect key="frame" x="153.5" y="196.5" width="68.5" height="16.5"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
+                                        <color key="textColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1G5-Ux-yv3" appends="YES" id="pFf-80-Ds9"/>
+                                        </connections>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="221" id="849-KF-hbw"/>
+                                    <constraint firstAttribute="bottom" secondItem="MDi-4g-YlV" secondAttribute="bottom" constant="18" id="06B-Yt-Jxi"/>
+                                    <constraint firstAttribute="height" constant="231" id="849-KF-hbw"/>
                                     <constraint firstItem="eg5-33-iCS" firstAttribute="top" secondItem="g29-At-nJm" secondAttribute="bottom" constant="30" id="BAB-Rb-FUE"/>
                                     <constraint firstAttribute="trailing" secondItem="UPq-P1-Jrk" secondAttribute="trailing" constant="20" id="Hhi-mJ-WOw"/>
                                     <constraint firstItem="UPq-P1-Jrk" firstAttribute="top" secondItem="eg5-33-iCS" secondAttribute="bottom" constant="16" id="TZ4-AT-v5g"/>
@@ -252,11 +266,12 @@
                                     <constraint firstItem="g29-At-nJm" firstAttribute="top" secondItem="zid-CP-aUF" secondAttribute="top" constant="60" id="flm-fW-cTf"/>
                                     <constraint firstItem="g29-At-nJm" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="kHX-Mr-Obc"/>
                                     <constraint firstItem="eg5-33-iCS" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="lLV-oH-ddY"/>
-                                    <constraint firstAttribute="bottom" secondItem="UPq-P1-Jrk" secondAttribute="bottom" constant="24" id="wh5-m0-7ek"/>
+                                    <constraint firstAttribute="bottom" secondItem="UPq-P1-Jrk" secondAttribute="bottom" constant="34" id="wh5-m0-7ek"/>
+                                    <constraint firstItem="MDi-4g-YlV" firstAttribute="centerX" secondItem="zid-CP-aUF" secondAttribute="centerX" id="xqq-kM-6fW"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jS-7R-Bxe">
-                                <rect key="frame" x="0.0" y="241" width="375" height="426"/>
+                                <rect key="frame" x="0.0" y="251" width="375" height="416"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="aiV-aJ-KyN" kind="embed" id="4Ut-fh-kqa"/>
@@ -280,6 +295,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrf-eG-X5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1G5-Ux-yv3">
+                    <connections>
+                        <action selector="learnMore:" destination="lh6-Ra-ZEU" id="A1d-2U-9oD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="689.5052473763119"/>
         </scene>
