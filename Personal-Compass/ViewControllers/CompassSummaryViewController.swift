@@ -53,7 +53,7 @@ class CompassSummaryViewController: UIViewController {
     @IBOutlet weak var innerWisdomIcon: UIImageView!
     
     var currentViewController: UIViewController?
-    var actionSheetHint: OnboardingPopover?
+    fileprivate var actionSheetHint: OnboardingPopover?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,7 +153,7 @@ class CompassSummaryViewController: UIViewController {
     
     // MARK: - Hint
     
-    private func showActionSheetHint() {
+    fileprivate func showActionSheetHint() {
         if !UserDefaults.standard.bool(forKey: "ActionSheetHintShown") {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
                 guard let ss = self, ss.view.window != nil else {
@@ -185,7 +185,7 @@ class CompassSummaryViewController: UIViewController {
         }
     }
     
-    private func dismissImproveHint() {
+    fileprivate func dismissImproveHint() {
         self.actionSheetHint?.dismiss()
     }
 }
