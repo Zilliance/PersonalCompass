@@ -12,8 +12,6 @@ import RealmSwift
 final class Emotion: Object {
     
     dynamic var level: Int = 0
-    
-    dynamic var shortTitle: String = ""
 
     dynamic var longTitle: String = ""
     
