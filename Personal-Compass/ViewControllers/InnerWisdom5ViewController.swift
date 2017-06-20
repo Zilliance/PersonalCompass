@@ -17,6 +17,7 @@ import MZFormSheetPresentationController
 final class InnerWisdom5ViewController: UIViewController {
     
     @IBOutlet fileprivate var titleLable: UILabel!
+    @IBOutlet fileprivate var descriptionLabel: UILabel!
     
     private(set) var tableViewController: ItemsSelectionViewController!
     
@@ -38,6 +39,8 @@ final class InnerWisdom5ViewController: UIViewController {
         emotionIcon.image = currentCompass.needMetEmotion?.icon
         emotionLabel.text = currentCompass.compassNeedMet
         emotionLabel.textColor = currentCompass.needMetEmotion?.color
+        
+        self.setupDescriptionLabel()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,6 +65,27 @@ final class InnerWisdom5ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func setupDescriptionLabel() {
+        let text = "Feel better, even if you can’t eliminate your stressor.  "
+        let learn = "Learn more."
+        
+        let textAttr = NSAttributedString(string: text, attributes: [
+            NSFontAttributeName: UIFont.muliItalic(size: 13),
+            NSForegroundColorAttributeName: UIColor.darkBlueText
+            ])
+        
+        let learnAttr = NSAttributedString(string: learn, attributes: [
+            NSFontAttributeName: UIFont.muliItalic(size: 13),
+            NSForegroundColorAttributeName: UIColor.lightBlue
+            ])
+        
+        let attrString = NSMutableAttributedString()
+        attrString.append(textAttr)
+        attrString.append(learnAttr)
+        
+        self.descriptionLabel.attributedText = attrString
     }
     
     fileprivate func showLearnMoreFirstTime() {
