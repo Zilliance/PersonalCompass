@@ -67,8 +67,10 @@ final class InnerWisdom5ViewController: UIViewController {
         }
     }
     
+    // TODO: MOVE TO INNER WISDOM 4
+    
     private func setupDescriptionLabel() {
-        let text = "Feel better, even if you can’t eliminate your stressor.  "
+        let text = "The main goal when working through a stressor is to feel better emotionally.  "
         let learn = "Learn more."
         
         let textAttr = NSAttributedString(string: text, attributes: [
