@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxh-Zc-UNt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tour-->
+        <scene sceneID="VD6-v7-AQB">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zxh-Zc-UNt" customClass="TourPageViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Tour" id="UbR-iq-zVi"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ahg-Kb-FeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="-686"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mfr-Rn-Vbf">
+            <objects>
+                <viewController storyboardIdentifier="first" id="ZmV-vI-JM0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MAO-IY-aQX"/>
+                        <viewControllerLayoutGuide type="bottom" id="YSd-0G-HW3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9pH-L4-YYv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-1" translatesAutoresizingMaskIntoConstraints="NO" id="bvy-Th-MLk">
+                                <rect key="frame" x="16" y="60" width="343" height="488"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify what you’re stressed about" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08U-2u-3QT">
+                                <rect key="frame" x="16" y="588" width="343" height="19"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bvy-Th-MLk" secondAttribute="trailing" id="2VO-Xz-PGJ"/>
+                            <constraint firstItem="YSd-0G-HW3" firstAttribute="top" secondItem="08U-2u-3QT" secondAttribute="bottom" constant="60" id="OT4-1k-ezs"/>
+                            <constraint firstItem="08U-2u-3QT" firstAttribute="trailing" secondItem="9pH-L4-YYv" secondAttribute="trailingMargin" id="bVz-eg-LCY"/>
+                            <constraint firstItem="08U-2u-3QT" firstAttribute="leading" secondItem="9pH-L4-YYv" secondAttribute="leadingMargin" id="kEE-oQ-1W5"/>
+                            <constraint firstItem="bvy-Th-MLk" firstAttribute="top" secondItem="MAO-IY-aQX" secondAttribute="bottom" constant="40" id="vgb-TS-ubU"/>
+                            <constraint firstItem="bvy-Th-MLk" firstAttribute="leading" secondItem="9pH-L4-YYv" secondAttribute="leadingMargin" id="vrg-aD-LOn"/>
+                            <constraint firstItem="bvy-Th-MLk" firstAttribute="centerX" secondItem="9pH-L4-YYv" secondAttribute="centerX" id="z2R-q2-cV7"/>
+                            <constraint firstItem="08U-2u-3QT" firstAttribute="top" secondItem="bvy-Th-MLk" secondAttribute="bottom" constant="40" id="zcP-3N-icV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGr-jv-tei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.19999999999999" y="130.88455772113943"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fMn-kZ-IHY">
+            <objects>
+                <viewController storyboardIdentifier="second" id="4Dl-7M-VzH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lga-sn-C2o"/>
+                        <viewControllerLayoutGuide type="bottom" id="hHt-cG-jAQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ik-7X-QVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5V-wb-rEM">
+                                <rect key="frame" x="187.5" y="527.5" width="0.0" height="21.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="22"/>
+                                <color key="textColor" white="0.95810850790000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify how your thoughts affect your emotions, body, and behavior" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zF-3C-sCa">
+                                <rect key="frame" x="16" y="569" width="343" height="38"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-2" translatesAutoresizingMaskIntoConstraints="NO" id="Hph-VL-yhS">
+                                <rect key="frame" x="16" y="60" width="343" height="469"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4zF-3C-sCa" firstAttribute="trailing" secondItem="9ik-7X-QVQ" secondAttribute="trailingMargin" id="0PB-U2-70M"/>
+                            <constraint firstItem="4zF-3C-sCa" firstAttribute="top" secondItem="Hph-VL-yhS" secondAttribute="bottom" constant="40" id="0UB-wA-NWQ"/>
+                            <constraint firstItem="4zF-3C-sCa" firstAttribute="leading" secondItem="9ik-7X-QVQ" secondAttribute="leadingMargin" id="2AF-rQ-MQS"/>
+                            <constraint firstItem="Hph-VL-yhS" firstAttribute="trailing" secondItem="9ik-7X-QVQ" secondAttribute="trailingMargin" id="CFg-h6-S1k"/>
+                            <constraint firstItem="Hph-VL-yhS" firstAttribute="leading" secondItem="9ik-7X-QVQ" secondAttribute="leadingMargin" id="F7h-A0-qpu"/>
+                            <constraint firstItem="Hph-VL-yhS" firstAttribute="centerX" secondItem="9ik-7X-QVQ" secondAttribute="centerX" id="FxX-A0-OHk"/>
+                            <constraint firstItem="Hph-VL-yhS" firstAttribute="top" secondItem="lga-sn-C2o" secondAttribute="bottom" constant="40" id="GEo-yl-7mZ"/>
+                            <constraint firstItem="hHt-cG-jAQ" firstAttribute="top" secondItem="4zF-3C-sCa" secondAttribute="bottom" constant="60" id="l0b-dZ-hPK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XnO-On-1rQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461.60000000000002" y="130.88455772113943"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LEp-FR-bv0">
+            <objects>
+                <viewController storyboardIdentifier="third" id="YRL-mp-Lmt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JkC-if-VhW"/>
+                        <viewControllerLayoutGuide type="bottom" id="qYo-n0-WYB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eZu-H3-R4G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-3" translatesAutoresizingMaskIntoConstraints="NO" id="fY8-JW-vhe">
+                                <rect key="frame" x="16" y="60" width="343" height="469"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify what you need to feel better and what you can DO about it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfN-tE-593">
+                                <rect key="frame" x="16" y="569" width="343" height="38"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                <color key="textColor" red="0.1215686275" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dfN-tE-593" firstAttribute="trailing" secondItem="eZu-H3-R4G" secondAttribute="trailingMargin" id="2jx-9l-LhJ"/>
+                            <constraint firstItem="fY8-JW-vhe" firstAttribute="trailing" secondItem="eZu-H3-R4G" secondAttribute="trailingMargin" id="CXq-2o-44g"/>
+                            <constraint firstItem="fY8-JW-vhe" firstAttribute="leading" secondItem="eZu-H3-R4G" secondAttribute="leadingMargin" id="EQG-aN-LXA"/>
+                            <constraint firstItem="fY8-JW-vhe" firstAttribute="top" secondItem="JkC-if-VhW" secondAttribute="bottom" constant="40" id="Oji-qH-NMn"/>
+                            <constraint firstItem="qYo-n0-WYB" firstAttribute="top" secondItem="dfN-tE-593" secondAttribute="bottom" constant="60" id="Tyx-rn-Q32"/>
+                            <constraint firstItem="fY8-JW-vhe" firstAttribute="centerX" secondItem="eZu-H3-R4G" secondAttribute="centerX" id="esg-pY-NJm"/>
+                            <constraint firstItem="dfN-tE-593" firstAttribute="top" secondItem="fY8-JW-vhe" secondAttribute="bottom" constant="40" id="kJY-Ul-TGB"/>
+                            <constraint firstItem="dfN-tE-593" firstAttribute="leading" secondItem="eZu-H3-R4G" secondAttribute="leadingMargin" id="oYE-xO-5UL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ph6-e4-HKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xQO-Ow-dYW">
+            <objects>
+                <viewController storyboardIdentifier="fourth" id="cBw-o7-OE5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6kh-o3-9ns"/>
+                        <viewControllerLayoutGuide type="bottom" id="AKG-Sh-9UW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vRg-6S-xoz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-4" translatesAutoresizingMaskIntoConstraints="NO" id="Qd6-Iv-ELI">
+                                <rect key="frame" x="16" y="60" width="343" height="488"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule your action steps" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYm-K4-AFg">
+                                <rect key="frame" x="16" y="588" width="343" height="19"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                <color key="textColor" red="0.1215686275" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qYm-K4-AFg" firstAttribute="trailing" secondItem="vRg-6S-xoz" secondAttribute="trailingMargin" id="1Cg-hO-NoH"/>
+                            <constraint firstItem="qYm-K4-AFg" firstAttribute="leading" secondItem="vRg-6S-xoz" secondAttribute="leadingMargin" id="4DD-Nm-6Jd"/>
+                            <constraint firstItem="Qd6-Iv-ELI" firstAttribute="top" secondItem="6kh-o3-9ns" secondAttribute="bottom" constant="40" id="75J-Og-whG"/>
+                            <constraint firstItem="AKG-Sh-9UW" firstAttribute="top" secondItem="qYm-K4-AFg" secondAttribute="bottom" constant="60" id="GPi-yL-trq"/>
+                            <constraint firstItem="Qd6-Iv-ELI" firstAttribute="centerX" secondItem="vRg-6S-xoz" secondAttribute="centerX" id="hUv-CI-F5k"/>
+                            <constraint firstItem="qYm-K4-AFg" firstAttribute="top" secondItem="Qd6-Iv-ELI" secondAttribute="bottom" constant="40" id="k2f-FG-L1S"/>
+                            <constraint firstItem="Qd6-Iv-ELI" firstAttribute="trailing" secondItem="vRg-6S-xoz" secondAttribute="trailingMargin" id="nkP-qN-ia3"/>
+                            <constraint firstItem="Qd6-Iv-ELI" firstAttribute="leading" secondItem="vRg-6S-xoz" secondAttribute="leadingMargin" id="pYt-8e-uGG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ccH-rh-whP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qKc-rN-G4j">
+            <objects>
+                <viewController storyboardIdentifier="fifth" id="1ON-Lv-ZZJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JTz-Tl-RSd"/>
+                        <viewControllerLayoutGuide type="bottom" id="7EW-Dd-Q3f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FBa-gP-8kb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="749" image="tour-5" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-6i-jj8">
+                                <rect key="frame" x="16" y="60" width="343" height="488"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save, print, and share you action plan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhH-AB-InI">
+                                <rect key="frame" x="16" y="588" width="343" height="19"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                <color key="textColor" red="0.1215686275" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TSn-6i-jj8" firstAttribute="top" secondItem="JTz-Tl-RSd" secondAttribute="bottom" constant="40" id="QlN-yt-kBL"/>
+                            <constraint firstItem="7EW-Dd-Q3f" firstAttribute="top" secondItem="dhH-AB-InI" secondAttribute="bottom" constant="60" id="bZ9-iB-3LN"/>
+                            <constraint firstItem="TSn-6i-jj8" firstAttribute="leading" secondItem="FBa-gP-8kb" secondAttribute="leadingMargin" id="cCH-2t-JaI"/>
+                            <constraint firstItem="dhH-AB-InI" firstAttribute="trailing" secondItem="FBa-gP-8kb" secondAttribute="trailingMargin" id="dZE-Ds-j0c"/>
+                            <constraint firstItem="dhH-AB-InI" firstAttribute="leading" secondItem="FBa-gP-8kb" secondAttribute="leadingMargin" id="h6K-rP-Muc"/>
+                            <constraint firstItem="TSn-6i-jj8" firstAttribute="trailing" secondItem="FBa-gP-8kb" secondAttribute="trailingMargin" id="hSO-6Y-WKQ"/>
+                            <constraint firstItem="dhH-AB-InI" firstAttribute="top" secondItem="TSn-6i-jj8" secondAttribute="bottom" constant="40" id="yVh-mw-fhs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWx-q7-kY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2607" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tour-1" width="1242" height="2208"/>
+        <image name="tour-2" width="621" height="1104"/>
+        <image name="tour-3" width="1242" height="2208"/>
+        <image name="tour-4" width="1242" height="2208"/>
+        <image name="tour-5" width="1242" height="2208"/>
+    </resources>
+</document>
