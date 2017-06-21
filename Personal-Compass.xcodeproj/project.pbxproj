@@ -99,13 +99,13 @@
 		CBF5C2B987593B1534F06EDA /* Pods_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */; };
 		E30CFB1A1EEF13AD00ACE42B /* TextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */; };
 		E30CFB1C1EEF171200ACE42B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */; };
+		E357BDE51EFABAF2006A141B /* meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E357BDE41EFABAF2006A141B /* meditation.mp3 */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
 		E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A811EC9FBA300076737 /* Assets.xcassets */; };
 		E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A831EC9FBA300076737 /* LaunchScreen.storyboard */; };
 		E37C7A901EC9FBA300076737 /* Personal_CompassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A8F1EC9FBA300076737 /* Personal_CompassTests.swift */; };
 		E37C7A9B1EC9FBA300076737 /* Personal_CompassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A9A1EC9FBA300076737 /* Personal_CompassUITests.swift */; };
 		E3E937A61EE7256F001F9035 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E937A51EE7256F001F9035 /* UIImage+Extensions.swift */; };
-		E3F1F0A41EF2E19400F6C9B4 /* mpthreetest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3F1F0A31EF2E19400F6C9B4 /* mpthreetest.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +221,7 @@
 		D6F1D4F40C4085A19441E40F /* Pods-Personal-CompassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassTests/Pods-Personal-CompassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewPlaceholder.swift; path = Utils/TextViewPlaceholder.swift; sourceTree = "<group>"; };
 		E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		E357BDE41EFABAF2006A141B /* meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meditation.mp3; sourceTree = "<group>"; };
 		E37C7A771EC9FBA300076737 /* Personal-Compass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal-Compass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37C7A811EC9FBA300076737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -233,7 +234,6 @@
 		E37C7A9A1EC9FBA300076737 /* Personal_CompassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal_CompassUITests.swift; sourceTree = "<group>"; };
 		E37C7A9C1EC9FBA300076737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3E937A51EE7256F001F9035 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		E3F1F0A31EF2E19400F6C9B4 /* mpthreetest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mpthreetest.mp3; sourceTree = "<group>"; };
 		EC48FF912D8728C3ACC4D045 /* Pods-Personal-CompassUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F62DA2C8E59F11927015A9E2 /* Pods-Personal-CompassTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassTests/Pods-Personal-CompassTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7621830EA552F505A3FFB53 /* Pods_Personal_CompassTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,7 +354,7 @@
 				8C42EB8E1EE9DE1700167EF4 /* faq.html */,
 				8C42EB8F1EE9DE1700167EF4 /* zilliance privacy policy.html */,
 				8C42EB901EE9DE1700167EF4 /* zilliance terms of service.html */,
-				E3F1F0A31EF2E19400F6C9B4 /* mpthreetest.mp3 */,
+				E357BDE41EFABAF2006A141B /* meditation.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -724,7 +724,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3F1F0A41EF2E19400F6C9B4 /* mpthreetest.mp3 in Resources */,
 				8CFC6D491ECE4E6000F44B95 /* Thought.storyboard in Resources */,
 				8C54AD241EE0B7F5001EC903 /* Schedule.storyboard in Resources */,
 				8C463B1F1ECA2D9700566531 /* Muli-SemiBold.ttf in Resources */,
@@ -766,6 +765,7 @@
 				8C463B131ECA2D9700566531 /* Muli-Black.ttf in Resources */,
 				8C42EB911EE9DE1700167EF4 /* faq.html in Resources */,
 				8C463B171ECA2D9700566531 /* Muli-ExtraBold.ttf in Resources */,
+				E357BDE51EFABAF2006A141B /* meditation.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
