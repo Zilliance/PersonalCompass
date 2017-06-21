@@ -12,26 +12,41 @@ import UIKit
 
 class AutoscrollableViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private var keyboardOffset: CGFloat = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    var editingViewFrame: CGRect? {
+        return self.view.subviews.filter {
+            $0.isFirstResponder == true
+            }.first?.frame
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         
-        let editingView = self.view.subviews.filter {
-            $0.isFirstResponder == true
-            }.first
-        
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, let editingView = editingView {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, let editingViewFrame = self.editingViewFrame {
             
-            let diff = self.view.frame.size.height - editingView.frame.size.height - editingView.frame.origin.y - keyboardSize.height
+            let diff = self.view.frame.size.height - editingViewFrame.size.height - editingViewFrame.origin.y - keyboardSize.height
             
             if (diff < 0) {
                 
-                self.view.frame.origin.y = max(self.view.frame.origin.y + diff, self.view.frame.origin.y - editingView.frame.origin.y + 20)
+                let originalY = self.view.frame.origin.y
+                
+                self.view.frame.origin.y = max(self.view.frame.origin.y + diff, self.view.frame.origin.y - editingViewFrame.origin.y + 20)
+                
+                keyboardOffset = self.view.frame.origin.y - originalY
                 
             }
             
@@ -39,7 +54,9 @@ class AutoscrollableViewController: UIViewController {
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        self.view.frame.origin.y = 0
+        self.view.frame.origin.y -= keyboardOffset
     }
+    
+    
     
 }

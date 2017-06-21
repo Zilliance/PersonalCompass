@@ -325,7 +325,7 @@ class CreateCompassViewController: UIViewController {
     fileprivate func moveToPage(page: Int, direction: UIPageViewControllerNavigationDirection) {
         
         if let currentItem = self.compassItems[self.currentPageIndex].viewController as? CompassFacetEditor {
-            currentItem.save()
+         //   currentItem.save()
         }
         
         self.currentPageIndex = page
