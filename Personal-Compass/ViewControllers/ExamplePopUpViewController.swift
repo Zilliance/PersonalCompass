@@ -43,7 +43,15 @@ class ExamplePopUpViewController: UIViewController {
                 self.text = "When I feel triggered by my spouse, I will take a few minutes to myself and listen to my favorite song before re-engaging."
             }
         }
+        
         self.exampleTextView.text = self.text
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.exampleTextView.setContentOffset(CGPoint.zero, animated: false)
+        // Stupid, otherwise text view doesn't start with content at top
     }
     
     //MARK - User Actions
