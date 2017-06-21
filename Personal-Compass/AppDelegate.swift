@@ -29,11 +29,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSFontAttributeName: UIFont.muliBold(size: 16)
         ]
         
-        let sideMenuViewController = CustomSideViewController()
-        sideMenuViewController.setupStartCompass()
+        var rootViewController: UIViewController?
+        
+        if UserDefaults.standard.bool(forKey: "IntroShowed") {
+            let sideMenuViewController = CustomSideViewController()
+            sideMenuViewController.setupStartCompass()
+            rootViewController = sideMenuViewController
+        }
+        else {
+            UserDefaults.standard.set(true, forKey: "IntroShowed")
+            rootViewController = UIStoryboard(name: "Intro", bundle: nil).instantiateInitialViewController()
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = sideMenuViewController
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         
         LocalNotificationsHelper.shared.listenToNotifications()
