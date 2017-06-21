@@ -67,8 +67,6 @@ final class InnerWisdom5ViewController: UIViewController {
         }
     }
     
-    // TODO: MOVE TO INNER WISDOM 4
-    
     private func setupDescriptionLabel() {
         let text = "The main goal when working through a stressor is to feel better emotionally.  "
         let learn = "Learn more."
