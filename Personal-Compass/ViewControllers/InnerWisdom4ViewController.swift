@@ -9,6 +9,7 @@
 import UIKit
 import AKPickerView_Swift
 import KMPlaceholderTextView
+import MZFormSheetPresentationController
 // Feel Better Emotion
 
 class InnerWisdom4ViewController: UIViewController {
@@ -38,6 +39,7 @@ class InnerWisdom4ViewController: UIViewController {
         self.textView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.setupPicker()
         self.setupTextView()
+        self.setupDescriptionLabel()
     }
     
     fileprivate var scrolledToPositiveEmotionTextView = false
@@ -70,6 +72,7 @@ class InnerWisdom4ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         self.loadData()
+        self.showLearnMoreFirstTime()
     }
     
     var editingViewFrame: CGRect? {
@@ -179,6 +182,58 @@ class InnerWisdom4ViewController: UIViewController {
         self.setupEmotionLabel()
     }
     
+    // MARK: - Learn More
+    
+    // TODO: MOVE TO INNER WISDOM 4
+    
+    private func setupDescriptionLabel() {
+        let text = "Feel better, even if you can't eliminate your stressor.  "
+        let learn = "Learn more."
+        
+        let textAttr = NSAttributedString(string: text, attributes: [
+            NSFontAttributeName: UIFont.muliItalic(size: 13),
+            NSForegroundColorAttributeName: UIColor.darkBlueText
+            ])
+        
+        let learnAttr = NSAttributedString(string: learn, attributes: [
+            NSFontAttributeName: UIFont.muliItalic(size: 13),
+            NSForegroundColorAttributeName: UIColor.lightBlue
+            ])
+        
+        let attrString = NSMutableAttributedString()
+        attrString.append(textAttr)
+        attrString.append(learnAttr)
+        
+        self.descriptionLabel.attributedText = attrString
+    }
+    
+    fileprivate func showLearnMoreFirstTime() {
+        if !UserDefaults.standard.bool(forKey: "FeelBetterHintShown") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                guard let ss = self, ss.view.window != nil else {
+                    return
+                }
+                
+                UserDefaults.standard.set(true, forKey: "FeelBetterHintShown")
+                ss.learnMore(ss)
+            }
+        }
+    }
+    
+    @IBAction func learnMore(_ sender: Any) {
+        guard let exampleViewController = UIStoryboard(name: "ExamplePopUp", bundle: nil).instantiateInitialViewController() as? ExamplePopUpViewController else {
+            assertionFailure()
+            return
+        }
+        
+        exampleViewController.title = "Feel Better"
+        exampleViewController.text = "The goal of the Personal Compass is to help you feel better, even if you can’t eliminate your stressor.\n\nMost of us make the mistake of thinking a SITUATION has to change in order for us to feel better, but feeling better is not about the situational outcome. Rather, it’s about an EMOTIONAL outcome.\n\nOn this screen, we want you to identify how you would feel if you got your need met, which is ultimately how you would like to feel in the face of your stressor."
+        
+        let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
+        formSheet.presentationController?.contentViewSize = CGSize(width: UIDevice.isSmallerThaniPhone6 ? 260 : 300, height: 400)
+        formSheet.contentViewControllerTransitionStyle = .bounce
+        self.present(formSheet, animated: true, completion: nil)
+    }
 }
 
 // MARK: - CompassFacetEditor

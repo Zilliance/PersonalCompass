@@ -100,6 +100,7 @@
 		E30CFB1A1EEF13AD00ACE42B /* TextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */; };
 		E30CFB1C1EEF171200ACE42B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */; };
 		E357BDE51EFABAF2006A141B /* meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E357BDE41EFABAF2006A141B /* meditation.mp3 */; };
+		E3784A2C1EF9790D00554972 /* OnboardingPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3784A2B1EF9790D00554972 /* OnboardingPopover.swift */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
 		E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A811EC9FBA300076737 /* Assets.xcassets */; };
 		E37C7A851EC9FBA300076737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37C7A831EC9FBA300076737 /* LaunchScreen.storyboard */; };
@@ -222,6 +223,7 @@
 		E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewPlaceholder.swift; path = Utils/TextViewPlaceholder.swift; sourceTree = "<group>"; };
 		E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
 		E357BDE41EFABAF2006A141B /* meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meditation.mp3; sourceTree = "<group>"; };
+		E3784A2B1EF9790D00554972 /* OnboardingPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPopover.swift; sourceTree = "<group>"; };
 		E37C7A771EC9FBA300076737 /* Personal-Compass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal-Compass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37C7A811EC9FBA300076737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */,
 				4FB5AF161EE5F7E600837FF0 /* LocalNotificationsHelper.swift */,
 				E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */,
+				E3784A2B1EF9790D00554972 /* OnboardingPopover.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -972,6 +975,7 @@
 				8C54AD1F1EDE1A34001EC903 /* InnerWisdom4ViewController.swift in Sources */,
 				E30CFB1C1EEF171200ACE42B /* String+Extensions.swift in Sources */,
 				E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */,
+				E3784A2C1EF9790D00554972 /* OnboardingPopover.swift in Sources */,
 				8C463B391ECA642600566531 /* UITableViewCell+Extensions.swift in Sources */,
 				8C54AD121ED5E4C6001EC903 /* NeedViewController.swift in Sources */,
 				4FCBA1B31EDDBE7E00B68A85 /* EmotionSummaryCell.swift in Sources */,

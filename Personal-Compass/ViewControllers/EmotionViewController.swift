@@ -9,6 +9,7 @@
 import UIKit
 import AKPickerView_Swift
 import KMPlaceholderTextView
+import MZFormSheetPresentationController
 
 private let indexOfNeutralEmotion = 5
 
@@ -26,6 +27,8 @@ class EmotionViewController: AutoscrollableViewController {
 
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
+    fileprivate var emotionHint: OnboardingPopover?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPicker()
@@ -39,6 +42,7 @@ class EmotionViewController: AutoscrollableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.showEmotionHint()
         self.loadData()
     }
     
@@ -105,7 +109,72 @@ class EmotionViewController: AutoscrollableViewController {
         self.picker.scrollToItem(self.currentIndex, animated: true)
         self.setupEmotionLabel()
     }
+}
+
+// MARK: - Hints
+
+extension EmotionViewController {
+    // MARK: - Hint
     
+    fileprivate func showEmotionHint() {
+        if !UserDefaults.standard.bool(forKey: "EmotionHintShown") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                guard let ss = self, ss.view.window != nil else {
+                    return
+                }
+                
+                UserDefaults.standard.set(true, forKey: "EmotionHintShown")
+                ss.learnMore(ss)
+            }
+        }
+        
+//        if !UserDefaults.standard.bool(forKey: "EmotionHintShown") {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+//                guard let ss = self, ss.view.window != nil else {
+//                    return
+//                }
+//                
+//                guard var center = ss.pickerContainerView.superview?.center else {
+//                    return
+//                }
+//                
+//                center.y += 30
+//                
+//                ss.emotionHint = OnboardingPopover()
+//                
+//                ss.emotionHint?.title = "Now let’s identify how the stress of this situation is affecting you emotionally"
+//                ss.emotionHint?.hasShadow = true
+//                ss.emotionHint?.shadowColor = UIColor(white: 0, alpha: 0.4)
+//                ss.emotionHint?.arrowLocation = .centeredOnTarget
+//                ss.emotionHint?.present(in: ss.view, at: center, from: .below)
+//                
+//                UserDefaults.standard.set(true, forKey: "EmotionHintShown")
+//                
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+//                    self?.dismissEmotionHint()
+//                }
+//            }
+//        }
+    }
+    
+    fileprivate func learnMore(_ sender: Any) {
+        guard let exampleViewController = UIStoryboard(name: "ExamplePopUp", bundle: nil).instantiateInitialViewController() as? ExamplePopUpViewController else {
+        assertionFailure()
+        return
+        }
+        
+        exampleViewController.title = "Emotion"
+        exampleViewController.text = "Now let’s identify how the stress of this situation is affecting you emotionally."
+        
+        let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
+        formSheet.presentationController?.contentViewSize = CGSize(width: UIDevice.isSmallerThaniPhone6 ? 260 : 300, height: 200)
+        formSheet.contentViewControllerTransitionStyle = .bounce
+        self.present(formSheet, animated: true, completion: nil)
+    }
+//    
+//    fileprivate func dismissEmotionHint() {
+//        self.emotionHint?.dismiss()
+//    }
 }
 
 // MARK: - CompassValidation

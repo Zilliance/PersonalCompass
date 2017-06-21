@@ -31,7 +31,7 @@ class InnerWisdom1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupAudioPlayer()
-        self.setupDecriptionLabel()
+        self.setupDescriptionLabel()
         
         self.textView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.listenLabel.clipsToBounds = true
@@ -82,7 +82,7 @@ class InnerWisdom1ViewController: UIViewController {
         }
     }
     
-    private func setupDecriptionLabel() {
+    private func setupDescriptionLabel() {
         let text = "Try this two minute meditation to see what your Inner Wisdom has to say about your need.  "
         let learn = "Learn more."
         

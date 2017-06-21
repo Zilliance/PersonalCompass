@@ -26,7 +26,7 @@ class ThoughtViewController: AutoscrollableViewController {
     }
     
     private func setupView() {
-        self.setupDecriptionLabel()
+        self.setupDescriptionLabel()
         
         self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
         
@@ -44,7 +44,7 @@ class ThoughtViewController: AutoscrollableViewController {
         }
     }
     
-    private func setupDecriptionLabel() {
+    private func setupDescriptionLabel() {
         let express = "Express all of your thoughts about your stressor that are causing you to feel the way you do.  "
         let learn = "Learn more."
         
