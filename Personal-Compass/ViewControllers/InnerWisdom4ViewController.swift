@@ -23,6 +23,7 @@ class InnerWisdom4ViewController: UIViewController {
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var emotionTextView: KMPlaceholderTextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
 
     var currentCompass: Compass!
     
