@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="300"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zilliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgO-fP-Vbo">
-                                        <rect key="frame" x="146" y="30" width="84.5" height="28"/>
+                                        <rect key="frame" x="145.5" y="30" width="84.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -322,7 +322,7 @@ Contact us at help@zilliance.com</string>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2aA-CK-ve1">
-                                <rect key="frame" x="123" y="93" width="128" height="128"/>
+                                <rect key="frame" x="123.5" y="93" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="0h1-Bb-Cjh"/>
                                     <constraint firstAttribute="height" constant="128" id="2Lz-pe-XGz"/>
