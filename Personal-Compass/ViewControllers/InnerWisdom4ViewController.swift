@@ -42,14 +42,8 @@ class InnerWisdom4ViewController: UIViewController {
         self.setupDescriptionLabel()
     }
     
-    fileprivate var scrolledToPositiveEmotionTextView = false
-    
     override func viewDidLayoutSubviews() {
         self.resetTextViewConstraint()
-        
-        if (self.scrolledToPositiveEmotionTextView) {
-            self.view.frame.origin.y = self.view.frame.origin.y - 90
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
