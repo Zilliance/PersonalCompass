@@ -8,18 +8,22 @@
 
 import UIKit
 import AKPickerView_Swift
-
+import KMPlaceholderTextView
 // Feel Better Emotion
 
-private let indexOfNeutralEmotion = 5
+class InnerWisdom4ViewController: UIViewController {
 
-class InnerWisdom4ViewController: AutoscrollableViewController {
+    private let indexOfNeutralEmotion = 5
 
+
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
-    @IBOutlet weak var needMetTextField: UITextField!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var emotionTextView: KMPlaceholderTextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
 
     var currentCompass: Compass!
     
@@ -33,12 +37,23 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
         super.viewDidLoad()
         self.textView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.setupPicker()
+        self.setupTextView()
     }
     
-    
+    fileprivate var scrolledToPositiveEmotionTextView = false
     
     override func viewDidLayoutSubviews() {
         self.resetTextViewConstraint()
+        
+        if (self.scrolledToPositiveEmotionTextView) {
+            self.view.frame.origin.y = self.view.frame.origin.y - 90
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
     }
     
     private func resetTextViewConstraint() {
@@ -50,8 +65,40 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
         self.loadData()
     }
+    
+    var editingViewFrame: CGRect? {
+        return self.view.subviews.filter {
+            $0.isFirstResponder == true
+            }.first?.frame
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        let editingView = self.containerView.subviews.filter {
+            $0.isFirstResponder == true
+            }.first
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, let editingView = editingView {
+            self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
+            self.scrollView.scrollIndicatorInsets = self.scrollView.contentInset
+            
+            let childStartPoint = self.view.convert(editingView.frame.origin, to: scrollView)
+            self.scrollView.scrollRectToVisible(CGRect(x: 0, y: childStartPoint.y - 20, width: 1, height: editingView.frame.height), animated: true)
+        }
+        
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.scrollView.contentInset = .zero
+        self.scrollView.scrollIndicatorInsets = .zero
+    }
+    
     
     private func setupPicker() {
         
@@ -70,13 +117,23 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
         
     }
     
+    private func setupTextView() {
+        self.emotionTextView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+        
+        self.emotionTextView.layer.cornerRadius = App.Appearance.buttonCornerRadius
+        self.emotionTextView.layer.borderWidth = App.Appearance.borderWidth
+        self.emotionTextView.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
     private func loadData() {
         
         if let emotion = self.currentCompass.needMetEmotion {
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
-            self.picker.scrollToItem(self.currentIndex)
-            self.needMetTextField.text = self.currentCompass.compassNeedMet
+
+            self.picker.scrollToItem(self.currentIndex, animated: true)
+            self.emotionTextView.text = self.currentCompass.compassNeedMet
+
         }
         else {
             self.currentIndex = indexOfNeutralEmotion
@@ -121,6 +178,7 @@ class InnerWisdom4ViewController: AutoscrollableViewController {
         self.picker.scrollToItem(self.currentIndex, animated: true)
         self.setupEmotionLabel()
     }
+    
 }
 
 // MARK: - CompassFacetEditor
@@ -129,7 +187,7 @@ extension InnerWisdom4ViewController: CompassFacetEditor {
     func save() {
         let emotion = self.emotions[self.currentIndex]
         self.currentCompass.needMetEmotion = emotion
-        self.currentCompass.compassNeedMet = self.needMetTextField.text
+        self.currentCompass.compassNeedMet = self.emotionTextView.text
         self.currentCompass.lastEditedFacet = .innerWisdom4
     }
 }
@@ -138,7 +196,7 @@ extension InnerWisdom4ViewController: CompassFacetEditor {
 
 extension InnerWisdom4ViewController: CompassValidation {
     var error: CompassError? {
-        if self.needMetTextField.text?.isEmpty == true {
+        if self.emotionTextView.text?.isEmpty == true {
             return .text
         } else {
             return nil
@@ -161,15 +219,24 @@ extension InnerWisdom4ViewController: AKPickerViewDataSource, AKPickerViewDelega
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
         self.currentIndex = item
         self.setupEmotionLabel()
-    }
-}
-
-// MARK: - UITextFieldDelegate
-
-extension InnerWisdom4ViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        
+        if (self.scrollView.contentSize.height > self.scrollView.frame.size.height) {
+            self.scrollView.setContentOffset(CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height), animated: true)
+        }
     }
     
+}
+
+// MARK: - UITextViewDelegate
+
+extension InnerWisdom4ViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n")
+        {
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        return true
+    }
 }
