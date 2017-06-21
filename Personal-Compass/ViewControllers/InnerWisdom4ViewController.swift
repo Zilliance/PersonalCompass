@@ -13,6 +13,9 @@ import KMPlaceholderTextView
 
 class InnerWisdom4ViewController: UIViewController {
 
+    private let indexOfNeutralEmotion = 5
+
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var emotionLabel: UILabel!
@@ -126,10 +129,19 @@ class InnerWisdom4ViewController: UIViewController {
         if let emotion = self.currentCompass.needMetEmotion {
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
+
             self.picker.scrollToItem(self.currentIndex, animated: true)
-            
             self.emotionTextView.text = self.currentCompass.compassNeedMet
+
         }
+        else {
+            self.currentIndex = indexOfNeutralEmotion
+        }
+    
+        DispatchQueue.main.async {
+            self.picker.scrollToItem(self.currentIndex)
+        }
+
         
         self.textView.text = self.currentCompass.editedNeed
         
@@ -140,7 +152,7 @@ class InnerWisdom4ViewController: UIViewController {
     }
     
     fileprivate func setupEmotionLabel() {
-        self.emotionLabel.text = self.emotions[self.currentIndex].longTitle
+        self.emotionLabel.text = self.emotions[self.currentIndex].title
         self.emotionLabel.textColor = self.emotions[self.currentIndex].color
     }
     

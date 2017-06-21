@@ -66,18 +66,21 @@ class EmotionViewController: AutoscrollableViewController {
         if let emotion = self.currentCompass.emotion {
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
-            self.picker.scrollToItem(self.currentIndex)
             self.textView.text = self.currentCompass.compassEmotion
-        } else {
-            // self.currentIndex = indexOfNeutralEmotion
-            // self.picker.scrollToItem(indexOfNeutralEmotion)
+        }
+        else {
+             self.currentIndex = indexOfNeutralEmotion
         }
         
+        DispatchQueue.main.async {
+            self.picker.scrollToItem(self.currentIndex)
+        }
+
         self.setupEmotionLabel()
     }
     
     fileprivate func setupEmotionLabel() {
-        self.emotionLabel.text = self.emotions[self.currentIndex].longTitle
+        self.emotionLabel.text = self.emotions[self.currentIndex].title
         self.emotionLabel.textColor = self.emotions[self.currentIndex].color
     }
     

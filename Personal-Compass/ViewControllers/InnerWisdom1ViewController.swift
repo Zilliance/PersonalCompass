@@ -59,7 +59,7 @@ class InnerWisdom1ViewController: UIViewController {
     private func setupAudioPlayer() {
         
         let url = URL.init(fileURLWithPath: Bundle.main.path(
-            forResource: "mpthreetest",
+            forResource: "meditation",
             ofType: "mp3")!)
         
         do {

@@ -12,10 +12,8 @@ import RealmSwift
 final class Emotion: Object {
     
     dynamic var level: Int = 0
-    
-    dynamic var shortTitle: String = ""
 
-    dynamic var longTitle: String = ""
+    dynamic var title: String = ""
     
     var icon: UIImage? {
         let iconName = "emotion-icon-\(self.level)"
