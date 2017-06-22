@@ -169,7 +169,6 @@ class CreateCompassViewController: UIViewController {
                 viewController.currentCompass = container.compass
                 viewController.done = {
                     container.save()
-                    container.navigationController?.popViewController(animated: true)
                 }
                 self.viewController = viewController
     

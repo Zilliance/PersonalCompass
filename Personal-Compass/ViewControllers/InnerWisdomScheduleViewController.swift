@@ -67,6 +67,14 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
     }
     
     @IBAction func doneAction(_ sender: UIButton) {
+        
         self.done?()
+        
+        guard let compassSummaryViewController = UIStoryboard(name: "CompassSummary", bundle: nil).instantiateInitialViewController() as? CompassSummaryViewController else { return assertionFailure() }
+        
+        compassSummaryViewController.compass = self.currentCompass
+        compassSummaryViewController.isFinishingCompass = true
+        self.navigationController?.pushViewController(compassSummaryViewController, animated: true)
+        
     }
 }
