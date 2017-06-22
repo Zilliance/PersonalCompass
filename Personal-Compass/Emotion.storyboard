@@ -30,9 +30,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRc-8L-ur7">
-                                <rect key="frame" x="20" y="86.5" width="335" height="53"/>
+                                <rect key="frame" x="20" y="86.5" width="335" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="dTM-nP-o7H"/>
+                                    <constraint firstAttribute="height" constant="30" id="dTM-nP-o7H"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-7X-hab" userLabel="Emotion Picker">
-                                <rect key="frame" x="0.0" y="155.5" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="132.5" width="375" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koN-fM-4mY">
                                         <rect key="frame" x="40" y="0.0" width="295" height="50"/>
@@ -88,7 +88,7 @@
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the emotion that best describes how you are feeling below:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6v-49-9Xn">
-                                <rect key="frame" x="57.5" y="225.5" width="260" height="78"/>
+                                <rect key="frame" x="57.5" y="202.5" width="260" height="78"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="PMU-li-SnY"/>
                                     <constraint firstAttribute="width" constant="260" id="XUF-ev-sMa"/>
@@ -98,7 +98,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ueG-Nu-AjH" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                <rect key="frame" x="20" y="239.5" width="335" height="128"/>
+                                <rect key="frame" x="20" y="216.5" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="6ro-Tg-XDQ"/>
@@ -117,7 +117,7 @@
                                 </connections>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cRc-8L-ur7" firstAttribute="top" secondItem="leO-Le-CAU" secondAttribute="bottom" constant="10" id="Jr6-hH-2DW"/>
                             <constraint firstAttribute="trailing" secondItem="cRc-8L-ur7" secondAttribute="trailing" constant="20" id="M0c-s2-BEB"/>
