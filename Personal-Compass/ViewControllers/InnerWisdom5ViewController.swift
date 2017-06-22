@@ -107,6 +107,8 @@ final class InnerWisdom5ViewController: UIViewController {
             return
         }
         
+        UserDefaults.standard.set(true, forKey: "OtherWaysToFeelBetterHintShown")
+        
         exampleViewController.title = "Ways to Feel Better"
         exampleViewController.text = "The main goal with working through a stressor is to feel better emotionally.\n\nThere are many different ways to feel an emotion. We can, for instance, go for a walk if we want immediate relief from a stressor. Others take time.\n\nWe want you to identify multiple ways to feel better. On this screen, we ask you to think of another way to feel the emotion you want to feel."
         

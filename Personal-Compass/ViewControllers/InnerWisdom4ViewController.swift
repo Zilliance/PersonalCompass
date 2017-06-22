@@ -220,6 +220,8 @@ class InnerWisdom4ViewController: UIViewController {
             return
         }
         
+        UserDefaults.standard.set(true, forKey: "FeelBetterHintShown")
+        
         exampleViewController.title = "Feel Better"
         exampleViewController.text = "The goal of the Personal Compass is to help you feel better, even if you can’t eliminate your stressor.\n\nMost of us make the mistake of thinking a SITUATION has to change in order for us to feel better, but feeling better is not about the situational outcome. Rather, it’s about an EMOTIONAL outcome.\n\nOn this screen, we want you to identify how you would feel if you got your need met, which is ultimately how you would like to feel in the face of your stressor."
         
