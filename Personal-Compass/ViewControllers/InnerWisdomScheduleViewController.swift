@@ -17,8 +17,6 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
     @IBOutlet weak var buttonContainerWidthConstraint: NSLayoutConstraint!  // 104
     @IBOutlet weak var buttonContainerHeightConstraint: NSLayoutConstraint! // 130
     
-    var done: (() -> ())?
-    
     var error: CompassError? = nil
     var currentCompass: Compass!
     
@@ -67,6 +65,12 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
     }
     
     @IBAction func doneAction(_ sender: UIButton) {
-        self.done?()
+        
+        guard let compassSummaryViewController = UIStoryboard(name: "CompassSummary", bundle: nil).instantiateInitialViewController() as? CompassSummaryViewController else { return assertionFailure() }
+        
+        compassSummaryViewController.compass = self.currentCompass
+        compassSummaryViewController.isFinishingCompass = true
+        self.navigationController?.pushViewController(compassSummaryViewController, animated: true)
+        
     }
 }

@@ -40,6 +40,7 @@ class CompassSummaryViewController: UIViewController {
     
     @IBOutlet weak var tableContainerView: UIView!
     var compass: Compass!
+    var isFinishingCompass = false
     
     @IBOutlet weak var summaryLabel: UILabel!
     
@@ -59,7 +60,11 @@ class CompassSummaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if isFinishingCompass {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(goToHome))
+        }
+        
         self.showAssessmentView()
         self.title = compass.stressor
         self.summaryLabel.text = SummaryText.asseessment.rawValue
@@ -70,6 +75,10 @@ class CompassSummaryViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.showActionSheetHint()
+    }
+    
+    @objc func goToHome() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func shareSummaryAction(_ sender: Any) {
