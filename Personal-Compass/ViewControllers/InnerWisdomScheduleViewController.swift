@@ -6,11 +6,16 @@
 //  Copyright © 2017 Zilliance. All rights reserved.
 //
 
+//  Completed
+
 import UIKit
 
 class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, CompassValidation {
 
     @IBOutlet weak var scheduleLabel: UILabel!
+    @IBOutlet weak var buttonContainer: UIView!
+    @IBOutlet weak var buttonContainerWidthConstraint: NSLayoutConstraint!  // 104
+    @IBOutlet weak var buttonContainerHeightConstraint: NSLayoutConstraint! // 130
     
     var done: (() -> ())?
     
@@ -28,10 +33,13 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
     }
     
     private func setupView() {
-        
         self.scheduleLabel.clipsToBounds = true
         self.scheduleLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
         
+        if UIDevice.isSmallerThaniPhone6 {
+            // self.buttonContainerWidthConstraint.constant *= 0.8
+            self.buttonContainerHeightConstraint.constant *= 0.8
+        }
     }
 
     @IBAction func scheduleAction(_ sender: UIButton) {
