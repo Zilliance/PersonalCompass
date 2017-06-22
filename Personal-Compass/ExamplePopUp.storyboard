@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6nR-Xs-jSm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6nR-Xs-jSm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,9 @@
     <customFonts key="customFonts">
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -40,7 +43,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="K0i-3f-rU5"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                         <state key="normal" title="Close">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -49,7 +52,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ihn-fW-57o" firstAttribute="top" secondItem="I0x-wm-tZ7" secondAttribute="top" id="HaJ-TV-aG1"/>
                                     <constraint firstAttribute="bottom" secondItem="e8v-Ky-GGi" secondAttribute="bottom" constant="10" id="Jzt-BE-65S"/>
@@ -65,9 +68,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="gu5-Mz-6J0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                 <state key="normal" title="Use This Example">
-                                    <color key="titleColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="okAction:" destination="6nR-Xs-jSm" eventType="touchUpInside" id="Wdv-8A-1kc"/>
