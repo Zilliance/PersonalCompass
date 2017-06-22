@@ -26,13 +26,13 @@ class InnerWisdom1ViewController: UIViewController {
     
     var currentCompass: Compass!
     
-    private var audioPlayer: AVAudioPlayer?
+    fileprivate var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupAudioPlayer()
         self.setupDescriptionLabel()
-        
+        self.setupAudioPlayer()
+
         self.textView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.listenLabel.clipsToBounds = true
         self.listenLabel.layer.cornerRadius = App.Appearance.buttonCornerRadius
@@ -117,22 +117,46 @@ class InnerWisdom1ViewController: UIViewController {
         self.setupView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.stopAudio()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.setupPlayingLabel()
+    }
+    
+    fileprivate func setupPlayingLabel() {
+        
+        guard let player = self.audioPlayer else {
+            return
+        }
+        
+        if !player.isPlaying {
+            self.listenLabel.text = "Listen"
+            self.listenLabel.backgroundColor = .purple
+            self.headphonesIcon.image = #imageLiteral(resourceName: "icon-headphones-listen")
+        }
+        else {
+            self.listenLabel.text = "Pause"
+            self.listenLabel.backgroundColor = .pause
+            self.headphonesIcon.image = #imageLiteral(resourceName: "icon-headphones-puase")
+        }
+    }
+    
     @IBAction func listenAction(_ sender: UIButton) {
         if let player = self.audioPlayer {
             
             if !player.isPlaying {
                 
                 player.play()
-                self.listenLabel.text = "Pause"
-                self.listenLabel.backgroundColor = .pause
-                self.headphonesIcon.image = #imageLiteral(resourceName: "icon-headphones-puase")
             }
             else {
                 player.stop()
-                self.listenLabel.text = "Listen"
-                self.listenLabel.backgroundColor = .purple
-                self.headphonesIcon.image = #imageLiteral(resourceName: "icon-headphones-listen")
             }
+            
+            self.setupPlayingLabel()
         }
     }
     
@@ -176,6 +200,11 @@ extension InnerWisdom1ViewController: AVAudioPlayerDelegate {
             self.headphonesIcon.image = #imageLiteral(resourceName: "icon-headphones-listen")
         }
         
+    }
+    
+    func stopAudio() {
+        self.audioPlayer?.stop()
+        self.audioPlayer?.currentTime = 0
     }
     
 }
