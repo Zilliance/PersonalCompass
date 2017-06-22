@@ -52,6 +52,8 @@ class CompassSummaryViewController: UIViewController {
     @IBOutlet weak var innerWisdomLabel: UILabel!
     @IBOutlet weak var innerWisdomIcon: UIImageView!
     
+    @IBOutlet weak var waysToFeelBetterLabel: UILabel!
+    
     var currentViewController: UIViewController?
     fileprivate var actionSheetHint: OnboardingPopover?
     
@@ -61,6 +63,8 @@ class CompassSummaryViewController: UIViewController {
         self.showAssessmentView()
         self.title = compass.stressor
         self.summaryLabel.text = SummaryText.asseessment.rawValue
+        
+        self.setupWaysToFeelBetterLabel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -188,6 +192,26 @@ class CompassSummaryViewController: UIViewController {
     fileprivate func dismissImproveHint() {
         self.actionSheetHint?.dismiss()
     }
+    
+    
+    @IBAction func showWaysToFeelBetter(_ sender: Any) {
+        
+        guard let viewController = UIStoryboard(name: "FeelBetter", bundle: nil).instantiateInitialViewController() as? FeelBetterViewController
+            else {
+                assertionFailure()
+                return
+        }
+        viewController.compass = self.compass
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.present(navigationController, animated: true, completion: nil)
+
+    }
+    
+    private func setupWaysToFeelBetterLabel() {
+        self.waysToFeelBetterLabel.textColor = UIColor.lightBlue
+        self.waysToFeelBetterLabel.font = UIFont.muliItalic(size: 13)
+    }
+    
 }
 
 
