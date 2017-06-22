@@ -154,7 +154,12 @@ class StartCompassViewController: UIViewController {
     }
     
     @IBAction func deleteAction(_ sender: UIButton) {
-        if let indexes = self.collectionView.indexPathsForSelectedItems {
+        
+        guard self.compasses.count > 0 else {
+            return
+        }
+        
+        if let indexes = self.collectionView.indexPathsForSelectedItems, indexes.count > 0 {
             
             let alertController = UIAlertController(title: "Are you sure you want to delete the selected compasses?", message: "Deleting them will permanently remove them.", preferredStyle: .alert)
             
@@ -182,6 +187,9 @@ class StartCompassViewController: UIViewController {
             })
             
             self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+            self.showAlert(title: "Please select the compasses you would like to delete", message: nil)
         }
     }
     
