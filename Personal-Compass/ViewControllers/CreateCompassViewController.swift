@@ -167,6 +167,9 @@ class CreateCompassViewController: UIViewController {
             case .takeAction:
                 let viewController = UIStoryboard(name: "InnerWisdom", bundle: nil).instantiateViewController(withIdentifier: "schedule") as! InnerWisdomScheduleViewController
                 viewController.currentCompass = container.compass
+                viewController.done = {
+                    container.save()
+                }
                 self.viewController = viewController
     
             }
