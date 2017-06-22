@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sE8-Lb-XQX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sE8-Lb-XQX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -138,11 +138,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyb-sb-pj0">
-                                <rect key="frame" x="0.0" y="182" width="375" height="377"/>
+                                <rect key="frame" x="0.0" y="182" width="375" height="371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me ways to feel better" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G7-ZK-XF6">
-                                <rect key="frame" x="102" y="559" width="171.5" height="44"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me more ways to feel better" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G7-ZK-XF6">
+                                <rect key="frame" x="85" y="553" width="205.5" height="50"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,7 +166,7 @@
                             <constraint firstItem="Kcu-IF-t5m" firstAttribute="top" secondItem="ogi-Rg-tN0" secondAttribute="bottom" id="hy4-1C-CVV"/>
                             <constraint firstAttribute="trailing" secondItem="ogi-Rg-tN0" secondAttribute="trailing" id="n0i-3i-Ebg"/>
                             <constraint firstItem="ogi-Rg-tN0" firstAttribute="leading" secondItem="xwi-gi-TXW" secondAttribute="leading" id="thP-Re-rQi"/>
-                            <constraint firstItem="LgC-bh-9Xn" firstAttribute="top" secondItem="wyb-sb-pj0" secondAttribute="bottom" constant="44" id="zYR-oM-b9u"/>
+                            <constraint firstItem="LgC-bh-9Xn" firstAttribute="top" secondItem="wyb-sb-pj0" secondAttribute="bottom" constant="50" id="zYR-oM-b9u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="FNK-tb-Lje">
