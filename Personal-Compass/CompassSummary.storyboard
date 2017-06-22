@@ -138,22 +138,35 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyb-sb-pj0">
-                                <rect key="frame" x="0.0" y="182" width="375" height="421"/>
+                                <rect key="frame" x="0.0" y="182" width="375" height="371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me more ways to feel better" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G7-ZK-XF6">
+                                <rect key="frame" x="85" y="553" width="205.5" height="50"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BLv-mf-S5w" appends="YES" id="7gs-kp-UST"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wyb-sb-pj0" firstAttribute="leading" secondItem="xwi-gi-TXW" secondAttribute="leading" id="1eC-wo-aep"/>
+                            <constraint firstItem="7G7-ZK-XF6" firstAttribute="centerX" secondItem="xwi-gi-TXW" secondAttribute="centerX" id="1ps-c6-tLN"/>
                             <constraint firstAttribute="trailing" secondItem="Kcu-IF-t5m" secondAttribute="trailing" id="AlL-B3-7es"/>
                             <constraint firstItem="ogi-Rg-tN0" firstAttribute="top" secondItem="xwi-gi-TXW" secondAttribute="top" id="OUZ-ad-KJ5"/>
+                            <constraint firstItem="7G7-ZK-XF6" firstAttribute="top" secondItem="wyb-sb-pj0" secondAttribute="bottom" id="PFA-54-bbL"/>
                             <constraint firstAttribute="trailing" secondItem="wyb-sb-pj0" secondAttribute="trailing" id="a2S-au-GET"/>
                             <constraint firstItem="Kcu-IF-t5m" firstAttribute="leading" secondItem="xwi-gi-TXW" secondAttribute="leading" id="aBp-7Z-BVc"/>
                             <constraint firstItem="wyb-sb-pj0" firstAttribute="top" secondItem="Kcu-IF-t5m" secondAttribute="bottom" id="cJQ-f6-WE4"/>
+                            <constraint firstItem="LgC-bh-9Xn" firstAttribute="top" secondItem="7G7-ZK-XF6" secondAttribute="bottom" id="ghm-KI-AJC"/>
                             <constraint firstItem="Kcu-IF-t5m" firstAttribute="top" secondItem="ogi-Rg-tN0" secondAttribute="bottom" id="hy4-1C-CVV"/>
                             <constraint firstAttribute="trailing" secondItem="ogi-Rg-tN0" secondAttribute="trailing" id="n0i-3i-Ebg"/>
                             <constraint firstItem="ogi-Rg-tN0" firstAttribute="leading" secondItem="xwi-gi-TXW" secondAttribute="leading" id="thP-Re-rQi"/>
-                            <constraint firstItem="LgC-bh-9Xn" firstAttribute="top" secondItem="wyb-sb-pj0" secondAttribute="bottom" id="zYR-oM-b9u"/>
+                            <constraint firstItem="LgC-bh-9Xn" firstAttribute="top" secondItem="wyb-sb-pj0" secondAttribute="bottom" constant="50" id="zYR-oM-b9u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="FNK-tb-Lje">
@@ -173,9 +186,15 @@
                         <outlet property="innerWisdomSummaryHeaderView" destination="lyW-1a-kS0" id="vh6-eP-AhT"/>
                         <outlet property="summaryLabel" destination="3Q9-xE-VmV" id="zir-tu-VJ0"/>
                         <outlet property="tableContainerView" destination="wyb-sb-pj0" id="gOf-C8-23y"/>
+                        <outlet property="waysToFeelBetterLabel" destination="7G7-ZK-XF6" id="ir9-Sp-Xsq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15F-KP-3y9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BLv-mf-S5w">
+                    <connections>
+                        <action selector="showWaysToFeelBetter:" destination="sE8-Lb-XQX" id="esg-So-EE5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="167.76611694152925"/>
         </scene>
