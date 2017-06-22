@@ -118,7 +118,13 @@ class InnerWisdom1ViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         self.stopAudio()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.setupPlayingLabel()
     }
     
     fileprivate func setupPlayingLabel() {
@@ -199,7 +205,6 @@ extension InnerWisdom1ViewController: AVAudioPlayerDelegate {
     func stopAudio() {
         self.audioPlayer?.stop()
         self.audioPlayer?.currentTime = 0
-        self.setupPlayingLabel()
     }
     
 }
