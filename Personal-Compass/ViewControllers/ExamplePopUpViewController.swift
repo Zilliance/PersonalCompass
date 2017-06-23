@@ -38,7 +38,7 @@ class ExamplePopUpViewController: UIViewController {
             case .thought:
                 self.text =  "Instead of thinking, \"I wasted a decade of my life on a bad marriage,\" I can think, \"I was married for a decade, and when the marriage dissolved, I identified a few things about myself that could be improved upon. These days, I’m much more upfront and direct about my communication, and I ask the same from my romantic partners.\""
             case .behavior:
-                self.text = "When I feel angry and resentful about having to do chore, I will take a ten minute break to call a friend and lift my mood."
+                self.text = "When I feel resentful about having to do chores, I will take a ten minute break to call a friend and lift my mood."
             case .emotion:
                 self.text = "When I feel triggered by my spouse, I will take a few minutes to myself and listen to my favorite song before re-engaging."
             }

@@ -52,11 +52,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-z3-59Z">
                                 <rect key="frame" x="21" y="280" width="333" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">The Personal Compass helps you quickly identify an action step you can take to feel better about something that is stressing you out. Additionally, seeing how your thoughts, emotions, body and behavior are interconnecting reveals multiple ways to take care of yourself around the stressful issue.
+                                <string key="text">The Personal Compass helps you quickly identify an action step you can take to feel better about something that is stressing you out. Additionally, seeing how your thoughts, emotions, body and behavior are interconnected reveals multiple ways to take care of yourself around the stressful issue.
 
 The output of the Personal Compass is an action plan with concrete steps you can take to start feeling better immediately.
 
-Check the Tour in the main menu for more info.</string>
+Check out the Tour in the main menu for more information.</string>
                                 <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
