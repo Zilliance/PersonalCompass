@@ -361,7 +361,7 @@ extension ZillianceTextViewController: UITextViewDelegate {
             self.setupTextView()
         case .emotion:
             self.validation = .placeholder1
-            self.textView.text = "Stressor: \(self.compass.stressor!)\nWhen I start to feel bad about this stressor, I will do this to feel better emotionally Call a Friend"
+            self.textView.text = "Stressor: \(self.compass.stressor!)\nWhen I start to feel bad about this stressor, I will do this to feel better emotionally: Call a Friend"
             self.promptTexts = ["Call a Friend"]
             self.setupTextView()
 
