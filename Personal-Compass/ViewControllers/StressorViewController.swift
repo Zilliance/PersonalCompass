@@ -75,10 +75,12 @@ extension StressorViewController: UITextViewDelegate {
         
         // check max character lenght
         
-        self.counterLabel.isHidden = false
+        let charCount = textView.text.characters.count + (text.characters.count - range.length)
+        
+        self.counterLabel.isHidden = charCount == 0
         self.counterLabel.text = "\(maxTextlenght - textView.text.characters.count)"
         
-        return textView.text.characters.count + (text.characters.count - range.length) <= maxTextlenght
+        return charCount <= maxTextlenght
       
     }
 }
