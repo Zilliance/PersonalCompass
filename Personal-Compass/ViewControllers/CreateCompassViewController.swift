@@ -21,7 +21,6 @@ protocol TableEditableViewController {
     var tableViewController: ItemsSelectionViewController! {get}
     func editTapped()
     var editingChanged: ((Bool) -> ())? {get set}
-    var isTableEditing: Bool {get}
 }
 
 extension TableEditableViewController {
@@ -280,7 +279,7 @@ class CreateCompassViewController: UIViewController {
         self.backcustomButton.removeFromSuperview()
     }
     
-    @objc private func setupView() {
+    private func setupView() {
         
         self.topLabel.backgroundColor = .clear
         self.pageControl.numberOfPages = self.compassItems.count
