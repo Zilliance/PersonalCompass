@@ -19,17 +19,7 @@ protocol CompassFacetEditor {
 
 protocol TableEditableViewController {
     var tableViewController: ItemsSelectionViewController! {get}
-    func editTapped()
     var tableLoaded: ((UIBarButtonItem) -> ())? {get set}
-}
-
-extension TableEditableViewController {
-    
-    func editTapped() {
-        let editing = self.tableViewController.tableView.isEditing
-        self.tableViewController.tableView.setEditing(!editing, animated: true)
-    }
-    
 }
 
 enum CompassError {
