@@ -15,9 +15,7 @@ import MZFormSheetPresentationController
 // How Else Can I Feel
 
 final class InnerWisdom5ViewController: UIViewController, TableEditableViewController {
-    
-    var editingChanged: ((Bool) -> ())?
-    
+        
     @IBOutlet fileprivate var titleLable: UILabel!
     @IBOutlet fileprivate var descriptionLabel: UILabel!
     
@@ -26,6 +24,8 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
     var currentCompass: Compass!
     
     var notificationToken: NotificationToken? = nil
+    
+    var tableLoaded: ((UIBarButtonItem) -> ())?
 
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var emotionIcon: UIImageView!
@@ -58,8 +58,8 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
             itemsSelectionsController.items = Array(Database.shared.positiveActivitiesStored)
             itemsSelectionsController.selectedItems = Array(self.currentCompass.positiveActivities)
 
-            self.tableViewController.editingChanged = self.editingChanged
-
+            self.tableLoaded?(self.tableViewController.editButtonItem)
+            
             itemsSelectionsController.saveAction = { selectedItems in
                 
                 let items = selectedItems.flatMap {

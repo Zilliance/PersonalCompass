@@ -20,7 +20,7 @@ protocol CompassFacetEditor {
 protocol TableEditableViewController {
     var tableViewController: ItemsSelectionViewController! {get}
     func editTapped()
-    var editingChanged: ((Bool) -> ())? {get set}
+    var tableLoaded: ((UIBarButtonItem) -> ())? {get set}
 }
 
 extension TableEditableViewController {
@@ -28,10 +28,6 @@ extension TableEditableViewController {
     func editTapped() {
         let editing = self.tableViewController.tableView.isEditing
         self.tableViewController.tableView.setEditing(!editing, animated: true)
-    }
-    
-    var isTableEditing: Bool {
-        return self.tableViewController.tableView.isEditing
     }
     
 }
@@ -196,9 +192,9 @@ class CreateCompassViewController: UIViewController {
             
             if var editableController = viewController as? TableEditableViewController {
 
-                editableController.editingChanged = { editing in
-                    
-                    container.navigationItem.rightBarButtonItem?.title = editing ? "Done" : "Edit"
+                editableController.tableLoaded = { editButtonItem in
+
+                    container.navigationItem.rightBarButtonItem = editButtonItem
                     
                 }
                 
@@ -255,7 +251,6 @@ class CreateCompassViewController: UIViewController {
         
         let currentItem = self.compassItems[self.currentPageIndex]
         self.setupLabel(for: currentItem.scene)
-        self.setupRightBarButtonItem(for: currentItem)
 
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         return controller
@@ -332,25 +327,6 @@ class CreateCompassViewController: UIViewController {
         
     }
     
-    private func setupRightBarButtonItem(for item: CompassItem) {
-        
-        if let editableViewController = item.viewController as? TableEditableViewController {
-            
-            self.navigationItem.rightBarButtonItem = BlockBarButtonItem(title: "Edit", style: .plain, actionHandler: {
-                
-                editableViewController.editTapped()
-                self.navigationItem.rightBarButtonItem?.title = editableViewController.isTableEditing ? "Done" : "Edit"
-                
-            })
-            
-        } else {
-            
-            self.navigationItem.rightBarButtonItem = nil
-            
-        }
-        
-    }
-    
     fileprivate func toggleSummaryButton() {
         
         let isShowing = self.returnToSummaryButton.alpha == 1 ? true : false
@@ -387,7 +363,6 @@ class CreateCompassViewController: UIViewController {
         
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         self.setupLabel(for: item.scene)
-        self.setupRightBarButtonItem(for: item)
 
     }
 

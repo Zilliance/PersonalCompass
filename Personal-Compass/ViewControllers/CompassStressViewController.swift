@@ -27,7 +27,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
     
     var notificationToken: NotificationToken? = nil
     
-    var editingChanged: ((Bool) -> ())?
+    var tableLoaded: ((UIBarButtonItem) -> ())?
     
     var error: CompassError? {
         if let items = self.tableViewController?.selectedItems, items.count > 0 {
@@ -107,7 +107,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
             itemsSelectionsController.type = self.StringItemType
             self.tableViewController = itemsSelectionsController
             
-            self.tableViewController.editingChanged = self.editingChanged
+            self.tableLoaded?(self.tableViewController.editButtonItem)
             
             if (self.StringItemType == BodyStress.self) {
                 

@@ -17,9 +17,7 @@ final class ItemsSelectionViewController: UITableViewController {
     var deleteAction: ((StringItem) -> ())?
     
     var type : StringItem.Type!
-    
-    var editingChanged: ((Bool) -> ())?
-    
+        
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -56,6 +54,9 @@ final class ItemsSelectionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 0 else {
+            return
+        }
         
         let item = items[indexPath.row]
         let index = selectedItems.index(of: item)
@@ -79,8 +80,6 @@ final class ItemsSelectionViewController: UITableViewController {
         
         let deleteRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler:{[unowned self] action, indexpath in
             
-            tableView.setEditing(false, animated: true)
-            
             let item = self.items[indexPath.row]
             
             if let selectedIndex = self.selectedItems.index(of: item) {
@@ -91,8 +90,6 @@ final class ItemsSelectionViewController: UITableViewController {
             
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             
-            self.editingChanged?(false)
-            
             self.deleteAction?(item)
         });
         
@@ -101,12 +98,6 @@ final class ItemsSelectionViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return indexPath.section == 1
-    }
-    
-    override func setEditing(_ editing: Bool, animated: Bool) {
-
-        self.editingChanged?(editing)
-        
     }
     
 }
