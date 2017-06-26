@@ -14,8 +14,8 @@ import MZFormSheetPresentationController
 
 // How Else Can I Feel
 
-final class InnerWisdom5ViewController: UIViewController {
-    
+final class InnerWisdom5ViewController: UIViewController, TableEditableViewController {
+        
     @IBOutlet fileprivate var titleLable: UILabel!
     @IBOutlet fileprivate var descriptionLabel: UILabel!
     
@@ -25,6 +25,8 @@ final class InnerWisdom5ViewController: UIViewController {
     
     var notificationToken: NotificationToken? = nil
     
+    var tableLoaded: ((UIBarButtonItem) -> ())?
+
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var emotionIcon: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!
@@ -33,6 +35,13 @@ final class InnerWisdom5ViewController: UIViewController {
         super.viewWillAppear(animated)
         self.setupView()
         self.showLearnMoreFirstTime()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        self.tableLoaded?(self.tableViewController.editButtonItem)
+        
     }
     
     private func setupView() {
@@ -55,7 +64,7 @@ final class InnerWisdom5ViewController: UIViewController {
             
             itemsSelectionsController.items = Array(Database.shared.positiveActivitiesStored)
             itemsSelectionsController.selectedItems = Array(self.currentCompass.positiveActivities)
-                        
+            
             itemsSelectionsController.saveAction = { selectedItems in
                 
                 let items = selectedItems.flatMap {
@@ -66,6 +75,22 @@ final class InnerWisdom5ViewController: UIViewController {
                     self.currentCompass.positiveActivities.removeAll()
                     self.currentCompass.positiveActivities.append(objectsIn: items)
                 }
+            }
+            
+            itemsSelectionsController.deleteAction = {[unowned self] toDeleteItem in
+                
+                guard let item = toDeleteItem as? PositiveActivity else {
+                    return assertionFailure()
+                }
+                
+                Database.shared.save {
+                    if let index = self.currentCompass.positiveActivities.index(of: item) {
+                        self.currentCompass.positiveActivities.remove(objectAtIndex: index)
+                    }
+                }
+                
+                Database.shared.delete(item)
+                                
             }
         }
     }
@@ -120,6 +145,7 @@ final class InnerWisdom5ViewController: UIViewController {
         formSheet.contentViewControllerTransitionStyle = .bounce
         self.present(formSheet, animated: true, completion: nil)
     }
+
 }
 
 // MARK: - CompassValidation

@@ -17,6 +17,11 @@ protocol CompassFacetEditor {
     func save()
 }
 
+protocol TableEditableViewController {
+    var tableViewController: ItemsSelectionViewController! {get}
+    var tableLoaded: ((UIBarButtonItem) -> ())? {get set}
+}
+
 enum CompassError {
     case text
     case selection
@@ -152,6 +157,7 @@ class CreateCompassViewController: UIViewController {
             case .innerWisdom5:
                 let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdom5ViewController") as! InnerWisdom5ViewController
                 viewController.currentCompass = container.compass
+                
                 self.viewController = viewController
                 
             case .innerWisdomSummary:
@@ -172,6 +178,16 @@ class CreateCompassViewController: UIViewController {
                 }
                 self.viewController = viewController
     
+            }
+            
+            if var editableController = viewController as? TableEditableViewController {
+
+                editableController.tableLoaded = { editButtonItem in
+
+                    container.navigationItem.rightBarButtonItem = editButtonItem
+                    
+                }
+                
             }
 
             self.scene = scene
@@ -222,7 +238,10 @@ class CreateCompassViewController: UIViewController {
              self.currentPageIndex = Int(self.compass.lastEditedFacet.pageIndex)
         controller.setViewControllers([self.compassItems[self.currentPageIndex].viewController], direction: .forward, animated: true, completion: nil)
         self.pageControl.currentPage = self.currentPageIndex
-        self.setupLabel(for: self.compassItems[self.currentPageIndex].scene)
+        
+        let currentItem = self.compassItems[self.currentPageIndex]
+        self.setupLabel(for: currentItem.scene)
+
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         return controller
     }()
@@ -334,8 +353,13 @@ class CreateCompassViewController: UIViewController {
         
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         self.setupLabel(for: item.scene)
+        
+        if !(item.viewController is TableEditableViewController) {
+            self.navigationItem.rightBarButtonItem = nil
+        }
 
     }
+
 
     @IBAction func backAction(_ sender: UIButton) {
         guard self.currentPageIndex > 0 else {
@@ -459,7 +483,7 @@ class CreateCompassViewController: UIViewController {
         self.moveToPage(page: scenePage, direction: scenePage > currentPageIndex ? .forward : .reverse)
 
     }
-
+    
 }
 
 extension CreateCompassViewController {

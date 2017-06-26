@@ -15,17 +15,21 @@ enum StressType {
     case behaviour
 }
 
-final class CompassStressViewController: UIViewController, CompassFacetEditor, CompassValidation {
+final class CompassStressViewController: UIViewController, CompassFacetEditor, CompassValidation, TableEditableViewController {
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
-    private var tableViewController: ItemsSelectionViewController!
+    private(set) var tableViewController: ItemsSelectionViewController!
     
     var currentCompass: Compass!
     
     var StringItemType: StringItem.Type!
     
     var notificationToken: NotificationToken? = nil
+    
+    var tableLoaded: ((UIBarButtonItem) -> ())?
+    
+    var updateItems: (() -> ())?
     
     var error: CompassError? {
         if let items = self.tableViewController?.selectedItems, items.count > 0 {
@@ -42,7 +46,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         super.viewDidLoad()
         
         self.titleLable.textColor = UIColor.darkBlue
-        
+                
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,8 +54,15 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         self.setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableLoaded?(self.tableViewController.editButtonItem)
+    }
+    
     private func setupView() {
         self.titleLable.text = self.title
+        
+        self.updateItems?()
     }
     
     func save() {
@@ -66,6 +77,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         }
 
     }
+
     
     private func setupItemsSelection<T: StringItem>(vc: ItemsSelectionViewController, preloadedItems: [T], destination: List<T>) {
         
@@ -85,6 +97,16 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
             
         }
         
+        vc.deleteAction = { toDeleteItem in
+            
+            guard let item = toDeleteItem as? T else {
+                return assertionFailure()
+            }
+            
+            Database.shared.delete(item)
+            
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -97,23 +119,20 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
             if (self.StringItemType == BodyStress.self) {
                 
                 self.setupItemsSelection(vc: itemsSelectionsController, preloadedItems: Array(Database.shared.bodyStressStored), destination: self.currentCompass.bodyStressElements)
-
-                notificationToken = Database.shared.bodyStressStored.addNotificationBlock({ _ in
-                    
+                
+                self.updateItems = {
                     itemsSelectionsController.updateItems(newItems: Array(Database.shared.bodyStressStored))
-                    
-                })
+                }
+
                 
             }
             else {
                 
                 self.setupItemsSelection(vc: itemsSelectionsController, preloadedItems: Array(Database.shared.behaviourStressStored), destination: self.currentCompass.behaviourStressElements)
                 
-                notificationToken = Database.shared.behaviourStressStored.addNotificationBlock({ _ in
-                    
+                self.updateItems = {
                     itemsSelectionsController.updateItems(newItems: Array(Database.shared.behaviourStressStored))
-                    
-                })
+                }
                 
             }
             
@@ -121,5 +140,5 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         }
         
     }
-    
+
 }
