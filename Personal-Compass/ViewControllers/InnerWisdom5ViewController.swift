@@ -37,6 +37,13 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
         self.showLearnMoreFirstTime()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        self.tableLoaded?(self.tableViewController.editButtonItem)
+        
+    }
+    
     private func setupView() {
         
         emotionIcon.image = currentCompass.needMetEmotion?.icon
@@ -57,8 +64,6 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
             
             itemsSelectionsController.items = Array(Database.shared.positiveActivitiesStored)
             itemsSelectionsController.selectedItems = Array(self.currentCompass.positiveActivities)
-
-            self.tableLoaded?(self.tableViewController.editButtonItem)
             
             itemsSelectionsController.saveAction = { selectedItems in
                 

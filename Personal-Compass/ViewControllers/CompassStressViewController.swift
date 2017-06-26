@@ -54,6 +54,11 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         self.setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableLoaded?(self.tableViewController.editButtonItem)
+    }
+    
     private func setupView() {
         self.titleLable.text = self.title
         
@@ -110,8 +115,6 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
             
             itemsSelectionsController.type = self.StringItemType
             self.tableViewController = itemsSelectionsController
-            
-            self.tableLoaded?(self.tableViewController.editButtonItem)
             
             if (self.StringItemType == BodyStress.self) {
                 

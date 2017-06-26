@@ -353,6 +353,10 @@ class CreateCompassViewController: UIViewController {
         
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         self.setupLabel(for: item.scene)
+        
+        if !(item.viewController is TableEditableViewController) {
+            self.navigationItem.rightBarButtonItem = nil
+        }
 
     }
 
