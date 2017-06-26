@@ -3,12 +3,15 @@
 <plist version="1.0">
 <array>
 	<string>Meditation/Deep Breathing</string>
-    <string>Take a walk/Exercise</string>
-    <string>Spend time with loved ones</string>
-    <string>Call a friend</string>
-    <string>Listen to music</string>
-    <string>Watch a funny video</string>
-    <string>Spend time in nature</string>
-    <string>Ask for a hug</string>
+	<string>Take a walk/Exercise</string>
+	<string>Spend time with loved ones</string>
+	<string>Call a friend</string>
+	<string>Listen to music</string>
+	<string>Watch a funny video</string>
+	<string>Spend time in nature</string>
+	<string>Ask for a hug</string>
+	<string>Play with your pet</string>
+	<string>Read a book</string>
+	<string>Take a nap</string>
 </array>
 </plist>
