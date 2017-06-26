@@ -36,9 +36,12 @@ final class InnerWisdom5ViewController: UIViewController {
     }
     
     private func setupView() {
+        
         emotionIcon.image = currentCompass.needMetEmotion?.icon
         emotionLabel.text = currentCompass.compassNeedMet
         emotionLabel.textColor = currentCompass.needMetEmotion?.color
+        
+        self.tableViewController.updateItems(newItems: Array(Database.shared.positiveActivitiesStored))
         
         self.setupDescriptionLabel()
     }
