@@ -89,7 +89,7 @@
                         <constraints>
                             <constraint firstItem="I0x-wm-tZ7" firstAttribute="leading" secondItem="TOT-Zs-7Ww" secondAttribute="leading" id="4eW-xf-gS0"/>
                             <constraint firstItem="TQO-M3-B3u" firstAttribute="top" secondItem="gSg-lz-KtJ" secondAttribute="bottom" constant="20" id="6Wf-eF-re8"/>
-                            <constraint firstItem="gSg-lz-KtJ" firstAttribute="top" secondItem="9Gn-jV-zaD" secondAttribute="bottom" constant="12" id="ShZ-1T-VbY"/>
+                            <constraint firstAttribute="bottom" secondItem="9Gn-jV-zaD" secondAttribute="bottom" constant="62" id="Jgs-ll-Izd"/>
                             <constraint firstAttribute="trailing" secondItem="gSg-lz-KtJ" secondAttribute="trailing" constant="20" id="dZF-Jr-I46"/>
                             <constraint firstItem="I0x-wm-tZ7" firstAttribute="top" secondItem="dQc-GH-l2x" secondAttribute="bottom" id="jLo-we-X7u"/>
                             <constraint firstAttribute="trailing" secondItem="I0x-wm-tZ7" secondAttribute="trailing" id="nI0-17-LQ5"/>
@@ -102,6 +102,7 @@
                     <connections>
                         <outlet property="exampleButton" destination="gSg-lz-KtJ" id="t45-q4-OM9"/>
                         <outlet property="exampleTextView" destination="9Gn-jV-zaD" id="313-Gm-glT"/>
+                        <outlet property="textViewBottomConstraint" destination="Jgs-ll-Izd" id="CzD-1w-r7i"/>
                         <outlet property="titleLabel" destination="ihn-fW-57o" id="h97-De-cKH"/>
                     </connections>
                 </viewController>
