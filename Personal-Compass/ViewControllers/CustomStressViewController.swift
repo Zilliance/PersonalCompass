@@ -48,7 +48,6 @@ final class CustomStressViewController: UIViewController {
     private func setupView() {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.closeView))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(self.save))
         
         self.textView.placeholder = self.placeholder
         self.topLabel.text = self.headerText
@@ -72,6 +71,7 @@ extension CustomStressViewController {
         
         guard self.textView.text.characters.count > 0 else {
             self.showAlert(title: "Please enter text", message: "")
+            textView.becomeFirstResponder()
             return
         }
         
@@ -87,6 +87,7 @@ extension CustomStressViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n")
         {
+            self.save()
             textView.resignFirstResponder()
             return false
         }
