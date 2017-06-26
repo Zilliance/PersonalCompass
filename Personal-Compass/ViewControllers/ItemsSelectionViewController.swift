@@ -54,7 +54,7 @@ final class ItemsSelectionViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard indexPath.section == 0 else {
+        guard indexPath.section == 1 else {
             return
         }
         
