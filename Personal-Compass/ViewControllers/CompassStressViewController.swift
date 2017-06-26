@@ -29,6 +29,8 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
     
     var tableLoaded: ((UIBarButtonItem) -> ())?
     
+    var updateItems: (() -> ())?
+    
     var error: CompassError? {
         if let items = self.tableViewController?.selectedItems, items.count > 0 {
             return nil
@@ -54,6 +56,8 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
     
     private func setupView() {
         self.titleLable.text = self.title
+        
+        self.updateItems?()
     }
     
     func save() {
@@ -112,23 +116,20 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
             if (self.StringItemType == BodyStress.self) {
                 
                 self.setupItemsSelection(vc: itemsSelectionsController, preloadedItems: Array(Database.shared.bodyStressStored), destination: self.currentCompass.bodyStressElements)
-
-                notificationToken = Database.shared.bodyStressStored.addNotificationBlock({ _ in
-                    
+                
+                self.updateItems = {
                     itemsSelectionsController.updateItems(newItems: Array(Database.shared.bodyStressStored))
-                    
-                })
+                }
+
                 
             }
             else {
                 
                 self.setupItemsSelection(vc: itemsSelectionsController, preloadedItems: Array(Database.shared.behaviourStressStored), destination: self.currentCompass.behaviourStressElements)
                 
-                notificationToken = Database.shared.behaviourStressStored.addNotificationBlock({ _ in
-                    
+                self.updateItems = {
                     itemsSelectionsController.updateItems(newItems: Array(Database.shared.behaviourStressStored))
-                    
-                })
+                }
                 
             }
             
