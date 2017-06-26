@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MZFormSheetPresentationController
 
 struct FeelBetterItem {
     let title: String
@@ -109,6 +110,11 @@ class FeelBetterViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.showLearnMoreFirstTime()
+    }
+    
     @objc func closeView()
     {
         self.dismiss(animated: true, completion: nil)
@@ -154,6 +160,38 @@ class FeelBetterViewController: UIViewController {
         self.present(navigationController, animated: true, completion: nil)
 
         
+    }
+    
+    // MARK: - Popup
+    
+    fileprivate func showLearnMoreFirstTime() {
+        if !UserDefaults.standard.bool(forKey: "WaysToFeelBetterHintShown") {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                guard let ss = self, ss.view.window != nil else {
+                    return
+                }
+                
+                UserDefaults.standard.set(true, forKey: "WaysToFeelBetterHintShown")
+                ss.learnMore(ss)
+            }
+        }
+    }
+    
+    @IBAction func learnMore(_ sender: Any) {
+        guard let exampleViewController = UIStoryboard(name: "ExamplePopUp", bundle: nil).instantiateInitialViewController() as? ExamplePopUpViewController else {
+            assertionFailure()
+            return
+        }
+        
+        UserDefaults.standard.set(true, forKey: "WaysToFeelBetterHintShown")
+        
+        exampleViewController.title = "Ways To Feel Better"
+        exampleViewController.text = "You can feel better by doing something positive in any of these four areas - your body, thoughts, behavior or emotions - even if you can’t eliminate your stressor."
+        
+        let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
+        formSheet.presentationController?.contentViewSize = CGSize(width: UIDevice.isSmallerThaniPhone6 ? 260 : 300, height: 300)
+        formSheet.contentViewControllerTransitionStyle = .bounce
+        self.present(formSheet, animated: true, completion: nil)
     }
     
 }
