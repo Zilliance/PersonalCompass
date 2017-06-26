@@ -64,6 +64,22 @@ final class InnerWisdom5ViewController: UIViewController {
                     self.currentCompass.positiveActivities.append(objectsIn: items)
                 }
             }
+            
+            itemsSelectionsController.deleteAction = {[unowned self] toDeleteItem in
+                
+                guard let item = toDeleteItem as? PositiveActivity else {
+                    return assertionFailure()
+                }
+                
+                Database.shared.save {
+                    if let index = self.currentCompass.positiveActivities.index(of: item) {
+                        self.currentCompass.positiveActivities.remove(objectAtIndex: index)
+                    }
+                }
+                
+                Database.shared.delete(item)
+                                
+            }
         }
     }
     
@@ -138,4 +154,13 @@ extension InnerWisdom5ViewController: CompassFacetEditor {
         self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentCompass.lastEditedFacet = .innerWisdom5
     }
+}
+
+extension InnerWisdom5ViewController: TableEditableViewController {
+
+    func editTapped() {
+        let editing = self.tableViewController.tableView.isEditing
+        self.tableViewController.tableView.setEditing(!editing, animated: true)
+    }
+
 }

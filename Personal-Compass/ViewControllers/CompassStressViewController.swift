@@ -19,7 +19,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
-    private var tableViewController: ItemsSelectionViewController!
+    fileprivate var tableViewController: ItemsSelectionViewController!
     
     var currentCompass: Compass!
     
@@ -42,6 +42,8 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         super.viewDidLoad()
         
         self.titleLable.textColor = UIColor.darkBlue
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(self.editTapped))
         
     }
     
@@ -66,6 +68,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         }
 
     }
+
     
     private func setupItemsSelection<T: StringItem>(vc: ItemsSelectionViewController, preloadedItems: [T], destination: List<T>) {
         
@@ -82,6 +85,16 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
                 destination.removeAll()
                 destination.append(objectsIn: items)
             }
+            
+        }
+        
+        vc.deleteAction = { toDeleteItem in
+            
+            guard let item = toDeleteItem as? T else {
+                return assertionFailure()
+            }
+            
+            Database.shared.delete(item)
             
         }
         
@@ -120,6 +133,15 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
             
         }
         
+    }
+    
+}
+
+extension CompassStressViewController: TableEditableViewController {
+    
+    func editTapped() {
+        let editing = self.tableViewController.tableView.isEditing
+        self.tableViewController.tableView.setEditing(!editing, animated: true)
     }
     
 }

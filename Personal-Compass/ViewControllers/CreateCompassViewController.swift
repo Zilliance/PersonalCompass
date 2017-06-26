@@ -17,6 +17,10 @@ protocol CompassFacetEditor {
     func save()
 }
 
+@objc protocol TableEditableViewController {
+    func editTapped()
+}
+
 enum CompassError {
     case text
     case selection
@@ -245,7 +249,7 @@ class CreateCompassViewController: UIViewController {
         self.backcustomButton.removeFromSuperview()
     }
     
-    private func setupView() {
+    @objc private func setupView() {
         
         self.topLabel.backgroundColor = .clear
         self.pageControl.numberOfPages = self.compassItems.count
@@ -334,6 +338,16 @@ class CreateCompassViewController: UIViewController {
         
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         self.setupLabel(for: item.scene)
+        
+        if let editableViewController = item.viewController as? TableEditableViewController {
+
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: editableViewController, action: #selector(editableViewController.editTapped))
+            
+        } else {
+            
+            self.navigationItem.rightBarButtonItem = nil
+            
+        }
 
     }
 

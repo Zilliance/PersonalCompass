@@ -14,6 +14,7 @@ final class ItemsSelectionViewController: UITableViewController {
     var items: [StringItem] = []
     var selectedItems: [StringItem] = []
     var saveAction: (([StringItem]) -> ())!
+    var deleteAction: ((StringItem) -> ())?
     
     var type : StringItem.Type!
     
@@ -69,6 +70,33 @@ final class ItemsSelectionViewController: UITableViewController {
     func updateItems(newItems: [StringItem]) {
         self.items = newItems
         self.tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                   editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Delete", handler:{[unowned self] action, indexpath in
+            
+            tableView.setEditing(false, animated: true)
+            
+            let item = self.items[indexPath.row]
+            
+            if let selectedIndex = self.selectedItems.index(of: item) {
+                self.selectedItems.remove(at: selectedIndex)
+            }
+            
+            self.items.remove(at: indexPath.row)
+            
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            self.deleteAction?(item)
+        });
+        
+        return [deleteRowAction];
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return indexPath.section == 1
     }
     
 }
