@@ -27,8 +27,6 @@ class EmotionViewController: AutoscrollableViewController {
 
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
-    fileprivate var emotionHint: OnboardingPopover?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPicker()
@@ -42,7 +40,6 @@ class EmotionViewController: AutoscrollableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.showEmotionHint()
         self.loadData()
     }
     
@@ -108,42 +105,6 @@ class EmotionViewController: AutoscrollableViewController {
         self.currentIndex -= 1
         self.picker.scrollToItem(self.currentIndex, animated: true)
         self.setupEmotionLabel()
-    }
-}
-
-// MARK: - Hints
-
-extension EmotionViewController {
-    // MARK: - Hint
-    
-    fileprivate func showEmotionHint() {
-        if !UserDefaults.standard.bool(forKey: "EmotionHintShown") {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-                guard let ss = self, ss.view.window != nil else {
-                    return
-                }
-                
-                UserDefaults.standard.set(true, forKey: "EmotionHintShown")
-                ss.learnMore(ss)
-            }
-        }
-    }
-    
-    fileprivate func learnMore(_ sender: Any) {
-        guard let exampleViewController = UIStoryboard(name: "ExamplePopUp", bundle: nil).instantiateInitialViewController() as? ExamplePopUpViewController else {
-            assertionFailure()
-            return
-        }
-        
-        UserDefaults.standard.set(true, forKey: "EmotionHintShown")
-        
-        exampleViewController.title = "Emotion"
-        exampleViewController.text = "Now let’s identify how the stress of this situation is affecting you emotionally."
-        
-        let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
-        formSheet.presentationController?.contentViewSize = CGSize(width: UIDevice.isSmallerThaniPhone6 ? 260 : 300, height: 200)
-        formSheet.contentViewControllerTransitionStyle = .bounce
-        self.present(formSheet, animated: true, completion: nil)
     }
 }
 

@@ -12,6 +12,9 @@
         <array key="Muli-Light.ttf">
             <string>Muli-Light</string>
         </array>
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
         <array key="Muli-SemiBold.ttf">
             <string>Muli-SemiBold</string>
         </array>
@@ -87,28 +90,26 @@
                                     <constraint firstItem="koN-fM-4mY" firstAttribute="top" secondItem="9mg-7X-hab" secondAttribute="top" id="tYz-1K-bOX"/>
                                 </constraints>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the emotion that best describes how you are feeling below:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6v-49-9Xn">
-                                <rect key="frame" x="57.5" y="202.5" width="260" height="78"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emotion-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ivk-58-Et3">
+                                <rect key="frame" x="179" y="188.5" width="18" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="PMU-li-SnY"/>
-                                    <constraint firstAttribute="width" constant="260" id="XUF-ev-sMa"/>
+                                    <constraint firstAttribute="width" constant="18" id="31K-M3-OaL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Z1P-pv-OJD"/>
+                                    <constraint firstAttribute="height" constant="18" id="cpl-l6-lFP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
-                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ueG-Nu-AjH" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ueG-Nu-AjH" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                 <rect key="frame" x="20" y="216.5" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="6ro-Tg-XDQ"/>
                                 </constraints>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="0.65879991319999998" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter the emotion that best describes how you are feeling, for example, Angry, Frustrated, or Hurt."/>
                                 </userDefinedRuntimeAttributes>
@@ -119,11 +120,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ivk-58-Et3" firstAttribute="centerX" secondItem="IRz-2L-ilJ" secondAttribute="centerX" id="3p3-Cc-HQI"/>
                             <constraint firstItem="cRc-8L-ur7" firstAttribute="top" secondItem="leO-Le-CAU" secondAttribute="bottom" constant="10" id="Jr6-hH-2DW"/>
                             <constraint firstAttribute="trailing" secondItem="cRc-8L-ur7" secondAttribute="trailing" constant="20" id="M0c-s2-BEB"/>
-                            <constraint firstItem="b6v-49-9Xn" firstAttribute="top" secondItem="9mg-7X-hab" secondAttribute="bottom" constant="20" id="TPt-DX-CyP"/>
                             <constraint firstItem="leO-Le-CAU" firstAttribute="top" secondItem="TSg-R3-sjH" secondAttribute="bottom" constant="35" id="U3m-me-mbv"/>
-                            <constraint firstItem="b6v-49-9Xn" firstAttribute="centerX" secondItem="IRz-2L-ilJ" secondAttribute="centerX" id="WCD-Mn-ZFH"/>
                             <constraint firstItem="9mg-7X-hab" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" id="Y5d-gY-Mji"/>
                             <constraint firstAttribute="trailing" secondItem="leO-Le-CAU" secondAttribute="trailing" id="YUX-UM-ZVK"/>
                             <constraint firstItem="9mg-7X-hab" firstAttribute="top" secondItem="cRc-8L-ur7" secondAttribute="bottom" constant="16" id="c3T-ab-QJt"/>
@@ -131,6 +131,7 @@
                             <constraint firstItem="ueG-Nu-AjH" firstAttribute="top" secondItem="9mg-7X-hab" secondAttribute="bottom" constant="34" id="iSE-7d-OG7"/>
                             <constraint firstItem="leO-Le-CAU" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" id="mWJ-hX-ooV"/>
                             <constraint firstItem="ueG-Nu-AjH" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="oxU-K5-Rmo"/>
+                            <constraint firstItem="ivk-58-Et3" firstAttribute="top" secondItem="9mg-7X-hab" secondAttribute="bottom" constant="6" id="qWS-7y-sqM"/>
                             <constraint firstAttribute="trailing" secondItem="ueG-Nu-AjH" secondAttribute="trailing" constant="20" id="rL4-rI-aib"/>
                             <constraint firstAttribute="trailing" secondItem="9mg-7X-hab" secondAttribute="trailing" id="smF-uT-hIG"/>
                         </constraints>
@@ -149,5 +150,6 @@
     <resources>
         <image name="arrow-icon-left-20px" width="20" height="20"/>
         <image name="arrow-icon-right-20px" width="20" height="20"/>
+        <image name="emotion-arrow" width="20" height="20"/>
     </resources>
 </document>

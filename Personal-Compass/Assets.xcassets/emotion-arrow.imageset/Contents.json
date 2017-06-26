@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "TOUR3.png",
+      "filename" : "indicatorArrows.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "indicatorArrows@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "indicatorArrows@3x.png",
       "scale" : "3x"
     }
   ],

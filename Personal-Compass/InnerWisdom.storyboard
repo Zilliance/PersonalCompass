@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="width" constant="122" id="yTO-op-k2g"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try this two minute meditation to see what your Inner Wisdom has to say about your need.  Learn more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-lp-yc3">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try this four minute meditation to see what your Inner Wisdom has to say about your need.  Learn more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7R-lp-yc3">
                                 <rect key="frame" x="16" y="203.5" width="343" height="33"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
@@ -178,7 +178,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wf-m6-dbP">
-                                <rect key="frame" x="136" y="95.5" width="104" height="130"/>
+                                <rect key="frame" x="136" y="96.5" width="104" height="130"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-schedule-encircled" translatesAutoresizingMaskIntoConstraints="NO" id="py9-0E-2Bj">
                                         <rect key="frame" x="10" y="0.0" width="84" height="90"/>
@@ -219,20 +219,20 @@
                                     <constraint firstAttribute="bottom" secondItem="TQ0-yj-o2Y" secondAttribute="bottom" id="zDX-L7-sfY"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We invite you to set a reminder for your better emotion action step." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yef-GA-h23">
-                                <rect key="frame" x="20" y="40" width="335" height="35.5"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set a reminder to take your action steps" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yef-GA-h23">
+                                <rect key="frame" x="40" y="55" width="295" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to discover ways for you to feel better?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6f-GB-Rvs">
-                                <rect key="frame" x="45.5" y="253.5" width="284.5" height="18"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to discover even more ways to feel better?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6f-GB-Rvs">
+                                <rect key="frame" x="20" y="254.5" width="335" height="18"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6N-JA-es5">
-                                <rect key="frame" x="118" y="286.5" width="138" height="28"/>
+                                <rect key="frame" x="118" y="287.5" width="138" height="28"/>
                                 <color key="backgroundColor" red="0.38431372549999998" green="0.42745098040000001" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="6YE-vg-NYt"/>
@@ -250,7 +250,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-U4-RKs">
-                                <rect key="frame" x="127" y="241.5" width="122" height="2"/>
+                                <rect key="frame" x="127" y="242.5" width="122" height="2"/>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="122" id="G6j-qh-Ib0"/>
@@ -258,13 +258,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCm-iv-U8f">
-                                <rect key="frame" x="181" y="322.5" width="13" height="18"/>
+                                <rect key="frame" x="181" y="323.5" width="13" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5do-3K-Bak">
-                                <rect key="frame" x="148.5" y="343.5" width="78" height="34"/>
+                                <rect key="frame" x="148.5" y="344.5" width="78" height="34"/>
                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
                                 <state key="normal" title="I'M DONE">
                                     <color key="titleColor" red="0.4549019608" green="0.79607843140000001" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -278,19 +278,20 @@
                         <constraints>
                             <constraint firstItem="VCm-iv-U8f" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="2h7-Kb-fwf"/>
                             <constraint firstItem="a6f-GB-Rvs" firstAttribute="top" secondItem="Oa1-U4-RKs" secondAttribute="bottom" constant="10" id="2lE-sl-a3B"/>
-                            <constraint firstItem="a6f-GB-Rvs" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="7Iz-aW-nO0"/>
+                            <constraint firstAttribute="trailing" secondItem="a6f-GB-Rvs" secondAttribute="trailing" constant="20" id="60F-9X-5vq"/>
+                            <constraint firstItem="a6f-GB-Rvs" firstAttribute="leading" secondItem="KVW-MR-bEe" secondAttribute="leading" constant="20" id="AhH-Au-b7a"/>
                             <constraint firstItem="5do-3K-Bak" firstAttribute="top" secondItem="VCm-iv-U8f" secondAttribute="bottom" constant="3" id="CrO-OD-YaU"/>
                             <constraint firstItem="X6N-JA-es5" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="DX9-Vd-yW4"/>
                             <constraint firstItem="VCm-iv-U8f" firstAttribute="top" secondItem="X6N-JA-es5" secondAttribute="bottom" constant="8" id="Hsi-hL-Nzs"/>
                             <constraint firstItem="X6N-JA-es5" firstAttribute="top" secondItem="a6f-GB-Rvs" secondAttribute="bottom" constant="15" id="JdV-jH-EFw"/>
                             <constraint firstItem="4wf-m6-dbP" firstAttribute="top" secondItem="yef-GA-h23" secondAttribute="bottom" constant="20" id="Pry-NZ-jcl"/>
-                            <constraint firstItem="yef-GA-h23" firstAttribute="top" secondItem="uvA-sz-PM1" secondAttribute="bottom" constant="20" id="R2i-Oa-QTz"/>
+                            <constraint firstItem="yef-GA-h23" firstAttribute="top" secondItem="uvA-sz-PM1" secondAttribute="bottom" constant="35" id="R2i-Oa-QTz"/>
                             <constraint firstItem="4wf-m6-dbP" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="RID-LU-HY2"/>
-                            <constraint firstAttribute="trailing" secondItem="yef-GA-h23" secondAttribute="trailing" constant="20" id="Slp-NY-h6b"/>
+                            <constraint firstAttribute="trailing" secondItem="yef-GA-h23" secondAttribute="trailing" constant="40" id="Slp-NY-h6b"/>
                             <constraint firstItem="Oa1-U4-RKs" firstAttribute="top" secondItem="4wf-m6-dbP" secondAttribute="bottom" constant="16" id="Wqg-Pf-TEd"/>
                             <constraint firstItem="Oa1-U4-RKs" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="b3n-Vz-2ab"/>
                             <constraint firstItem="5do-3K-Bak" firstAttribute="centerX" secondItem="KVW-MR-bEe" secondAttribute="centerX" id="fAX-1v-lU2"/>
-                            <constraint firstItem="yef-GA-h23" firstAttribute="leading" secondItem="KVW-MR-bEe" secondAttribute="leading" constant="20" id="hBA-AR-6xD"/>
+                            <constraint firstItem="yef-GA-h23" firstAttribute="leading" secondItem="KVW-MR-bEe" secondAttribute="leading" constant="40" id="hBA-AR-6xD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -329,7 +330,7 @@
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXU-F4-Z1A">
                                 <rect key="frame" x="30" y="112" width="315" height="98"/>
                                 <gestureRecognizers/>
-                                <string key="text">Now that you’ve checked in with your Inner Wisdom (or not!), do you want to keep or change your answer about what you need to feel better?
+                                <string key="text">Now that you’ve checked in with your Inner Wisdom (or not), do you want to keep your answer or change it?
 
 Remember, your Inner Wisdom wants you to find a way to feel better that’s in your control.</string>
                                 <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
@@ -342,12 +343,12 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="hTk-68-TpQ"/>
                                 </constraints>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="0.65855577256944442" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
                                         <string key="value">For example, I need a job, but after listening to my Inner Wisdom I realize that what’s  in my control is that I need to stop freaking out so I can think clearly and make a plan.</string>
@@ -426,12 +427,12 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="UjN-k9-Jmz"/>
                                 </constraints>
-                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="0.66220969292852616" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder">
                                         <string key="value">Write down one action step, for example, I can ask Mark to help me make a plan for finding a job, or, I will ask my friend to come over this week so we can talk.</string>
@@ -486,16 +487,16 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXD-jo-qmj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="502.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="517.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have identified your need as:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTa-hl-YoP">
-                                                <rect key="frame" x="20" y="20" width="335" height="21.5"/>
+                                                <rect key="frame" x="20" y="35" width="335" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha6-Aw-yRC">
-                                                <rect key="frame" x="127" y="151.5" width="122" height="2"/>
+                                                <rect key="frame" x="127" y="166.5" width="122" height="2"/>
                                                 <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="122" id="2Zo-b1-z4k"/>
@@ -503,7 +504,7 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If I got this need met I would feel:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-tR-3p4">
-                                                <rect key="frame" x="20" y="163.5" width="335" height="40"/>
+                                                <rect key="frame" x="20" y="178.5" width="335" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="86y-Uc-iY5"/>
                                                 </constraints>
@@ -512,7 +513,7 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUn-wd-uZY">
-                                                <rect key="frame" x="40" y="51.5" width="295" height="80"/>
+                                                <rect key="frame" x="40" y="66.5" width="295" height="80"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="qgy-Us-6Ci"/>
@@ -525,7 +526,7 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                                 </connections>
                                             </textView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G30-a6-tTe">
-                                                <rect key="frame" x="20" y="273.5" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="288.5" width="335" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzo-eb-Pfu">
                                                         <rect key="frame" x="40" y="0.0" width="255" height="50"/>
@@ -569,7 +570,7 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wth-zC-uAa">
-                                                <rect key="frame" x="20" y="227.5" width="335" height="30"/>
+                                                <rect key="frame" x="20" y="242.5" width="335" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="bZf-xY-uiY"/>
                                                 </constraints>
@@ -578,17 +579,17 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x2G-LD-FxE" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                                <rect key="frame" x="20" y="352.5" width="335" height="128"/>
+                                                <rect key="frame" x="20" y="367.5" width="335" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="N0b-T0-FWI"/>
                                                 </constraints>
-                                                <color key="textColor" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="14"/>
+                                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" white="0.66220969289999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter the emotion that best describes how you would feel if you got this need met, for example, Calm, Happy, or Hopeful."/>
                                                 </userDefinedRuntimeAttributes>
@@ -597,7 +598,7 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                                 </connections>
                                             </textView>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="learn more" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nl8-iK-8Ou">
-                                                <rect key="frame" x="20" y="206.5" width="335" height="16.5"/>
+                                                <rect key="frame" x="20" y="221.5" width="335" height="16.5"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
                                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -606,6 +607,14 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                                     <outletCollection property="gestureRecognizers" destination="DHJ-LC-dMC" appends="YES" id="d6I-WQ-unk"/>
                                                 </connections>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emotion-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="264-G7-gVc">
+                                                <rect key="frame" x="179" y="344.5" width="18" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="5wJ-Tj-f1n"/>
+                                                    <constraint firstAttribute="height" constant="18" id="YgR-oP-Kff"/>
+                                                    <constraint firstAttribute="width" constant="18" id="o1F-hG-Ow6"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -615,19 +624,21 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
                                             <constraint firstAttribute="trailing" secondItem="G30-a6-tTe" secondAttribute="trailing" constant="20" id="7I8-a6-ALL"/>
                                             <constraint firstAttribute="trailing" secondItem="Wth-zC-uAa" secondAttribute="trailing" constant="20" id="88W-0U-yMx"/>
                                             <constraint firstItem="ha6-Aw-yRC" firstAttribute="centerX" secondItem="fXD-jo-qmj" secondAttribute="centerX" id="AYi-8s-JT8"/>
+                                            <constraint firstItem="264-G7-gVc" firstAttribute="top" secondItem="G30-a6-tTe" secondAttribute="bottom" constant="6" id="I39-bX-jFU"/>
                                             <constraint firstAttribute="trailing" secondItem="Nl8-iK-8Ou" secondAttribute="trailing" constant="20" id="IHZ-UJ-8WP"/>
                                             <constraint firstItem="ha6-Aw-yRC" firstAttribute="top" secondItem="aUn-wd-uZY" secondAttribute="bottom" constant="20" id="Ipd-4R-Lyi"/>
                                             <constraint firstItem="Wth-zC-uAa" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="Nnx-BZ-6IA"/>
                                             <constraint firstAttribute="trailing" secondItem="5bR-tR-3p4" secondAttribute="trailing" constant="20" id="Ppq-ct-eO3"/>
                                             <constraint firstAttribute="trailing" secondItem="x2G-LD-FxE" secondAttribute="trailing" constant="20" id="U4U-Jc-622"/>
                                             <constraint firstAttribute="trailing" secondItem="qTa-hl-YoP" secondAttribute="trailing" constant="20" id="V9q-1G-Y5G"/>
+                                            <constraint firstItem="264-G7-gVc" firstAttribute="centerX" secondItem="fXD-jo-qmj" secondAttribute="centerX" id="XEd-2O-9ts"/>
                                             <constraint firstItem="aUn-wd-uZY" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="40" id="XPf-p5-WV2"/>
                                             <constraint firstItem="Wth-zC-uAa" firstAttribute="top" secondItem="Nl8-iK-8Ou" secondAttribute="bottom" constant="4.5" id="b6X-ku-PBm"/>
                                             <constraint firstItem="Nl8-iK-8Ou" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="ciy-yd-6xG"/>
                                             <constraint firstItem="G30-a6-tTe" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="dwk-eM-QL1"/>
                                             <constraint firstItem="5bR-tR-3p4" firstAttribute="top" secondItem="ha6-Aw-yRC" secondAttribute="bottom" constant="10" id="eXp-3B-Co2"/>
                                             <constraint firstItem="x2G-LD-FxE" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="g6v-7u-Eck"/>
-                                            <constraint firstItem="qTa-hl-YoP" firstAttribute="top" secondItem="fXD-jo-qmj" secondAttribute="top" constant="20" id="gLL-vG-Jmf"/>
+                                            <constraint firstItem="qTa-hl-YoP" firstAttribute="top" secondItem="fXD-jo-qmj" secondAttribute="top" constant="35" id="gLL-vG-Jmf"/>
                                             <constraint firstItem="5bR-tR-3p4" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="hcb-c5-0tx"/>
                                             <constraint firstItem="aUn-wd-uZY" firstAttribute="top" secondItem="qTa-hl-YoP" secondAttribute="bottom" constant="10" id="nJ8-ix-2tT"/>
                                             <constraint firstAttribute="bottom" secondItem="x2G-LD-FxE" secondAttribute="bottom" constant="22" id="nat-0j-zWC"/>
@@ -727,6 +738,7 @@ Remember, your Inner Wisdom wants you to find a way to feel better that’s in y
     <resources>
         <image name="arrow-icon-left-20px" width="20" height="20"/>
         <image name="arrow-icon-right-20px" width="20" height="20"/>
+        <image name="emotion-arrow" width="20" height="20"/>
         <image name="icon-headphones-listen" width="87" height="87"/>
         <image name="icon-schedule-encircled" width="84" height="84"/>
     </resources>

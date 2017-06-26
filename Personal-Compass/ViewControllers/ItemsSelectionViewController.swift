@@ -91,6 +91,8 @@ final class ItemsSelectionViewController: UITableViewController {
             
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             
+            self.editingChanged?(false)
+            
             self.deleteAction?(item)
         });
         

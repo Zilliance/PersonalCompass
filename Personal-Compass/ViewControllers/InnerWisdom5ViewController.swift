@@ -38,9 +38,12 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
     }
     
     private func setupView() {
+        
         emotionIcon.image = currentCompass.needMetEmotion?.icon
         emotionLabel.text = currentCompass.compassNeedMet
         emotionLabel.textColor = currentCompass.needMetEmotion?.color
+        
+        self.tableViewController.updateItems(newItems: Array(Database.shared.positiveActivitiesStored))
         
         self.setupDescriptionLabel()
     }
@@ -130,7 +133,7 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
         UserDefaults.standard.set(true, forKey: "OtherWaysToFeelBetterHintShown")
         
         exampleViewController.title = "Ways to Feel Better"
-        exampleViewController.text = "The main goal with working through a stressor is to feel better emotionally.\n\nThere are many different ways to feel an emotion. We can, for instance, go for a walk if we want immediate relief from a stressor. Others take time.\n\nWe want you to identify multiple ways to feel better. On this screen, we ask you to think of another way to feel the emotion you want to feel."
+        exampleViewController.text = "Having activities that always make you feel better is a powerful tool. Use this list to identify as many activities as possible that allow you to feel the positive emotions you are reaching for."
         
         let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)
         formSheet.presentationController?.contentViewSize = CGSize(width: UIDevice.isSmallerThaniPhone6 ? 260 : 300, height: 400)
