@@ -18,6 +18,7 @@ class ExamplePopUpViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var exampleTextView: UITextView!
     @IBOutlet weak var exampleButton: UIButton!
+    @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class ExamplePopUpViewController: UIViewController {
         
         if let type = self.type {
             
+            self.textViewBottomConstraint.constant = 62
             self.exampleButton.isHidden = false
             
             switch type {
@@ -42,6 +44,9 @@ class ExamplePopUpViewController: UIViewController {
             case .emotion:
                 self.text = "When I feel triggered by my spouse, I will take a few minutes to myself and listen to my favorite song before re-engaging."
             }
+        } else {
+            self.textViewBottomConstraint.constant = 16
+            self.exampleButton.isHidden = true
         }
         
         self.exampleTextView.text = self.text
