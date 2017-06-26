@@ -17,8 +17,24 @@ protocol CompassFacetEditor {
     func save()
 }
 
-@objc protocol TableEditableViewController {
+protocol TableEditableViewController {
+    var tableViewController: ItemsSelectionViewController! {get}
     func editTapped()
+    var editingChanged: ((Bool) -> ())? {get set}
+    var isTableEditing: Bool {get}
+}
+
+extension TableEditableViewController {
+    
+    func editTapped() {
+        let editing = self.tableViewController.tableView.isEditing
+        self.tableViewController.tableView.setEditing(!editing, animated: true)
+    }
+    
+    var isTableEditing: Bool {
+        return self.tableViewController.tableView.isEditing
+    }
+    
 }
 
 enum CompassError {
@@ -156,6 +172,7 @@ class CreateCompassViewController: UIViewController {
             case .innerWisdom5:
                 let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "InnerWisdom5ViewController") as! InnerWisdom5ViewController
                 viewController.currentCompass = container.compass
+                
                 self.viewController = viewController
                 
             case .innerWisdomSummary:
@@ -176,6 +193,16 @@ class CreateCompassViewController: UIViewController {
                 }
                 self.viewController = viewController
     
+            }
+            
+            if var editableController = viewController as? TableEditableViewController {
+
+                editableController.editingChanged = { editing in
+                    
+                    container.navigationItem.rightBarButtonItem?.title = editing ? "Done" : "Edit"
+                    
+                }
+                
             }
 
             self.scene = scene
@@ -226,7 +253,11 @@ class CreateCompassViewController: UIViewController {
              self.currentPageIndex = Int(self.compass.lastEditedFacet.pageIndex)
         controller.setViewControllers([self.compassItems[self.currentPageIndex].viewController], direction: .forward, animated: true, completion: nil)
         self.pageControl.currentPage = self.currentPageIndex
-        self.setupLabel(for: self.compassItems[self.currentPageIndex].scene)
+        
+        let currentItem = self.compassItems[self.currentPageIndex]
+        self.setupLabel(for: currentItem.scene)
+        self.setupRightBarButtonItem(for: currentItem)
+
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         return controller
     }()
@@ -302,6 +333,25 @@ class CreateCompassViewController: UIViewController {
         
     }
     
+    private func setupRightBarButtonItem(for item: CompassItem) {
+        
+        if let editableViewController = item.viewController as? TableEditableViewController {
+            
+            self.navigationItem.rightBarButtonItem = BlockBarButtonItem(title: "Edit", style: .plain, actionHandler: {
+                
+                editableViewController.editTapped()
+                self.navigationItem.rightBarButtonItem?.title = editableViewController.isTableEditing ? "Done" : "Edit"
+                
+            })
+            
+        } else {
+            
+            self.navigationItem.rightBarButtonItem = nil
+            
+        }
+        
+    }
+    
     fileprivate func toggleSummaryButton() {
         
         let isShowing = self.returnToSummaryButton.alpha == 1 ? true : false
@@ -338,18 +388,10 @@ class CreateCompassViewController: UIViewController {
         
         self.pageControlViewController.setViewControllers([item.viewController], direction: direction, animated: true, completion: nil)
         self.setupLabel(for: item.scene)
-        
-        if let editableViewController = item.viewController as? TableEditableViewController {
-
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: editableViewController, action: #selector(editableViewController.editTapped))
-            
-        } else {
-            
-            self.navigationItem.rightBarButtonItem = nil
-            
-        }
+        self.setupRightBarButtonItem(for: item)
 
     }
+
 
     @IBAction func backAction(_ sender: UIButton) {
         guard self.currentPageIndex > 0 else {
@@ -473,7 +515,7 @@ class CreateCompassViewController: UIViewController {
         self.moveToPage(page: scenePage, direction: scenePage > currentPageIndex ? .forward : .reverse)
 
     }
-
+    
 }
 
 extension CreateCompassViewController {

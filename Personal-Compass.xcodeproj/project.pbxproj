@@ -19,6 +19,7 @@
 		4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */; };
 		4F8C2E2A1ED5BA2D00A24A40 /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C2E291ED5BA2D00A24A40 /* Summary.storyboard */; };
 		4F8C2E2E1ED5BD8600A24A40 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2D1ED5BD8600A24A40 /* SummaryViewController.swift */; };
+		4F9CFCF11F018AAB006D1E66 /* BlockBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9CFCF01F018AAB006D1E66 /* BlockBarButtonItem.swift */; };
 		4FA8257C1EE1ACAD009AB272 /* EmotionSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA8257A1EE1ACAD009AB272 /* EmotionSummaryCell.xib */; };
 		4FA8257E1EE1AD5F009AB272 /* CompassFacetSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA8257D1EE1AD5F009AB272 /* CompassFacetSummaryCell.xib */; };
 		4FA825801EE1AE08009AB272 /* InnerWisdomSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8257F1EE1AE08009AB272 /* InnerWisdomSummaryViewController.swift */; };
@@ -145,6 +146,7 @@
 		4F8C2E291ED5BA2D00A24A40 /* Summary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
 		4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompassFacetSummaryCell.swift; path = Cells/CompassFacetSummaryCell.swift; sourceTree = "<group>"; };
 		4F8C2E2D1ED5BD8600A24A40 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SummaryViewController.swift; path = ViewControllers/SummaryViewController.swift; sourceTree = "<group>"; };
+		4F9CFCF01F018AAB006D1E66 /* BlockBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlockBarButtonItem.swift; path = Utils/BlockBarButtonItem.swift; sourceTree = "<group>"; };
 		4FA8257A1EE1ACAD009AB272 /* EmotionSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmotionSummaryCell.xib; path = ViewControllers/EmotionSummaryCell.xib; sourceTree = "<group>"; };
 		4FA8257D1EE1AD5F009AB272 /* CompassFacetSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CompassFacetSummaryCell.xib; path = ViewControllers/CompassFacetSummaryCell.xib; sourceTree = "<group>"; };
 		4FA8257F1EE1AE08009AB272 /* InnerWisdomSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdomSummaryViewController.swift; path = ViewControllers/InnerWisdomSummaryViewController.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				4FB5AF161EE5F7E600837FF0 /* LocalNotificationsHelper.swift */,
 				E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */,
 				E3784A2B1EF9790D00554972 /* OnboardingPopover.swift */,
+				4F9CFCF01F018AAB006D1E66 /* BlockBarButtonItem.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -991,6 +994,7 @@
 				8C463B3E1ECB6E2300566531 /* App.swift in Sources */,
 				8CAF52561EF1CD0400E5F2DE /* ExamplePopUpViewController.swift in Sources */,
 				4FD5B65A1ECCD9680017DC06 /* StringItemSelectionCell.swift in Sources */,
+				4F9CFCF11F018AAB006D1E66 /* BlockBarButtonItem.swift in Sources */,
 				8C54AD191ED8DF0E001EC903 /* InnerWisdom1ViewController.swift in Sources */,
 				8C463B431ECBA02600566531 /* CreateCompassViewController.swift in Sources */,
 				8C463B3C1ECA682F00566531 /* AboutCompanyViewController.swift in Sources */,

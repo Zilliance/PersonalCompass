@@ -14,7 +14,9 @@ import MZFormSheetPresentationController
 
 // How Else Can I Feel
 
-final class InnerWisdom5ViewController: UIViewController {
+final class InnerWisdom5ViewController: UIViewController, TableEditableViewController {
+    
+    var editingChanged: ((Bool) -> ())?
     
     @IBOutlet fileprivate var titleLable: UILabel!
     @IBOutlet fileprivate var descriptionLabel: UILabel!
@@ -24,7 +26,7 @@ final class InnerWisdom5ViewController: UIViewController {
     var currentCompass: Compass!
     
     var notificationToken: NotificationToken? = nil
-    
+
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var emotionIcon: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!
@@ -52,7 +54,9 @@ final class InnerWisdom5ViewController: UIViewController {
             
             itemsSelectionsController.items = Array(Database.shared.positiveActivitiesStored)
             itemsSelectionsController.selectedItems = Array(self.currentCompass.positiveActivities)
-                        
+
+            self.tableViewController.editingChanged = self.editingChanged
+
             itemsSelectionsController.saveAction = { selectedItems in
                 
                 let items = selectedItems.flatMap {
@@ -133,6 +137,7 @@ final class InnerWisdom5ViewController: UIViewController {
         formSheet.contentViewControllerTransitionStyle = .bounce
         self.present(formSheet, animated: true, completion: nil)
     }
+
 }
 
 // MARK: - CompassValidation
@@ -154,13 +159,4 @@ extension InnerWisdom5ViewController: CompassFacetEditor {
         self.tableViewController.saveAction(self.tableViewController.selectedItems)
         self.currentCompass.lastEditedFacet = .innerWisdom5
     }
-}
-
-extension InnerWisdom5ViewController: TableEditableViewController {
-
-    func editTapped() {
-        let editing = self.tableViewController.tableView.isEditing
-        self.tableViewController.tableView.setEditing(!editing, animated: true)
-    }
-
 }

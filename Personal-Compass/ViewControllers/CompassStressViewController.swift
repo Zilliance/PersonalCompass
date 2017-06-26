@@ -15,17 +15,19 @@ enum StressType {
     case behaviour
 }
 
-final class CompassStressViewController: UIViewController, CompassFacetEditor, CompassValidation {
+final class CompassStressViewController: UIViewController, CompassFacetEditor, CompassValidation, TableEditableViewController {
     
     @IBOutlet fileprivate var titleLable: UILabel!
     
-    fileprivate var tableViewController: ItemsSelectionViewController!
+    private(set) var tableViewController: ItemsSelectionViewController!
     
     var currentCompass: Compass!
     
     var StringItemType: StringItem.Type!
     
     var notificationToken: NotificationToken? = nil
+    
+    var editingChanged: ((Bool) -> ())?
     
     var error: CompassError? {
         if let items = self.tableViewController?.selectedItems, items.count > 0 {
@@ -42,9 +44,7 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         super.viewDidLoad()
         
         self.titleLable.textColor = UIColor.darkBlue
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(self.editTapped))
-        
+                
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,6 +107,8 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
             itemsSelectionsController.type = self.StringItemType
             self.tableViewController = itemsSelectionsController
             
+            self.tableViewController.editingChanged = self.editingChanged
+            
             if (self.StringItemType == BodyStress.self) {
                 
                 self.setupItemsSelection(vc: itemsSelectionsController, preloadedItems: Array(Database.shared.bodyStressStored), destination: self.currentCompass.bodyStressElements)
@@ -134,14 +136,5 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
         }
         
     }
-    
-}
 
-extension CompassStressViewController: TableEditableViewController {
-    
-    func editTapped() {
-        let editing = self.tableViewController.tableView.isEditing
-        self.tableViewController.tableView.setEditing(!editing, animated: true)
-    }
-    
 }
