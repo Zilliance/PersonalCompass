@@ -45,7 +45,7 @@ class ThoughtViewController: AutoscrollableViewController {
     }
     
     private func setupDescriptionLabel() {
-        let express = "Express all of your thoughts about your stressor that are causing you to feel the way you do.  "
+        let express = "Finish the sentence to see your thoughts about this stressor.  "
         let learn = "Learn more."
         
         let expressAttr = NSAttributedString(string: express, attributes: [
@@ -71,7 +71,7 @@ class ThoughtViewController: AutoscrollableViewController {
             return
         }
         
-        exampleViewController.title = "Your Ticker Tape"
+        exampleViewController.title = "Your Thoughts"
         exampleViewController.text = "Behind every emotion is a thought or a bunch of thoughts. In fact, your stressor is not what is upsetting you; it’s your thoughts about your stressor that are upsetting you.\n\nWhen you get your thoughts out of your head and in front of you where you can see them, you can decide what to do about them. So get a few of them out right now."
         
         let formSheet = MZFormSheetPresentationViewController(contentViewController: exampleViewController)

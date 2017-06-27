@@ -84,7 +84,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-uH-Xi2">
-                                            <rect key="frame" x="28" y="13" width="187.5" height="19"/>
+                                            <rect key="frame" x="28" y="12.5" width="187.5" height="19"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -153,7 +153,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gB8-7J-FnL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the stress of this situation affecting me phisically" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-PR-eI6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does the stress of this situation show up in my body?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-PR-eI6">
                                         <rect key="frame" x="20" y="27" width="335" height="43"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                         <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -204,29 +204,29 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="231"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How else can I feel that emotion?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPq-P1-Jrk">
-                                        <rect key="frame" x="20" y="127" width="335" height="21"/>
+                                        <rect key="frame" x="20" y="127" width="335" height="23"/>
                                         <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g29-At-nJm">
-                                        <rect key="frame" x="95.5" y="35" width="184.5" height="44"/>
+                                        <rect key="frame" x="95.5" y="35" width="185" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would feel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-0P-MfT">
-                                                <rect key="frame" x="0.0" y="0.0" width="72" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="44"/>
                                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emotion-icon-8" translatesAutoresizingMaskIntoConstraints="NO" id="2Q9-4X-nlx">
-                                                <rect key="frame" x="82" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="83" y="0.0" width="44" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="Bf8-84-pj3"/>
                                                     <constraint firstAttribute="height" constant="44" id="ZQr-Tr-Rb9"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joyful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DId-a1-ysX">
-                                                <rect key="frame" x="136" y="0.0" width="48.5" height="44"/>
+                                                <rect key="frame" x="137" y="0.0" width="48" height="44"/>
                                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -242,7 +242,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feel better, even if you can’t eliminate your stressor.  Learn more" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-4g-YlV">
-                                        <rect key="frame" x="20" y="163" width="335" height="30.5"/>
+                                        <rect key="frame" x="20" y="165" width="335" height="33"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
                                         <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -331,7 +331,7 @@
                                     <outlet property="delegate" destination="p86-3Q-HEy" id="NSl-AR-kqN"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How is the stress of this situation affecting me physically?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csk-Fr-vSj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does the stress of this situation show up in my body?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csk-Fr-vSj">
                                 <rect key="frame" x="20" y="50" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VjE-Po-XdR"/>
