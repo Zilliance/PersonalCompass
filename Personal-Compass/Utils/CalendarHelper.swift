@@ -38,6 +38,7 @@ class CalendarHelper {
             let event = EKEvent(eventStore: store)
             event.title = title
             event.startDate = date
+            event.addAlarm(EKAlarm(relativeOffset: 0))
             
             if let eventNotes = notes {
                 event.notes = eventNotes
