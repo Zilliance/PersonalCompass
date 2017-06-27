@@ -45,7 +45,7 @@ class ThoughtViewController: AutoscrollableViewController {
     }
     
     private func setupDescriptionLabel() {
-        let express = "Express all of your thoughts about your stressor that are causing you to feel the way you do.  "
+        let express = "Finish the sentence to see your thoughts about this stressor.  "
         let learn = "Learn more."
         
         let expressAttr = NSAttributedString(string: express, attributes: [
