@@ -72,8 +72,6 @@ final class LocalNotificationsHelper: NSObject
                     }
                     
                 }
-                
-                
             })
             
         } else {
@@ -100,9 +98,9 @@ final class LocalNotificationsHelper: NSObject
             let center = UNUserNotificationCenter.current()
             
             center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-                
-                completion?(granted)
-                
+                DispatchQueue.main.async {
+                    completion?(granted)
+                }
             }
         } else {
             
