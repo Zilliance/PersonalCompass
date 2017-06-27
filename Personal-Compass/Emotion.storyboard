@@ -111,7 +111,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter the emotion that best describes how you are feeling, for example, Angry, Frustrated, or Hurt."/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter the emotion that best describes how you are feeling. For example: Angry, Frustrated, or Hurt."/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="AcN-T2-8PF" id="Ulx-vy-2PK"/>
