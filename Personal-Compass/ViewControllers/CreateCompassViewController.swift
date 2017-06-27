@@ -95,7 +95,7 @@ class CreateCompassViewController: UIViewController {
                 let viewController = UIStoryboard(name: "StringItems", bundle: nil).instantiateViewController(withIdentifier: "CompassStressViewController") as! CompassStressViewController
                 viewController.StringItemType = BodyStress.self
                 viewController.currentCompass = container.compass
-                viewController.title = "How is the stress of this situation affecting me physically?"
+                viewController.title = "How does the stress of this situation show up in my body?"
                 self.viewController = viewController
                 
             case .behavior:

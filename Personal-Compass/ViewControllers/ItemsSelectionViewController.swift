@@ -125,7 +125,7 @@ extension ItemsSelectionViewController: CustomStressViewControllerDelegate {
         
         if (type == BodyStress.self) {
             customStressViewController.placeholder = "In one or two words, describe how the situation makes you feel physically."
-            customStressViewController.headerText = "How is the stress of this situation affecting me physically?"
+            customStressViewController.headerText = "How does the stress of this situation show up in my body?"
             customStressViewController.title = "Custom Body Stress"
         }
         
