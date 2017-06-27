@@ -83,7 +83,7 @@ class InnerWisdom1ViewController: UIViewController {
     }
     
     private func setupDescriptionLabel() {
-        let text = "Try this two minute meditation to see what your Inner Wisdom has to say about your need.  "
+        let text = "Try this four minute meditation to see what your Inner Wisdom has to say about your need.  "
         let learn = "Learn more."
         
         let textAttr = NSAttributedString(string: text, attributes: [
