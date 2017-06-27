@@ -146,7 +146,10 @@ class ScheduleViewController: UIViewController {
             
             if (authorized)
             {
-                LocalNotificationsHelper.scheduleLocalNotification(title: "Personal Compass", body: body, date: self.datePicker.date, identifier: self.compass.id)
+                // Notification identifiers must be unique
+                let identifier = "\(self.compass.id)::\(UUID().uuidString)"
+                
+                LocalNotificationsHelper.scheduleLocalNotification(title: "Personal Compass", body: body, date: self.datePicker.date, identifier: identifier)
                 
                 self.dismiss(animated: true, completion: {
                     self.showSuccessHUD(message: "Set Reminder")
