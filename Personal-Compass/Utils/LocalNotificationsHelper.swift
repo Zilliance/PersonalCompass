@@ -252,6 +252,8 @@ extension LocalNotificationsHelper: UNUserNotificationCenterDelegate {
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 
+        // Realm won't return the compass if it hasn't been saved yet or has been deleted
+        
         if  let id = response.notification.request.identifier.components(separatedBy: "::").first,
             let compass = Database.shared.realm.object(ofType: Compass.self, forPrimaryKey: id) {
             let title = response.notification.request.content.title
@@ -269,6 +271,9 @@ extension LocalNotificationsHelper: UNUserNotificationCenterDelegate {
 
 extension LocalNotificationsHelper {
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        
+        // Realm won't return the compass if it hasn't been saved yet or has been deleted
+        
         if  let notId = notification.userInfo?["identifier"] as? String,
             let id = notId.components(separatedBy: "::").first,
             let compass = Database.shared.realm.object(ofType: Compass.self, forPrimaryKey: id),
