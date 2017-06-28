@@ -41,6 +41,7 @@ class CompassSummaryViewController: UIViewController {
     @IBOutlet weak var tableContainerView: UIView!
     var compass: Compass!
     var isFinishingCompass = false
+    var isFromNotification = false
     
     @IBOutlet weak var summaryLabel: UILabel!
     
@@ -64,12 +65,13 @@ class CompassSummaryViewController: UIViewController {
         if isFinishingCompass {
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(goToHome))
         }
+        if isFromNotification {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(close))
+        }
         
         self.showAssessmentView()
         self.title = compass.stressor
         self.summaryLabel.text = SummaryText.asseessment.rawValue
-        
-        self.setupWaysToFeelBetterLabel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,6 +81,10 @@ class CompassSummaryViewController: UIViewController {
     
     @objc func goToHome() {
         self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func shareSummaryAction(_ sender: Any) {
@@ -215,12 +221,7 @@ class CompassSummaryViewController: UIViewController {
         self.present(navigationController, animated: true, completion: nil)
 
     }
-    
-    private func setupWaysToFeelBetterLabel() {
-        self.waysToFeelBetterLabel.textColor = UIColor.lightBlue
-        self.waysToFeelBetterLabel.font = UIFont.muliItalic(size: 13)
-    }
-    
+
 }
 
 

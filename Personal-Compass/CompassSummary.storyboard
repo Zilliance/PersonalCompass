@@ -142,10 +142,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me more ways to feel better" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7G7-ZK-XF6">
-                                <rect key="frame" x="85" y="553" width="205.5" height="50"/>
+                                <rect key="frame" x="84" y="553" width="208.5" height="50"/>
                                 <gestureRecognizers/>
-                                <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
-                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="13"/>
+                                <color key="textColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="BLv-mf-S5w" appends="YES" id="7gs-kp-UST"/>
