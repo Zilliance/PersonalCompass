@@ -12,13 +12,19 @@ import Foundation
 import UserNotifications
 import UIKit
 
+struct NotificationInfo {
+    let compass: Compass
+    let title: String
+    let body: String
+}
+
 final class LocalNotificationsHelper: NSObject
 {
     static let notificationCategory = "reminderNotification"
-    
     static let shared = LocalNotificationsHelper()
     
     fileprivate var waitingAuthorizationCompletion: ((Bool) -> ())?
+    var notificationCallback: ((NotificationInfo) -> ())?
     
     private func ownAuthorization(vc: UIViewController, completion: @escaping (Bool) -> ())
     {
@@ -104,7 +110,7 @@ final class LocalNotificationsHelper: NSObject
             }
         } else {
             
-            waitingAuthorizationCompletion = completion
+            self.waitingAuthorizationCompletion = completion
             UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .sound], categories: nil))
             
         }
@@ -113,7 +119,7 @@ final class LocalNotificationsHelper: NSObject
     
     func authorizationReceived(authorized: Bool)
     {
-        waitingAuthorizationCompletion?(authorized)
+       self.waitingAuthorizationCompletion?(authorized)
     }
     
     static func scheduleLocalNotification(title: String, body: String, date: Date, identifier: String)
@@ -143,7 +149,7 @@ final class LocalNotificationsHelper: NSObject
                 return
             }
             
-            removeNotificationsForIdentifier(identifier: identifier)
+            self.removeNotificationsForIdentifier(identifier: identifier)
             
             let notification = UILocalNotification()
             notification.fireDate = date
@@ -154,7 +160,6 @@ final class LocalNotificationsHelper: NSObject
             notification.userInfo = ["identifier": identifier]
             
             UIApplication.shared.scheduleLocalNotification(notification)
-            
         }
     }
     
@@ -203,11 +208,7 @@ final class LocalNotificationsHelper: NSObject
     static func removeNotificationsForIdentifier(identifier: String) {
         
         if #available(iOS 10.0, *) {
-            let center = UNUserNotificationCenter.current()
-            
-            center.removePendingNotificationRequests(withIdentifiers: [identifier])
-            
-            
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
         } else {
             
             let notifications = UIApplication.shared.scheduledLocalNotifications?.filter({ (notification) -> Bool in
@@ -226,29 +227,55 @@ final class LocalNotificationsHelper: NSObject
     
 }
 
+// MARK: - iOS 10 Notifications
 
 extension LocalNotificationsHelper: UNUserNotificationCenterDelegate {
     
     func listenToNotifications() {
-        
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
-        } 
-        
+        } else {
+            
+        }
     }
     
-    //for displaying notification when app is in foreground
+    /// Called on iOS 10 when app is in foreground, we're instructing system to still show the notification
+    
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         completionHandler([.alert,.badge])
     }
     
-    // For handling tap and user actions. We need to have this here if not the local notification is received and we would show an alert as in iOS 9
+    /// Called on iOS 10 when the user taps a notification, whether while the app is in the background or the foreground
+    
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 
+        if  let id = response.notification.request.identifier.components(separatedBy: "::").first,
+            let compass = Database.shared.realm.object(ofType: Compass.self, forPrimaryKey: id) {
+            let title = response.notification.request.content.title
+            let body = response.notification.request.content.body
+        
+            self.notificationCallback?(NotificationInfo(compass: compass, title: title, body: body))
+        }
+        
         completionHandler()
     }
     
+}
+
+// MARK: - iOS 9 Notifications
+
+extension LocalNotificationsHelper {
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        if  let notId = notification.userInfo?["identifier"] as? String,
+            let id = notId.components(separatedBy: "::").first,
+            let compass = Database.shared.realm.object(ofType: Compass.self, forPrimaryKey: id),
+            let title = notification.alertBody,
+            let body = notification.alertTitle {
+            
+            self.notificationCallback?(NotificationInfo(compass: compass, title: title, body: body))
+        }
+    }
 }

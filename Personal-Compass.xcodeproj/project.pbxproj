@@ -102,6 +102,9 @@
 		8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */; };
 		8CFC6D4D1ED3A0D600F44B95 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */; };
 		CBF5C2B987593B1534F06EDA /* Pods_Personal_Compass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485BFE6DCE93CB39A41A3C03 /* Pods_Personal_Compass.framework */; };
+		E305F2441F04414900AE0D04 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E305F2431F04414900AE0D04 /* Notification.storyboard */; };
+		E305F2461F04415500AE0D04 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E305F2451F04415500AE0D04 /* NotificationViewController.swift */; };
+		E305F2481F04471D00AE0D04 /* UIViewController+TopMost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E305F2471F04471D00AE0D04 /* UIViewController+TopMost.swift */; };
 		E30CFB1A1EEF13AD00ACE42B /* TextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */; };
 		E30CFB1C1EEF171200ACE42B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */; };
 		E357BDE51EFABAF2006A141B /* meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E357BDE41EFABAF2006A141B /* meditation.mp3 */; };
@@ -230,6 +233,9 @@
 		978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personal_CompassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF2CF0E80AFBAC596BA0EBC /* Pods-Personal-Compass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-Compass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-Compass/Pods-Personal-Compass.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F1D4F40C4085A19441E40F /* Pods-Personal-CompassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personal-CompassTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Personal-CompassTests/Pods-Personal-CompassTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E305F2431F04414900AE0D04 /* Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		E305F2451F04415500AE0D04 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		E305F2471F04471D00AE0D04 /* UIViewController+TopMost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopMost.swift"; sourceTree = "<group>"; };
 		E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewPlaceholder.swift; path = Utils/TextViewPlaceholder.swift; sourceTree = "<group>"; };
 		E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
 		E357BDE41EFABAF2006A141B /* meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meditation.mp3; sourceTree = "<group>"; };
@@ -330,8 +336,8 @@
 		4FB5AF1C1EE838A000837FF0 /* CompassSummary */ = {
 			isa = PBXGroup;
 			children = (
-				4FB5AF1F1EE839CF00837FF0 /* CompassSummaryViewController.swift */,
 				4FB5AF211EE839DD00837FF0 /* CompassSummary.storyboard */,
+				4FB5AF1F1EE839CF00837FF0 /* CompassSummaryViewController.swift */,
 			);
 			name = CompassSummary;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */,
 				E3784A2B1EF9790D00554972 /* OnboardingPopover.swift */,
 				4F9CFCF01F018AAB006D1E66 /* BlockBarButtonItem.swift */,
+				E305F2471F04471D00AE0D04 /* UIViewController+TopMost.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -414,6 +421,7 @@
 				8CAF52571EFAD91500E5F2DE /* Intro */,
 				8CAF525C1EFB0A6A00E5F2DE /* Tour */,
 				8CAF52521EF1CCDC00E5F2DE /* Example */,
+				E305F2421F04412D00AE0D04 /* Notification */,
 				4FB5AF1C1EE838A000837FF0 /* CompassSummary */,
 				8C54AD291EE602BD001EC903 /* FeelBetter */,
 				4FA825761EE1AC6A009AB272 /* Cells */,
@@ -561,6 +569,15 @@
 				8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */,
 			);
 			name = Thought;
+			sourceTree = "<group>";
+		};
+		E305F2421F04412D00AE0D04 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				E305F2431F04414900AE0D04 /* Notification.storyboard */,
+				E305F2451F04415500AE0D04 /* NotificationViewController.swift */,
+			);
+			name = Notification;
 			sourceTree = "<group>";
 		};
 		E37C7A6E1EC9FBA300076737 = {
@@ -787,6 +804,7 @@
 				4FB5AF221EE839DD00837FF0 /* CompassSummary.storyboard in Resources */,
 				4F7D86EF1EE0441D002C63A4 /* PreloadedPositiveActivities.plist in Resources */,
 				8C463B201ECA2D9700566531 /* Muli-SemiBoldItalic.ttf in Resources */,
+				E305F2441F04414900AE0D04 /* Notification.storyboard in Resources */,
 				8C9166861ECCF1F20072C19F /* Emotion.storyboard in Resources */,
 				8C463B1A1ECA2D9700566531 /* Muli-ExtraLightItalic.ttf in Resources */,
 				E37C7A821EC9FBA300076737 /* Assets.xcassets in Resources */,
@@ -975,6 +993,7 @@
 				047A58071ECB30A400BC7650 /* Emotion.swift in Sources */,
 				4F7D86EB1EE04243002C63A4 /* PositiveActivity.swift in Sources */,
 				8C54AD141ED72B33001EC903 /* CustomStressViewController.swift in Sources */,
+				E305F2481F04471D00AE0D04 /* UIViewController+TopMost.swift in Sources */,
 				4FB5AF171EE5F7E600837FF0 /* LocalNotificationsHelper.swift in Sources */,
 				8C54AD281EE0D27D001EC903 /* CalendarHelper.swift in Sources */,
 				047A58031ECB2D6300BC7650 /* BodyStress.swift in Sources */,
@@ -1014,6 +1033,7 @@
 				8C54AD121ED5E4C6001EC903 /* NeedViewController.swift in Sources */,
 				8CAF525B1EFAD97400E5F2DE /* IntroViewController.swift in Sources */,
 				4FCBA1B31EDDBE7E00B68A85 /* EmotionSummaryCell.swift in Sources */,
+				E305F2461F04415500AE0D04 /* NotificationViewController.swift in Sources */,
 				8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */,
 				8C463B321ECA61E500566531 /* CustomSideViewController.swift in Sources */,
 				8C54AD1D1EDDF9A2001EC903 /* InnerWisdom3ViewController.swift in Sources */,

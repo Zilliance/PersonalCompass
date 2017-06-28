@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import MZFormSheetPresentationController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         _ = Database.shared.appStarted()
@@ -45,23 +45,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
         
+        // Notifications
+        
+        LocalNotificationsHelper.shared.notificationCallback = { notificationInfo in
+            print("compass:", notificationInfo.compass, "title:", notificationInfo.title, "body:", notificationInfo.body)
+            
+            // Present the compass summary, and on top of that present the reminder
+            // Or present the reminder with an option to go to the compass
+            
+            let vc = UIStoryboard(name: "Notification", bundle: nil).instantiateInitialViewController() as! NotificationViewController
+            
+            vc.notificationInfo = notificationInfo
+            
+            let sheet = MZFormSheetPresentationViewController(contentViewController: vc)
+            
+            sheet.presentationController?.contentViewSize = CGSize(width: UIDevice.isSmallerThaniPhone6 ? 260 : 300, height: 300)
+            sheet.contentViewControllerTransitionStyle = .bounce
+            
+            self.window?.rootViewController?.topmost().present(sheet, animated: true, completion: nil)
+        }
+        
         LocalNotificationsHelper.shared.listenToNotifications()
         
         return true
     }
     
-    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        
-        guard application.applicationState == .active else {
-            return
-        }
-        
-        //this will only be exectuted on iOS 9. On iOS 10 we use the UNUserNotificationCenter methods
-        let alert = UIAlertController(title: notification.alertTitle, message: notification.alertBody, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        window?.rootViewController?.present(alert, animated: true, completion: nil)
-    }
+    /// Called on iOS 9 when notification fires
+    /// On iOS 10 UNUserNotificationCenter delegate methods on LocalNotificationHelper are used
     
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        LocalNotificationsHelper.shared.application(application, didReceive: notification)
+    }
 
 }
 
