@@ -78,6 +78,10 @@ class InnerWisdom4ViewController: UIViewController {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         
+        guard self.scrollView.contentInset == .zero else {
+            return
+        }
+        
         let editingView = self.containerView.subviews.filter {
             $0.isFirstResponder == true
             }.first
