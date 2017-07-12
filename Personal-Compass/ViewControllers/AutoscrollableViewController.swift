@@ -36,6 +36,10 @@ class AutoscrollableViewController: UIViewController {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         
+        guard self.view.frame.origin.y == 0 else {
+            return
+        }
+        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue, let editingViewFrame = self.editingViewFrame {
             
             let diff = self.view.frame.size.height - editingViewFrame.size.height - editingViewFrame.origin.y - keyboardSize.height
