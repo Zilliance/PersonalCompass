@@ -233,6 +233,6 @@ extension StartCompassViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 105.0)
+        return CGSize(width: collectionView.bounds.width, height: 78)
     }
 }
