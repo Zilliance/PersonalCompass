@@ -11,7 +11,7 @@ import KMPlaceholderTextView
 
 class StressorViewController: AutoscrollableViewController {
     
-    fileprivate let maxTextlenght = 25
+    fileprivate let maxTextlenght = 48
 
     @IBOutlet weak var textView: KMPlaceholderTextView!
     @IBOutlet weak var counterLabel: UILabel!

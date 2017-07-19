@@ -16,8 +16,6 @@ class CompassCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var greyLineView: UIView!
     @IBOutlet weak var checkmarkView: UIImageView!
     
-    static let size = CGSize(width: 105.0, height: 105.0)
-    
     var isDeleting = false
     
     private static let dateFormatter: DateFormatter = {
@@ -110,9 +108,6 @@ class StartCompassViewController: UIViewController {
     private func setupView() {
         self.title = "Personal Compass"
         self.editButton.title = "Edit"
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CompassCollectionViewCell.size
-        self.collectionView.collectionViewLayout = layout
         self.collectionView.allowsMultipleSelection = true
         self.startCompassButton.layer.cornerRadius = App.Appearance.buttonCornerRadius
         
@@ -211,7 +206,7 @@ extension StartCompassViewController: UICollectionViewDataSource {
     }
 }
 
-extension StartCompassViewController: UICollectionViewDelegate {
+extension StartCompassViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard !self.isDeleting else {
@@ -235,5 +230,9 @@ extension StartCompassViewController: UICollectionViewDelegate {
         }
 
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 78)
     }
 }
