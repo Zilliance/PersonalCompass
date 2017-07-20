@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g9l-os-V6r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g9l-os-V6r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -60,7 +60,7 @@
                                 </connections>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-gx-eOk">
-                                <rect key="frame" x="131" y="96.5" width="113" height="50"/>
+                                <rect key="frame" x="20" y="96.5" width="335" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPt-St-839">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -69,8 +69,8 @@
                                             <constraint firstAttribute="height" constant="50" id="pB9-ew-ymL"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-uD-pDv">
-                                        <rect key="frame" x="70" y="0.0" width="43" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-uD-pDv">
+                                        <rect key="frame" x="70" y="0.0" width="265" height="50"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -101,6 +101,7 @@
                             <constraint firstAttribute="trailing" secondItem="MtR-db-5RY" secondAttribute="trailing" id="BDC-t4-YBK"/>
                             <constraint firstItem="MtR-db-5RY" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" id="JWg-nH-flR"/>
                             <constraint firstAttribute="trailing" secondItem="3n1-QI-lsB" secondAttribute="trailing" constant="30" id="LUZ-Vj-KWQ"/>
+                            <constraint firstAttribute="trailing" secondItem="m9g-gx-eOk" secondAttribute="trailing" constant="20" id="Mdo-DE-U2I"/>
                             <constraint firstItem="m9g-gx-eOk" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="20" id="Umg-pT-NIX"/>
                             <constraint firstAttribute="trailing" secondItem="IHa-ko-eTm" secondAttribute="trailing" constant="20" id="XWF-FD-oG1"/>
                             <constraint firstItem="m9g-gx-eOk" firstAttribute="centerX" secondItem="nlG-po-c2V" secondAttribute="centerX" id="ccu-K4-yWf"/>
