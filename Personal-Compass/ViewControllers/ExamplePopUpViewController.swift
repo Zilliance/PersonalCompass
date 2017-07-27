@@ -6,6 +6,9 @@
 //  Copyright © 2017 Pillars4Life. All rights reserved.
 //
 
+//  We need a more generic popup that takes this form and let's the user set the text
+//  without this class knowing anything about the FeelBetterType
+
 import UIKit
 
 class ExamplePopUpViewController: UIViewController {
