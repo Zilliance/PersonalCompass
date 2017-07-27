@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,12 +12,15 @@
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Feel Better Item View Controller-->
         <scene sceneID="ezF-kP-P93">
             <objects>
-                <viewController storyboardIdentifier="body" id="Qwt-3Z-Eoy" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="body-original" id="Qwt-3Z-Eoy" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ggZ-Ej-ZfK"/>
                         <viewControllerLayoutGuide type="bottom" id="uQT-Sn-Pm7"/>
@@ -56,7 +59,7 @@ When you do something physical to interrupt the negativity you feel, you will po
         <!--Feel Better Item View Controller-->
         <scene sceneID="M9h-ob-P46">
             <objects>
-                <viewController storyboardIdentifier="thought" id="8lq-Fl-qYk" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="thought-original" id="8lq-Fl-qYk" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xtr-Bp-yoO"/>
                         <viewControllerLayoutGuide type="bottom" id="CQe-eO-uJP"/>
@@ -93,9 +96,93 @@ So choose an empowering thought. Do not choose a thought that you can’t actual
             <point key="canvasLocation" x="-863" y="-1650"/>
         </scene>
         <!--Feel Better Item View Controller-->
+        <scene sceneID="Rg4-2e-dJL">
+            <objects>
+                <viewController storyboardIdentifier="body" id="s0S-xw-UEv" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d7C-tB-1HW"/>
+                        <viewControllerLayoutGuide type="bottom" id="NM2-FW-5w6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mkG-Zu-tJV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crE-4y-Z7e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRa-kK-JCE">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1j-WB-tbU">
+                                                <rect key="frame" x="12" y="16" width="351" height="235"/>
+                                                <string key="text">Doing something that feels good for your body (like going for a walk or taking six deep breaths) is usually the easiest entry point into feeling better because you can almost always take immediate action to impact your body positively. 
+ 
+When you do something physical to interrupt the negativity you feel, you will positively impact your thoughts, behaviors, and emotions. </string>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feel-better-body" translatesAutoresizingMaskIntoConstraints="NO" id="1gq-XY-jai">
+                                                <rect key="frame" x="0.0" y="281" width="375" height="256"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="256" id="kIz-uR-p3u"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6n-hb-Osw">
+                                                <rect key="frame" x="16" y="557" width="91" height="31"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                                <state key="normal" title="See Example">
+                                                    <color key="titleColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showExample:" destination="s0S-xw-UEv" eventType="touchUpInside" id="Y9b-nS-pMc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.976806640625" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="S6n-hb-Osw" secondAttribute="bottom" id="0OI-ec-idZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="1gq-XY-jai" secondAttribute="trailing" id="DNe-Qt-uuq"/>
+                                            <constraint firstItem="x1j-WB-tbU" firstAttribute="leading" secondItem="dRa-kK-JCE" secondAttribute="leading" constant="12" id="Gey-mv-bM4"/>
+                                            <constraint firstItem="1gq-XY-jai" firstAttribute="leading" secondItem="dRa-kK-JCE" secondAttribute="leading" id="Iaq-qX-nqx"/>
+                                            <constraint firstItem="S6n-hb-Osw" firstAttribute="leading" secondItem="dRa-kK-JCE" secondAttribute="leading" constant="16" id="KC3-HB-Gyl"/>
+                                            <constraint firstItem="x1j-WB-tbU" firstAttribute="top" secondItem="dRa-kK-JCE" secondAttribute="top" constant="16" id="Sei-Yd-qbc"/>
+                                            <constraint firstItem="S6n-hb-Osw" firstAttribute="top" secondItem="1gq-XY-jai" secondAttribute="bottom" constant="20" id="U8y-bd-P7v"/>
+                                            <constraint firstAttribute="trailing" secondItem="x1j-WB-tbU" secondAttribute="trailing" constant="12" id="lMJ-lX-so3"/>
+                                            <constraint firstItem="1gq-XY-jai" firstAttribute="top" secondItem="x1j-WB-tbU" secondAttribute="bottom" constant="30" id="wiB-ex-GhG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.98166232638888884" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dRa-kK-JCE" secondAttribute="bottom" id="GNr-Tf-cJT"/>
+                                    <constraint firstAttribute="trailing" secondItem="dRa-kK-JCE" secondAttribute="trailing" id="NkE-FR-wep"/>
+                                    <constraint firstItem="dRa-kK-JCE" firstAttribute="leading" secondItem="crE-4y-Z7e" secondAttribute="leading" id="jGu-1M-QV8"/>
+                                    <constraint firstItem="dRa-kK-JCE" firstAttribute="top" secondItem="crE-4y-Z7e" secondAttribute="top" id="zw1-3J-sbW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.98011610243055558" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="crE-4y-Z7e" secondAttribute="bottom" id="BwV-p2-Csv"/>
+                            <constraint firstAttribute="trailing" secondItem="crE-4y-Z7e" secondAttribute="trailing" id="C8W-bs-tsb"/>
+                            <constraint firstItem="dRa-kK-JCE" firstAttribute="width" secondItem="mkG-Zu-tJV" secondAttribute="width" id="MQL-WH-kY5"/>
+                            <constraint firstItem="crE-4y-Z7e" firstAttribute="leading" secondItem="mkG-Zu-tJV" secondAttribute="leading" id="OPd-DD-3w4"/>
+                            <constraint firstItem="crE-4y-Z7e" firstAttribute="top" secondItem="mkG-Zu-tJV" secondAttribute="top" id="wTe-tT-VeX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="crE-4y-Z7e" id="qlO-MD-E7M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDe-rm-dsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1610" y="-970"/>
+        </scene>
+        <!--Feel Better Item View Controller-->
         <scene sceneID="qfG-qm-buK">
             <objects>
-                <viewController storyboardIdentifier="emotion" id="dgl-6L-rEA" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="emotion-original" id="dgl-6L-rEA" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cdF-Bx-jhj"/>
                         <viewControllerLayoutGuide type="bottom" id="uEd-XS-EeY"/>
@@ -134,7 +221,7 @@ Identify your Instant Mood Shifters so that you have them on hand. This way, whe
         <!--Feel Better Item View Controller-->
         <scene sceneID="k9C-Us-0E5">
             <objects>
-                <viewController storyboardIdentifier="behavior" id="Cs4-YW-xeE" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="behavior-original" id="Cs4-YW-xeE" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n5D-bi-9dv"/>
                         <viewControllerLayoutGuide type="bottom" id="eMC-vr-dEU"/>
@@ -170,5 +257,263 @@ Changing your behavior shifts your thoughts from your stressor to something you 
             </objects>
             <point key="canvasLocation" x="-119" y="-1650"/>
         </scene>
+        <!--Feel Better Item View Controller-->
+        <scene sceneID="Bxy-j7-BVX">
+            <objects>
+                <viewController storyboardIdentifier="emotion" id="CSw-Ji-R6K" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ue6-WU-IOR"/>
+                        <viewControllerLayoutGuide type="bottom" id="fcn-8h-u62"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ssF-8b-ozG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onT-DW-fZi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtQ-Ko-Gcm">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="566.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bR-9O-Ukf">
+                                                <rect key="frame" x="16" y="16" width="343" height="277.5"/>
+                                                <string key="text">Most people have favorite activities that always make them feel better, like watching comedies, listening to music, or snuggling with their children. These are called "Instant Mood Shifters." 
+ 
+Identify your Instant Mood Shifters so that you have them on hand. This way, when you find yourself spiraling into negativity, you can reach for an Instant Mood Shifter to improve your emotion. Just as stress adds up, so do the little moments of relief you choose to give yourself.</string>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feel-better-emotion" translatesAutoresizingMaskIntoConstraints="NO" id="bak-7z-DeU">
+                                                <rect key="frame" x="0.0" y="323.5" width="375" height="192"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="192" id="eos-sr-GIx"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70l-SH-vA3">
+                                                <rect key="frame" x="16" y="535.5" width="91" height="31"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                                <state key="normal" title="See Example">
+                                                    <color key="titleColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showExample:" destination="CSw-Ji-R6K" eventType="touchUpInside" id="4KL-ka-FOs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.9768066406" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="70l-SH-vA3" firstAttribute="leading" secondItem="AtQ-Ko-Gcm" secondAttribute="leading" constant="16" id="18z-FF-a5J"/>
+                                            <constraint firstItem="1bR-9O-Ukf" firstAttribute="top" secondItem="AtQ-Ko-Gcm" secondAttribute="top" constant="16" id="3CR-SL-I4Y"/>
+                                            <constraint firstItem="70l-SH-vA3" firstAttribute="top" secondItem="bak-7z-DeU" secondAttribute="bottom" constant="20" id="7Fk-bF-CXH"/>
+                                            <constraint firstItem="bak-7z-DeU" firstAttribute="top" secondItem="1bR-9O-Ukf" secondAttribute="bottom" constant="30" id="CgU-0Z-KLj"/>
+                                            <constraint firstAttribute="trailing" secondItem="1bR-9O-Ukf" secondAttribute="trailing" constant="16" id="Lmv-df-5x0"/>
+                                            <constraint firstAttribute="trailing" secondItem="bak-7z-DeU" secondAttribute="trailing" id="VR9-JZ-JIx"/>
+                                            <constraint firstAttribute="bottom" secondItem="70l-SH-vA3" secondAttribute="bottom" id="XYV-FW-WB9"/>
+                                            <constraint firstItem="1bR-9O-Ukf" firstAttribute="leading" secondItem="AtQ-Ko-Gcm" secondAttribute="leading" constant="16" id="b3V-oG-Tbt"/>
+                                            <constraint firstItem="bak-7z-DeU" firstAttribute="leading" secondItem="AtQ-Ko-Gcm" secondAttribute="leading" id="zN6-LH-nxS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.98166232639999995" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="AtQ-Ko-Gcm" firstAttribute="leading" secondItem="onT-DW-fZi" secondAttribute="leading" id="9uZ-ns-eJB"/>
+                                    <constraint firstAttribute="bottom" secondItem="AtQ-Ko-Gcm" secondAttribute="bottom" id="UJP-mf-Pdd"/>
+                                    <constraint firstAttribute="trailing" secondItem="AtQ-Ko-Gcm" secondAttribute="trailing" id="bpD-Xp-NSV"/>
+                                    <constraint firstItem="AtQ-Ko-Gcm" firstAttribute="top" secondItem="onT-DW-fZi" secondAttribute="top" id="fkE-Oq-P8R"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.98011610240000002" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AtQ-Ko-Gcm" firstAttribute="width" secondItem="ssF-8b-ozG" secondAttribute="width" id="5AJ-Y1-UeF"/>
+                            <constraint firstItem="onT-DW-fZi" firstAttribute="top" secondItem="ssF-8b-ozG" secondAttribute="top" id="FZz-0K-ayq"/>
+                            <constraint firstItem="onT-DW-fZi" firstAttribute="leading" secondItem="ssF-8b-ozG" secondAttribute="leading" id="N23-hp-u00"/>
+                            <constraint firstAttribute="bottom" secondItem="onT-DW-fZi" secondAttribute="bottom" id="Rr5-Mu-rCn"/>
+                            <constraint firstAttribute="trailing" secondItem="onT-DW-fZi" secondAttribute="trailing" id="wfL-4y-909"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="onT-DW-fZi" id="5qt-qC-hj1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hig-vH-Yyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="-970"/>
+        </scene>
+        <!--Feel Better Item View Controller-->
+        <scene sceneID="uVd-TT-tke">
+            <objects>
+                <viewController storyboardIdentifier="thought" id="mDh-p3-Igb" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yee-F0-rKR"/>
+                        <viewControllerLayoutGuide type="bottom" id="OGi-Aq-nql"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JVG-Ds-LFJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeC-5T-VwK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOd-b6-Q8w">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTe-GR-N94">
+                                                <rect key="frame" x="12" y="16" width="351" height="235"/>
+                                                <string key="text">It is never the stressor that causes you to suffer. Rather, your thoughts about the stressor cause you to suffer.
+ 
+So choose an empowering thought. Do not choose a thought that you can’t actually believe, but when given a choice between one thought that is negative and one that is positive, both of which come with equal amounts of evidence, choose the positive thought. </string>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feel-better-thought" translatesAutoresizingMaskIntoConstraints="NO" id="1pz-62-Nxt">
+                                                <rect key="frame" x="0.0" y="281" width="375" height="256"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="256" id="vj0-he-eOf"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaV-nY-6gi">
+                                                <rect key="frame" x="16" y="557" width="91" height="31"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                                <state key="normal" title="See Example">
+                                                    <color key="titleColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showExample:" destination="mDh-p3-Igb" eventType="touchUpInside" id="NRO-Di-zpX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.9768066406" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="EaV-nY-6gi" firstAttribute="leading" secondItem="vOd-b6-Q8w" secondAttribute="leading" constant="16" id="5YQ-xH-DWQ"/>
+                                            <constraint firstItem="EaV-nY-6gi" firstAttribute="top" secondItem="1pz-62-Nxt" secondAttribute="bottom" constant="20" id="FZx-Qp-vC4"/>
+                                            <constraint firstItem="yTe-GR-N94" firstAttribute="leading" secondItem="vOd-b6-Q8w" secondAttribute="leading" constant="12" id="Nls-bR-j2z"/>
+                                            <constraint firstItem="yTe-GR-N94" firstAttribute="top" secondItem="vOd-b6-Q8w" secondAttribute="top" constant="16" id="OR2-H1-Gk6"/>
+                                            <constraint firstAttribute="bottom" secondItem="EaV-nY-6gi" secondAttribute="bottom" id="av5-ZJ-aiQ"/>
+                                            <constraint firstItem="1pz-62-Nxt" firstAttribute="top" secondItem="yTe-GR-N94" secondAttribute="bottom" constant="30" id="dpf-K2-8hm"/>
+                                            <constraint firstAttribute="trailing" secondItem="yTe-GR-N94" secondAttribute="trailing" constant="12" id="ex7-8s-nsQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="1pz-62-Nxt" secondAttribute="trailing" id="fyB-3N-Hba"/>
+                                            <constraint firstItem="1pz-62-Nxt" firstAttribute="leading" secondItem="vOd-b6-Q8w" secondAttribute="leading" id="tfY-fK-5Nn"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.98166232639999995" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="vOd-b6-Q8w" firstAttribute="top" secondItem="NeC-5T-VwK" secondAttribute="top" id="APM-vY-VCQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="vOd-b6-Q8w" secondAttribute="trailing" id="XOX-Uc-13k"/>
+                                    <constraint firstAttribute="bottom" secondItem="vOd-b6-Q8w" secondAttribute="bottom" id="hVr-47-W1h"/>
+                                    <constraint firstItem="vOd-b6-Q8w" firstAttribute="leading" secondItem="NeC-5T-VwK" secondAttribute="leading" id="uLy-nm-Nxo"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.98011610240000002" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NeC-5T-VwK" firstAttribute="leading" secondItem="JVG-Ds-LFJ" secondAttribute="leading" id="Dfx-FB-jaU"/>
+                            <constraint firstItem="NeC-5T-VwK" firstAttribute="top" secondItem="JVG-Ds-LFJ" secondAttribute="top" id="IP1-Ow-Fw3"/>
+                            <constraint firstItem="vOd-b6-Q8w" firstAttribute="width" secondItem="JVG-Ds-LFJ" secondAttribute="width" id="Ncq-9R-Y1a"/>
+                            <constraint firstAttribute="bottom" secondItem="NeC-5T-VwK" secondAttribute="bottom" id="Z4r-fs-ljt"/>
+                            <constraint firstAttribute="trailing" secondItem="NeC-5T-VwK" secondAttribute="trailing" id="cRq-xF-Txl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="NeC-5T-VwK" id="QvV-rE-o1i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slA-Gz-moZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-863" y="-970"/>
+        </scene>
+        <!--Feel Better Item View Controller-->
+        <scene sceneID="fDh-y5-mbd">
+            <objects>
+                <viewController storyboardIdentifier="behavior" id="5aY-0o-sFI" customClass="FeelBetterItemViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xaQ-pd-EwB"/>
+                        <viewControllerLayoutGuide type="bottom" id="PxP-4B-EKO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dfs-pm-en0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9H-dq-kcS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-4F-BFV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="609.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xq-F6-zcP">
+                                                <rect key="frame" x="12" y="16" width="351" height="256.5"/>
+                                                <string key="text">Rarely will you feel better about a stressor if you sit on the couch and ruminate about it. Instead, interrupt a downward spiral by doing something you enjoy doing. Call a friend, do something nice for someone else, or do something you get lost in. 
+ 
+Changing your behavior shifts your thoughts from your stressor to something you enjoy. This lifts your mood, and it allows you to come back to your stressor in a better frame of mind.</string>
+                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feel-better-behavior" translatesAutoresizingMaskIntoConstraints="NO" id="ESV-FK-V3T">
+                                                <rect key="frame" x="0.0" y="302.5" width="375" height="256"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="256" id="ek9-7Y-H8H"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7V-pA-Mfu">
+                                                <rect key="frame" x="16" y="578.5" width="91" height="31"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="15"/>
+                                                <state key="normal" title="See Example">
+                                                    <color key="titleColor" red="0.0039215686269999999" green="0.73725490199999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showExample:" destination="5aY-0o-sFI" eventType="touchUpInside" id="n4t-zg-G71"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.9768066406" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ESV-FK-V3T" firstAttribute="leading" secondItem="3yk-4F-BFV" secondAttribute="leading" id="2p6-ix-W5V"/>
+                                            <constraint firstItem="U7V-pA-Mfu" firstAttribute="top" secondItem="ESV-FK-V3T" secondAttribute="bottom" constant="20" id="3w1-rP-PDk"/>
+                                            <constraint firstItem="ESV-FK-V3T" firstAttribute="top" secondItem="2Xq-F6-zcP" secondAttribute="bottom" constant="30" id="Nnr-Ze-J43"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Xq-F6-zcP" secondAttribute="trailing" constant="12" id="PQo-M7-ssx"/>
+                                            <constraint firstItem="2Xq-F6-zcP" firstAttribute="leading" secondItem="3yk-4F-BFV" secondAttribute="leading" constant="12" id="UyE-U1-Uaj"/>
+                                            <constraint firstAttribute="trailing" secondItem="ESV-FK-V3T" secondAttribute="trailing" id="llT-Ce-tAE"/>
+                                            <constraint firstAttribute="bottom" secondItem="U7V-pA-Mfu" secondAttribute="bottom" id="rCV-Wu-khR"/>
+                                            <constraint firstItem="U7V-pA-Mfu" firstAttribute="leading" secondItem="3yk-4F-BFV" secondAttribute="leading" constant="16" id="rZ5-gB-9TI"/>
+                                            <constraint firstItem="2Xq-F6-zcP" firstAttribute="top" secondItem="3yk-4F-BFV" secondAttribute="top" constant="16" id="uQB-08-giQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.98166232639999995" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3yk-4F-BFV" firstAttribute="top" secondItem="o9H-dq-kcS" secondAttribute="top" id="EmZ-NQ-zi8"/>
+                                    <constraint firstItem="3yk-4F-BFV" firstAttribute="leading" secondItem="o9H-dq-kcS" secondAttribute="leading" id="Qth-Gh-3Ym"/>
+                                    <constraint firstAttribute="bottom" secondItem="3yk-4F-BFV" secondAttribute="bottom" id="ja4-3l-ZSB"/>
+                                    <constraint firstAttribute="trailing" secondItem="3yk-4F-BFV" secondAttribute="trailing" id="txq-Yc-1sk"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.98011610240000002" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3yk-4F-BFV" firstAttribute="width" secondItem="dfs-pm-en0" secondAttribute="width" id="73j-8h-fdo"/>
+                            <constraint firstItem="o9H-dq-kcS" firstAttribute="leading" secondItem="dfs-pm-en0" secondAttribute="leading" id="MhJ-EV-ZOf"/>
+                            <constraint firstAttribute="bottom" secondItem="o9H-dq-kcS" secondAttribute="bottom" id="Y7q-eS-kBt"/>
+                            <constraint firstItem="o9H-dq-kcS" firstAttribute="top" secondItem="dfs-pm-en0" secondAttribute="top" id="nue-SJ-Kgq"/>
+                            <constraint firstAttribute="trailing" secondItem="o9H-dq-kcS" secondAttribute="trailing" id="vxn-eb-ls1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="o9H-dq-kcS" id="ycg-sC-YGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nl7-qE-eRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119" y="-970"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="feel-better-behavior" width="2594" height="1801"/>
+        <image name="feel-better-body" width="2618" height="1704"/>
+        <image name="feel-better-emotion" width="2304" height="1298"/>
+        <image name="feel-better-thought" width="2160" height="1338"/>
+    </resources>
 </document>

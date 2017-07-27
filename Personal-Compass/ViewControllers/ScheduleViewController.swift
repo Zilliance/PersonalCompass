@@ -58,10 +58,13 @@ class ScheduleViewController: UIViewController {
             view.layer.borderWidth = App.Appearance.borderWidth
             view.layer.borderColor = UIColor.lightGray.cgColor
         }
+
+        // NOTE: Keep the example button hidden while client evaluates new design
+        self.exampleButton.isHidden = true
         
-        if let _ = self.feelBetterType {
-            self.exampleButton.isHidden = false
-        }
+//        if let _ = self.feelBetterType {
+//            self.exampleButton.isHidden = false
+//        }
     }
     
     // MARK: -- User Actions

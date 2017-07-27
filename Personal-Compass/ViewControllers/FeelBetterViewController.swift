@@ -12,7 +12,7 @@ import MZFormSheetPresentationController
 struct FeelBetterItem {
     let title: String
     let image: UIImage
-    let viewController: UIViewController
+    let viewController: FeelBetterItemViewController
     let type : FeelBetterType
     
     var selectedColor: UIColor {
@@ -30,10 +30,26 @@ struct FeelBetterItem {
 }
 
 extension FeelBetterItem {
-    static var body: FeelBetterItem = FeelBetterItem(title: "Body", image: #imageLiteral(resourceName: "icon-body-default"), viewController: UIStoryboard(name: "FeelBetterItems", bundle: nil).instantiateViewController(withIdentifier: "body") , type: .body)
-    static var thought: FeelBetterItem = FeelBetterItem(title: "Thought", image: #imageLiteral(resourceName: "icon-thought-default"), viewController: UIStoryboard(name: "FeelBetterItems", bundle: nil).instantiateViewController(withIdentifier: "thought") , type: .thought)
-    static var behavior: FeelBetterItem = FeelBetterItem(title: "Behavior", image: #imageLiteral(resourceName: "icon-behavior-default"), viewController: UIStoryboard(name: "FeelBetterItems", bundle: nil).instantiateViewController(withIdentifier: "behavior") , type: .behavior)
-    static var emotion: FeelBetterItem = FeelBetterItem(title: "Emotion", image: #imageLiteral(resourceName: "icon-emotion-default"), viewController: UIStoryboard(name: "FeelBetterItems", bundle: nil).instantiateViewController(withIdentifier: "emotion") , type: .emotion)
+    static var body: FeelBetterItem = {
+        let item = FeelBetterItem(title: "Body", image: #imageLiteral(resourceName: "icon-body-default"), viewController: UIStoryboard(name: "FeelBetterItems", bundle: nil).instantiateViewController(withIdentifier: "body") as! FeelBetterItemViewController, type: .body)
+        item.viewController.item = item
+        return item
+    }()
+    static var thought: FeelBetterItem = {
+        let item = FeelBetterItem(title: "Thought", image: #imageLiteral(resourceName: "icon-thought-default"), viewController: UIStoryboard(name: "FeelBetterItems", bundle: nil).instantiateViewController(withIdentifier: "thought") as! FeelBetterItemViewController, type: .thought)
+        item.viewController.item = item
+        return item
+    }()
+    static var behavior: FeelBetterItem = {
+        let item = FeelBetterItem(title: "Behavior", image: #imageLiteral(resourceName: "icon-behavior-default"), viewController: UIStoryboard(name: "FeelBetterItems", bundle: nil).instantiateViewController(withIdentifier: "behavior") as! FeelBetterItemViewController, type: .behavior)
+        item.viewController.item = item
+        return item
+    }()
+    static var emotion: FeelBetterItem = {
+        let item = FeelBetterItem(title: "Emotion", image: #imageLiteral(resourceName: "icon-emotion-default"), viewController: UIStoryboard(name: "FeelBetterItems", bundle: nil).instantiateViewController(withIdentifier: "emotion")as! FeelBetterItemViewController, type: .emotion)
+        item.viewController.item = item
+        return item
+    }()
 }
 
 enum FeelBetterType: String {
@@ -158,8 +174,6 @@ class FeelBetterViewController: UIViewController {
         viewController.feelBetterType = self.feelBetterItems[self.currentIndex].type
         let navigationController = UINavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true, completion: nil)
-
-        
     }
     
     // MARK: - Popup
