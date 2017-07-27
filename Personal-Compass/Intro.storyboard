@@ -49,7 +49,7 @@
                                     <action selector="continueAction:" destination="7Rv-YE-G50" eventType="touchUpInside" id="clh-9x-K1m"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-z3-59Z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="747" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-z3-59Z">
                                 <rect key="frame" x="21" y="280" width="333" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">The Personal Compass helps you quickly identify an action step you can take to feel better about something that is stressing you out. Additionally, seeing how your thoughts, emotions, body and behavior are interconnected reveals multiple ways to take care of yourself around the stressful issue.
