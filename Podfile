@@ -15,6 +15,7 @@ target 'Personal-Compass' do
   pod 'AKPickerView-Swift', :git => 'https://github.com/Akkyie/AKPickerView-Swift.git'
   pod 'PDFGenerator', '~> 2.0.1'
   pod 'KMPlaceholderTextView', '~> 1.3.0'
+  pod 'YouTubePlayer'
 
   target 'Personal-CompassTests' do
     inherit! :search_paths
