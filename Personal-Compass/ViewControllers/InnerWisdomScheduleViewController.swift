@@ -50,7 +50,7 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
                 return
         }
         viewController.compass = currentCompass
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = OrientableNavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true, completion: nil)
     }
     
@@ -62,7 +62,7 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
                 return
         }
         viewController.compass = self.currentCompass
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = OrientableNavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true, completion: nil)
     }
     

@@ -13,6 +13,14 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageHeightContraint: NSLayoutConstraint!
     
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
