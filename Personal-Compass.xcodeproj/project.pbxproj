@@ -99,6 +99,7 @@
 		8CAF52601EFB0AB400E5F2DE /* TourPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF525F1EFB0AB400E5F2DE /* TourPageViewController.swift */; };
 		8CD329031F2BD92800844C5F /* VideoPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CD329021F2BD92800844C5F /* VideoPlayer.storyboard */; };
 		8CD329051F2BD93D00844C5F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD329041F2BD93D00844C5F /* VideoPlayerViewController.swift */; };
+		8CD329071F2BDD9A00844C5F /* OrientableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD329061F2BDD9A00844C5F /* OrientableNavigationController.swift */; };
 		8CF78EC94537B4F6424BE525 /* Pods_Personal_CompassUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978524BA55714684E1E971B8 /* Pods_Personal_CompassUITests.framework */; };
 		8CFC6D491ECE4E6000F44B95 /* Thought.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC6D481ECE4E6000F44B95 /* Thought.storyboard */; };
 		8CFC6D4B1ECE501F00F44B95 /* ThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */; };
@@ -230,6 +231,7 @@
 		8CAF525F1EFB0AB400E5F2DE /* TourPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TourPageViewController.swift; path = ViewControllers/TourPageViewController.swift; sourceTree = "<group>"; };
 		8CD329021F2BD92800844C5F /* VideoPlayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoPlayer.storyboard; sourceTree = "<group>"; };
 		8CD329041F2BD93D00844C5F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoPlayerViewController.swift; path = ViewControllers/VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		8CD329061F2BDD9A00844C5F /* OrientableNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrientableNavigationController.swift; path = ViewControllers/OrientableNavigationController.swift; sourceTree = "<group>"; };
 		8CFC6D481ECE4E6000F44B95 /* Thought.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Thought.storyboard; sourceTree = "<group>"; };
 		8CFC6D4A1ECE501F00F44B95 /* ThoughtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThoughtViewController.swift; path = ViewControllers/ThoughtViewController.swift; sourceTree = "<group>"; };
 		8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 		4FCBA1AF1EDD951400B68A85 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8CD329061F2BDD9A00844C5F /* OrientableNavigationController.swift */,
 				8C54AD271EE0D27D001EC903 /* CalendarHelper.swift */,
 				4FCBA1B01EDD954900B68A85 /* UINavigationController+Completion.swift */,
 				4FB5AF161EE5F7E600837FF0 /* LocalNotificationsHelper.swift */,
@@ -1029,6 +1032,7 @@
 				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
 				4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */,
 				8C54AD2D1EE619DA001EC903 /* FeelBetterViewController.swift in Sources */,
+				8CD329071F2BDD9A00844C5F /* OrientableNavigationController.swift in Sources */,
 				8C463B361ECA63D700566531 /* WebViewController.swift in Sources */,
 				8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */,
 				4FD5B65F1ECCE0480017DC06 /* AddItemCell.swift in Sources */,

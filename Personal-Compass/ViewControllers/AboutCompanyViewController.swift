@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutCompanyViewController: UIViewController {
+class AboutCompanyViewController: UIViewController, OrientableViewController {
     @IBOutlet var textView: UITextView!
     
     override func viewDidLoad() {

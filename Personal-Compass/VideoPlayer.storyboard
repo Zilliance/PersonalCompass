@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Orientable Navigation Controller-->
         <scene sceneID="BhA-Yb-eLh">
             <objects>
-                <navigationController id="65s-Ua-8O7" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fif-2L-bVa">
+                <navigationController id="65s-Ua-8O7" customClass="OrientableNavigationController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fif-2L-bVa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

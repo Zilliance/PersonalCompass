@@ -9,7 +9,7 @@
 import UIKit
 import YouTubePlayer
 
-class VideoPlayerViewController: UIViewController {
+class VideoPlayerViewController: UIViewController, OrientableViewController {
     
 
     @IBOutlet weak var youtubePlayer: YouTubePlayerView!
