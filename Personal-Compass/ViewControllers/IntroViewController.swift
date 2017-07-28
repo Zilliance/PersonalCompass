@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController, OrientableViewController {
+class IntroViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageHeightContraint: NSLayoutConstraint!

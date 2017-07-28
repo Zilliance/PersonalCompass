@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SideMenuController
 
-final class CustomSideViewController: SideMenuController, OrientableViewController
+final class CustomSideViewController: SideMenuController
 {
     static func initSideProperties() {
         SideMenuController.preferences.drawing.sidePanelPosition = .underCenterPanelLeft

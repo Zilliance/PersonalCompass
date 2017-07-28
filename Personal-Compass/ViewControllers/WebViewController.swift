@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class WebViewController: UIViewController, UIWebViewDelegate, OrientableViewController
+final class WebViewController: UIViewController, UIWebViewDelegate
 {
     var url: URL! // this is to be set before loading the controller and it's not optional
     @IBOutlet weak var webView: UIWebView!

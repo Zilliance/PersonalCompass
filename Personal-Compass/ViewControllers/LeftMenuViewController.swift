@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SideMenuController
 
-final class LeftMenuViewController: UIViewController, OrientableViewController {
+final class LeftMenuViewController: UIViewController {
     enum Row: Int {
         case howItWorks = 0
         case tour
