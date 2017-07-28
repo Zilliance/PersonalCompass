@@ -114,7 +114,7 @@ So choose an empowering thought. Do not choose a thought that you can’t actual
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1j-WB-tbU">
-                                                <rect key="frame" x="12" y="16" width="351" height="235"/>
+                                                <rect key="frame" x="12" y="302" width="351" height="235"/>
                                                 <string key="text">Doing something that feels good for your body (like going for a walk or taking six deep breaths) is usually the easiest entry point into feeling better because you can almost always take immediate action to impact your body positively. 
  
 When you do something physical to interrupt the negativity you feel, you will positively impact your thoughts, behaviors, and emotions. </string>
@@ -123,7 +123,7 @@ When you do something physical to interrupt the negativity you feel, you will po
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feel-better-body" translatesAutoresizingMaskIntoConstraints="NO" id="1gq-XY-jai">
-                                                <rect key="frame" x="0.0" y="281" width="375" height="256"/>
+                                                <rect key="frame" x="0.0" y="16" width="375" height="256"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="256" id="kIz-uR-p3u"/>
                                                 </constraints>
@@ -142,14 +142,14 @@ When you do something physical to interrupt the negativity you feel, you will po
                                         <color key="backgroundColor" white="0.976806640625" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="S6n-hb-Osw" secondAttribute="bottom" id="0OI-ec-idZ"/>
+                                            <constraint firstItem="1gq-XY-jai" firstAttribute="top" secondItem="dRa-kK-JCE" secondAttribute="top" constant="16" id="2dC-Mb-FL5"/>
                                             <constraint firstAttribute="trailing" secondItem="1gq-XY-jai" secondAttribute="trailing" id="DNe-Qt-uuq"/>
                                             <constraint firstItem="x1j-WB-tbU" firstAttribute="leading" secondItem="dRa-kK-JCE" secondAttribute="leading" constant="12" id="Gey-mv-bM4"/>
                                             <constraint firstItem="1gq-XY-jai" firstAttribute="leading" secondItem="dRa-kK-JCE" secondAttribute="leading" id="Iaq-qX-nqx"/>
                                             <constraint firstItem="S6n-hb-Osw" firstAttribute="leading" secondItem="dRa-kK-JCE" secondAttribute="leading" constant="16" id="KC3-HB-Gyl"/>
-                                            <constraint firstItem="x1j-WB-tbU" firstAttribute="top" secondItem="dRa-kK-JCE" secondAttribute="top" constant="16" id="Sei-Yd-qbc"/>
-                                            <constraint firstItem="S6n-hb-Osw" firstAttribute="top" secondItem="1gq-XY-jai" secondAttribute="bottom" constant="20" id="U8y-bd-P7v"/>
                                             <constraint firstAttribute="trailing" secondItem="x1j-WB-tbU" secondAttribute="trailing" constant="12" id="lMJ-lX-so3"/>
-                                            <constraint firstItem="1gq-XY-jai" firstAttribute="top" secondItem="x1j-WB-tbU" secondAttribute="bottom" constant="30" id="wiB-ex-GhG"/>
+                                            <constraint firstItem="x1j-WB-tbU" firstAttribute="top" secondItem="1gq-XY-jai" secondAttribute="bottom" constant="30" id="n8s-pb-AlW"/>
+                                            <constraint firstItem="S6n-hb-Osw" firstAttribute="top" secondItem="x1j-WB-tbU" secondAttribute="bottom" constant="20" id="uhK-lq-5EY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -276,7 +276,7 @@ Changing your behavior shifts your thoughts from your stressor to something you 
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="566.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bR-9O-Ukf">
-                                                <rect key="frame" x="16" y="16" width="343" height="277.5"/>
+                                                <rect key="frame" x="16" y="238" width="343" height="277.5"/>
                                                 <string key="text">Most people have favorite activities that always make them feel better, like watching comedies, listening to music, or snuggling with their children. These are called "Instant Mood Shifters." 
  
 Identify your Instant Mood Shifters so that you have them on hand. This way, when you find yourself spiraling into negativity, you can reach for an Instant Mood Shifter to improve your emotion. Just as stress adds up, so do the little moments of relief you choose to give yourself.</string>
@@ -285,7 +285,7 @@ Identify your Instant Mood Shifters so that you have them on hand. This way, whe
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feel-better-emotion" translatesAutoresizingMaskIntoConstraints="NO" id="bak-7z-DeU">
-                                                <rect key="frame" x="0.0" y="323.5" width="375" height="192"/>
+                                                <rect key="frame" x="0.0" y="16" width="375" height="192"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="192" id="eos-sr-GIx"/>
                                                 </constraints>
@@ -304,13 +304,13 @@ Identify your Instant Mood Shifters so that you have them on hand. This way, whe
                                         <color key="backgroundColor" white="0.9768066406" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="70l-SH-vA3" firstAttribute="leading" secondItem="AtQ-Ko-Gcm" secondAttribute="leading" constant="16" id="18z-FF-a5J"/>
-                                            <constraint firstItem="1bR-9O-Ukf" firstAttribute="top" secondItem="AtQ-Ko-Gcm" secondAttribute="top" constant="16" id="3CR-SL-I4Y"/>
-                                            <constraint firstItem="70l-SH-vA3" firstAttribute="top" secondItem="bak-7z-DeU" secondAttribute="bottom" constant="20" id="7Fk-bF-CXH"/>
-                                            <constraint firstItem="bak-7z-DeU" firstAttribute="top" secondItem="1bR-9O-Ukf" secondAttribute="bottom" constant="30" id="CgU-0Z-KLj"/>
                                             <constraint firstAttribute="trailing" secondItem="1bR-9O-Ukf" secondAttribute="trailing" constant="16" id="Lmv-df-5x0"/>
                                             <constraint firstAttribute="trailing" secondItem="bak-7z-DeU" secondAttribute="trailing" id="VR9-JZ-JIx"/>
                                             <constraint firstAttribute="bottom" secondItem="70l-SH-vA3" secondAttribute="bottom" id="XYV-FW-WB9"/>
                                             <constraint firstItem="1bR-9O-Ukf" firstAttribute="leading" secondItem="AtQ-Ko-Gcm" secondAttribute="leading" constant="16" id="b3V-oG-Tbt"/>
+                                            <constraint firstItem="1bR-9O-Ukf" firstAttribute="top" secondItem="bak-7z-DeU" secondAttribute="bottom" constant="30" id="gPP-Ki-Nf7"/>
+                                            <constraint firstItem="70l-SH-vA3" firstAttribute="top" secondItem="1bR-9O-Ukf" secondAttribute="bottom" constant="20" id="koz-BN-LNp"/>
+                                            <constraint firstItem="bak-7z-DeU" firstAttribute="top" secondItem="AtQ-Ko-Gcm" secondAttribute="top" constant="16" id="stQ-su-MBd"/>
                                             <constraint firstItem="bak-7z-DeU" firstAttribute="leading" secondItem="AtQ-Ko-Gcm" secondAttribute="leading" id="zN6-LH-nxS"/>
                                         </constraints>
                                     </view>
@@ -360,7 +360,7 @@ Identify your Instant Mood Shifters so that you have them on hand. This way, whe
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTe-GR-N94">
-                                                <rect key="frame" x="12" y="16" width="351" height="235"/>
+                                                <rect key="frame" x="12" y="302" width="351" height="235"/>
                                                 <string key="text">It is never the stressor that causes you to suffer. Rather, your thoughts about the stressor cause you to suffer.
  
 So choose an empowering thought. Do not choose a thought that you can’t actually believe, but when given a choice between one thought that is negative and one that is positive, both of which come with equal amounts of evidence, choose the positive thought. </string>
@@ -369,7 +369,7 @@ So choose an empowering thought. Do not choose a thought that you can’t actual
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feel-better-thought" translatesAutoresizingMaskIntoConstraints="NO" id="1pz-62-Nxt">
-                                                <rect key="frame" x="0.0" y="281" width="375" height="256"/>
+                                                <rect key="frame" x="0.0" y="16" width="375" height="256"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="256" id="vj0-he-eOf"/>
                                                 </constraints>
@@ -388,13 +388,13 @@ So choose an empowering thought. Do not choose a thought that you can’t actual
                                         <color key="backgroundColor" white="0.9768066406" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="EaV-nY-6gi" firstAttribute="leading" secondItem="vOd-b6-Q8w" secondAttribute="leading" constant="16" id="5YQ-xH-DWQ"/>
-                                            <constraint firstItem="EaV-nY-6gi" firstAttribute="top" secondItem="1pz-62-Nxt" secondAttribute="bottom" constant="20" id="FZx-Qp-vC4"/>
                                             <constraint firstItem="yTe-GR-N94" firstAttribute="leading" secondItem="vOd-b6-Q8w" secondAttribute="leading" constant="12" id="Nls-bR-j2z"/>
-                                            <constraint firstItem="yTe-GR-N94" firstAttribute="top" secondItem="vOd-b6-Q8w" secondAttribute="top" constant="16" id="OR2-H1-Gk6"/>
+                                            <constraint firstItem="EaV-nY-6gi" firstAttribute="top" secondItem="yTe-GR-N94" secondAttribute="bottom" constant="20" id="ZO2-pe-s6m"/>
                                             <constraint firstAttribute="bottom" secondItem="EaV-nY-6gi" secondAttribute="bottom" id="av5-ZJ-aiQ"/>
-                                            <constraint firstItem="1pz-62-Nxt" firstAttribute="top" secondItem="yTe-GR-N94" secondAttribute="bottom" constant="30" id="dpf-K2-8hm"/>
+                                            <constraint firstItem="1pz-62-Nxt" firstAttribute="top" secondItem="vOd-b6-Q8w" secondAttribute="top" constant="16" id="ceM-ib-Rd7"/>
                                             <constraint firstAttribute="trailing" secondItem="yTe-GR-N94" secondAttribute="trailing" constant="12" id="ex7-8s-nsQ"/>
                                             <constraint firstAttribute="trailing" secondItem="1pz-62-Nxt" secondAttribute="trailing" id="fyB-3N-Hba"/>
+                                            <constraint firstItem="yTe-GR-N94" firstAttribute="top" secondItem="1pz-62-Nxt" secondAttribute="bottom" constant="30" id="ry7-Hk-mCn"/>
                                             <constraint firstItem="1pz-62-Nxt" firstAttribute="leading" secondItem="vOd-b6-Q8w" secondAttribute="leading" id="tfY-fK-5Nn"/>
                                         </constraints>
                                     </view>
@@ -444,7 +444,7 @@ So choose an empowering thought. Do not choose a thought that you can’t actual
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="609.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xq-F6-zcP">
-                                                <rect key="frame" x="12" y="16" width="351" height="256.5"/>
+                                                <rect key="frame" x="12" y="302" width="351" height="256.5"/>
                                                 <string key="text">Rarely will you feel better about a stressor if you sit on the couch and ruminate about it. Instead, interrupt a downward spiral by doing something you enjoy doing. Call a friend, do something nice for someone else, or do something you get lost in. 
  
 Changing your behavior shifts your thoughts from your stressor to something you enjoy. This lifts your mood, and it allows you to come back to your stressor in a better frame of mind.</string>
@@ -453,7 +453,7 @@ Changing your behavior shifts your thoughts from your stressor to something you 
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feel-better-behavior" translatesAutoresizingMaskIntoConstraints="NO" id="ESV-FK-V3T">
-                                                <rect key="frame" x="0.0" y="302.5" width="375" height="256"/>
+                                                <rect key="frame" x="0.0" y="16" width="375" height="256"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="256" id="ek9-7Y-H8H"/>
                                                 </constraints>
@@ -472,14 +472,14 @@ Changing your behavior shifts your thoughts from your stressor to something you 
                                         <color key="backgroundColor" white="0.9768066406" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="ESV-FK-V3T" firstAttribute="leading" secondItem="3yk-4F-BFV" secondAttribute="leading" id="2p6-ix-W5V"/>
-                                            <constraint firstItem="U7V-pA-Mfu" firstAttribute="top" secondItem="ESV-FK-V3T" secondAttribute="bottom" constant="20" id="3w1-rP-PDk"/>
-                                            <constraint firstItem="ESV-FK-V3T" firstAttribute="top" secondItem="2Xq-F6-zcP" secondAttribute="bottom" constant="30" id="Nnr-Ze-J43"/>
+                                            <constraint firstItem="ESV-FK-V3T" firstAttribute="top" secondItem="3yk-4F-BFV" secondAttribute="top" constant="16" id="6AZ-Ma-ZaN"/>
+                                            <constraint firstItem="U7V-pA-Mfu" firstAttribute="top" secondItem="2Xq-F6-zcP" secondAttribute="bottom" constant="20" id="Eih-PI-F0Y"/>
                                             <constraint firstAttribute="trailing" secondItem="2Xq-F6-zcP" secondAttribute="trailing" constant="12" id="PQo-M7-ssx"/>
                                             <constraint firstItem="2Xq-F6-zcP" firstAttribute="leading" secondItem="3yk-4F-BFV" secondAttribute="leading" constant="12" id="UyE-U1-Uaj"/>
+                                            <constraint firstItem="2Xq-F6-zcP" firstAttribute="top" secondItem="ESV-FK-V3T" secondAttribute="bottom" constant="30" id="XOH-i9-ciS"/>
                                             <constraint firstAttribute="trailing" secondItem="ESV-FK-V3T" secondAttribute="trailing" id="llT-Ce-tAE"/>
                                             <constraint firstAttribute="bottom" secondItem="U7V-pA-Mfu" secondAttribute="bottom" id="rCV-Wu-khR"/>
                                             <constraint firstItem="U7V-pA-Mfu" firstAttribute="leading" secondItem="3yk-4F-BFV" secondAttribute="leading" constant="16" id="rZ5-gB-9TI"/>
-                                            <constraint firstItem="2Xq-F6-zcP" firstAttribute="top" secondItem="3yk-4F-BFV" secondAttribute="top" constant="16" id="uQB-08-giQ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
