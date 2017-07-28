@@ -18,11 +18,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Orientable Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="bcG-bS-yTf">
             <objects>
-                <navigationController id="zHu-2M-R1x" customClass="OrientableNavigationController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9jK-0q-TRI">
+                <navigationController id="zHu-2M-R1x" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9jK-0q-TRI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
