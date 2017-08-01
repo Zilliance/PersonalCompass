@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pc-full" translatesAutoresizingMaskIntoConstraints="NO" id="0MR-xF-q0c">
-                                <rect key="frame" x="45" y="40" width="284" height="232"/>
+                                <rect key="frame" x="45.5" y="40" width="284" height="232"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="7AV-AT-Gft"/>
                                     <constraint firstAttribute="height" constant="232" id="Zrm-WH-gbl"/>
@@ -56,9 +56,9 @@
 
 The output of the Personal Compass is an action plan with concrete steps you can take to start feeling better immediately.
 
-Check out the Tour in the main menu for more information.</string>
+Check out the Tour and the Personal Compass video in the main menu for more information.</string>
                                 <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
