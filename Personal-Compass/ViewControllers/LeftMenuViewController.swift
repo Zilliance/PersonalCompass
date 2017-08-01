@@ -14,7 +14,7 @@ final class LeftMenuViewController: UIViewController {
     enum Row: Int {
         case howItWorks = 0
         case tour
-        //case videos
+        case videos
         case faq
         case spacer
         case about
@@ -51,7 +51,7 @@ final class LeftMenuViewController: UIViewController {
             webController.title = title
             webController.url = url
             
-            let navigationController = UINavigationController(rootViewController: webController)
+            let navigationController = OrientableNavigationController(rootViewController: webController)
             
             self.sideMenuController?.embed(centerViewController: navigationController)
         }
@@ -95,7 +95,7 @@ final class LeftMenuViewController: UIViewController {
     
     func showAboutCompany() {
         let vc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "AboutCompany")
-        let nav = UINavigationController(rootViewController: vc)
+        let nav = OrientableNavigationController(rootViewController: vc)
         self.sideMenuController?.embed(centerViewController: nav)
     }
     
@@ -105,16 +105,16 @@ final class LeftMenuViewController: UIViewController {
             return
         }
         vc.presentationType = .fromMenu
-        let nav = UINavigationController(rootViewController: vc)
+        let nav = OrientableNavigationController(rootViewController: vc)
         self.sideMenuController?.embed(centerViewController: nav)
     }
     
     func showVideo() {
-//        guard let vc  = UIStoryboard(name: "VideoPlayer", bundle: nil).instantiateInitialViewController() else {
-//            assertionFailure()
-//            return
-//        }
-//        self.sideMenuController?.embed(centerViewController: vc)
+        guard let vc  = UIStoryboard(name: "VideoPlayer", bundle: nil).instantiateInitialViewController() else {
+            assertionFailure()
+            return
+        }
+        self.sideMenuController?.embed(centerViewController: vc)
     }
     
     func showFaq() {
@@ -154,8 +154,8 @@ extension LeftMenuViewController: UITableViewDelegate {
         switch Row(rawValue: indexPath.row) {
         case .tour?:
             self.showTour()
-//        case .videos?:
-//            self.showVideo()
+        case .videos?:
+            self.showVideo()
         case .faq?:
             self.showFaq()
         case .company?:

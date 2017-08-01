@@ -135,7 +135,7 @@ extension ItemsSelectionViewController: CustomStressViewControllerDelegate {
             customStressViewController.title = "Custom Alternative"
         }
         
-        let navController = UINavigationController(rootViewController: customStressViewController)
+        let navController = OrientableNavigationController(rootViewController: customStressViewController)
         
         self.present(navController, animated: true, completion: nil)
     }

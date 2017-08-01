@@ -172,7 +172,7 @@ class FeelBetterViewController: UIViewController {
         
         viewController.compass = self.compass
         viewController.feelBetterType = self.feelBetterItems[self.currentIndex].type
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = OrientableNavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true, completion: nil)
     }
     

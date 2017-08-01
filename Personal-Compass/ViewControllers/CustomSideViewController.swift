@@ -29,6 +29,14 @@ final class CustomSideViewController: SideMenuController
         super.init(nibName: nil, bundle: nil)
     }
     
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

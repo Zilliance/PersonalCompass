@@ -217,7 +217,7 @@ class CompassSummaryViewController: UIViewController {
                 return
         }
         viewController.compass = self.compass
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let navigationController = OrientableNavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true, completion: nil)
 
     }

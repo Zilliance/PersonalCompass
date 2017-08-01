@@ -35,7 +35,7 @@ final class WebViewController: UIViewController, UIWebViewDelegate
         
         tourViewController.presentationType = .fromFaq
         
-        let navigationController = UINavigationController(rootViewController: tourViewController)
+        let navigationController = OrientableNavigationController(rootViewController: tourViewController)
         self.present(navigationController, animated: true, completion: nil)
     }
     

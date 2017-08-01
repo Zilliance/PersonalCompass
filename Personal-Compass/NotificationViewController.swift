@@ -52,7 +52,7 @@ class NotificationViewController: UIViewController {
         summary.compass = self.notificationInfo!.compass
         summary.isFromNotification = true
         
-        let nav = UINavigationController(rootViewController: summary)
+        let nav = OrientableNavigationController(rootViewController: summary)
         
         self.dismiss(animated: true, completion: {
             presenting?.present(nav, animated: true, completion: nil)

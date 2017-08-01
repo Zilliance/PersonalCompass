@@ -12,6 +12,7 @@ PODS:
     - Realm (= 2.8.1)
   - SideMenuController (0.2.4)
   - SVProgressHUD (2.1.2)
+  - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - AKPickerView-Swift (from `https://github.com/Akkyie/AKPickerView-Swift.git`)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - RealmSwift
   - SideMenuController
   - SVProgressHUD
+  - YouTubePlayer
 
 EXTERNAL SOURCES:
   AKPickerView-Swift:
@@ -42,7 +44,8 @@ SPEC CHECKSUMS:
   RealmSwift: 4764ca7657f2193c256fb032c0b123926f70dbcd
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: a5a40715b9b7c8e1da4cbf888638a14961ffc40e
+PODFILE CHECKSUM: dbf84ddcb44ae2c3f454b1789737fa5d40eeb148
 
 COCOAPODS: 1.2.1
