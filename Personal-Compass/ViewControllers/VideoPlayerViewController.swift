@@ -10,13 +10,23 @@ import UIKit
 import YouTubePlayer
 
 class VideoPlayerViewController: UIViewController {
+    enum PresentationMode {
+        case sidebar
+        case faq
+    }
     
+    var presentationMode = PresentationMode.sidebar {
+        didSet {
+            self.updatePresentation()
+        }
+    }
 
     @IBOutlet weak var youtubePlayer: YouTubePlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Video"
+        self.updatePresentation()
         self.youtubePlayer.loadVideoID("CB0UlN6gt6k")
     }
     
@@ -26,7 +36,23 @@ class VideoPlayerViewController: UIViewController {
 
     }
     
+    func updatePresentation() {
+        switch self.presentationMode {
+        case .sidebar:
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu-icon"), style: .plain, target: self, action: #selector(backTapped(_:)))
+        case .faq:
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(close(_:)))
+        }
+    }
+    
+    // MARK: - User Actions
+    
     @IBAction func backTapped(_ sender: Any) {
         self.sideMenuController?.toggle()
     }
+    
+    @IBAction func close(_ sender: Any?) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }

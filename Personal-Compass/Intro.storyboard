@@ -60,6 +60,9 @@ Check out the Tour and the Personal Compass video in the main menu for more info
                                 <color key="textColor" red="0.12156862745098039" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7Rv-YE-G50" id="NUH-uT-nab"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>

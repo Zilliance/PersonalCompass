@@ -106,7 +106,6 @@ class IntroViewController: UIViewController {
     }
     
     @IBAction func showTour() {
-        print("showTour")
         guard let onboarding = UIStoryboard(name: "Tour", bundle: nil).instantiateInitialViewController() as? TourPageViewController else {
             assertionFailure()
             return
@@ -114,19 +113,18 @@ class IntroViewController: UIViewController {
         
         onboarding.presentationType = .fromFaq // same as from tour
         
-        let navigationController = CustomNavigationController(rootViewController: onboarding)
+        let navigationController = OrientableNavigationController(rootViewController: onboarding)
         self.present(navigationController, animated: true, completion: nil)
     }
     
     @IBAction func showVideo() {
-        print("showVideo")
-//        guard let video  = UIStoryboard(name: "VideoPlayer", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
-//            assertionFailure()
-//            return
-//        }
-//        
-//        (video.topViewController as? VideoPlayerViewController)?.presentationMode = .faq
-//        self.present(video, animated: true, completion: nil)
+        guard let video  = UIStoryboard(name: "VideoPlayer", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
+            assertionFailure()
+            return
+        }
+        
+        (video.topViewController as? VideoPlayerViewController)?.presentationMode = .faq
+        self.present(video, animated: true, completion: nil)
     }
 }
 
