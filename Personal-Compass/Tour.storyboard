@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxh-Zc-UNt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zxh-Zc-UNt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,7 +33,7 @@
         <!--View Controller-->
         <scene sceneID="Mfr-Rn-Vbf">
             <objects>
-                <viewController storyboardIdentifier="third" id="ZmV-vI-JM0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" id="ZmV-vI-JM0" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MAO-IY-aQX"/>
                         <viewControllerLayoutGuide type="bottom" id="YSd-0G-HW3"/>
@@ -73,7 +73,7 @@
         <!--View Controller-->
         <scene sceneID="fMn-kZ-IHY">
             <objects>
-                <viewController storyboardIdentifier="fourth" id="4Dl-7M-VzH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="third" id="4Dl-7M-VzH" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lga-sn-C2o"/>
                         <viewControllerLayoutGuide type="bottom" id="hHt-cG-jAQ"/>
@@ -120,7 +120,7 @@
         <!--View Controller-->
         <scene sceneID="LEp-FR-bv0">
             <objects>
-                <viewController storyboardIdentifier="fifth" id="YRL-mp-Lmt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fourth" id="YRL-mp-Lmt" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JkC-if-VhW"/>
                         <viewControllerLayoutGuide type="bottom" id="qYo-n0-WYB"/>
@@ -160,7 +160,7 @@
         <!--View Controller-->
         <scene sceneID="xQO-Ow-dYW">
             <objects>
-                <viewController storyboardIdentifier="sixth" id="cBw-o7-OE5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fifth" id="cBw-o7-OE5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6kh-o3-9ns"/>
                         <viewControllerLayoutGuide type="bottom" id="AKG-Sh-9UW"/>
@@ -200,7 +200,7 @@
         <!--View Controller-->
         <scene sceneID="qKc-rN-G4j">
             <objects>
-                <viewController storyboardIdentifier="seventh" id="1ON-Lv-ZZJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sixth" id="1ON-Lv-ZZJ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JTz-Tl-RSd"/>
                         <viewControllerLayoutGuide type="bottom" id="7EW-Dd-Q3f"/>
@@ -240,7 +240,7 @@
         <!--Intro View Controller-->
         <scene sceneID="71A-2e-Yg2">
             <objects>
-                <viewController storyboardIdentifier="first" id="H0o-uu-wH8" customClass="IntroViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="zero" id="H0o-uu-wH8" customClass="IntroViewController" customModule="Personal_Compass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oqd-9T-h0o"/>
                         <viewControllerLayoutGuide type="bottom" id="weX-IY-kqN"/>
@@ -289,7 +289,7 @@ The output of the Personal Compass is an action plan with concrete steps you can
         <!--View Controller-->
         <scene sceneID="mXD-pd-P3E">
             <objects>
-                <viewController storyboardIdentifier="second" id="CPG-zU-Pva" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="first" id="CPG-zU-Pva" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="16S-E6-YEN"/>
                         <viewControllerLayoutGuide type="bottom" id="f1u-rh-e0C"/>

@@ -208,7 +208,6 @@ class CompassSummaryViewController: UIViewController {
         self.actionSheetHint?.dismiss()
     }
     
-    
     @IBAction func showWaysToFeelBetter(_ sender: Any) {
         
         guard let viewController = UIStoryboard(name: "FeelBetter", bundle: nil).instantiateInitialViewController() as? FeelBetterViewController

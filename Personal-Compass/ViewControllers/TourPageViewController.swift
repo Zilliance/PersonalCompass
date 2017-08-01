@@ -17,7 +17,6 @@ class TourPageViewController: UIPageViewController {
         case fourth
         case fifth
         case sixth
-        case seventh
     }
     
     enum TourPresentationMode {
@@ -34,7 +33,6 @@ class TourPageViewController: UIPageViewController {
             self.viewController(for: .fourth),
             self.viewController(for: .fifth),
             self.viewController(for: .sixth),
-            self.viewController(for: .seventh),
             ]
         
         return viewControllers
