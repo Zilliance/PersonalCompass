@@ -17,6 +17,7 @@
 		4F7D86EB1EE04243002C63A4 /* PositiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D86EA1EE04243002C63A4 /* PositiveActivity.swift */; };
 		4F7D86EF1EE0441D002C63A4 /* PreloadedPositiveActivities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F7D86EE1EE0441D002C63A4 /* PreloadedPositiveActivities.plist */; };
 		4F7D86F11EE04F99002C63A4 /* InnerWisdom5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */; };
+		4F7E80531F3B2E9C005E896B /* EmotionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7E80521F3B2E9C005E896B /* EmotionItem.swift */; };
 		4F8C2E2A1ED5BA2D00A24A40 /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8C2E291ED5BA2D00A24A40 /* Summary.storyboard */; };
 		4F8C2E2E1ED5BD8600A24A40 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C2E2D1ED5BD8600A24A40 /* SummaryViewController.swift */; };
 		4F9CFCF11F018AAB006D1E66 /* BlockBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9CFCF01F018AAB006D1E66 /* BlockBarButtonItem.swift */; };
@@ -149,6 +150,7 @@
 		4F7D86EA1EE04243002C63A4 /* PositiveActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PositiveActivity.swift; path = Model/PositiveActivity.swift; sourceTree = "<group>"; };
 		4F7D86EE1EE0441D002C63A4 /* PreloadedPositiveActivities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PreloadedPositiveActivities.plist; path = Model/PreloadedPositiveActivities.plist; sourceTree = "<group>"; };
 		4F7D86F01EE04F99002C63A4 /* InnerWisdom5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InnerWisdom5ViewController.swift; path = ViewControllers/InnerWisdom5ViewController.swift; sourceTree = "<group>"; };
+		4F7E80521F3B2E9C005E896B /* EmotionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmotionItem.swift; path = Model/EmotionItem.swift; sourceTree = "<group>"; };
 		4F8C2E291ED5BA2D00A24A40 /* Summary.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
 		4F8C2E2B1ED5BD1E00A24A40 /* CompassFacetSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompassFacetSummaryCell.swift; path = Cells/CompassFacetSummaryCell.swift; sourceTree = "<group>"; };
 		4F8C2E2D1ED5BD8600A24A40 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SummaryViewController.swift; path = ViewControllers/SummaryViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				4FD5B64F1ECC3D6A0017DC06 /* PreloadedBehaviourStress.plist */,
 				4FD5B6511ECC3DEC0017DC06 /* PreloadedEmotions.plist */,
 				4F7D86EE1EE0441D002C63A4 /* PreloadedPositiveActivities.plist */,
+				4F7E80521F3B2E9C005E896B /* EmotionItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -993,6 +996,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CAF52511EF043EE00E5F2DE /* ZillianceTextViewController.swift in Sources */,
+				4F7E80531F3B2E9C005E896B /* EmotionItem.swift in Sources */,
 				8C9166881ECCF2030072C19F /* EmotionViewController.swift in Sources */,
 				4FD5B64C1ECBD9550017DC06 /* UIFont+CustomFonts.swift in Sources */,
 				4F8C2E2E1ED5BD8600A24A40 /* SummaryViewController.swift in Sources */,

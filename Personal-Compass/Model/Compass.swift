@@ -40,6 +40,8 @@ final class Compass: Object {
     let behaviourStressElements = List<BehaviourStress>()
     
     let positiveActivities = List<PositiveActivity>()
+
+    let emotionItems = List<EmotionItem>()
     
     dynamic var emotion: Emotion?
     

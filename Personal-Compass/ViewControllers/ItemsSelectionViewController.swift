@@ -135,6 +135,12 @@ extension ItemsSelectionViewController: CustomStressViewControllerDelegate {
             customStressViewController.title = "Custom Alternative"
         }
         
+        if (type == EmotionItem.self) {
+            customStressViewController.placeholder = "In one or two words, describe how you are feeling"
+            customStressViewController.headerText = "How am I feeling?"
+            customStressViewController.title = "Custom Alternative"
+        }
+        
         let navController = OrientableNavigationController(rootViewController: customStressViewController)
         
         self.present(navController, animated: true, completion: nil)

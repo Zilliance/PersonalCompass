@@ -17,13 +17,15 @@ class EmotionViewController: AutoscrollableViewController {
     
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
-    @IBOutlet weak var textView: KMPlaceholderTextView!
+//    @IBOutlet weak var textView: KMPlaceholderTextView!
     
     private let picker = AKPickerView()
     
     fileprivate var currentIndex = 0 // indexOfNeutralEmotion
     
     var currentCompass: Compass!
+    
+    private(set) var tableViewController: ItemsSelectionViewController!
 
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
 
@@ -31,11 +33,11 @@ class EmotionViewController: AutoscrollableViewController {
         super.viewDidLoad()
         self.setupPicker()
         
-        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
-        
-        self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
-        self.textView.layer.borderWidth = App.Appearance.borderWidth
-        self.textView.layer.borderColor = UIColor.lightGray.cgColor
+//        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
+//        
+//        self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
+//        self.textView.layer.borderWidth = App.Appearance.borderWidth
+//        self.textView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,7 +69,7 @@ class EmotionViewController: AutoscrollableViewController {
         if let emotion = self.currentCompass.emotion {
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
-            self.textView.text = self.currentCompass.compassEmotion
+//            self.textView.text = self.currentCompass.compassEmotion
         }
         else {
              self.currentIndex = indexOfNeutralEmotion
@@ -78,6 +80,9 @@ class EmotionViewController: AutoscrollableViewController {
         }
 
         self.setupEmotionLabel()
+        
+        self.tableViewController.updateItems(newItems: Array(Database.shared.emotionItemsStored))
+
     }
     
     fileprivate func setupEmotionLabel() {
@@ -106,17 +111,58 @@ class EmotionViewController: AutoscrollableViewController {
         self.picker.scrollToItem(self.currentIndex, animated: true)
         self.setupEmotionLabel()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let itemsSelectionsController = segue.destination as? ItemsSelectionViewController {
+            
+            itemsSelectionsController.type = EmotionItem.self
+            self.tableViewController = itemsSelectionsController
+            
+            itemsSelectionsController.items = Array(Database.shared.emotionItemsStored)
+            itemsSelectionsController.selectedItems = Array(self.currentCompass.emotionItems)
+            
+            itemsSelectionsController.saveAction = { selectedItems in
+                
+                let items = selectedItems.flatMap {
+                    return $0 as? EmotionItem
+                }
+                
+                Database.shared.save {
+                    self.currentCompass.emotionItems.removeAll()
+                    self.currentCompass.emotionItems.append(objectsIn: items)
+                }
+            }
+            
+            itemsSelectionsController.deleteAction = {[unowned self] toDeleteItem in
+                
+                guard let item = toDeleteItem as? EmotionItem else {
+                    return assertionFailure()
+                }
+                
+                Database.shared.save {
+                    if let index = self.currentCompass.emotionItems.index(of: item) {
+                        self.currentCompass.emotionItems.remove(objectAtIndex: index)
+                    }
+                }
+                
+                Database.shared.delete(item)
+                
+            }
+        }
+    }
 }
 
 // MARK: - CompassValidation
 
 extension EmotionViewController: CompassValidation {
     var error: CompassError? {
-        if self.textView.text.isEmpty {
-            return .text
-        } else {
-            return nil
-        }
+        return nil
+//        if self.textView.text.isEmpty {
+//            return .text
+//        } else {
+//            return nil
+//        }
     }
 }
 
@@ -128,7 +174,9 @@ extension EmotionViewController: CompassFacetEditor {
         
         self.currentCompass.emotion = emotion
         self.currentCompass.lastEditedFacet = .emotion
-        self.currentCompass.compassEmotion = self.textView.text
+//        self.currentCompass.compassEmotion = self.textView.text
+        self.tableViewController.saveAction(self.tableViewController.selectedItems)
+
     }
 }
 
