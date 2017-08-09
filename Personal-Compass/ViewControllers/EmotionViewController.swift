@@ -17,7 +17,6 @@ class EmotionViewController: AutoscrollableViewController {
     
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
-//    @IBOutlet weak var textView: KMPlaceholderTextView!
     
     private let picker = AKPickerView()
     
@@ -32,12 +31,6 @@ class EmotionViewController: AutoscrollableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPicker()
-        
-//        self.textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
-//        
-//        self.textView.layer.cornerRadius = App.Appearance.buttonCornerRadius
-//        self.textView.layer.borderWidth = App.Appearance.borderWidth
-//        self.textView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +62,6 @@ class EmotionViewController: AutoscrollableViewController {
         if let emotion = self.currentCompass.emotion {
             let index = self.emotions.index(of: emotion)
             self.currentIndex = index!
-//            self.textView.text = self.currentCompass.compassEmotion
         }
         else {
              self.currentIndex = indexOfNeutralEmotion
@@ -158,11 +150,6 @@ class EmotionViewController: AutoscrollableViewController {
 extension EmotionViewController: CompassValidation {
     var error: CompassError? {
         return nil
-//        if self.textView.text.isEmpty {
-//            return .text
-//        } else {
-//            return nil
-//        }
     }
 }
 
@@ -174,7 +161,6 @@ extension EmotionViewController: CompassFacetEditor {
         
         self.currentCompass.emotion = emotion
         self.currentCompass.lastEditedFacet = .emotion
-//        self.currentCompass.compassEmotion = self.textView.text
         self.tableViewController.saveAction(self.tableViewController.selectedItems)
 
     }
