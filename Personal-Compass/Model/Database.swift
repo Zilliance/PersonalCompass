@@ -40,18 +40,21 @@ class Database {
     
     private(set) var positiveActivitiesStored: Results<PositiveActivity>!
 
+    private(set) var emotionItemsStored: Results<EmotionItem>!
+
+    private var needsBootstrapEmotionItems = false
+
     
     init() {
         do {
                         
             let config = Realm.Configuration(
-                schemaVersion: 10,
+                schemaVersion: 12,
                 
                 migrationBlock: { migration, oldSchemaVersion in
-                    if (oldSchemaVersion < 1) {
-                        // Nothing to do!
-                        // Realm will automatically detect new properties and removed properties
-                        // And will update the schema on disk automatically
+                    if (oldSchemaVersion < 11) {
+                        
+                        self.needsBootstrapEmotionItems = true
                     }
             })
             
@@ -67,6 +70,8 @@ class Database {
             behaviourStressStored = self.realm.objects(BehaviourStress.self).sorted(by: sortProperties)
             
             positiveActivitiesStored = self.realm.objects(PositiveActivity.self).sorted(by: sortProperties)
+            
+            emotionItemsStored = self.realm.objects(EmotionItem.self).sorted(by: sortProperties)
 
             if let user = self.realm.objects(User.self).first
             {
@@ -76,6 +81,10 @@ class Database {
             {
                 //first time launch, let's prepare the DB
                 self.bootstrap()
+            }
+            
+            if (self.needsBootstrapEmotionItems) {
+                self.bootstrapEmotionItems()
             }
             
             
@@ -101,6 +110,7 @@ extension Database {
     
     fileprivate func bootstrap() {
         self.bootstrapEmotions()
+        self.bootstrapEmotionItems()
         self.bootstrapBodyStress()
         self.bootstrapBehaviourStress()
         self.bootstrapPositiveActivities()
@@ -135,6 +145,27 @@ extension Database {
                     newEmotion.title = title
                     
                     realm.add(newEmotion)
+                    
+                })
+            })
+        }
+    }
+    
+    fileprivate func bootstrapEmotionItems() {
+        if let path = Bundle.main.path(forResource: "PreloadedEmotions", ofType: "plist"), let emotions = NSArray(contentsOfFile: path) as? PreloadedEmotionData {
+            
+            try! realm.write({
+                emotions.enumerated().forEach({ offset, emotion in
+                    guard let title = emotion["title"] else {
+                        return assertionFailure()
+                    }
+                    
+                    let emotionsInTitle = title.components(separatedBy: ",")
+                    for emotion in emotionsInTitle {
+                        let newEmotionItem = EmotionItem()
+                        newEmotionItem.title = emotion.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                        realm.add(newEmotionItem)
+                    }
                     
                 })
             })

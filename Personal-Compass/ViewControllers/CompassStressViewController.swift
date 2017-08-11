@@ -78,7 +78,6 @@ final class CompassStressViewController: UIViewController, CompassFacetEditor, C
 
     }
 
-    
     private func setupItemsSelection<T: StringItem>(vc: ItemsSelectionViewController, preloadedItems: [T], destination: List<T>) {
         
         vc.items = preloadedItems
