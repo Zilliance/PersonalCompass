@@ -111,16 +111,15 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
             cell.title.text = "Action Step"
             cell.label.text = currentCompass.concreteStep
             cell.label.textColor = UIColor.innerWisdom
-
             
         case .emotion:
             let emotionCell = tableView.dequeueReusableCell(withIdentifier: "EmotionSummaryCell", for: indexPath) as! EmotionSummaryCell
 
+            let emotionElements = (currentCompass.needMetEmotionItems.flatMap { $0.title }).joined(separator: ",\n")
             emotionCell.title.text = "Emotion"
-            emotionCell.label.text = self.currentCompass.compassNeedMet
-            emotionCell.iconView.image = self.currentCompass.needMetEmotion?.icon
-            emotionCell.label.textColor = .darkGray
-            
+            emotionCell.label.text = emotionElements
+            emotionCell.label.textColor = currentCompass.needMetEmotion?.color
+            emotionCell.iconView.image = currentCompass.needMetEmotion?.icon
             cell = emotionCell
             
         case .secondActionStep:

@@ -279,6 +279,7 @@ extension InnerWisdom4ViewController: CompassFacetEditor {
         let emotion = self.emotions[self.currentIndex]
         self.currentCompass.needMetEmotion = emotion
         self.currentCompass.lastEditedFacet = .innerWisdom4
+        self.tableViewController.saveAction(self.tableViewController.selectedItems)
     }
 }
 
