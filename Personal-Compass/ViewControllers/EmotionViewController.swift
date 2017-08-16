@@ -149,7 +149,11 @@ class EmotionViewController: AutoscrollableViewController {
 
 extension EmotionViewController: CompassValidation {
     var error: CompassError? {
-        return nil
+        if let items = self.tableViewController?.selectedItems, items.count > 0 {
+            return nil
+        } else {
+            return .selection
+        }
     }
 }
 

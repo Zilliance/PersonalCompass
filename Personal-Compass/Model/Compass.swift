@@ -43,6 +43,9 @@ final class Compass: Object {
 
     let emotionItems = List<EmotionItem>()
     
+    let needMetEmotionItems = List<EmotionItem>()
+
+    
     dynamic var emotion: Emotion?
     
     dynamic var needMetEmotion: Emotion?

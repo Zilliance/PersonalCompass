@@ -504,7 +504,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXD-jo-qmj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="517.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="589.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What I need to feel better:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTa-hl-YoP">
                                                 <rect key="frame" x="20" y="35" width="335" height="21.5"/>
@@ -595,25 +595,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x2G-LD-FxE" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                                <rect key="frame" x="20" y="367.5" width="335" height="128"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="N0b-T0-FWI"/>
-                                                </constraints>
-                                                <color key="textColor" red="0.1176470588" green="0.16862745100000001" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                        <color key="value" red="0.45882352939999999" green="0.46666666670000001" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter the emotion that best describes how you would feel if you got this need met. For example: Calm, Happy, or Hopeful."/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <outlet property="delegate" destination="Wjo-c5-RxO" id="KLD-2Q-VIx"/>
-                                                </connections>
-                                            </textView>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="learn more" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nl8-iK-8Ou">
                                                 <rect key="frame" x="20" y="221.5" width="335" height="16.5"/>
                                                 <gestureRecognizers/>
@@ -632,21 +613,32 @@
                                                     <constraint firstAttribute="width" constant="18" id="o1F-hG-Ow6"/>
                                                 </constraints>
                                             </imageView>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMc-Pn-3iq">
+                                                <rect key="frame" x="20" y="368" width="335" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="uQd-Jp-cD5"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="kZG-m2-eHA" kind="embed" id="iGH-iq-uNJ"/>
+                                                </connections>
+                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="qTa-hl-YoP" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="02f-Zl-hzs"/>
                                             <constraint firstItem="Nl8-iK-8Ou" firstAttribute="top" secondItem="5bR-tR-3p4" secondAttribute="bottom" constant="3" id="4He-r8-I3p"/>
-                                            <constraint firstItem="x2G-LD-FxE" firstAttribute="top" secondItem="Kzo-eb-Pfu" secondAttribute="bottom" constant="29" id="71t-wX-ghu"/>
                                             <constraint firstAttribute="trailing" secondItem="G30-a6-tTe" secondAttribute="trailing" constant="20" id="7I8-a6-ALL"/>
+                                            <constraint firstAttribute="trailing" secondItem="gMc-Pn-3iq" secondAttribute="trailing" constant="20" id="7bM-rQ-0pK"/>
                                             <constraint firstAttribute="trailing" secondItem="Wth-zC-uAa" secondAttribute="trailing" constant="20" id="88W-0U-yMx"/>
                                             <constraint firstItem="ha6-Aw-yRC" firstAttribute="centerX" secondItem="fXD-jo-qmj" secondAttribute="centerX" id="AYi-8s-JT8"/>
+                                            <constraint firstItem="gMc-Pn-3iq" firstAttribute="top" secondItem="264-G7-gVc" secondAttribute="bottom" constant="5.5" id="Ekb-yN-9hT"/>
+                                            <constraint firstAttribute="bottom" secondItem="gMc-Pn-3iq" secondAttribute="bottom" constant="21.5" id="G5r-uI-7cI"/>
+                                            <constraint firstItem="gMc-Pn-3iq" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="HmQ-RJ-MXB"/>
                                             <constraint firstItem="264-G7-gVc" firstAttribute="top" secondItem="G30-a6-tTe" secondAttribute="bottom" constant="6" id="I39-bX-jFU"/>
                                             <constraint firstAttribute="trailing" secondItem="Nl8-iK-8Ou" secondAttribute="trailing" constant="20" id="IHZ-UJ-8WP"/>
                                             <constraint firstItem="ha6-Aw-yRC" firstAttribute="top" secondItem="aUn-wd-uZY" secondAttribute="bottom" constant="20" id="Ipd-4R-Lyi"/>
                                             <constraint firstItem="Wth-zC-uAa" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="Nnx-BZ-6IA"/>
                                             <constraint firstAttribute="trailing" secondItem="5bR-tR-3p4" secondAttribute="trailing" constant="20" id="Ppq-ct-eO3"/>
-                                            <constraint firstAttribute="trailing" secondItem="x2G-LD-FxE" secondAttribute="trailing" constant="20" id="U4U-Jc-622"/>
                                             <constraint firstAttribute="trailing" secondItem="qTa-hl-YoP" secondAttribute="trailing" constant="20" id="V9q-1G-Y5G"/>
                                             <constraint firstItem="264-G7-gVc" firstAttribute="centerX" secondItem="fXD-jo-qmj" secondAttribute="centerX" id="XEd-2O-9ts"/>
                                             <constraint firstItem="aUn-wd-uZY" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="40" id="XPf-p5-WV2"/>
@@ -654,11 +646,9 @@
                                             <constraint firstItem="Nl8-iK-8Ou" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="ciy-yd-6xG"/>
                                             <constraint firstItem="G30-a6-tTe" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="dwk-eM-QL1"/>
                                             <constraint firstItem="5bR-tR-3p4" firstAttribute="top" secondItem="ha6-Aw-yRC" secondAttribute="bottom" constant="10" id="eXp-3B-Co2"/>
-                                            <constraint firstItem="x2G-LD-FxE" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="g6v-7u-Eck"/>
                                             <constraint firstItem="qTa-hl-YoP" firstAttribute="top" secondItem="fXD-jo-qmj" secondAttribute="top" constant="35" id="gLL-vG-Jmf"/>
                                             <constraint firstItem="5bR-tR-3p4" firstAttribute="leading" secondItem="fXD-jo-qmj" secondAttribute="leading" constant="20" id="hcb-c5-0tx"/>
                                             <constraint firstItem="aUn-wd-uZY" firstAttribute="top" secondItem="qTa-hl-YoP" secondAttribute="bottom" constant="10" id="nJ8-ix-2tT"/>
-                                            <constraint firstAttribute="bottom" secondItem="x2G-LD-FxE" secondAttribute="bottom" constant="22" id="nat-0j-zWC"/>
                                             <constraint firstAttribute="trailing" secondItem="aUn-wd-uZY" secondAttribute="trailing" constant="40" id="ruC-4A-B2D"/>
                                             <constraint firstItem="G30-a6-tTe" firstAttribute="top" secondItem="Wth-zC-uAa" secondAttribute="bottom" constant="16" id="x3f-Hi-AtH"/>
                                         </constraints>
@@ -686,7 +676,6 @@
                         <outlet property="containerView" destination="fXD-jo-qmj" id="uhI-or-df7"/>
                         <outlet property="descriptionLabel" destination="Nl8-iK-8Ou" id="EKf-QE-B6u"/>
                         <outlet property="emotionLabel" destination="Wth-zC-uAa" id="z4c-Ht-1IS"/>
-                        <outlet property="emotionTextView" destination="x2G-LD-FxE" id="gFf-7d-kEU"/>
                         <outlet property="pickerContainerView" destination="Kzo-eb-Pfu" id="8FR-gQ-hE1"/>
                         <outlet property="scrollView" destination="cO9-fJ-EOG" id="Un1-9F-cXQ"/>
                         <outlet property="textView" destination="aUn-wd-uZY" id="ISi-ck-R3Q"/>
@@ -700,7 +689,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1996" y="152"/>
+            <point key="canvasLocation" x="2181.5999999999999" y="151.57421289355324"/>
         </scene>
         <!--Inner Wisdom Summary View Controller-->
         <scene sceneID="h5C-rq-cCB">
@@ -750,6 +739,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKq-ky-DG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="616" y="786"/>
+        </scene>
+        <!--ItemsSelectionViewController-->
+        <scene sceneID="t0U-qr-hKv">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ItemsSelectionViewController" storyboardName="StringItems" referencedIdentifier="ItemsSelectionViewController" id="kZG-m2-eHA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PzR-x3-b7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2478" y="574"/>
         </scene>
     </scenes>
     <resources>
