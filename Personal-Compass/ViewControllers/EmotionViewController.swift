@@ -182,6 +182,10 @@ extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
         return self.emotions[item].icon!
     }
     
+    func pickerView(_ pickerView: AKPickerView, titleForItem item: Int) -> String {
+        return String(item)
+    }
+    
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
         self.currentIndex = item
         self.setupEmotionLabel()
