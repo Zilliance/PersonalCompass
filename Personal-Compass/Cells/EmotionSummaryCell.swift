@@ -12,6 +12,7 @@ import UIKit
 class EmotionSummaryCell: CompassFacetSummaryCell {
     
     @IBOutlet var iconView: UIImageView!
+    @IBOutlet var levelLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

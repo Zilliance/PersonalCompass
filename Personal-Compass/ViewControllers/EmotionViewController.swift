@@ -149,7 +149,11 @@ class EmotionViewController: AutoscrollableViewController {
 
 extension EmotionViewController: CompassValidation {
     var error: CompassError? {
-        return nil
+        if let items = self.tableViewController?.selectedItems, items.count > 0 {
+            return nil
+        } else {
+            return .selection
+        }
     }
 }
 
@@ -176,6 +180,10 @@ extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
     
     func pickerView(_ pickerView: AKPickerView, imageForItem item: Int) -> UIImage {
         return self.emotions[item].icon!
+    }
+    
+    func pickerView(_ pickerView: AKPickerView, titleForItem item: Int) -> String {
+        return String(item)
     }
     
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {

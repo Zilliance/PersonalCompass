@@ -12,10 +12,10 @@ target 'Personal-Compass' do
   pod 'SideMenuController'
   pod 'SVProgressHUD'
   pod 'MZFormSheetPresentationController'
-  pod 'AKPickerView-Swift', :git => 'https://github.com/Akkyie/AKPickerView-Swift.git'
   pod 'PDFGenerator', '~> 2.0.1'
   pod 'KMPlaceholderTextView', '~> 1.3.0'
   pod 'YouTubePlayer'
+  pod 'AKPickerView-Swift', :path => './AKPickerView-Swift'
 
   target 'Personal-CompassTests' do
     inherit! :search_paths

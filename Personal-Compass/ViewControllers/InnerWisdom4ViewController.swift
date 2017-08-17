@@ -24,7 +24,6 @@ class InnerWisdom4ViewController: UIViewController {
     @IBOutlet weak var pickerContainerView: UIView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var emotionTextView: KMPlaceholderTextView!
     @IBOutlet weak var descriptionLabel: UILabel!
 
     var currentCompass: Compass!
@@ -35,11 +34,12 @@ class InnerWisdom4ViewController: UIViewController {
     
     fileprivate let emotions: [Emotion] = Array(Database.shared.allEmotions())
     
+    private(set) var tableViewController: ItemsSelectionViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.setupPicker()
-        self.setupTextView()
         self.setupDescriptionLabel()
     }
     
@@ -119,13 +119,6 @@ class InnerWisdom4ViewController: UIViewController {
         
     }
     
-    private func setupTextView() {
-        self.emotionTextView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20)
-        
-        self.emotionTextView.layer.cornerRadius = App.Appearance.buttonCornerRadius
-        self.emotionTextView.layer.borderWidth = App.Appearance.borderWidth
-        self.emotionTextView.layer.borderColor = UIColor.lightGray.cgColor
-    }
     
     private func loadData() {
         
@@ -134,7 +127,6 @@ class InnerWisdom4ViewController: UIViewController {
             self.currentIndex = index!
 
             self.picker.scrollToItem(self.currentIndex, animated: true)
-            self.emotionTextView.text = self.currentCompass.compassNeedMet
 
         }
         else {
@@ -151,6 +143,9 @@ class InnerWisdom4ViewController: UIViewController {
         self.setupEmotionLabel()
         
         self.resetTextViewConstraint()
+        
+        self.tableViewController.updateItems(newItems: Array(Database.shared.emotionItemsStored))
+
         
     }
     
@@ -235,6 +230,46 @@ class InnerWisdom4ViewController: UIViewController {
         formSheet.contentViewControllerTransitionStyle = .bounce
         self.present(formSheet, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let itemsSelectionsController = segue.destination as? ItemsSelectionViewController {
+            
+            itemsSelectionsController.type = EmotionItem.self
+            self.tableViewController = itemsSelectionsController
+            
+            itemsSelectionsController.items = Array(Database.shared.emotionItemsStored)
+            itemsSelectionsController.selectedItems = Array(self.currentCompass.needMetEmotionItems)
+            
+            itemsSelectionsController.saveAction = { selectedItems in
+                
+                let items = selectedItems.flatMap {
+                    return $0 as? EmotionItem
+                }
+                
+                Database.shared.save {
+                    self.currentCompass.needMetEmotionItems.removeAll()
+                    self.currentCompass.needMetEmotionItems.append(objectsIn: items)
+                }
+            }
+            
+            itemsSelectionsController.deleteAction = {[unowned self] toDeleteItem in
+                
+                guard let item = toDeleteItem as? EmotionItem else {
+                    return assertionFailure()
+                }
+                
+                Database.shared.save {
+                    if let index = self.currentCompass.needMetEmotionItems.index(of: item) {
+                        self.currentCompass.needMetEmotionItems.remove(objectAtIndex: index)
+                    }
+                }
+                
+                Database.shared.delete(item)
+                
+            }
+        }
+    }
 }
 
 // MARK: - CompassFacetEditor
@@ -243,8 +278,8 @@ extension InnerWisdom4ViewController: CompassFacetEditor {
     func save() {
         let emotion = self.emotions[self.currentIndex]
         self.currentCompass.needMetEmotion = emotion
-        self.currentCompass.compassNeedMet = self.emotionTextView.text
         self.currentCompass.lastEditedFacet = .innerWisdom4
+        self.tableViewController.saveAction(self.tableViewController.selectedItems)
     }
 }
 
@@ -252,10 +287,10 @@ extension InnerWisdom4ViewController: CompassFacetEditor {
 
 extension InnerWisdom4ViewController: CompassValidation {
     var error: CompassError? {
-        if self.emotionTextView.text?.isEmpty == true {
-            return .text
-        } else {
+        if let items = self.tableViewController?.selectedItems, items.count > 0 {
             return nil
+        } else {
+            return .selection
         }
     }
 }
