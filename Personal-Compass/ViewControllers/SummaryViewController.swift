@@ -116,6 +116,8 @@ extension SummaryViewController: UITableViewDataSource, UITableViewDelegate {
             let emotionElements = (currentCompass.emotionItems.flatMap { $0.title }).joined(separator: ",\n")
             emotionCell.label.text = emotionElements
             emotionCell.label.textColor = currentCompass.emotion?.color
+            emotionCell.levelLabel.text = String(currentCompass.emotion?.level ?? 0)
+            emotionCell.levelLabel.textColor = currentCompass.emotion?.color
             emotionCell.iconView.image = currentCompass.emotion?.icon
             cell = emotionCell
             
