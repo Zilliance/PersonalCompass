@@ -84,7 +84,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social withdrawal/isolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-uH-Xi2">
-                                            <rect key="frame" x="28" y="13" width="187.5" height="19"/>
+                                            <rect key="frame" x="28" y="12.5" width="187.5" height="19"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -213,13 +213,13 @@
                                         <rect key="frame" x="10" y="10" width="355" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-Gp-pLN">
-                                                <rect key="frame" x="139.5" y="38" width="11" height="23"/>
+                                                <rect key="frame" x="136.5" y="38" width="11" height="23"/>
                                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="I would feel  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-0P-MfT">
-                                                <rect key="frame" x="10" y="41.5" width="121.5" height="18"/>
+                                                <rect key="frame" x="10" y="41" width="118.5" height="18"/>
                                                 <fontDescription key="fontDescription" name="Muli-LightItalic" family="Muli" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -258,7 +258,7 @@
                                             <constraint firstItem="qKg-0P-MfT" firstAttribute="leading" secondItem="rtr-0M-0Bb" secondAttribute="leading" constant="10" id="5OR-Us-Xnz"/>
                                             <constraint firstItem="PFp-Nz-rQw" firstAttribute="leading" secondItem="2Q9-4X-nlx" secondAttribute="trailing" constant="12" id="7tG-IE-xc8"/>
                                             <constraint firstItem="2Q9-4X-nlx" firstAttribute="centerY" secondItem="rtr-0M-0Bb" secondAttribute="centerY" id="8vj-bI-qUY"/>
-                                            <constraint firstItem="2Q9-4X-nlx" firstAttribute="leading" secondItem="dN1-Gp-pLN" secondAttribute="trailing" constant="5" id="9Po-B8-WCN"/>
+                                            <constraint firstItem="2Q9-4X-nlx" firstAttribute="leading" secondItem="dN1-Gp-pLN" secondAttribute="trailing" constant="8" id="9Po-B8-WCN"/>
                                             <constraint firstAttribute="bottom" secondItem="PFp-Nz-rQw" secondAttribute="bottom" constant="8" id="AW9-UM-KDu"/>
                                             <constraint firstAttribute="height" constant="100" id="HLs-D9-yFW"/>
                                             <constraint firstItem="2Q9-4X-nlx" firstAttribute="centerX" secondItem="rtr-0M-0Bb" secondAttribute="centerX" id="J4f-rH-RrJ"/>
