@@ -15,6 +15,7 @@ class ThoughtViewController: AutoscrollableViewController {
     
     var currentCompass: Compass!
     
+    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var emotionIconImageView: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var textView: KMPlaceholderTextView!
@@ -43,7 +44,7 @@ class ThoughtViewController: AutoscrollableViewController {
             self.emotionIconImageView.image = emotion.icon
             self.emotionLabel.text = (currentCompass.emotionItems.flatMap { $0.title }).joined(separator: ", ")
             self.emotionLabel.textColor = currentCompass.emotion?.color
-            
+            self.numberLabel.textColor = currentCompass.emotion?.color
         }
     }
     

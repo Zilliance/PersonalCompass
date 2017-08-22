@@ -23,6 +23,7 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
     
     var currentCompass: Compass!
     
+    @IBOutlet weak var numberLabel: UILabel!
     var notificationToken: NotificationToken? = nil
     
     var tableLoaded: ((UIBarButtonItem) -> ())?
@@ -46,9 +47,10 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
     
     private func setupView() {
         
-        emotionIcon.image = currentCompass.needMetEmotion?.icon
-        emotionLabel.text = (currentCompass.needMetEmotionItems.flatMap { $0.title }).joined(separator: ",\n")
-        emotionLabel.textColor = currentCompass.needMetEmotion?.color
+        self.emotionIcon.image = currentCompass.needMetEmotion?.icon
+        self.emotionLabel.text = (currentCompass.needMetEmotionItems.flatMap { $0.title }).joined(separator: ",\n")
+        self.emotionLabel.textColor = currentCompass.needMetEmotion?.color
+        self.numberLabel.textColor = currentCompass.needMetEmotion?.color
         
         self.tableViewController.updateItems(newItems: Array(Database.shared.positiveActivitiesStored))
         

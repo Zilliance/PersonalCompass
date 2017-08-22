@@ -78,8 +78,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLB-m7-Vob">
                                 <rect key="frame" x="20" y="96.5" width="335" height="80"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGI-xX-X62">
+                                        <rect key="frame" x="20" y="28.5" width="11" height="23"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emotion-icon-8" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-bx-hJ2">
-                                        <rect key="frame" x="20" y="18" width="44" height="44"/>
+                                        <rect key="frame" x="43" y="18" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="DJr-2E-kNS"/>
                                             <constraint firstAttribute="height" constant="44" id="uCA-km-Qx5"/>
@@ -88,7 +94,7 @@
                                         </constraints>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87d-hN-F1z">
-                                        <rect key="frame" x="76" y="10" width="259" height="62"/>
+                                        <rect key="frame" x="99" y="10" width="236" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joyful" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNS-wa-N62">
                                                 <rect key="frame" x="0.0" y="20" width="48" height="23"/>
@@ -107,11 +113,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="wGI-xX-X62" firstAttribute="leading" secondItem="JLB-m7-Vob" secondAttribute="leading" constant="20" id="5fM-Uf-8fC"/>
                                     <constraint firstItem="87d-hN-F1z" firstAttribute="leading" secondItem="f4p-bx-hJ2" secondAttribute="trailing" constant="12" id="KI4-gg-eoE"/>
-                                    <constraint firstItem="f4p-bx-hJ2" firstAttribute="leading" secondItem="JLB-m7-Vob" secondAttribute="leading" constant="20" id="QmH-ag-8wE"/>
+                                    <constraint firstItem="wGI-xX-X62" firstAttribute="centerY" secondItem="JLB-m7-Vob" secondAttribute="centerY" id="RaX-r5-PhF"/>
                                     <constraint firstAttribute="bottom" secondItem="87d-hN-F1z" secondAttribute="bottom" constant="8" id="UCZ-ru-fkq"/>
                                     <constraint firstAttribute="trailing" secondItem="87d-hN-F1z" secondAttribute="trailing" id="dJu-7c-kEX"/>
                                     <constraint firstItem="f4p-bx-hJ2" firstAttribute="centerY" secondItem="JLB-m7-Vob" secondAttribute="centerY" id="f1r-Pu-AOd"/>
+                                    <constraint firstItem="f4p-bx-hJ2" firstAttribute="leading" secondItem="wGI-xX-X62" secondAttribute="trailing" constant="12" id="j7Q-lf-oEu"/>
                                     <constraint firstItem="87d-hN-F1z" firstAttribute="top" secondItem="JLB-m7-Vob" secondAttribute="top" constant="10" id="tY7-zU-7EE"/>
                                     <constraint firstAttribute="height" constant="80" id="wyi-oX-Uk9"/>
                                 </constraints>
@@ -140,6 +148,7 @@
                         <outlet property="descriptionLabel" destination="3n1-QI-lsB" id="fX4-Cn-6HT"/>
                         <outlet property="emotionIconImageView" destination="f4p-bx-hJ2" id="pF7-Ge-ocu"/>
                         <outlet property="emotionLabel" destination="VNS-wa-N62" id="tWH-16-iID"/>
+                        <outlet property="numberLabel" destination="wGI-xX-X62" id="KXG-b5-SqT"/>
                         <outlet property="textView" destination="IHa-ko-eTm" id="xNU-QP-rOw"/>
                     </connections>
                 </viewController>
