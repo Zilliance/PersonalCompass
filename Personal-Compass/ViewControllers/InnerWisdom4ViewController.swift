@@ -311,6 +311,10 @@ extension InnerWisdom4ViewController: AKPickerViewDataSource, AKPickerViewDelega
         return String(item)
     }
     
+    func pickerView(_ pickerView: AKPickerView, labelColor item: Int) -> UIColor {
+        return self.emotions[item].color
+    }
+    
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
         self.currentIndex = item
         self.setupEmotionLabel()

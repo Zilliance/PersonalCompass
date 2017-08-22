@@ -28,6 +28,7 @@ public enum AKPickerViewStyle {
     func numberOfItemsInPickerView(_ pickerView: AKPickerView) -> Int
     @objc optional func pickerView(_ pickerView: AKPickerView, titleForItem item: Int) -> String
     @objc optional func pickerView(_ pickerView: AKPickerView, imageForItem item: Int) -> UIImage
+    @objc optional func pickerView(_ pickerView: AKPickerView, labelColor item: Int) -> UIColor
 }
 
 // MARK: AKPickerViewDelegate
@@ -542,6 +543,10 @@ public class AKPickerView: UIView, UICollectionViewDataSource, UICollectionViewD
         }
         if let title = self.dataSource?.pickerView?(self, titleForItem: indexPath.item) {
             cell.label.text = title
+        }
+        
+        if let labelColor = self.dataSource?.pickerView?(self, labelColor: indexPath.item) {
+            cell.label.textColor = labelColor
         }
         
         cell.contentView.setNeedsLayout()
