@@ -38,9 +38,12 @@ class ThoughtViewController: AutoscrollableViewController {
             self.textView.text = thought
         }
         
-        if let emotion = self.currentCompass.emotion, let compassEmotion = self.currentCompass.compassEmotion {
+        if let emotion = self.currentCompass.emotion {
+            
             self.emotionIconImageView.image = emotion.icon
-            self.emotionLabel.text = compassEmotion
+            self.emotionLabel.text = (currentCompass.emotionItems.flatMap { $0.title }).joined(separator: ", ")
+            self.emotionLabel.textColor = currentCompass.emotion?.color
+            
         }
     }
     
