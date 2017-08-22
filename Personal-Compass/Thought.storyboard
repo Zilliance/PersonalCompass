@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IHa-ko-eTm" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
-                                <rect key="frame" x="20" y="243" width="335" height="128"/>
+                                <rect key="frame" x="20" y="272.5" width="335" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="I4c-v7-2Pv"/>
@@ -59,26 +59,8 @@
                                     <outlet property="delegate" destination="g9l-os-V6r" id="Hnq-fh-LXM"/>
                                 </connections>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-gx-eOk">
-                                <rect key="frame" x="20" y="96.5" width="335" height="50"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YPt-St-839">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="bHz-q5-hmp"/>
-                                            <constraint firstAttribute="height" constant="50" id="pB9-ew-ymL"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vt-uD-pDv">
-                                        <rect key="frame" x="70" y="0.0" width="265" height="50"/>
-                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish the sentence to see your thoughts about this stressor. Learn more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n1-QI-lsB">
-                                <rect key="frame" x="30" y="197" width="315" height="33"/>
+                                <rect key="frame" x="30" y="226.5" width="315" height="33"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="13"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,35 +70,83 @@
                                 </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="because ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtR-db-5RY">
-                                <rect key="frame" x="0.0" y="164" width="375" height="21.5"/>
+                                <rect key="frame" x="0.0" y="193.5" width="375" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFM-4k-3cV">
+                                <rect key="frame" x="10" y="85" width="355" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjl-sM-ZyD">
+                                        <rect key="frame" x="136.5" y="38" width="11" height="23"/>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emotion-icon-8" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-g1-PnJ">
+                                        <rect key="frame" x="155.5" y="28" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="dcD-Oj-20w"/>
+                                            <constraint firstAttribute="width" constant="44" id="joS-sJ-Eld"/>
+                                        </constraints>
+                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfc-Jr-a3b">
+                                        <rect key="frame" x="211.5" y="10" width="143.5" height="82"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joyful" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdR-rz-hdH">
+                                                <rect key="frame" x="0.0" y="28" width="48" height="23"/>
+                                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="HdR-rz-hdH" secondAttribute="bottom" id="3Gi-H9-Bvt"/>
+                                            <constraint firstAttribute="trailing" secondItem="HdR-rz-hdH" secondAttribute="trailing" id="9V4-Da-xx1"/>
+                                            <constraint firstItem="HdR-rz-hdH" firstAttribute="leading" secondItem="Dfc-Jr-a3b" secondAttribute="leading" id="PwM-Jk-bfP"/>
+                                            <constraint firstItem="HdR-rz-hdH" firstAttribute="top" secondItem="Dfc-Jr-a3b" secondAttribute="top" constant="28" id="mQU-c7-0BZ"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7Gq-HQ-A5d"/>
+                                    <constraint firstItem="Dfc-Jr-a3b" firstAttribute="leading" secondItem="KNB-g1-PnJ" secondAttribute="trailing" constant="12" id="HEg-MS-i7n"/>
+                                    <constraint firstItem="KNB-g1-PnJ" firstAttribute="centerY" secondItem="vFM-4k-3cV" secondAttribute="centerY" id="IdZ-eC-yQO"/>
+                                    <constraint firstItem="KNB-g1-PnJ" firstAttribute="leading" secondItem="cjl-sM-ZyD" secondAttribute="trailing" constant="8" id="JJ0-ok-VkM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dfc-Jr-a3b" secondAttribute="trailing" id="XIg-F9-GVf"/>
+                                    <constraint firstItem="Dfc-Jr-a3b" firstAttribute="top" secondItem="vFM-4k-3cV" secondAttribute="top" constant="10" id="h5K-Ne-Zld"/>
+                                    <constraint firstItem="KNB-g1-PnJ" firstAttribute="centerX" secondItem="vFM-4k-3cV" secondAttribute="centerX" id="hvO-Dq-8YK"/>
+                                    <constraint firstItem="cjl-sM-ZyD" firstAttribute="centerY" secondItem="vFM-4k-3cV" secondAttribute="centerY" id="qK4-Uc-8lC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dfc-Jr-a3b" secondAttribute="bottom" constant="8" id="x4W-7j-ArL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3n1-QI-lsB" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" constant="30" id="2Nq-5Z-XtA"/>
                             <constraint firstItem="fZ1-8y-9Os" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" id="7gg-Xy-s3p"/>
                             <constraint firstAttribute="trailing" secondItem="MtR-db-5RY" secondAttribute="trailing" id="BDC-t4-YBK"/>
+                            <constraint firstItem="vFM-4k-3cV" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" constant="10" id="IUI-Jt-li8"/>
                             <constraint firstItem="MtR-db-5RY" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" id="JWg-nH-flR"/>
                             <constraint firstAttribute="trailing" secondItem="3n1-QI-lsB" secondAttribute="trailing" constant="30" id="LUZ-Vj-KWQ"/>
-                            <constraint firstAttribute="trailing" secondItem="m9g-gx-eOk" secondAttribute="trailing" constant="20" id="Mdo-DE-U2I"/>
-                            <constraint firstItem="m9g-gx-eOk" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="20" id="Umg-pT-NIX"/>
+                            <constraint firstAttribute="trailing" secondItem="vFM-4k-3cV" secondAttribute="trailing" constant="10" id="PiH-el-b6h"/>
                             <constraint firstAttribute="trailing" secondItem="IHa-ko-eTm" secondAttribute="trailing" constant="20" id="XWF-FD-oG1"/>
-                            <constraint firstItem="m9g-gx-eOk" firstAttribute="centerX" secondItem="nlG-po-c2V" secondAttribute="centerX" id="ccu-K4-yWf"/>
                             <constraint firstItem="IHa-ko-eTm" firstAttribute="top" secondItem="3n1-QI-lsB" secondAttribute="bottom" constant="13" id="dqz-MH-T3Z"/>
+                            <constraint firstItem="MtR-db-5RY" firstAttribute="top" secondItem="vFM-4k-3cV" secondAttribute="bottom" constant="8.5" id="lCo-H3-NiY"/>
                             <constraint firstItem="IHa-ko-eTm" firstAttribute="leading" secondItem="nlG-po-c2V" secondAttribute="leading" constant="20" id="nsv-jZ-NVY"/>
-                            <constraint firstItem="MtR-db-5RY" firstAttribute="top" secondItem="m9g-gx-eOk" secondAttribute="bottom" constant="17.5" id="puW-CN-fd0"/>
                             <constraint firstItem="3n1-QI-lsB" firstAttribute="top" secondItem="MtR-db-5RY" secondAttribute="bottom" constant="11.5" id="rbH-vm-TZz"/>
                             <constraint firstAttribute="trailing" secondItem="fZ1-8y-9Os" secondAttribute="trailing" id="rzb-AP-fje"/>
+                            <constraint firstItem="vFM-4k-3cV" firstAttribute="top" secondItem="fZ1-8y-9Os" secondAttribute="bottom" constant="8.5" id="sNc-Hs-GFe"/>
                             <constraint firstItem="fZ1-8y-9Os" firstAttribute="top" secondItem="jvH-Hc-0OV" secondAttribute="bottom" constant="35" id="z9b-zI-hc2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="3n1-QI-lsB" id="fX4-Cn-6HT"/>
-                        <outlet property="emotionIconImageView" destination="YPt-St-839" id="mhr-PL-PCw"/>
-                        <outlet property="emotionLabel" destination="1vt-uD-pDv" id="Mh8-Ir-7hm"/>
+                        <outlet property="emotionIconImageView" destination="KNB-g1-PnJ" id="Vve-Ia-E9L"/>
+                        <outlet property="emotionLabel" destination="HdR-rz-hdH" id="whG-dO-7hW"/>
+                        <outlet property="numberLabel" destination="cjl-sM-ZyD" id="Wqs-Ah-Cb6"/>
                         <outlet property="textView" destination="IHa-ko-eTm" id="xNU-QP-rOw"/>
                     </connections>
                 </viewController>
@@ -130,4 +160,7 @@
             <point key="canvasLocation" x="77.599999999999994" y="45.42728635682159"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="emotion-icon-8" width="50" height="50"/>
+    </resources>
 </document>

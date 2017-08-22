@@ -15,6 +15,7 @@ class ThoughtViewController: AutoscrollableViewController {
     
     var currentCompass: Compass!
     
+    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var emotionIconImageView: UIImageView!
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var textView: KMPlaceholderTextView!
@@ -38,9 +39,13 @@ class ThoughtViewController: AutoscrollableViewController {
             self.textView.text = thought
         }
         
-        if let emotion = self.currentCompass.emotion, let compassEmotion = self.currentCompass.compassEmotion {
+        if let emotion = self.currentCompass.emotion {
+            
             self.emotionIconImageView.image = emotion.icon
-            self.emotionLabel.text = compassEmotion
+            self.emotionLabel.text = (currentCompass.emotionItems.flatMap { $0.title }).joined(separator: ",\n")
+            self.emotionLabel.textColor = currentCompass.emotion?.color
+            self.numberLabel.textColor = currentCompass.emotion?.color
+            self.numberLabel.text = String(currentCompass.emotion?.level ?? 0)
         }
     }
     
