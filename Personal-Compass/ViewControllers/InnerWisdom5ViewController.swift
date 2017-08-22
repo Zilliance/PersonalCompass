@@ -51,7 +51,7 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
         self.emotionLabel.text = (currentCompass.needMetEmotionItems.flatMap { $0.title }).joined(separator: ",\n")
         self.emotionLabel.textColor = currentCompass.needMetEmotion?.color
         self.numberLabel.textColor = currentCompass.needMetEmotion?.color
-        
+        self.numberLabel.text = String(currentCompass.needMetEmotion?.level ?? 0)
         self.tableViewController.updateItems(newItems: Array(Database.shared.positiveActivitiesStored))
         
         self.setupDescriptionLabel()
