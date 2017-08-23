@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcN-T2-8PF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AcN-T2-8PF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,9 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Muli-Light.ttf">
-            <string>Muli-Light</string>
-        </array>
         <array key="Muli-SemiBold.ttf">
             <string>Muli-SemiBold</string>
         </array>
@@ -29,23 +26,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRc-8L-ur7">
-                                <rect key="frame" x="20" y="86.5" width="335" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dTM-nP-o7H"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I feel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leO-Le-CAU">
-                                <rect key="frame" x="0.0" y="55" width="375" height="21.5"/>
-                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On a scale from 0 to 10, where 0 is hopeless and 10 is joyful, how do you feel about your stressor:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leO-Le-CAU">
+                                <rect key="frame" x="20" y="55" width="335" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mg-7X-hab" userLabel="Emotion Picker">
-                                <rect key="frame" x="0.0" y="132.5" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koN-fM-4mY">
                                         <rect key="frame" x="40" y="0.0" width="295" height="50"/>
@@ -88,7 +76,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emotion-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ivk-58-Et3">
-                                <rect key="frame" x="179" y="188.5" width="18" height="18"/>
+                                <rect key="frame" x="178.5" y="166" width="18" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="18" id="31K-M3-OaL"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Z1P-pv-OJD"/>
@@ -96,33 +84,37 @@
                                 </constraints>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-oZ-5pR">
-                                <rect key="frame" x="0.0" y="216.5" width="375" height="450.5"/>
+                                <rect key="frame" x="0.0" y="226" width="375" height="441"/>
                                 <connections>
                                     <segue destination="KZV-TK-IJ0" kind="embed" id="4tP-yb-U8g"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your emotions:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gse-NR-Ecm">
+                                <rect key="frame" x="113" y="196" width="149" height="18"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ivk-58-Et3" firstAttribute="centerX" secondItem="IRz-2L-ilJ" secondAttribute="centerX" id="3p3-Cc-HQI"/>
-                            <constraint firstItem="cRc-8L-ur7" firstAttribute="top" secondItem="leO-Le-CAU" secondAttribute="bottom" constant="10" id="Jr6-hH-2DW"/>
-                            <constraint firstAttribute="trailing" secondItem="cRc-8L-ur7" secondAttribute="trailing" constant="20" id="M0c-s2-BEB"/>
+                            <constraint firstItem="xrh-oZ-5pR" firstAttribute="top" secondItem="Gse-NR-Ecm" secondAttribute="bottom" constant="12" id="DM4-cK-N2p"/>
                             <constraint firstItem="MM2-b7-Bou" firstAttribute="top" secondItem="xrh-oZ-5pR" secondAttribute="bottom" id="QxO-1Z-ph9"/>
                             <constraint firstItem="leO-Le-CAU" firstAttribute="top" secondItem="TSg-R3-sjH" secondAttribute="bottom" constant="35" id="U3m-me-mbv"/>
                             <constraint firstItem="9mg-7X-hab" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" id="Y5d-gY-Mji"/>
-                            <constraint firstAttribute="trailing" secondItem="leO-Le-CAU" secondAttribute="trailing" id="YUX-UM-ZVK"/>
+                            <constraint firstAttribute="trailing" secondItem="leO-Le-CAU" secondAttribute="trailing" constant="20" id="YUX-UM-ZVK"/>
                             <constraint firstAttribute="trailing" secondItem="xrh-oZ-5pR" secondAttribute="trailing" id="aYP-qJ-4no"/>
-                            <constraint firstItem="9mg-7X-hab" firstAttribute="top" secondItem="cRc-8L-ur7" secondAttribute="bottom" constant="16" id="c3T-ab-QJt"/>
-                            <constraint firstItem="cRc-8L-ur7" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="eHh-5P-yNf"/>
+                            <constraint firstItem="9mg-7X-hab" firstAttribute="top" secondItem="leO-Le-CAU" secondAttribute="bottom" constant="20" id="i0p-iy-ESH"/>
                             <constraint firstItem="xrh-oZ-5pR" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" id="kss-gE-ZEZ"/>
-                            <constraint firstItem="leO-Le-CAU" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" id="mWJ-hX-ooV"/>
+                            <constraint firstItem="Gse-NR-Ecm" firstAttribute="top" secondItem="ivk-58-Et3" secondAttribute="bottom" constant="12" id="lhx-wS-Afb"/>
+                            <constraint firstItem="leO-Le-CAU" firstAttribute="leading" secondItem="IRz-2L-ilJ" secondAttribute="leading" constant="20" id="mWJ-hX-ooV"/>
                             <constraint firstItem="ivk-58-Et3" firstAttribute="top" secondItem="9mg-7X-hab" secondAttribute="bottom" constant="6" id="qWS-7y-sqM"/>
                             <constraint firstAttribute="trailing" secondItem="9mg-7X-hab" secondAttribute="trailing" id="smF-uT-hIG"/>
-                            <constraint firstItem="xrh-oZ-5pR" firstAttribute="top" secondItem="ivk-58-Et3" secondAttribute="bottom" constant="10" id="tlA-sQ-MXJ"/>
+                            <constraint firstItem="Gse-NR-Ecm" firstAttribute="centerX" secondItem="IRz-2L-ilJ" secondAttribute="centerX" id="thb-WT-ZIk"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emotionLabel" destination="cRc-8L-ur7" id="QRV-a3-np2"/>
                         <outlet property="pickerContainerView" destination="koN-fM-4mY" id="WI5-Fb-Ofv"/>
                     </connections>
                 </viewController>

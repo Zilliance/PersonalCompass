@@ -20,7 +20,6 @@ class InnerWisdom4ViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
     @IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
@@ -140,18 +139,11 @@ class InnerWisdom4ViewController: UIViewController {
         
         self.textView.text = self.currentCompass.editedNeed
         
-        self.setupEmotionLabel()
-        
         self.resetTextViewConstraint()
         
         self.tableViewController.updateItems(newItems: Array(Database.shared.emotionItemsStored))
 
         
-    }
-    
-    fileprivate func setupEmotionLabel() {
-        self.emotionLabel.text = self.emotions[self.currentIndex].title
-        self.emotionLabel.textColor = self.emotions[self.currentIndex].color
     }
     
     @IBAction func rightArrowAction(_ sender: UIButton) {
@@ -162,8 +154,6 @@ class InnerWisdom4ViewController: UIViewController {
         
         self.currentIndex += 1
         self.picker.scrollToItem(self.currentIndex, animated: true)
-        self.setupEmotionLabel()
-        
     }
     
     @IBAction func leftArrowAction(_ sender: UIButton) {
@@ -173,7 +163,7 @@ class InnerWisdom4ViewController: UIViewController {
         }
         self.currentIndex -= 1
         self.picker.scrollToItem(self.currentIndex, animated: true)
-        self.setupEmotionLabel()
+
     }
     
     // MARK: - Learn More
@@ -317,7 +307,6 @@ extension InnerWisdom4ViewController: AKPickerViewDataSource, AKPickerViewDelega
     
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
         self.currentIndex = item
-        self.setupEmotionLabel()
         
         if (self.scrollView.contentSize.height > self.scrollView.frame.size.height) {
             self.scrollView.setContentOffset(CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height), animated: true)
