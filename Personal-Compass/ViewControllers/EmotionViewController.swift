@@ -14,8 +14,6 @@ import MZFormSheetPresentationController
 private let indexOfNeutralEmotion = 5
 
 class EmotionViewController: AutoscrollableViewController {
-    
-    @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var pickerContainerView: UIView!
     
     private let picker = AKPickerView()
@@ -71,15 +69,7 @@ class EmotionViewController: AutoscrollableViewController {
             self.picker.scrollToItem(self.currentIndex)
         }
 
-        self.setupEmotionLabel()
-        
         self.tableViewController.updateItems(newItems: Array(Database.shared.emotionItemsStored))
-
-    }
-    
-    fileprivate func setupEmotionLabel() {
-        self.emotionLabel.text = self.emotions[self.currentIndex].title
-        self.emotionLabel.textColor = self.emotions[self.currentIndex].color
     }
     
     @IBAction func rightArrowAction(_ sender: UIButton) {
@@ -90,7 +80,6 @@ class EmotionViewController: AutoscrollableViewController {
         
         self.currentIndex += 1
         self.picker.scrollToItem(self.currentIndex, animated: true)
-        self.setupEmotionLabel()
 
     }
     
@@ -101,7 +90,6 @@ class EmotionViewController: AutoscrollableViewController {
         }
         self.currentIndex -= 1
         self.picker.scrollToItem(self.currentIndex, animated: true)
-        self.setupEmotionLabel()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -192,7 +180,6 @@ extension EmotionViewController: AKPickerViewDataSource, AKPickerViewDelegate {
     
     func pickerView(_ pickerView: AKPickerView, didSelectItem item: Int) {
         self.currentIndex = item
-        self.setupEmotionLabel()
     }
 }
 

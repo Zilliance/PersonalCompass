@@ -119,8 +119,8 @@ class InnerWisdomSummaryViewController: UIViewController, UITableViewDelegate, U
             emotionCell.title.text = "Emotion"
             emotionCell.label.text = emotionElements
             emotionCell.label.textColor = currentCompass.needMetEmotion?.color
-            emotionCell.levelLabel.text = String(currentCompass.emotion?.level ?? 0)
-            emotionCell.levelLabel.textColor = currentCompass.emotion?.color
+            emotionCell.levelLabel.text = String(currentCompass.needMetEmotion?.level ?? 0)
+            emotionCell.levelLabel.textColor = currentCompass.needMetEmotion?.color
             emotionCell.iconView.image = currentCompass.needMetEmotion?.icon
 
             cell = emotionCell

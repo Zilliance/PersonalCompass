@@ -5,11 +5,11 @@ PODS:
   - MZFormSheetPresentationController (2.4.2):
     - MZAppearance
   - PDFGenerator (2.0.1)
-  - Realm (2.9.1):
-    - Realm/Headers (= 2.9.1)
-  - Realm/Headers (2.9.1)
-  - RealmSwift (2.9.1):
-    - Realm (= 2.9.1)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
   - SideMenuController (0.2.4)
   - SVProgressHUD (2.1.2)
   - YouTubePlayer (0.4.0)
@@ -35,8 +35,8 @@ SPEC CHECKSUMS:
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
   MZFormSheetPresentationController: c1dc3bce639d2393b3cc416fcb6e050eb5bca062
   PDFGenerator: 69cf0787767d501a10b6b85492b1f27fd23b00e8
-  Realm: f91fb43bd474c4f731a116ebf7392c75dd015920
-  RealmSwift: 207f12a4a36b696c5183c60a1c06d70234a23e56
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
