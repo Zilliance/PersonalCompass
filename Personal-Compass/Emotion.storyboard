@@ -90,7 +90,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your emotions:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gse-NR-Ecm">
-                                <rect key="frame" x="113" y="196" width="149" height="18"/>
+                                <rect key="frame" x="113.5" y="196" width="149" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="14"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.19215686269999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -122,31 +122,13 @@
             </objects>
             <point key="canvasLocation" x="980" y="-83.208395802098963"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="6gL-bT-4wX">
-            <objects>
-                <viewController id="Fc0-RK-dgu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="a87-4e-io3"/>
-                        <viewControllerLayoutGuide type="bottom" id="CZw-rm-om0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CoO-US-p4H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="16e-TB-QFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="950" y="770"/>
-        </scene>
         <!--ItemsSelectionViewController-->
         <scene sceneID="ie3-4d-tK9">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="ItemsSelectionViewController" storyboardName="StringItems" referencedIdentifier="ItemsSelectionViewController" id="KZV-TK-IJ0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RE-QN-Bls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="319"/>
+            <point key="canvasLocation" x="979" y="398"/>
         </scene>
     </scenes>
     <resources>
