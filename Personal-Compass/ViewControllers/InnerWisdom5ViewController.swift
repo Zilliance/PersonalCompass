@@ -48,7 +48,7 @@ final class InnerWisdom5ViewController: UIViewController, TableEditableViewContr
     private func setupView() {
         
         self.emotionIcon.image = currentCompass.needMetEmotion?.icon
-        self.emotionLabel.text = (currentCompass.needMetEmotionItems.flatMap { $0.title }).joined(separator: ",\n")
+        self.emotionLabel.text = (currentCompass.needMetEmotionItems.flatMap { $0.title }).joined(separator: ", ")
         self.emotionLabel.textColor = currentCompass.needMetEmotion?.color
         self.numberLabel.textColor = currentCompass.needMetEmotion?.color
         self.numberLabel.text = String(currentCompass.needMetEmotion?.level ?? 0)
