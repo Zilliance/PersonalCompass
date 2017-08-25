@@ -111,6 +111,7 @@
 		E305F2481F04471D00AE0D04 /* UIViewController+TopMost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E305F2471F04471D00AE0D04 /* UIViewController+TopMost.swift */; };
 		E30CFB1A1EEF13AD00ACE42B /* TextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */; };
 		E30CFB1C1EEF171200ACE42B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */; };
+		E331393A1F5098BF00F60086 /* NSString+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33139391F5098BF00F60086 /* NSString+Ranges.swift */; };
 		E357BDE51EFABAF2006A141B /* meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E357BDE41EFABAF2006A141B /* meditation.mp3 */; };
 		E3784A2C1EF9790D00554972 /* OnboardingPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3784A2B1EF9790D00554972 /* OnboardingPopover.swift */; };
 		E37C7A7B1EC9FBA300076737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C7A7A1EC9FBA300076737 /* AppDelegate.swift */; };
@@ -246,6 +247,7 @@
 		E305F2471F04471D00AE0D04 /* UIViewController+TopMost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopMost.swift"; sourceTree = "<group>"; };
 		E30CFB191EEF13AD00ACE42B /* TextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewPlaceholder.swift; path = Utils/TextViewPlaceholder.swift; sourceTree = "<group>"; };
 		E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		E33139391F5098BF00F60086 /* NSString+Ranges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Ranges.swift"; sourceTree = "<group>"; };
 		E357BDE41EFABAF2006A141B /* meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meditation.mp3; sourceTree = "<group>"; };
 		E3784A2B1EF9790D00554972 /* OnboardingPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPopover.swift; sourceTree = "<group>"; };
 		E37C7A771EC9FBA300076737 /* Personal-Compass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Personal-Compass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -421,6 +423,7 @@
 				8C463B231ECA2ED600566531 /* UIFont+CustomFonts.swift */,
 				8CFC6D4C1ED3A0D600F44B95 /* UIViewController+Extensions.swift */,
 				E30CFB1B1EEF171200ACE42B /* String+Extensions.swift */,
+				E33139391F5098BF00F60086 /* NSString+Ranges.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1036,6 +1039,7 @@
 				8C463B311ECA61E500566531 /* LeftMenuViewController.swift in Sources */,
 				4FD5B64B1ECBD9130017DC06 /* UIColor+CustomColors.swift in Sources */,
 				8C54AD2D1EE619DA001EC903 /* FeelBetterViewController.swift in Sources */,
+				E331393A1F5098BF00F60086 /* NSString+Ranges.swift in Sources */,
 				8CD329071F2BDD9A00844C5F /* OrientableNavigationController.swift in Sources */,
 				8C463B361ECA63D700566531 /* WebViewController.swift in Sources */,
 				8C463B3A1ECA642600566531 /* UIDevice+Extensions.swift in Sources */,

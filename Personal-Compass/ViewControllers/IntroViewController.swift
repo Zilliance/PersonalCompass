@@ -34,10 +34,10 @@ class IntroViewController: UIViewController {
             self.textView.font = UIFont.muliSemiBold(size: 14)
         }
         
-        self.linkIntroText()
+        self.attributeIntroText()
     }
     
-    func linkIntroText() {
+    func attributeIntroText() {
         let attrText = self.textView.attributedText.mutableCopy() as! NSMutableAttributedString
         
         let tourAttributes: [String: Any] = [
@@ -50,9 +50,13 @@ class IntroViewController: UIViewController {
             NSForegroundColorAttributeName: UIColor.lightBlue,
             NSLinkAttributeName: videoURL
         ]
+        let nameAttributes: [String: Any] = [
+            NSFontAttributeName: UIFont.muliItalic(size: 14)
+        ]
         
         let tourRange = (attrText.string as NSString).range(of: "Tour")
-        let videoRange = (attrText.string as NSString).range(of: "Personal Compass video")
+        let videoRange = (attrText.string as NSString).range(of: "The Personal Compass video")
+        let nameRanges = (attrText.string as NSString).ranges(of: "The Personal Compass")
         
         if tourRange.location != NSNotFound {
             attrText.addAttributes(tourAttributes, range: tourRange)
@@ -64,6 +68,10 @@ class IntroViewController: UIViewController {
             attrText.addAttributes(videoAttributes, range: videoRange)
         } else {
             assertionFailure()
+        }
+        
+        nameRanges.forEach { range in
+            attrText.addAttributes(nameAttributes, range: range)
         }
         
         self.textView.attributedText = attrText
