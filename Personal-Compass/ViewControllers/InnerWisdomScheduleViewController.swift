@@ -30,6 +30,7 @@ class InnerWisdomScheduleViewController: UIViewController, CompassFacetEditor, C
     func save() {
         self.currentCompass.lastEditedFacet = .takeAction
         self.currentCompass.completed = true
+        Analytics.shared.send(event: PersonalCompassAnalytics.PersonalCompassEvent.compassCompleted)
     }
     
     private func setupView() {
