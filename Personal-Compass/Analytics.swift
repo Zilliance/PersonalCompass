@@ -22,7 +22,8 @@ final class Analytics: AnalyticsService {
         Fabric.with([Answers.self])
         
         //Amplitude
-        Amplitude.instance().initializeApiKey("06340c361683be51394dce61fc1e16")
+        
+        Amplitude.instance().initializeApiKey("06340c361683be8e51394dce61fc1e16")
         
         ZillianceAnalytics.initialize(projectName: "Personal.Compass.", analyticsService: self)
         
