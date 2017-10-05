@@ -693,6 +693,7 @@
 				E37C7A751EC9FBA300076737 /* Resources */,
 				DB37C615FBE18C25860CB5CC /* [CP] Embed Pods Frameworks */,
 				D1F10235A622288BD699038D /* [CP] Copy Pods Resources */,
+				4FDA6DB11F86C6FA00474B2A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -902,6 +903,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Personal-CompassUITests/Pods-Personal-CompassUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4FDA6DB11F86C6FA00474B2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6631633fac45777f880b67875f93e5e1579ebe94 aec2a948527f13b65a38d774981ab57095364ffaa7d0212f03068fa5856444d1";
 		};
 		513D3C9BD03908703C681B47 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
