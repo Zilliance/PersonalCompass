@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import ZillianceShared
 
 fileprivate let tourURL = URL(string: "personalcompass://tour")!
 fileprivate let videoURL = URL(string: "personalcompass://video")!
 
-class IntroViewController: UIViewController {
+class IntroViewController: AnalyzedViewController {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageHeightContraint: NSLayoutConstraint!

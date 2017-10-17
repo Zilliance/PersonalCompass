@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 protocol CompassValidation {
     var error: CompassError? { get }
@@ -82,7 +83,7 @@ enum CompassScene: String {
     
 }
 
-class CreateCompassViewController: UIViewController {
+class CreateCompassViewController: AnalyzedViewController {
     
     fileprivate struct CompassItem {
         let viewController: UIViewController

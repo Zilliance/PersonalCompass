@@ -8,6 +8,7 @@
 
 import UIKit
 import PDFGenerator
+import ZillianceShared
 
 protocol SummaryViewControllerProtocol {
     var tableView: UITableView! {get}
@@ -31,7 +32,7 @@ extension SummaryViewControllerProtocol where Self: UIViewController {
 
 }
 
-class CompassSummaryViewController: UIViewController {
+class CompassSummaryViewController: AnalyzedViewController {
     
     enum SummaryText: String {
         case asseessment = "This is how my thoughts are affecting my emotions, body and behavior:"
@@ -91,6 +92,8 @@ class CompassSummaryViewController: UIViewController {
         self.generatePDF { [unowned self] (destinationURL,error) in
             
             if let destinationURL = destinationURL {
+                
+                Analytics.shared.send(event: PersonalCompassAnalytics.PersonalCompassEvent.didShareCompass)
                 
                 let activityViewController = UIActivityViewController(activityItems: [destinationURL] , applicationActivities: nil)
                 

@@ -13,10 +13,21 @@ class PersonalCompassAnalytics: ZillianceAnalytics {
     
     enum PersonalCompassEvent: String, AnalyticEvent {
         
+        
         // new compass creation events
         case newCompass
         case compassCompleted
         case compassResumed
+        
+        // audio
+        
+        case didPlayMeditationAudio
+        case didStopMeditationAudio
+        
+        // sharing
+        
+        case didShareCompass
+        
         
     }
     

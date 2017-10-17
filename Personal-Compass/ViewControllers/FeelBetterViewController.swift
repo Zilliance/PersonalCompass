@@ -8,6 +8,7 @@
 
 import UIKit
 import MZFormSheetPresentationController
+import ZillianceShared
 
 struct FeelBetterItem {
     let title: String
@@ -93,7 +94,7 @@ final class FeelBetterItemCell: UICollectionViewCell {
     }
 }
 
-class FeelBetterViewController: UIViewController {
+class FeelBetterViewController: AnalyzedViewController {
     
     @IBOutlet weak var scheduleItButton: UIButton!
     @IBOutlet weak var vcContainerView: UIView!
