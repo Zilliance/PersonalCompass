@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import ZillianceShared
 
 class CompassCollectionViewCell: UICollectionViewCell {
     
@@ -77,7 +78,7 @@ class CompassCollectionViewCell: UICollectionViewCell {
     
 }
 
-class StartCompassViewController: UIViewController {
+class StartCompassViewController: AnalyzedViewController {
     
     @IBOutlet weak var startCompassButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!

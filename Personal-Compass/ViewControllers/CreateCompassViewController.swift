@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZillianceShared
 
 protocol CompassValidation {
     var error: CompassError? { get }
@@ -82,7 +83,7 @@ enum CompassScene: String {
     
 }
 
-class CreateCompassViewController: UIViewController {
+class CreateCompassViewController: AnalyzedViewController {
     
     fileprivate struct CompassItem {
         let viewController: UIViewController
@@ -248,6 +249,13 @@ class CreateCompassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (self.compass.stressor == nil) {
+            Analytics.shared.send(event: PersonalCompassAnalytics.PersonalCompassEvent.newCompass)
+        } else {
+            Analytics.shared.send(event: PersonalCompassAnalytics.PersonalCompassEvent.compassResumed)
+        }
+        
         self.setupView()
     }
     

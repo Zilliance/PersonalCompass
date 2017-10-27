@@ -149,10 +149,11 @@ class InnerWisdom1ViewController: UIViewController {
         if let player = self.audioPlayer {
             
             if !player.isPlaying {
-                
+                 Analytics.shared.send(event: PersonalCompassAnalytics.PersonalCompassEvent.didPlayMeditationAudio)
                 player.play()
             }
             else {
+                 Analytics.shared.send(event: PersonalCompassAnalytics.PersonalCompassEvent.didStopMeditationAudio)
                 player.stop()
             }
             

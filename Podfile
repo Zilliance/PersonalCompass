@@ -16,6 +16,11 @@ target 'Personal-Compass' do
   pod 'KMPlaceholderTextView', '~> 1.3.0'
   pod 'YouTubePlayer'
   pod 'AKPickerView-Swift', :path => './AKPickerView-Swift'
+  pod 'Firebase/Core', '~> 3.0'
+  pod 'Fabric'
+  pod 'Answers'
+  pod 'Amplitude-iOS', '~> 3.14.1'
+  pod 'ZillianceShared', :git => 'https://github.com/ScalablePath/ZillianceShared.git'
 
   target 'Personal-CompassTests' do
     inherit! :search_paths

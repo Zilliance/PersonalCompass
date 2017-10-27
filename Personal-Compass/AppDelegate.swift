@@ -8,6 +8,7 @@
 
 import UIKit
 import MZFormSheetPresentationController
+import ZillianceShared
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -66,6 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         LocalNotificationsHelper.shared.listenToNotifications()
+        Analytics.shared.initialize()
         
         return true
     }

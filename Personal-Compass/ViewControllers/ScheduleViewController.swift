@@ -9,8 +9,9 @@
 import UIKit
 import SVProgressHUD
 import MZFormSheetPresentationController
+import ZillianceShared
 
-class ScheduleViewController: UIViewController {
+class ScheduleViewController: AnalyzedViewController {
 
  
     @IBOutlet weak var datePicker: UIDatePicker!
