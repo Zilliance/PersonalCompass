@@ -9,6 +9,7 @@
 import UIKit
 import MZFormSheetPresentationController
 import ZillianceShared
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
