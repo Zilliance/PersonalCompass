@@ -21,6 +21,7 @@ target 'Personal-Compass' do
   pod 'Answers'
   pod 'Amplitude-iOS', '~> 3.14.1'
   pod 'ZillianceShared', :git => 'https://github.com/ScalablePath/ZillianceShared.git'
+  pod 'FacebookCore'
 
   target 'Personal-CompassTests' do
     inherit! :search_paths

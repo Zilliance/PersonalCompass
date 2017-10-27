@@ -78,6 +78,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         LocalNotificationsHelper.shared.application(application, didReceive: notification)
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+        AppEventsLogger.activate(application)
+        
+    }
 
 }
 
